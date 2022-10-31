@@ -1,0 +1,50 @@
+# Pipes functions
+
+All the data related to the assets are available through Pipes functions and can be used together with sensor data on any analysis.
+
+{% hint style="success" %}
+All functions are available under the namespace`og` so they are easily found using auto-complete in pipes terminals (depends on plugin-wells 2.25.0+)
+{% endhint %}
+
+### Well
+
+| `Function`                                                                                                                                                                                                                                                                                                                            |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| `well(eventType) / og.well(eventType)`                                                                                                                                                                                                                                                                                                |   |
+| Returns the well associated to an event type. If that type is defined by a well normalization configuration, the well is returned. If the type is defined by a rig normalization configuration, the function looks for the intervention which its period contains the query `span` and returns the well related to that intervention. |   |
+| `wellById(id) / og.wellById(id)`                                                                                                                                                                                                                                                                                                      |   |
+| Returns a specific well by id.                                                                                                                                                                                                                                                                                                        |   |
+| `og.wellByName(name)`                                                                                                                                                                                                                                                                                                                 |   |
+| Returns a specific well by name.                                                                                                                                                                                                                                                                                                      |   |
+| `well_section(eventType, depth) / og.well_section(eventType, depth)`                                                                                                                                                                                                                                                                  |   |
+| Returns the well section for that depth. It uses the same approach that the function `well` uses to determine the well.                                                                                                                                                                                                               |   |
+
+### Rig
+
+| Function                                                                                                                                                                                                                                                                                                                         |   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| `rig(eventType) / og.rig(eventType)`                                                                                                                                                                                                                                                                                             |   |
+| Returns the rig associated with an event type. If that type is defined by a rig normalization configuration, the rig is returned. If the type is defined by a well normalization configuration, the function looks for the intervention whose period contains the query `span` and returns the rig related to that intervention. |   |
+| `rigByWellName(name) / og.rigByWellName(name)`                                                                                                                                                                                                                                                                                   |   |
+| <p>Given the well name, returns rig info of active intervention.  </p><p></p><ul><li>This function needs an active intervention with start and end date interval that contains the current date</li></ul>                                                                                                                        |   |
+| og.rigAllocation(eventType)                                                                                                                                                                                                                                                                                                      |   |
+| Given the event type, returns rig info with additional information.                                                                                                                                                                                                                                                              |   |
+
+### Intervention
+
+| `Function`                                                                                                                                                                                                                                                                                          |   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| `intervention(eventType) / og.intervention(eventType)`                                                                                                                                                                                                                                              |   |
+| Returns the list of interventions that match any well or rig associated to that event type on the query `span`period. This function requires that the intervention's initial and final dates must be configured.                                                                                    |   |
+| `intervention(eventType, status) / og.intervention(eventType,status)`                                                                                                                                                                                                                               |   |
+| Returns the list of interventions that match any well or rig associated to that event type on the query `span`period, returning only interventions on the designated `status` ("planned" or "finished"). This function requires that the intervention's initial and final dates must be configured. |   |
+| `interventionById(id) / og.interventionById(id)`                                                                                                                                                                                                                                                    |   |
+| Returns a specific intervention.                                                                                                                                                                                                                                                                    |   |
+| `interventionByName(name) / og.interventionByName(name)`                                                                                                                                                                                                                                            |   |
+| Returns an intervention with the given name.                                                                                                                                                                                                                                                        |   |
+| `interventionsByStatus(status) / og.interventionsByStatus(status)`                                                                                                                                                                                                                                  |   |
+| Returns an intervention list with the given status.                                                                                                                                                                                                                                                 |   |
+
+{% hint style="info" %}
+All the function respects the user permission restrictions.
+{% endhint %}

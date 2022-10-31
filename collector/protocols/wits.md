@@ -1,0 +1,61 @@
+# WITS
+
+Data in WITS format can be transferred to the collector over Serial ports or TCP connections.
+
+The WITS metadata is applied by Intelie Live during the normalization process when generating the raw JSON events.
+
+{% hint style="info" %}
+Data is always transmitted from the collector to Intelie Live exactly as it was received from the sources, for any protocol.
+{% endhint %}
+
+Intelie Live follows the [WITS specification](http://www.petrospec-technologies.com/resource/wits\_doc.htm) to add the names, the set of units (imperial/UK, imperial/US or metric) and to relate a depth value to each sample. Spare channels can be associated with names and units in the web interface.
+
+As it occurs with data transmitted in any other protocol, those names and units are present on the raw events but are converted to the environment standards in the normalized events.
+
+Intelie Live supports WITS Level 0.
+
+**Disclaimer:** WITS is a petroleum industry standard dated 90's (see [WITS ≠ WITSML](https://www.energistics.org/portfolio/witsml-data-standards/) on Energistics), so could be difficult to find out the spec, we also recommend a [page hosted by http://home.sprynet.com/\~carob (archived by web.archive.org)](https://web.archive.org/web/20170110225236/http://home.sprynet.com/\~carob) and the [paper published in SPE Drilling Engineering Volume 4, Issue 04, December 1989](https://doi.org/10.2118/16141-PA).
+
+### Configuration by remote control
+
+Once the [Remote Control](../remote-control/) is enabled, the centralized Live can coordinate the source creation directly in an UI as follows:
+
+<figure><img src="../../.gitbook/assets/liverig-wits-source-configuration.png" alt=""><figcaption><p>WITS source configuration options</p></figcaption></figure>
+
+#### Null values
+
+As a textual representation, WITS typically carries some standard number that needs to be interpreted as **null values**. The WITS source enables you to specify your typical values and drop them from the actual event representation for the channels.
+
+#### Mapping
+
+Enables the user to choose between three standard record mappings.
+
+<figure><img src="../../.gitbook/assets/image (158).png" alt=""><figcaption><p>Standard WITS record mappings supported</p></figcaption></figure>
+
+#### WITS custom mapping
+
+Selects a custom mapping between WITS records and channel mnemonics supported in Live. See [WITS Custom Mapping](../../administration/high-frequency-data/wits-custom-mapping.md) for more details.
+
+#### Server mode configuration
+
+In server mode, the access endpoint will enable only the TCP configuration is supported.
+
+#### Client mode configuration
+
+For WITS client mode configuration, the access endpoint configuration will support both TCP and Serial ports (starting at LiveRig 4.7.0) as described:
+
+<div>
+
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp.png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-serial.png" alt=""><figcaption><p>Serial port configuration for CSV source endpoint</p></figcaption></figure>
+
+</div>
+
+In case, any older LiveRig Collector is used in the edge installation, the selection for Serial ports will be unavailable since only TCP endpoints are allowed up to 4.6 series.
+
+<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p>Warning the lack of support for serial port connections at local sites</p></figcaption></figure>
+
+###
