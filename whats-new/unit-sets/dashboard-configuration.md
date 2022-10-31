@@ -18,7 +18,7 @@ The unit set has 3 categories:
 
 When opening the unit set modal in dashboard, it is possible to select the unit set saved in configuration previously. Selecting a global unit set for example Imperial would affect the channels on the dashboard configured for that unit set:
 
-![](<../../.gitbook/assets/image (358).png>)
+![](<../../.gitbook/assets/image (358) (1).png>)
 
 ![](<../../.gitbook/assets/image (220).png>)
 

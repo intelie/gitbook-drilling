@@ -31,4 +31,4 @@ When active an unit selector will appear on the dashboard\
 
 Click on it or on the options menu item and the selector will pop
 
-![](<../../.gitbook/assets/image (475).png>)
+![](<../../.gitbook/assets/image (358).png>)

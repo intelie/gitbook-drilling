@@ -184,7 +184,6 @@
 
 * [Identified Curves](developer/identified-curves.md)
 * [Hidden Units](developer/hidden-units.md)
-* [Sample Page](developer/sample-page.md)
 
 ## DEPRECATED
 
