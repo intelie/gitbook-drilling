@@ -8,6 +8,14 @@ description: Here you find the latest oil-and-gas-related plugins and artifacts
 The complete list of plugins for the **Live Drilling** solution is now categorized and published into the **Intelie Live Marketplace**, see: [https://marketplace.intelie.com/search/category/O\&G%20Drillin](https://marketplace.intelie.com/search/category/O\&G%20Drilling/)****
 {% endhint %}
 
+****
+
+## **Nov. 11th 2022**
+
+* **plugin-liverig 4.9.0, 4.8.1, 4.7.2, 4.6.4 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
+* **plugin-assets 4.9.0, 4.8.1, 4.7.2, 4.6.4  (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 4.9.0, 4.8.1, 4.7.2, 4.6.4  (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+
 ## **Oct. 24th 2022**
 
 * **plugin-liverig 4.8.0, 4.7.1 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
