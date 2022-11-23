@@ -7,10 +7,6 @@ description: >-
 
 # FFT spectrum
 
-{% hint style="info" %}
-Plugin-spectrum is at _Beta_ version
-{% endhint %}
-
 ## Introduction
 
 The `plugin-spectrum` it is a Live plugin that provides pipes functions to analyse signals in the frequency domain using FFT (_Fast Fourier Transform_).&#x20;
