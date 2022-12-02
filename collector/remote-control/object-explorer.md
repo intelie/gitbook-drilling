@@ -1,6 +1,6 @@
 # Requests
 
-When source has mode client, there is a tab called List of requests on source modal. In this feature, the witsml tree, showing available objects, can be requested from remote control.
+When source has mode client, there is a tab called `Object Explorer` on source modal. In this feature, the witsml tree, showing available objects, can be requested from remote control.
 
 This page also shows the requests configured in the collector and which ones are configured.
 

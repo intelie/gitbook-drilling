@@ -11,7 +11,7 @@ In this example, we can see that an OPCDA Source should have a single Request an
 | uid\_log      | Request identifier                              | no        | 1             |
 | enabled       | Request collection enabled                      | no        | false         |
 
-The **OPCDA** Source also needs a **ProgID** and a **CLSID**. These values could be configured on the screen or concatenated directly on the field. In the example below `OPC.Simulation.1` is the **ProgId** and `f8582cf2-88fb-11d0-b850-00c0f0104305` is the **CLSID**, always following the pattern `opcda://{computerAddress}/{ProgID}/{CLSID}`. The and must reflect the server’s computer user settings.
+The **OPCDA** Source also needs a **ProgID** and a **CLSID**. These values could be configured on the screen or concatenated directly on the field. In the example below `OPC.Simulation.1` is the **ProgId** and `f8582cf2-88fb-11d0-b850-00c0f0104305` is the **CLSID**, always following the pattern `opcda://{computerAddress}/{ProgID}/{CLSID}`. The `username` and `password` must reflect the server’s computer user settings.
 
 ```xml
 <source>
@@ -24,7 +24,7 @@ The **OPCDA** Source also needs a **ProgID** and a **CLSID**. These values could
     <protocol_version>0.0.0</protocol_version>
     <endpoint>
         opcda://127.0.0.1/OPC.Simulation.1/f8582cf2-88fb-11d0-b850-00c0f0104305
-    /endpoint>
+    </endpoint>
     <username>Administrator</username>
     <password>admin</password>
     <requests>
@@ -38,46 +38,9 @@ The **OPCDA** Source also needs a **ProgID** and a **CLSID**. These values could
 </source>
 ```
 
-The Liverig collector also requires the Node Ids (Tags) values, among other information, to query properly. These values are mapped in the following JSON format, as below, inside the `store.json` file:
+The same example could be configured through the source page, at the collector's tab:
 
-```json
-{
-  "database": {
-    "url": "jdbc:postgresql://localhost:5432/?user=root&password=rootpassword"
-  },
-  "endpoint": "http://127.0.0.1:1234/witsml/store",
-  "limit": 1234,
-  "rigs": {
-    "NS04": {
-      "name": "NS04",
-      "timestamp": "TIME",
-      "tags": {
-        "RandomInt32": "ns=2;s=Dynamic/RandomInt32",
-        "RandomInt64": "ns=2;s=Dynamic/RandomInt64"
-      },
-      "units": {
-        "RandomInt32": "m",
-        "RandomInt64": "m/s"
-      },
-      "types": {
-        "RandomInt32": "long",
-        "RandomInt64": "long"
-      }
-    }
-  }
-}
-```
+![OPC-DA Source Configuration](<../../.gitbook/assets/collector-protocol-opc-da-1.png>)
+![OPC-DA Source Configuration](<../../.gitbook/assets/collector-protocol-opc-da-2.png>)
 
-Each object under rigs is related to an **OPCDA** Source, linking both files through their Rig Name. Some generic fields configure global collector settings: database, endpoint, and limit. These configurations are required if the **OPCDA** Source is going through the **OPC** to **WITSML** conversion.
-
-The alias is used as a key reference for tags, units and types values.&#x20;
-
-| Name      | Description                        | Required                             | Default value |
-| --------- | ---------------------------------- | ------------------------------------ | ------------- |
-| name      | An identifier for this rig         | **yes**                              |               |
-| timestamp | A timestamp field identifier       | no                                   | TIMESTAMP     |
-| tags      | Uses the Tag (nodeId) as a value.  | **yes**                              |               |
-| units     | Uses the UOM as a value            | no                                   |               |
-| types     | Uses the type as a value           | no (if OPC to WITSML converter, yes) | double        |
-
-Obs: The tag field, should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
+The Liverig collector also ***requires*** the Node Ids (Tags) values, among other information, to query properly. These values should be configured at the [store.json](./../configuration/store.json.md) file.

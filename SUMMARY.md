@@ -146,8 +146,9 @@
     * [storeConfiguration](collector/remote-control/apis/storeconfiguration.md)
     * [getFromStore](collector/remote-control/apis/getfromstore.md)
   * [Sources](collector/remote-control/sources.md)
-  * [Requests](collector/remote-control/requests.md)
+  * [Object Explorer](collector/remote-control/object-explorer.md)
   * [WITSML Backlog Sync](collector/remote-control/backlog-sync.md)
+  * [Properties](collector/remote-control/properties.md)
 * [HA Deployment](collector/ha-deployment.md)
 * [Protocols](collector/protocols/README.md)
   * [WITSML](collector/protocols/witsml.md)
@@ -163,6 +164,7 @@
   * [sources.xml](collector/configuration/sources.xml.md)
   * [Tags in LiveRig Collector](collector/configuration/tags-in-liverig-collector.md)
   * [Certificate-based authentication for WITSML HTTPS sources](collector/configuration/certificate-based-authentication-for-witsml-https-sources.md)
+  * [store.json](collector/configuration/store.json.md)
 * [LiveRig Collector Appliance](collector/liverig-collector-appliance.md)
 * [Command line Interface (CLI)](collector/cli.md)
 

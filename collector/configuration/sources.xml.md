@@ -35,6 +35,8 @@ This file stores the configuration regarding the connection to all the remote da
 | This filter can represent either the desired uid\_well or the wildcard `*`, meaning to collect data from all wells.                                                                   |                               |                        |
 | `uid_wellbore`                                                                                                                                                                        | string                        | witsml                 |
 | This filter can represent either the desired uid\_wellbore or the wildcard `*`, meaning to collect data from all wellbores.                                                           |                               |                        |
+| `tls_auth`                                                                                                                                                                            | boolean                       | witsml                 |
+| This flag indicates if a witsml source using https protocol should use a certificate to authenticate.                                                                                 |                               |                        |
 | `requests`                                                                                                                                                                            | list\<Sources.Source.Request> | witsml                 |
 
 ### Sources.Source.Request
@@ -77,7 +79,8 @@ This file stores the configuration regarding the connection to all the remote da
         <service_company>the company</service_company>
         <protocol_name>witsml</protocol_name>
         <protocol_version>1.3.1.1</protocol_version>
-        <endpoint>http://the_server:9999/witsml</endpoint>
+        <endpoint>https://the_server:9999/witsml</endpoint>
+        <tls_auth>true</tls_auth>
         <username>witsml</username>
         <password>witsml</password>
 
