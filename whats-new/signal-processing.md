@@ -1,7 +1,7 @@
 # Signal Processing
 
 {% hint style="info" %}
-Requirement: plugin-processing-1.0.0+
+Requirement: plugin-processing-1.0.0+, plugin-spectrum-1.0.0+
 {% endhint %}
 
 Live provides pipe functions to improve signal data processing helping make business decisions.
