@@ -101,7 +101,7 @@ y over all every 10 sec
 
 ### Peak Detection
 
-The pipe function to find peaks is used to determine the peak or a local maximum that is a sample whose two direct neighbours have a smaller amplitude.
+The pipes find peaks function is used to find peaks or valleys within a given sample. The values found can be filtered within a certain range that can take into account its height, plateau size, distance, prominence and width.
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
 
