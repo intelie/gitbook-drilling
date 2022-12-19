@@ -26,6 +26,7 @@
 * [Rig State detection](whats-new/rig-state-detection.md)
 * [BOP Schematic](whats-new/bop-schematic/README.md)
   * [BOP status register](whats-new/bop-schematic/bop-status-register.md)
+* [Signal Processing](whats-new/signal-processing.md)
 
 ## Data Flow
 
