@@ -4,13 +4,13 @@
 Requirement: plugin-processing-1.0.0+
 {% endhint %}
 
-Live provides pipe functions to help apply signal processing
+Live provides pipe functions to improve signal data processing helping make business decisions.
 
 ### Filters
 
-The pipe function for filter signals enables removing unwanted harmonic component to have a more clear curve.
+The pipe function for filtering signals enables removing unwanted harmonic component to have a more clear curve using low/band/high pass filters.
 
-<figure><img src="../.gitbook/assets/image (259).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
 
 Sine Wave Combined with Multiple Frequencies and Gaussian White Noise
 
@@ -103,9 +103,9 @@ y over all every 10 sec
 
 The pipe function to find peaks is used to determine the peak or a local maximum that is a sample whose two direct neighbours have a smaller amplitude.
 
-<figure><img src="../.gitbook/assets/image (260).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (258).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
 
 Detecting Peaks and Troughs on a Channel
 
@@ -190,7 +190,7 @@ Square Wave with differents Duty Cycles
 
 An outlier is an observation that is unusually far from the other values in a data set. Remove outlier is a common process to have a more clear data.
 
-<figure><img src="../.gitbook/assets/image (257).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
 
 Remove the top 5% and bottom 5% values
 

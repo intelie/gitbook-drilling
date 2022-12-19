@@ -19,7 +19,7 @@ After configure the OpenWells integration with credentials at the admin page the
 
 ![Search well by name](<../.gitbook/assets/image (26).png>)
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)
 
 ![Phase details from OpenWells](<../.gitbook/assets/image (262).png>)
 
