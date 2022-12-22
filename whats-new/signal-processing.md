@@ -40,9 +40,8 @@ def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
   + sine_wave(x, 1/15, 2.5)
   + noise as y, x every item
 
-=> signal.FFT(x, y#, 1, false) as fftResultData over last 5 min every min
-=> fftResultData:json():jsonparse() as result
-=> result->magnitudes:seq as mag, result->frequencies:seq as freq
+=> signal.FFT(x, y#, 1, false) as result over last 5 min every min
+=> result->magnitudes:seq:get(0) as mag, result->frequencies:seq as freq
 => @for range(freq:len()) as i, mag, freq
 => mag[i] as y, freq[i] as x
 ```
@@ -63,8 +62,7 @@ def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
  
 => signal.filter(x, y, 0, 1/60, 1, 1, "low", "butterworth") as result, 
 y over all every min
-=> result:json():jsonparse() as res, y
-=> res->result:seq as yArr, res->timestamps:seq as xArr
+=> res->result:seq:get(0) as yArr, res->timestamps:seq as xArr
 => @for range(xArr:len()) as x, yArr
 => yArr[x] as y_filtered, x as x
 ```
@@ -85,8 +83,7 @@ def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
  
 => signal.filter(x, y, 0, 1/60, 1, 1, "low", "butterworth") as result, 
 y over all every 10 sec
-=> result:json():jsonparse() as res, y
-=> res->result:seq as yArr, res->timestamps:seq as xArr
+=> res->result:seq:get(0) as yArr, res->timestamps:seq as xArr
 => @for range(xArr:len()) as x, yArr
 => yArr[x] as y, x as x
 
