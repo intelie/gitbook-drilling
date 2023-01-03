@@ -7,8 +7,39 @@ description: >-
 # LiveRig 4
 
 {% hint style="warning" %}
-The LiveRig 4.0 beta series are also documented on this page, and if you have any 4.0 installed, please upgrade it to the 4.1 LiveRig series. They are compatible between then.
+The LiveRig 4.0 beta series are also documented on this page, and if you have any 4.0 installed, please upgrade it to the 4.1 LiveRig series or above. They are compatible between them.
 {% endhint %}
+
+## 4.10 series
+
+**4.10.0**
+
+* Allow disabling highlight points feature programatically to avoid addons side-effects
+* Add visibility menu for Unit Sets feature
+* Graphic is rendered for each character typed in the configurations
+
+## 4.9 series
+
+**4.9.0**
+
+* Support for grid on X axis for multichannel temporal widget
+* Customize the number of ticks for axis with automatic limits in multichannel temporal widget
+
+## 4.8 series
+
+**4.8.0**
+
+* New layout for collectors page
+* Add monitoring tab for the collector page layout
+* Support deletions of WITSML requests in collector page
+* New screen for the remote control configuration of liverig properties
+* Make it possible to edit the uids fields of a WITSML Request
+* Informs source ID as part of collector summary in frontend API
+* Improve the UX when configuring channels visualizations in pipeless widgets
+* New endpoint in liverig remote control API to save collector properties
+* Create a JSON Schema to validate and describe AppProperties JSON documents
+* Compatibility with Intelie Design System: migrate buttons, search bars, inputs and modals component in Normalization Template page
+
 
 ## 4.7 series
 
