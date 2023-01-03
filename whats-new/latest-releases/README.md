@@ -10,6 +10,12 @@ The complete list of plugins for the **Live Drilling** solution is now categoriz
 
 ****
 
+## **Dez. 30th 2022**
+
+* **plugin-liverig 5.0.0, 4.10.1, 4.9.2, 4.8.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
+* **plugin-assets 5.0.0, 4.10.1, 4.9.2, 4.8.3  (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 5.0.0, 4.10.1, 4.9.2, 4.8.3  (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+
 ## **Dez. 12th 2022**
 
 * **plugin-liverig 4.10.0, 4.9.1, 4.8.2, 4.7.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
