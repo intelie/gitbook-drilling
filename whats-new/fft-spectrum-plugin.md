@@ -7,15 +7,11 @@ description: >-
 
 # FFT spectrum
 
-{% hint style="info" %}
-Plugin-spectrum is at _Beta_ version
-{% endhint %}
-
 ## Introduction
 
 The `plugin-spectrum` it is a Live plugin that provides pipes functions to analyse signals in the frequency domain using FFT (_Fast Fourier Transform_).&#x20;
 
-![Signal processing of plugin-spectrum from time domain to frequency domain with FFT](<../.gitbook/assets/image (258).png>)
+<figure><img src="../.gitbook/assets/spec.png" alt=""><figcaption><p>Signal processing of plugin-spectrum from time domain to frequency domain with FFT</p></figcaption></figure>
 
 Some of the benefits of frequency analysis are improved well safety monitoring and issue prevention:
 

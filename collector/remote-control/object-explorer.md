@@ -22,7 +22,7 @@ When collector cryptography is not configured, the system will not be able to re
 
 An explanation of how to configure the cryptography is available clicking on the "Configure SSL" button.
 
-![Information on how to configured cryptography](../../.gitbook/assets/image.png)
+![Information on how to configured cryptography](<../../.gitbook/assets/image (4).png>)
 
 When the "remote control" is disabled in collector properties an error is displayed.
 
