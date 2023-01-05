@@ -169,7 +169,6 @@
   * [modbus.json](collector/configuration/modbus.json.md)
   * [Tags in LiveRig Collector](collector/configuration/tags-in-liverig-collector.md)
   * [Certificate-based authentication for WITSML HTTPS sources](collector/configuration/certificate-based-authentication-for-witsml-https-sources.md)
-  * [store.json](collector/configuration/store.json.md)
 * [LiveRig Collector Appliance](collector/liverig-collector-appliance.md)
 * [Command line Interface (CLI)](collector/cli.md)
 
