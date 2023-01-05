@@ -147,6 +147,8 @@
     * [storeConfiguration](collector/remote-control/apis/storeconfiguration.md)
     * [getFromStore](collector/remote-control/apis/getfromstore.md)
   * [Sources](collector/remote-control/sources.md)
+  * [Witsml Requests](collector/remote-control/witsml-requests.md)
+  * [Opc Requests](collector/remote-control/opc-requests.md)
   * [Object Explorer](collector/remote-control/object-explorer.md)
   * [WITSML Backlog Sync](collector/remote-control/backlog-sync.md)
   * [Properties](collector/remote-control/properties.md)
