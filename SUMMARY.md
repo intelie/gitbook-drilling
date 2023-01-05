@@ -163,6 +163,8 @@
 * [Configuration](collector/configuration/README.md)
   * [liverig.properties](collector/configuration/liverig.properties.md)
   * [sources.xml](collector/configuration/sources.xml.md)
+  * [store.json](collector/configuration/store.json.md)
+  * [modbus.json](collector/configuration/modbus.json.md)
   * [Tags in LiveRig Collector](collector/configuration/tags-in-liverig-collector.md)
   * [Certificate-based authentication for WITSML HTTPS sources](collector/configuration/certificate-based-authentication-for-witsml-https-sources.md)
   * [store.json](collector/configuration/store.json.md)
