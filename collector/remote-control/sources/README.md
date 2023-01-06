@@ -20,6 +20,6 @@ After saving the new source, you may wait for a while as the collector sources l
 
 On the source page, the **configurations** tab will allow you to update the configured event type and store access information, saving those changes may take a while to update as well.
 
-Dependent upon the protocol type, additional tabs can be displayed. For example, sources for WITSML allow the configuration of [requests](./witsml-requests), [backlog sync](./witsml-backlog-sync.md) and [object explorer](./witsml-object-explorer).
+Dependent upon the protocol type, additional tabs can be displayed. For example, sources for WITSML allow the configuration of [requests](./witsml-requests.md), [backlog sync](./witsml-backlog-sync.md) and [object explorer](./witsml-object-explorer.md).
 
 ![](<../../../.gitbook/assets/collector-remote-control-witsml-tabs.png>)
