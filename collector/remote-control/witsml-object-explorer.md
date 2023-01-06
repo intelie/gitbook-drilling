@@ -1,6 +1,8 @@
-# Requests
+# WITSML Object Explorer
 
-When source has mode client, there is a tab called List of requests on source modal. In this feature, the witsml tree, showing available objects, can be requested from remote control.
+Once a WITSML source is configured in client mode, a tab called `Object Explorer` will display at the source details. This feature lists the WITSML objects tree and accelerate the user to configure the requests to be made by the remote control.
+
+Alternatively, the user can configure WITSML requests in a more advanced mode with wildcards support against object ID and names at the `Requests` tab. See [WITSML Requests](./witsml-requests.md) for more details.
 
 This page also shows the requests configured in the collector and which ones are configured.
 
