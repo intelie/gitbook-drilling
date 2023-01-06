@@ -1,4 +1,4 @@
-# Requests
+# Object Explorer
 
 Once a WITSML source is configured in client mode, a tab called `Object Explorer` will display at the source details. This feature lists the WITSML objects tree and accelerate the user to configure the requests to be made by the remote control.
 
