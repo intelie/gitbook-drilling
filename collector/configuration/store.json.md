@@ -42,4 +42,4 @@ The alias is used as a key reference for tags, units and types values.&#x20;
 
 Obs: For **OPC-UA** sources, the tag field should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
 
-Instead of manually configuring this file, is also possible to use the remote control page [OPC Requests](./../remote-control/opc-requests.md) to do this settings.
+Instead of manually configuring this file, is also possible to use the remote control page [OPC Requests](./../remote-control/sources/opc-requests.md) to do this settings.
