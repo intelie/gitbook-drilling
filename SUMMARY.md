@@ -149,7 +149,7 @@
   * [Sources](collector/remote-control/sources.md)
   * [WITSML Requests](collector/remote-control/witsml-requests.md)
   * [OPC Requests](collector/remote-control/opc-requests.md)
-  * [WITSML Object Explorer](collector/remote-control/object-explorer.md)
+  * [WITSML Object Explorer](collector/remote-control/witsml-object-explorer.md)
   * [WITSML Backlog Sync](collector/remote-control/backlog-sync.md)
   * [Properties](collector/remote-control/properties.md)
 * [HA Deployment](collector/ha-deployment.md)
