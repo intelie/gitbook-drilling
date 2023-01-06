@@ -59,43 +59,4 @@ In this example we have two PLC devices, identified by `<request>` node and the 
 | query\_period       | Interval, in seconds, for the execution of each request                                  | Yes          |               |
 | uid\_log            | A number, between 1 and 255, that identifies the target PLC                              | No           | 1             |
 
-To be normalized by Intelie Live, each `<request>` might be mapped on the following JSON format (`modbus.json`).&#x20;
-
-```javascript
-{
-  "controllers": {
-    "pump-pressure-1": {
-      "input-register" : {
-        "start_address": 0,
-        "count": 3,
-        "unit": "bar"
-      },
-      "discrete-input": {
-        "start_address": 5,
-        "count": 2,
-        "unit": "psi"
-      },
-      "coil": {
-        "start_address": 10
-      }
-    },
-    "water-flow-1": {
-      "holding-register" : {
-        "start_address": 0,
-        "unit": "ft3/d"
-      },
-      "coil": {
-        "start_address": 3
-      }
-    }
-  }
-}
-```
-
-Each `controller` represents a device defined in `<request>/<object>`and describe all memory areas that will be fetched. For each memory area (such as `input-register,` `discrete-input`, `coil` or `holding-register`), the following information must be provided:&#x20;
-
-| Name           | Description                                                                                        | Is required? | Default value |
-| -------------- | -------------------------------------------------------------------------------------------------- | ------------ | ------------- |
-| start\_address | A number, between 1 and 65536. Represents the starting address of the memory area                  | yes          |               |
-| count          | Represents the number of registers or coils that will be read sequentially from the start\_address | No           | 0             |
-| unit           | The unit of measurement to be used in Intelie Live                                                 | No           |               |
+A [modbus.json](./../configuration/modbus.json.md) is also needed to be configured in the collector, so the data can be properly retrieved.

@@ -4,17 +4,21 @@ On Intelie Live `Collectors` tab, it is possible to get an overview of all the a
 
 The interface provides information regarding data availabilty and quality, transmission and compression rates, SSL/TLS status, and many other information about the health of the collectors.
 
-![](<../.gitbook/assets/image (297).png>)
+![](<../.gitbook/assets/collector-monitoring.png>)
+
+![](<../.gitbook/assets/collector-monitoring-2.png>)
 
 **Sources Status**
 
-The sources using WITSML protocol for data transmission are clickable and Intelie Live provides more details of the source in a modal. When source is a server, basic information is displayed.
+The sources are clickable and Intelie Live provides more details of the source in a modal.
 
-When source has mode client, Intelie Live will display basic source information, requests in execution, requests configured and information available in the WITSML server can be requested.
+For every protocol available, Intelie Live will display basic source information and configuation. For WITSML (only client mode) and OPC sources, a request tab is also available, showing requests configured and information available in the server can be requested.
 
-![Modal for sources with mode client (Available only for WITSML) - Configurations](<../.gitbook/assets/image (19).png>)
+![Configuration Tab available for WITSML, WITS, CSV, OPC-DA, OPC-UA, Modbus and Raw sources](<../.gitbook/assets/collector-witsml-source.png>)
 
-![Modal for sources with mode client (Available only for WITSML) - Requests](<../.gitbook/assets/image (391).png>)
+![Request Tab for WITSML Sources](<../.gitbook/assets/collector-witsml-requests.png>)
+
+![Request Tab for OPC Sources](<../.gitbook/assets/collector-opc-requests.png>)
 
 ### The `internal` event
 
@@ -74,6 +78,10 @@ The fields contained on this type of event are detailed below.
 | Information about the NTP state of the host machine, if available.                                                                                            |         |        |
 | `system.disk`                                                                                                                                                 | map     | 2.14.2 |
 | Information about the local disks state, if available.                                                                                                        |         |        |
+| `internalEventsPeriod`                                                                                                                                        | long    | 4.7.0  |
+| Period (in milliseconds) to compute and transmit the internal events reporting actual source configuration and basic server statistics to central sites.      |         |        |
+|`configurationStatus`                                                                                                                                          |         |        |
+| Contains the hashcode of the liverig properties file, the modbus, the OPC and the gerenal sources configuration files.                                        | map     | 5.0.0  |
 
 {% hint style="info" %}
 All the counters, such as bytes and received, errors, and drops, reset every time the collector is restarted.

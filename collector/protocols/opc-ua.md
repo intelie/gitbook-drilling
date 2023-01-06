@@ -28,6 +28,11 @@ Example:
 </source>
 ```
 
+The same example could be configured through the source page, at the collector's tab:
+
+![OPC-UA Source Configuration](<../../.gitbook/assets/collector-protocol-opc-ua-1.png>)
+![OPC-UA Source Configuration](<../../.gitbook/assets/collector-protocol-opc-ua-2.png>)
+
 In this example we can see that an OPCUA Source should have a single Request and the following information must be provided:
 
 | Name          | Description                                     | Required  | Default value |
@@ -37,45 +42,5 @@ In this example we can see that an OPCUA Source should have a single Request and
 | uid\_log      | Request identifier                              | no        | 1             |
 | enabled       | Request collection enabled                      | no        | False         |
 
-The Liverig collector also requires the Node Ids (Tags) values, among other information, to query properly. These values are mapped in the following JSON format as below, inside the `store.json` file:
-
-```json
-{
-  "database": {
-    "url": "jdbc:postgresql://localhost:5432/?user=root&password=rootpassword"
-  },
-  "endpoint": "http://127.0.0.1:1234/witsml/store",
-  "limit": 1234,
-  "rigs": {
-    "NS04": {
-      "name": "NS04",
-      "timestamp": "TIME",
-      "tags": {
-        "RandomInt32": "ns=2;s=Dynamic/RandomInt32",
-        "RandomInt64": "ns=2;s=Dynamic/RandomInt64"
-      },
-      "units": {
-        "RandomInt32": "m",
-        "RandomInt64": "m/s"
-      },
-      "types": {
-        "RandomInt32": "long",
-        "RandomInt64": "long"
-      }
-    }
-  }
-}
-```
-
-Each object under rigs is related to an OPCUA Source, linking both files through their Rig Name. Some generic fields configure global collector settings: database, endpoint, and limit. These configurations are required if the OPCUA Source is going through the OPC to WITSML conversion. The configuration fields under the Rig Name are as follows:
-
-| Name      | Description                        | Required                             | Default value |
-| --------- | ---------------------------------- | ------------------------------------ | ------------- |
-| name      | An identifier for this rig         | **yes**                              |               |
-| timestamp | A timestamp field identifier       | no                                   | TIMESTAMP     |
-| tags      | Uses the Tag (nodeId) as a value.  | **yes**                              |               |
-| units     | Uses the UOM as a value            | no                                   |               |
-| types     | Uses the type as a value           | no (if OPC to WITSML converter, yes) | double        |
-
-Note that the alias is used as a key reference for tags, units and types values.&#x20;
+The Liverig collector also ***requires*** the Node Ids (Tags) values, among other information, to query properly. These values should be configured at the [store.json](./../configuration/store.json.md) file.
 

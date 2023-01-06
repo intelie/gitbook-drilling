@@ -6,7 +6,7 @@ The connection between the LiveRig collector and the live plugin can optionally 
 
 The status of the cryptography is shown on the collectors web interface.
 
-![Cryptography status on the web interface](<../.gitbook/assets/image (478).png>)
+![Cryptography status on the web interface](<../.gitbook/assets/collector-security.png>)
 
 ### Deployment upon OpenVPN
 
