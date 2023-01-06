@@ -414,8 +414,8 @@ There are new plugins on this version: plugin-ui-components and plugin-rig-state
 * API to edit hole and measured depth
 * Depth picker - add "Entire depth" option
 * Support for different units of measurement in well static data
-* Backlog data request using collector remote control ([more](../../collector/remote-control/backlog-sync.md))
-* Retrieve WITSML tree and active configuration using collector remote control ([more](../../collector/remote-control/requests.md))
+* Backlog data request using collector remote control ([more](../../collector/remote-control/sources/backlog-sync.md))
+* Retrieve WITSML tree and active configuration using collector remote control ([more](../../collector/remote-control/sources/witsml-object-explorer.md))
 * Mark data gaps on line charts (depends on Live 2.28.0+)
 * New options on pressure tests configurations
 * Support for multiple completion columns

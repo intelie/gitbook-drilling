@@ -50,7 +50,7 @@ The cloud environment is receiving data from a configured collector:
 
 ![](https://lh6.googleusercontent.com/KEbVJwNZQxe9joD6aN59QYjiYWDDDOQU484y9aZ4FROcWiyeLJiwE17R-dugP5y4cDGtFGf0DV1rkgusEAS2dFl8l9zwlFnd52nB6OQp-R9BweORbGp74lQzfjji7BPtDOfztOoe8djOSH4XdQ)
 
-On the image below it is possible to see the online [collector source](../collector/remote-control/sources.md) active:
+On the image below it is possible to see the online [collector source](../collector/remote-control/sources/README.md) active:
 
 ![](https://lh3.googleusercontent.com/XZL8l9V15jk3O18\_b2bDjrxymttCzVUm8Zmpu0lEoArFxW6\_EXb744LANYWFtfXW30jpS4rjIm-6uB1JYoUfOpSx0eCXmwKFzjmxsR-PuiCCtLlIYPDBDzAIvFwaVtN8cqtS2pb5z7F3jWAmow)
 
