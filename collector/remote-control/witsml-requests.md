@@ -1,5 +1,5 @@
 {% hint style="info" %}
-This feature is available on plugin liverig version 4.7.0 or above
+This feature is available on plugin-liverig version 4.7.0 or above
 {% endhint %}
 
 When selecting a WITSML source in client mode, is possible to manually set the requests that are being made to the server, through the `Requests` tab:
@@ -18,8 +18,8 @@ It's not possible to save two or more equal requests. When trying to save duplic
 
 ![WITSML Requests page showing edited requests in the sidebar with a yellow dot](<../../.gitbook/assets/collector-remote-control-witsml-duplicated-requests-modal.png>)
 
-It's also possible to delete witsml requests when needed. To do so, select the request that should be deleted, and in the upper right corner a `DELETE REQUEST` button should be visible. After clicking it, a confirmation modal will appear asking for confirmation. After clicking the `Delete` button on the confirmation modal, the request will be imediatelly deleted. There is no need to click on the save after the confirmation:
+It's also possible to delete WITSML requests when needed. To do so, select the request that should be deleted, and in the upper right corner a `DELETE REQUEST` button should be visible. After clicking it, a confirmation modal will appear asking for confirmation. After clicking the `Delete` button on the confirmation modal, the request will be imediatelly deleted. There is no need to click on the save after the confirmation:
 
 ![WITSML Request confirmation modal when deleting a request](<../../.gitbook/assets/collector-remote-control-witsml-delete-modal.png>)
 
-After clicking the "Save" button or deleting a request, some time is needed before the collector apply the modifications.
+After clicking the `Save` button or deleting a request, some time is needed before the collector apply the modifications in the remote site.

@@ -16,7 +16,7 @@ For every protocol available, Intelie Live will display basic source information
 
 ![Configuration Tab available for WITSML, WITS, CSV, OPC-DA, OPC-UA, Modbus and Raw sources](<../.gitbook/assets/collector-witsml-source.png>)
 
-![Request Tab for Witsml Sources](<../.gitbook/assets/collector-witsml-requests.png>)
+![Request Tab for WITSML Sources](<../.gitbook/assets/collector-witsml-requests.png>)
 
 ![Request Tab for OPC Sources](<../.gitbook/assets/collector-opc-requests.png>)
 
