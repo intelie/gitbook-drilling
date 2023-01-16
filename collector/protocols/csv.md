@@ -16,7 +16,7 @@ As a textual representation, CSV typically carries some standard number that nee
 
 #### Date time pattern
 
-The date time pattern can be customized to detect seconds, milliseconds or textual samples of information like months, AM/PM marks, or either some fixed strings in the rows which represent the timestamp of each data measurement.
+The date time pattern can be customized to detect seconds, milliseconds, or textual samples of information like months, AM/PM marks, or either some fixed strings in the rows which represent the timestamp of each data measurement. See the [full list of symbols supported](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) (as in Java).
 
 <figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption><p>Date time custom format configuration rules</p></figcaption></figure>
 
