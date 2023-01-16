@@ -30,7 +30,7 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 <div>
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
 
  
 
@@ -43,3 +43,31 @@ The TCP connector puts the source in **server mode** and waits for data to be pu
 In case, any older LiveRig Collector is used in the edge installation, the selection for Serial ports will be unavailable since only TCP endpoints are allowed up to 4.6 series.
 
 <figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p>Warning the lack of support for serial port connections at local sites</p></figcaption></figure>
+
+### Configuration by source file
+
+Locally in the LiveRig Collector machine, the [`sources.xml` can be configured](../configuration/sources.xml.md) as demonstrated below. This configuration opens the TCP port 9873 on all local interfaces to listen for CSV files.
+
+```markup
+<source>
+	<name>CSV endpoint</name>
+	<mode>server</mode>
+	<rig_name>my_rig</rig_name>
+	<service_company>my_company</service_company>
+	<protocol_name>csv</protocol_name>
+	<endpoint>tcp://0.0.0.0:9873/</endpoint>
+</source>
+```
+
+This other example reads the first COM port in a Unix system available at /dev/ttyS0 to watch for events in CSV format.
+
+```markup
+<source>
+	<name>CSV endpoint</name>
+	<mode>client</mode>
+	<rig_name>my_rig</rig_name>
+	<service_company>my_company</service_company>
+	<protocol_name>csv</protocol_name>
+	<endpoint>serial:///dev/ttyS0?baudRate=9600</endpoint>
+</source>
+```
