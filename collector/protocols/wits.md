@@ -46,7 +46,7 @@ For WITS client mode configuration, the access endpoint configuration will suppo
 
 <div>
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
 
  
 

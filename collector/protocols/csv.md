@@ -24,19 +24,21 @@ Each column in the CSV file will be interpreted as a channel value and the first
 
 #### Access endpoint
 
-The CSV source always executes in **server mode** only. Third parties applications may push data into the LiveRig CSV source endpoint.
+The CSV source can execute in client or server mode, depending upon the underlay connector configured. Third parties applications may push data into the LiveRig CSV source endpoint.
 
 Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial ports:
 
 <div>
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
 
  
 
 <figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-serial.png" alt=""><figcaption><p>Serial port configuration for CSV source endpoint</p></figcaption></figure>
 
 </div>
+
+The TCP connector puts the source in **server mode** and waits for data to be pushed into it. On the other hand, the Serial port connector configures the source as **client mode** and watches the Unix device file to consume the data passing through.
 
 In case, any older LiveRig Collector is used in the edge installation, the selection for Serial ports will be unavailable since only TCP endpoints are allowed up to 4.6 series.
 
