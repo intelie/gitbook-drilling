@@ -8,7 +8,7 @@ Live provides the capability to correlate wells with symmetric association.&#x20
 
 First add one or more correlated wells at well parameters tab:
 
-![Well parameters tab](<../.gitbook/assets/image (91).png>)
+![Well parameters tab](<../.gitbook/assets/image (91) (1).png>)
 
 ![Correlated well option](<../.gitbook/assets/image (118).png>)
 
