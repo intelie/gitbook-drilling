@@ -244,7 +244,7 @@ at the end
 plugin-processing-1.1.0 required
 {% endhint %}
 
-It is posible to turn on the moving average or filter option on a chart to calculate it throw a temporal range.&#x20;
+It is posible to turn on the moving average or filter option on a chart to calculate it through a temporal range.&#x20;
 
 #### Moving average
 
