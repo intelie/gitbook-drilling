@@ -246,7 +246,11 @@ plugin-processing-1.1.0 required
 
 It is posible to turn on the moving average or filter option on a chart to calculate it throw a temporal range.&#x20;
 
+#### Moving average
+
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+#### Filters
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
