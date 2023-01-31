@@ -2,7 +2,7 @@
 
 Once a WITSML source is configured in client mode, a tab called `Object Explorer` will display at the source details. This feature lists the WITSML objects tree and accelerate the user to configure the requests to be made by the remote control.
 
-Alternatively, the user can configure WITSML requests in a more advanced mode with wildcards support against object ID and names at the `Requests` tab. See [WITSML Requests](./witsml-requests.md) for more details.
+Alternatively, the user can configure WITSML requests in a more advanced mode with wildcards support against object ID and names at the `Requests` tab. See [WITSML Requests](witsml-requests.md) for more details.
 
 This page also shows the requests configured in the collector and which ones are configured.
 
@@ -24,7 +24,7 @@ When collector cryptography is not configured, the system will not be able to re
 
 An explanation of how to configure the cryptography is available clicking on the "Configure SSL" button.
 
-![Information on how to configured cryptography](<../../../.gitbook/assets/image (4).png>)
+![Information on how to configured cryptography](<../../../.gitbook/assets/image (4) (1).png>)
 
 When the "remote control" is disabled in collector properties an error is displayed.
 

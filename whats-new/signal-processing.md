@@ -187,7 +187,7 @@ Square Wave with differents Duty Cycles
 
 An outlier is an observation that is unusually far from the other values in a data set. Remove outlier is a common process to have a more clear data.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (111).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
 
 Remove the top 5% and bottom 5% values
 
@@ -206,7 +206,7 @@ over all every 10 minutes
 
 We can use pipes to estimate a point using interpolation functions.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
 
 In pipes we have two types of interpolation linear and polynomial ( lagrange method )
 
@@ -224,7 +224,7 @@ at the end
 => signal.linear_interpolation(x, y, xi) as result
 ```
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
 
 ```
 def @@x: (1.0, 2.0, 4.0, 5.0);
@@ -237,3 +237,19 @@ def @@xi: (3.0, 4.0);
 at the end
 => signal.polynomial_lagrange_interpolation(x, y, xi) as result
 ```
+
+### Aggregations
+
+{% hint style="info" %}
+plugin-processing-1.1.0 required
+{% endhint %}
+
+It is posible to turn on the moving average or filter option on a chart to calculate it throw a temporal range.&#x20;
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
