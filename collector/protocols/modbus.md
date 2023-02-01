@@ -25,12 +25,11 @@ There are a number of memory areas defined in the MODBUS specification. Here, ar
 If you are using a LiveRig version 5.0.0 or above, you can change the connection protocol by declaring the endpoint using the
 format: `{code}:{transport}://{ip-address}:{port}?{options}`. Here is a list of options:
 
-- Code: `modbus-tcp`*(default)*, `modbus-adu`, `modbus-ascii`;
-- Transport: `tcp`*(default)*, `udp`, `serial`;
-- Options: `request-timeout`, `unit-identifier` (This will use the following
-  structure: `?{option-1-name}={option-1-value}&{option-2-name}={option-2-value}`)
+- **code**: `modbus-tcp`*(default)*, `modbus-adu`, `modbus-ascii`;
+- **transport**: `tcp`*(default)*, `udp`, `serial`;
+- **options**: `request-timeout`, `unit-identifier` (This will use the following structure: `?{option-1-name}={option-1-value}&{option-2-name}={option-2-value}`)
 
-The `Transport`, `Port` and `Options` fields are optional. The default port value is `502` and if the `Code` value is
+The `transport`, `port` and `options` fields are optional. The default port value is `502` and if the `code` value is
 just `modbus`, it will default to the `modbus-tcp` value.
 
 **Example TCP Modbus endpoint:**
