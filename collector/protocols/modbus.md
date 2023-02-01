@@ -5,13 +5,13 @@ description: Based on MODBUS Application Protocol Specification V1.1b3
 # MODBUS
 
 {% hint style="info" %}
-This capability is provided by **Liverig Collector 2.28.0** or higher&#x20;
+This capability is provided by **LiveRig Collector 2.28.0** or higher
 {% endhint %}
 
-The MODBUS protocol is capable of receiving data from a PLC (programmable logic controllers) device via TCP connections if Liverig is older than 5.0.0, otherwise the data can be received  via
+The MODBUS protocol is capable of receiving data from a PLC (programmable logic controllers) device via TCP connections if LiveRig is older than 5.0.0, otherwise the data can be received  via
 TCP, UDP and Serial connections.
 
-There are a number of memory areas defined in the MODBUS specification. Here, are the types of data supported, by the Liverig Collector:
+There are a number of memory areas defined in the MODBUS specification. Here, are the types of data supported, by the LiveRig Collector:
 
 * Coils
   * Discrete Input - Boolean input value, usually representing a binary input to the PLC
@@ -21,8 +21,8 @@ There are a number of memory areas defined in the MODBUS specification. Here, ar
   * Holding Register - Short value, usually representing an analog output from the PLC
 
 ## Configuring the `endpoint` field for Modbus sources
-### For Liverig versions 5.0.0 or above
-If you are using a Liverig version 5.0.0 or above, you can change the connection protocol by declaring the endpoint using the
+### LiveRig Collector 5.0.0 or above
+If you are using a LiveRig version 5.0.0 or above, you can change the connection protocol by declaring the endpoint using the
 format: `{code}:{transport}://{ip-address}:{port}?{options}`. Here is a list of options:
 
 - Code: `modbus-tcp`*(default)*, `modbus-adu`, `modbus-ascii`;
@@ -43,11 +43,11 @@ just `modbus`, it will default to the `modbus-tcp` value.
 - For Windows Systems:
   `modbus-adu:serial:COM1`
 
-**OBS:** *You need to add a special permission to access serial Sources on Linux. This can be done by adding the user to
+**Note:** *You need to add a special permission to access serial Sources on Linux. This can be done by adding the user to
 the `dialout` group using a `sudo usermod -a -G dialout $USER` command.*
 
-### For liverig versions older than 5.0.0
-If you are using a Liverig version below 5.0.0, you cannot change the connection protocol, so the endpoint format must be `modbus://{ip-address}:{port}`
+### LiveRig Collector previous than 5.0.0
+If you are using a LiveRig 4.x or bellow, you cannot change the connection protocol, so the endpoint format must be `modbus://{ip-address}:{port}`
 
 ## Example
 

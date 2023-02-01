@@ -1,6 +1,6 @@
 For a modbus source to be normalized by Intelie Live, two files are needed to be configured, the [sources.xml](./sources.xml.md) and the `modbus.json`. The specific setting about a modbus source can be found at the [modbus protocol page](./../protocols/modbus.md). Following the example at the modbus protocol page, two `<request>` objects need to be mapped on the following JSON format (`modbus.json`).&#x20;
 
-## For Collector versions 5.0.0 or above
+## LiveRig Collector 5.0.0 or above
 
 ```json
 {
@@ -85,7 +85,7 @@ file.
 
 You don't need to declare a count if using Multi-register data types, we will assume it is always the next address.
 Example:
-If the dataType is `int32` and the `start_address` is `123`, the Liverig Collector will fetch the values from
+If the dataType is `int32` and the `start_address` is `123`, the LiveRig Collector will fetch the values from
 addresses `123` and `124` to form the `int32` (long) value.
 
 ### Aliases
@@ -95,29 +95,29 @@ to a memory area.
 If that is the case the alias will be applied by the following rule:
 For each address fetched by the memory area, we will apply the alias from the list using the order of both.
 
-**Example1:**
+**Example 1:**
 *If a memory area has a `start_address` set as `123` and a `count` set as `3`, the end result will be values from
-addresses `123`, `124` and `125`. If the `alias` field has just the value `["exampeAlias"]`, then the Liverig Collector
+addresses `123`, `124` and `125`. If the `alias` field has just the value `["exampeAlias"]`, then the LiveRig Collector
 will map `exampeAlias_123` to address `123`, `exampeAlias_124` to address `124` and `exampeAlias_125` to address `125`.*
 
-**Example2:**
+**Example 2:**
 *If a memory area has a `start_address` set as `123` and a `count` set as `3`, the end result will be values from
 addresses `123`, `124` and `125`. If the `alias` field has the value `["exampleAlias1", "exampleAlias2", "exampleAlias3"
-]`, then the Liverig Collector will map `exampleAlias1` to address `123`, `exampleAlias2` to address `124` and
+]`, then the LiveRig Collector will map `exampleAlias1` to address `123`, `exampleAlias2` to address `124` and
 `exampleAlias3` to address `125`.*
 
-**Example3:**
+**Example 3:**
 *If a memory area has a `start_address` set as `123` and a `count` set as `3`, the end result will be values from
 addresses `123`, `124` and `125`. If the `alias` field has the value `["exampleAlias1", "exampleAlias2", "exampleAlias3"
-, "exampleAlias4"]`, then the Liverig Collector will map `exampeAlias_123` to address `123`, `exampeAlias_124` to
+, "exampleAlias4"]`, then the LiveRig Collector will map `exampeAlias_123` to address `123`, `exampeAlias_124` to
 address `124` and `exampeAlias_125` to address `125`. The `exampleAlias4` will not be used as a channel rename.*
 
-**OBS:**
+**Note:**
 If there is fewer aliases than the address count (the alias list has a size of `2` and the count of addresses is `4`),
 the
 Liverig Collector will raise an Exception, since it won't know how to map the aliases to each address.
 
-## For Collector versions 4.x.x or bellow
+## LiveRig Collector 4.x or bellow
 
 ```json
 {
