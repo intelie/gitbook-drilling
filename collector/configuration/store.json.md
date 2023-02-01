@@ -73,7 +73,7 @@ Resulting in the following value:
 
 **Example 2:**
 
-![OpcuaObjectEvent3.png](../../.gitbook/assets/OpcuaObjectEvent3.png)
+![An encoded OPC object arrives as is](../../.gitbook/assets/OpcuaObjectEvent3.png)
 
 In this event, the OPC-UA source returned a value structured as an object with the following format:
 
@@ -103,7 +103,7 @@ to extract the `encodingId/namespaceIndex/value` as a value.
 
 Resulting in the following value:
 
-![img.png](../../.gitbook/assets/OpcuaObjectEvent4.png)
+![Extracting the encoded object](../../.gitbook/assets/OpcuaObjectEvent4.png)
 
 **Note**: Since the `tags` field from the `store.json` file is a `Map`, you need to add a new alias for each field you want to fetch. Example:
 `"RangeObject/Identifier": "ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange?field=/encodingId/identifier/value"` and
