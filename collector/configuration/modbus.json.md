@@ -115,7 +115,7 @@ address `124` and `exampeAlias_125` to address `125`. The `exampleAlias4` will n
 **Note:**
 If there is fewer aliases than the address count (the alias list has a size of `2` and the count of addresses is `4`),
 the
-Liverig Collector will raise an Exception, since it won't know how to map the aliases to each address.
+LiveRig Collector will raise an exception, since it won't know how to map the aliases to each address.
 
 ## LiveRig Collector 4.x or bellow
 
