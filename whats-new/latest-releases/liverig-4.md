@@ -40,7 +40,6 @@ The LiveRig 4.0 beta series are also documented on this page, and if you have an
 * Create a JSON Schema to validate and describe AppProperties JSON documents
 * Compatibility with Intelie Design System: migrate buttons, search bars, inputs and modals component in Normalization Template page
 
-
 ## 4.7 series
 
 **4.7.0**
@@ -75,8 +74,6 @@ The LiveRig 4.0 beta series are also documented on this page, and if you have an
 * Rename "Unit Management Tools" from "Item validator" to "Conversion validator"
 * Adding endpoints to handle the liverig properties file
 
-
-
 ## 4.5 series
 
 **4.5.0**
@@ -103,13 +100,13 @@ The LiveRig 4.0 beta series are also documented on this page, and if you have an
 
 ## 4.1 series
 
-* Redesign of plugin dependencies at LiveRig Kit&#x20;
+* Redesign of plugin dependencies at LiveRig Kit
   * Channels activity and Auto-switch extracted to separated plugins
   * Removed UI components plugin in favor of `@intelie/ui` NPM toolkit
   * Data management frontend API was moved to plugin-assets
 * New Modbus data layout to ease channels mapping configuration
 * New normalization API
-* [New batch renormalization UI **** ](liverig-4.md#new-batch-renormalization-ui)****
+* [New batch renormalization UI \*\*\*\* ](liverig-4.md#new-batch-renormalization-ui)\*\*\*\*
 * New unit sets API ([more](../unit-sets/))
 * Moved object list service into a new plugin
 * Replaced log4j with logback
@@ -117,8 +114,8 @@ The LiveRig 4.0 beta series are also documented on this page, and if you have an
   * Moved from `plugin-liverig/shared/components`
     * `ProgressBar`
   * Moved from `plugin-ui-components/shared/components`
-    * `EmptyData`&#x20;
-    * `IconMessage`&#x20;
+    * `EmptyData`
+    * `IconMessage`
     * `RadioGroupCard`
   * Replaced by other components from `@intelie/ui`
     * `Alert` component replaced by `InformationToken`
@@ -138,12 +135,12 @@ The LiveRig 4.0 beta series are also documented on this page, and if you have an
 
 The batch renormalization UI was updated to support the new normalization API.
 
-The renormalization of time-series data typically will reprocess date-time information in order to create the normalized channels. However, for drilling applications, the plugins also need to deliver a renormalization by depth (see the [depth renormalization feature at Live Wells v5 series](wells-5.md#depth-support-for-batch-renormalizations)).&#x20;
+The renormalization of time-series data typically will reprocess date-time information in order to create the normalized channels. However, for drilling applications, the plugins also need to deliver a renormalization by depth (see the [depth renormalization feature at Live Wells v5 series](wells-5.md#depth-support-for-batch-renormalizations)).
 
 The renormalization now supports recalculating a single channel. Previously, at LiveRig v3 series, batch renormalization only could reprocess the entire dataset.
 
-New feature flags to **use source timestamp** and **sort by source timestamp** were added.&#x20;
+New feature flags to **use source timestamp** and **sort by source timestamp** were added.
 
-![New option to start a batch renormalization](<../../.gitbook/assets/image (241).png>)
+![New option to start a batch renormalization](<../../.gitbook/assets/image (516).png>)
 
 ![Full history of renormalizations executed in the platform](<../../.gitbook/assets/image (434).png>)

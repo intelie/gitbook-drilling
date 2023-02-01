@@ -16,13 +16,15 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 <div>
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for RAW source endpoint</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-serial.png" alt=""><figcaption><p>Serial port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-serial.png" alt=""><figcaption><p>Serial port configuration for RAW source endpoint</p></figcaption></figure>
 
 </div>
+
+The TCP connector puts the source in **server mode** and waits for data to be pushed into it. On the other hand, the Serial port connector configures the source as **client mode** and watches the Unix device file to consume the data passing through.
 
 In case, any older LiveRig Collector is used in the edge installation, the selection for Serial ports will be unavailable since only TCP endpoints are allowed up to 4.6 series.
 
@@ -40,6 +42,19 @@ Locally in the LiveRig Collector machine, the [`sources.xml` can be configured](
 	<service_company>my_company</service_company>
 	<protocol_name>raw</protocol_name>
 	<endpoint>tcp://0.0.0.0:9876/</endpoint>
+</source>
+```
+
+This other example reads the first COM port in a Unix system available at /dev/ttyS0 to watch for events in JSON format.
+
+```markup
+<source>
+	<name>Raw endpoint</name>
+	<mode>client</mode>
+	<rig_name>my_rig</rig_name>
+	<service_company>my_company</service_company>
+	<protocol_name>raw</protocol_name>
+	<endpoint>serial:///dev/ttyS0?baudRate=9600</endpoint>
 </source>
 ```
 

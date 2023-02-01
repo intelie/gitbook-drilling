@@ -16,7 +16,7 @@ As a textual representation, CSV typically carries some standard number that nee
 
 #### Date time pattern
 
-The date time pattern can be customized to detect seconds, milliseconds or textual samples of information like months, AM/PM marks, or either some fixed strings in the rows which represent the timestamp of each data measurement.
+The date time pattern can be customized to detect seconds, milliseconds, or textual samples of information like months, AM/PM marks, or either some fixed strings in the rows which represent the timestamp of each data measurement. See the [full list of symbols supported](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) (as in Java).
 
 <figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption><p>Date time custom format configuration rules</p></figcaption></figure>
 
@@ -24,13 +24,13 @@ Each column in the CSV file will be interpreted as a channel value and the first
 
 #### Access endpoint
 
-The CSV source always executes in **server mode** only. Third parties applications may push data into the LiveRig CSV source endpoint.
+The CSV source can execute in client or server mode, depending upon the underlay connector configured. Third parties applications may push data into the LiveRig CSV source endpoint.
 
 Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial ports:
 
 <div>
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
 
  
 
@@ -38,6 +38,36 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 </div>
 
+The TCP connector puts the source in **server mode** and waits for data to be pushed into it. On the other hand, the Serial port connector configures the source as **client mode** and watches the Unix device file to consume the data passing through.
+
 In case, any older LiveRig Collector is used in the edge installation, the selection for Serial ports will be unavailable since only TCP endpoints are allowed up to 4.6 series.
 
 <figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p>Warning the lack of support for serial port connections at local sites</p></figcaption></figure>
+
+### Configuration by source file
+
+Locally in the LiveRig Collector machine, the [`sources.xml` can be configured](../configuration/sources.xml.md) as demonstrated below. This configuration opens the TCP port 9873 on all local interfaces to listen for CSV files.
+
+```markup
+<source>
+	<name>CSV endpoint</name>
+	<mode>server</mode>
+	<rig_name>my_rig</rig_name>
+	<service_company>my_company</service_company>
+	<protocol_name>csv</protocol_name>
+	<endpoint>tcp://0.0.0.0:9873/</endpoint>
+</source>
+```
+
+This other example reads the first COM port in a Unix system available at /dev/ttyS0 to watch for events in CSV format.
+
+```markup
+<source>
+	<name>CSV endpoint</name>
+	<mode>client</mode>
+	<rig_name>my_rig</rig_name>
+	<service_company>my_company</service_company>
+	<protocol_name>csv</protocol_name>
+	<endpoint>serial:///dev/ttyS0?baudRate=9600</endpoint>
+</source>
+```

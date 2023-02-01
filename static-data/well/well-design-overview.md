@@ -12,5 +12,5 @@ Version required: plugin-wells 3.0.0+
 
 In a well's parameters tab it is possible to define section and casing parameters such as casing type, liners, diameters, final md  by section:
 
-![Well design overview](<../../.gitbook/assets/image (4) (1).png>)
+![Well design overview](<../../.gitbook/assets/image (4) (1) (1).png>)
 

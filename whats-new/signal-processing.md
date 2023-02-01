@@ -10,7 +10,7 @@ Live provides pipe functions to improve signal data processing helping make busi
 
 The pipe function for filtering signals enables removing unwanted harmonic component to have a more clear curve using low/band/high pass filters.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
 
 Sine Wave Combined with Multiple Frequencies and Gaussian White Noise
 
@@ -100,9 +100,9 @@ y over all every 10 sec
 
 The pipes find peaks function is used to find peaks or valleys within a given sample. The values found can be filtered within a certain range that can take into account its height, plateau size, distance, prominence and width.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (3).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
 
 Detecting Peaks and Troughs on a Channel
 
@@ -187,7 +187,7 @@ Square Wave with differents Duty Cycles
 
 An outlier is an observation that is unusually far from the other values in a data set. Remove outlier is a common process to have a more clear data.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (111).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
 
 Remove the top 5% and bottom 5% values
 
@@ -201,3 +201,59 @@ over all every 10 minutes
 ```
 
 <figure><img src="https://lh6.googleusercontent.com/V1rD9BdoUHpsDotatmDYKVD3OM2L7tvPIKlhJ3UsU_icOwH3XcJLHIFC8kM6ki5T8FgXoyYHusRrW24jC6B209c4Jk4t_5U0La4dSDbz6WlebIu153vfi2gABVK6LupYQsQT1oeTFHePW_u6eUGgFI5O16ftMgpfP7xjictgaOT5lK4Ih5fhY19ZXWu6wA" alt=""><figcaption><p>Outliers removal</p></figcaption></figure>
+
+### Interpolation functions
+
+We can use pipes to estimate a point using interpolation functions.
+
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
+
+In pipes we have two types of interpolation linear and polynomial ( lagrange method )
+
+<figure><img src="../.gitbook/assets/image (91).png" alt=""><figcaption><p>Example of linear interpolation</p></figcaption></figure>
+
+```
+def @@x: (1.0, 2.0, 4.0, 5.0);
+def @@y: (4.0, 6.0, 11.0, 17.0);
+def @@xi: (3.0, 4.0);
+
+=> @@x:seq() as x,
+    @@y:seq() as y,
+  @@xi:seq() as xi 
+at the end
+=> signal.linear_interpolation(x, y, xi) as result
+```
+
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
+
+```
+def @@x: (1.0, 2.0, 4.0, 5.0);
+def @@y: (4.0, 6.0, 11.0, 17.0);
+def @@xi: (3.0, 4.0);
+
+=> @@x:seq() as x,
+    @@y:seq() as y,
+  @@xi:seq() as xi 
+at the end
+=> signal.polynomial_lagrange_interpolation(x, y, xi) as result
+```
+
+### Aggregations
+
+{% hint style="info" %}
+plugin-processing-1.1.0 required
+{% endhint %}
+
+It is posible to turn on the moving average or filter option on a chart to calculate it through a temporal range.&#x20;
+
+#### Moving average
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+#### Filters
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>

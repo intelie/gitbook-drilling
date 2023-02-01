@@ -38,7 +38,9 @@ Selects a custom mapping between WITS records and channel mnemonics supported in
 
 #### Server mode configuration
 
-In server mode, the access endpoint will enable only the TCP configuration is supported.
+In server mode, only the TCP configuration is supported, then the access endpoint will display a very simple input to configure the IP address and the port.
+
+<figure><img src="../../.gitbook/assets/Screenshot_select-area_20230116113641.png" alt=""><figcaption><p>TCP Port configuration for WITS in server mode</p></figcaption></figure>
 
 #### Client mode configuration
 
@@ -46,11 +48,11 @@ For WITS client mode configuration, the access endpoint configuration will suppo
 
 <div>
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for WITS client endpoint</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-serial.png" alt=""><figcaption><p>Serial port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-serial.png" alt=""><figcaption><p>Serial port configuration for WITS client endpoint</p></figcaption></figure>
 
 </div>
 
@@ -58,4 +60,30 @@ In case, any older LiveRig Collector is used in the edge installation, the selec
 
 <figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p>Warning the lack of support for serial port connections at local sites</p></figcaption></figure>
 
-###
+### Configuration by source file
+
+Locally in the LiveRig Collector machine, the [`sources.xml` can be configured](../configuration/sources.xml.md) as demonstrated below. This configuration opens the TCP port 9872 on all local interfaces to listen for WITS data.
+
+```markup
+<source>
+        <name>WITS sample</name>
+        <mode>server</mode>
+        <rig_name>my_rig</rig_name>
+        <service_company>My Company</service_company>
+        <protocol_name>wits;0;metric;null=9999;tz=utc</protocol_name>
+        <endpoint>tcp://0.0.0.0:9872</endpoint>
+</source>
+```
+
+This other example reads the first COM port in a Unix system available at /dev/ttyS0 to watch for data in WITS format.
+
+```markup
+<source>
+        <name>WITS Sample</name>
+        <mode>client</mode>
+        <rig_name>my_rig</rig_name>
+        <service_company>My Company</service_company>
+        <protocol_name>wits;0;metric;null=9999;tz=utc</protocol_name>
+        <endpoint>serial:///dev/ttyS0?baudRate=9600</endpoint>
+</source>
+```
