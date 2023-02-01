@@ -32,7 +32,7 @@ The LiveRig Collector depends on the Node Ids (Tags) values, among other informa
 
 Each object under rigs is related to an **OPC-DA** or **OPC-UA** source, linking the `store.json` and `sources.xml` files through their **Rig Name**. 
 
-Some extra fields are responsible for an additional collector feature known as [**OPC to WITSML converter**](./../protocol-conversion.md). These optional fields are: `database`, `endpoint`, and `limit`. Once the `endpoint` and `database` are configured, a basic WITSML server will start backed by a PostgreSQL database to keep the data and enable the WITSML queries on top of it.
+Some extra fields are responsible for an additional collector feature known as [OPC to WITSML protocol conversion](./../protocol-conversion.md). These optional fields are: `database`, `endpoint`, and `limit`. Once the `endpoint` and `database` are configured, a basic WITSML server will start backed by a PostgreSQL database to keep the data and enable the WITSML queries on top of it.
 
 The `alias` is used as a key reference for tags, units and types values.&#x20;
 
@@ -52,7 +52,7 @@ Since LiveRig Collector version 5.0.0, the collector can be configured to extrac
 
 **Example 1:**
 
-![OpcuaObjectEvent1.png](../../.gitbook/assets/OpcuaObjectEvent1.png)
+![A date time OPC object arrives as is](../../.gitbook/assets/OpcuaObjectEvent1.png)
 
 In this event, the OPC-UA source returned a value structured as an object with the following format:
 
@@ -66,13 +66,14 @@ To extract the field `utcTime` as the value itself we need to configure the tag 
 `{tag}?field={path}`.
 
 So, in this example the previous tag `"ns=2;s=HelloWorld/ScalarTypes/UtcTime"` would be changed to `"ns=2;s=HelloWorld/ScalarTypes/UtcTime?field=/utcTime"`
+
 Resulting in the following value:
 
-![OpcuaObjectEvent2.png](../../.gitbook/assets/OpcuaObjectEvent2.png)
+![Extracting the timestamp from an OPC date time object](../../.gitbook/assets/OpcuaObjectEvent2.png)
 
 **Example 2:**
 
-![OpcuaObjectEvent3.png](../../.gitbook/assets/OpcuaObjectEvent3.png)
+![An encoded OPC object arrives as is](../../.gitbook/assets/OpcuaObjectEvent3.png)
 
 In this event, the OPC-UA source returned a value structured as an object with the following format:
 
@@ -102,7 +103,7 @@ to extract the `encodingId/namespaceIndex/value` as a value.
 
 Resulting in the following value:
 
-![img.png](../../.gitbook/assets/OpcuaObjectEvent4.png)
+![Extracting the encoded object](../../.gitbook/assets/OpcuaObjectEvent4.png)
 
 **Note**: Since the `tags` field from the `store.json` file is a `Map`, you need to add a new alias for each field you want to fetch. Example:
 `"RangeObject/Identifier": "ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange?field=/encodingId/identifier/value"` and
