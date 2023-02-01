@@ -66,9 +66,10 @@ To extract the field `utcTime` as the value itself we need to configure the tag 
 `{tag}?field={path}`.
 
 So, in this example the previous tag `"ns=2;s=HelloWorld/ScalarTypes/UtcTime"` would be changed to `"ns=2;s=HelloWorld/ScalarTypes/UtcTime?field=/utcTime"`
+
 Resulting in the following value:
 
-![OpcuaObjectEvent2.png](../../.gitbook/assets/OpcuaObjectEvent2.png)
+![Extracting the timestamp from an OPC date time object](../../.gitbook/assets/OpcuaObjectEvent2.png)
 
 **Example 2:**
 
