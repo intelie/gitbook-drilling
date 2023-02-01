@@ -1,4 +1,6 @@
-The Liverig collector also requires the Node Ids (Tags) values, among other information, to query properly. These values are mapped in the following JSON format, as below, inside the `store.json` file:
+The `store.json` file is used by LiveRig Collector to organize the OPC tags to be read from the sources configured at `sources.xml`.
+
+The LiveRig Collector depends on the Node Ids (Tags) values, among other information, to query OPC server properly. These values are mapped in the following JSON format, as below:
 
 ```json
 {
@@ -28,9 +30,11 @@ The Liverig collector also requires the Node Ids (Tags) values, among other info
 }
 ```
 
-Each object under rigs is related to an **OPC-DA** or **OPC-UA** Source, linking the `store.json` and `sources.xml` files through their Rig Name. Some generic fields configure global collector settings: database, endpoint, and limit. These configurations are required if the **OPC** Source is going through the **OPC** to **WITSML** conversion.
+Each object under rigs is related to an **OPC-DA** or **OPC-UA** source, linking the `store.json` and `sources.xml` files through their **Rig Name**. 
 
-The alias is used as a key reference for tags, units and types values.&#x20;
+Some extra fields are responsible for an additional collector feature known as [**OPC to WITSML converter**](./../protocol-conversion.md). These optional fields are: `database`, `endpoint`, and `limit`. Once the `endpoint` and `database` are configured, a basic WITSML server will start backed by a PostgreSQL database to keep the data and enable the WITSML queries on top of it.
+
+The `alias` is used as a key reference for tags, units and types values.&#x20;
 
 | Name      | Description                        | Required                             | Default value |
 | --------- | ---------------------------------- | ------------------------------------ | ------------- |
@@ -40,13 +44,13 @@ The alias is used as a key reference for tags, units and types values.&#x20;
 | units     | Uses the UOM as a value            | no                                   |               |
 | types     | Uses the type as a value           | no (if OPC to WITSML converter, yes) | double        |
 
-Obs: For **OPC-UA** sources, the tag field should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
+**Note**: For **OPC-UA** sources, the tag field should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
 
 ## LiveRig Collector 5.0.0 or above
 
 Since LiveRig Collector version 5.0.0, the collector can be configured to extract field from object values in **OPC-UA** sources. 
 
-**Example:**
+**Example 1:**
 
 ![OpcuaObjectEvent1.png](../../.gitbook/assets/OpcuaObjectEvent1.png)
 
@@ -66,7 +70,7 @@ Resulting in the following value:
 
 ![OpcuaObjectEvent2.png](../../.gitbook/assets/OpcuaObjectEvent2.png)
 
-**Example2:**
+**Example 2:**
 
 ![OpcuaObjectEvent3.png](../../.gitbook/assets/OpcuaObjectEvent3.png)
 
