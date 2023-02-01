@@ -52,7 +52,7 @@ Since LiveRig Collector version 5.0.0, the collector can be configured to extrac
 
 **Example 1:**
 
-![OpcuaObjectEvent1.png](../../.gitbook/assets/OpcuaObjectEvent1.png)
+![A date time OPC object arrives as is](../../.gitbook/assets/OpcuaObjectEvent1.png)
 
 In this event, the OPC-UA source returned a value structured as an object with the following format:
 
