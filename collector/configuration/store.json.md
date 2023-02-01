@@ -44,7 +44,7 @@ Obs: For **OPC-UA** sources, the tag field should be written as the following pa
 
 ## LiveRig Collector 5.0.0 or above
 
-Since Liverig Collector version 5.0.0, the collector can be configured to extract field from object values in **OPC-UA** sources. 
+Since LiveRig Collector version 5.0.0, the collector can be configured to extract field from object values in **OPC-UA** sources. 
 
 **Example:**
 
