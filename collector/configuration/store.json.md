@@ -42,7 +42,7 @@ The alias is used as a key reference for tags, units and types values.&#x20;
 
 Obs: For **OPC-UA** sources, the tag field should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
 
-### For Liverig Collector versions 5.0.0 or above
+## LiveRig Collector 5.0.0 or above
 
 Since Liverig Collector version 5.0.0, the collector can be configured to extract field from object values in **OPC-UA** sources. 
 
