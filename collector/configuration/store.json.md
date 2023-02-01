@@ -106,5 +106,5 @@ Resulting in the following value:
 
 
 {% hint style="info" %} 
-Instead of manually configuring this file, is also possible to use the remote control page [OPC Requests](./../remote-control/sources/opc-requests.md) to easily change settings.
+Instead of manually configuring this file, is also possible to use the remote control page [OPC Requests](./../remote-control/sources/opc-requests.md) to change the settings easily.
 {% endhint %}
