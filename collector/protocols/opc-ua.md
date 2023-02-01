@@ -1,7 +1,7 @@
 # OPC-UA
 
 The **OPCUA** protocol is a service-oriented architecture that does not work polling information, instead uses a subscription and notification system, letting the server monitor the queried items.\
-The **OPCUA** server uses the Node Ids to find the items, grouping them in a Subscription. These Node Ids are also called Tags. For more information on how to configure an **OPCUA** Source from the ground up, go to this [link](https://docs.google.com/document/u/0/d/11ywrwVIG2qCbM4PJ90V1VKmIaWcL5CQXaEIcrEyycCA/edit).\
+The **OPCUA** server uses the Node Ids to find the items, grouping them in a Subscription. These Node Ids are also called Tags. For more information on how to configure an **OPCUA** Source from the ground up, go to this [page](./../configuration/configuring-an-opcua-source.md).\
 \
 Example:
 
