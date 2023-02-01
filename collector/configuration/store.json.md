@@ -1,4 +1,6 @@
-The Liverig collector also requires the Node Ids (Tags) values, among other information, to query properly. These values are mapped in the following JSON format, as below, inside the `store.json` file:
+The `store.json` file is used by LiveRig Collector to organize the OPC tags to be read from the sources configured at `sources.xml`.
+
+The LiveRig Collector depends on the Node Ids (Tags) values, among other information, to query OPC server properly. These values are mapped in the following JSON format, as below:
 
 ```json
 {
@@ -28,9 +30,11 @@ The Liverig collector also requires the Node Ids (Tags) values, among other info
 }
 ```
 
-Each object under rigs is related to an **OPC-DA** or **OPC-UA** Source, linking the `store.json` and `sources.xml` files through their Rig Name. Some generic fields configure global collector settings: database, endpoint, and limit. These configurations are required if the **OPC** Source is going through the **OPC** to **WITSML** conversion.
+Each object under rigs is related to an **OPC-DA** or **OPC-UA** source, linking the `store.json` and `sources.xml` files through their **Rig Name**. 
 
-The alias is used as a key reference for tags, units and types values.&#x20;
+Some extra fields are responsible for an additional collector feature known as [OPC to WITSML protocol conversion](./../protocol-conversion.md). These optional fields are: `database`, `endpoint`, and `limit`. Once the `endpoint` and `database` are configured, a basic WITSML server will start backed by a PostgreSQL database to keep the data and enable the WITSML queries on top of it.
+
+The `alias` is used as a key reference for tags, units and types values.&#x20;
 
 | Name      | Description                        | Required                             | Default value |
 | --------- | ---------------------------------- | ------------------------------------ | ------------- |
@@ -40,6 +44,72 @@ The alias is used as a key reference for tags, units and types values.&#x20;
 | units     | Uses the UOM as a value            | no                                   |               |
 | types     | Uses the type as a value           | no (if OPC to WITSML converter, yes) | double        |
 
-Obs: For **OPC-UA** sources, the tag field should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
+**Note**: For **OPC-UA** sources, the tag field should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
 
-Instead of manually configuring this file, is also possible to use the remote control page [OPC Requests](./../remote-control/sources/opc-requests.md) to do this settings.
+## LiveRig Collector 5.0.0 or above
+
+Since LiveRig Collector version 5.0.0, the collector can be configured to extract field from object values in **OPC-UA** sources. 
+
+**Example 1:**
+
+![A date time OPC object arrives as is](../../.gitbook/assets/OpcuaObjectEvent1.png)
+
+In this event, the OPC-UA source returned a value structured as an object with the following format:
+
+```json
+{
+  "utcTime": 133144611706210000
+}
+```
+
+To extract the field `utcTime` as the value itself we need to configure the tag using the `?field=` parameter. Example:
+`{tag}?field={path}`.
+
+So, in this example the previous tag `"ns=2;s=HelloWorld/ScalarTypes/UtcTime"` would be changed to `"ns=2;s=HelloWorld/ScalarTypes/UtcTime?field=/utcTime"`
+
+Resulting in the following value:
+
+![Extracting the timestamp from an OPC date time object](../../.gitbook/assets/OpcuaObjectEvent2.png)
+
+**Example 2:**
+
+![An encoded OPC object arrives as is](../../.gitbook/assets/OpcuaObjectEvent3.png)
+
+In this event, the OPC-UA source returned a value structured as an object with the following format:
+
+```json
+{
+  "bodyType": "ByteString",
+  "encodingId": {
+    "identifier": {
+      "value": 886
+    },
+    "namespaceIndex": {
+      "value": 0
+    }
+  },
+  "decoded": {},
+  "body": {
+    "bytes": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,89,64]
+  }
+}
+```
+To extract the field `endodingId/indentifier/value` as the value itself we need to configure the tag using the `?field=` parameter. Example:
+`{tag}?field={path}`.
+
+So, in this example the previous tag `"ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange"` would be changed to `"ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange?field=/encodingId/identifier/value"`.
+If you want to extract other fields from the same object, you can declare it as a new tag, like `"ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange?field=/encodingId/namespaceIndex/value"`
+to extract the `encodingId/namespaceIndex/value` as a value.
+
+Resulting in the following value:
+
+![Extracting the encoded object](../../.gitbook/assets/OpcuaObjectEvent4.png)
+
+**Note**: Since the `tags` field from the `store.json` file is a `Map`, you need to add a new alias for each field you want to fetch. Example:
+`"RangeObject/Identifier": "ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange?field=/encodingId/identifier/value"` and
+`"RangeObject/namespaceIndex": "ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange?field=/encodingId/namespaceIndex/value"`
+
+
+{% hint style="info" %} 
+Instead of manually configuring this file, is also possible to use the remote control page [OPC Requests](./../remote-control/sources/opc-requests.md) to change the settings easily.
+{% endhint %}
