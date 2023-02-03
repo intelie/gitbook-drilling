@@ -39,7 +39,7 @@ The field `depth_value` should be used by default to plot data from those source
 
 In the WITSML case, the value of `index_type` will be either `measured depth` or `vertical depth`.
 
-![Example of data normalized from a depth-based WITSML log](<../../.gitbook/assets/image (481).png>)
+![Example of data normalized from a depth-based WITSML log](<../../.gitbook/assets/image (205).png>)
 
 The unit of measurement used for the depth values can be configured on the `Additional Features` area, as the image below shows. This configuration affects the `index_value`, which is the value received from the data sources, and the `depth_value`, which is the value enriched by Intelie Live based on the `Depth channel` configuration.
 

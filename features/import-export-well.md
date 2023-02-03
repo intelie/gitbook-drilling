@@ -20,11 +20,11 @@ Minimum dependency required:  plugin-wells-2.27.0
 
 * At the import option modal it is possible to select JSON option
 
-![Import well as JSON option](<../.gitbook/assets/image (283).png>)
+![Import well as JSON option](<../.gitbook/assets/image (191).png>)
 
 * It is possible to drop a file or paste the JSON from the clipboard
 
-![Importing paste and drop file option](<../.gitbook/assets/image (381).png>)
+![Importing paste and drop file option](<../.gitbook/assets/image (390).png>)
 
 * Paste the well JSON data
 

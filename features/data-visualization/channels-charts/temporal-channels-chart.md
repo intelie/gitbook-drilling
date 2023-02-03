@@ -6,11 +6,11 @@ description: View channels in a time interval
 
 
 
-![Example of a temporal chart](<../../../.gitbook/assets/image (62).png>)
+![Example of a temporal chart](<../../../.gitbook/assets/image (190).png>)
 
 Many visual options are available on the `Chart` tab, as shown on the image below.
 
-![Example of chart configuration](<../../../.gitbook/assets/image (363).png>)
+![Example of chart configuration](<../../../.gitbook/assets/image (431).png>)
 
 ## Plot fills between multiple channels
 

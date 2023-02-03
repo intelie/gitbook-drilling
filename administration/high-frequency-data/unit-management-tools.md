@@ -97,7 +97,7 @@ At last, it's important to mention the known side effects of deleting or renamin
 
 The unit is no longer recognized by Live, and, then, will be displayed with a warning layout.
 
-![Unknown unit warnning](<../../.gitbook/assets/image (252).png>)
+![Unknown unit warnning](<../../.gitbook/assets/image (44).png>)
 
 #### **At "Data Management"**&#x20;
 
@@ -111,4 +111,4 @@ If a unit alias or a unit extension that is being used at Display Units, and is 
 
 And the Display Units will prevent the user from saving until the unit is changed to a known one:
 
-![](<../../.gitbook/assets/image (196).png>)
+![](<../../.gitbook/assets/image (269).png>)
