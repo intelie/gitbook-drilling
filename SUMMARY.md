@@ -202,4 +202,3 @@
   * [3.1.0](deprecated/liverig-v3/3.1.0.md)
   * [3.0.0](deprecated/liverig-v3/3.0.0.md)
   * [2.29.0](deprecated/liverig-v3/2.29.0.md)
-* [Ignore](deprecated/readme.md)

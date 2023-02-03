@@ -159,13 +159,13 @@ The complete list of plugins for the **Live Drilling** solution is now categoriz
 * **plugin-wells 4.2.0  (**[**more**](https://marketplace.intelie.com/artifact/plugin-wells)**)**
   * Unit sets for wells and rigs
 
-![](<../../.gitbook/assets/image (334) (1).png>)
+![](<../../.gitbook/assets/image (343) (1) (1).png>)
 
 ![](<../../.gitbook/assets/image (426).png>)
 
-![](<../../.gitbook/assets/image (313).png>)
+![](<../../.gitbook/assets/image (331).png>)
 
-![](<../../.gitbook/assets/image (2) (1).png>)
+![](<../../.gitbook/assets/image (378).png>)
 
 ## **Oct. 29th 2021**
 

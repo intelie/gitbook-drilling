@@ -87,7 +87,7 @@ Toggles the Channels Management edit mode. During the edit mode, input and targe
 
 ### Data Quality
 
-![Not normalizing, not configured or unknown data quality](<../../../.gitbook/assets/image (517) (1) (1).png>)
+![Not normalizing, not configured or unknown data quality](<../../../.gitbook/assets/image (456).png>)
 
 ![Invalid generated event type](<../../../.gitbook/assets/image (464).png>)
 

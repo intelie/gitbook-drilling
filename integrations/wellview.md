@@ -14,7 +14,7 @@ After configure the WellView integration with credentials at the admin page the 
 
 ![Searching well by name from Wellview](<../.gitbook/assets/image (200).png>)
 
-![Options and depth selection](<../.gitbook/assets/image (260) (1).png>)
+![Options and depth selection](<../.gitbook/assets/image (260).png>)
 
 ![Confirm importing data](<../.gitbook/assets/image (58).png>)
 
