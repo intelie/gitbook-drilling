@@ -7,6 +7,7 @@
 
 * [Latest releases](whats-new/latest-releases/README.md)
   * [Wells 5](whats-new/latest-releases/wells-5.md)
+  * [LiveRig 5](whats-new/latest-releases/liverig-5.md)
   * [LiveRig 4](whats-new/latest-releases/liverig-4.md)
   * [WITSML Store](whats-new/latest-releases/witsml-store.md)
 * [Operations in Time by Depth Chart](whats-new/operations-in-time-by-depth-chart.md)
