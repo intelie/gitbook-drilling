@@ -26,13 +26,13 @@ Adding tags in the **event type** field of an existing source.
 Available tags
 
 {% hint style="info" %}
-**{well-uid} -** UID of well \
-**{well-name} -** Name of well \
-**{welborel-uid} -** UID of wellbore \
-**{wellbore-name} -** Name of wellbore \
-**{object-uid} -** UID of object \
-**{object-name} -** Name of object \
-**{object-type} -** Type of object \
+**{well-uid} -** UID of well\
+**{well-name} -** Name of well\
+**{welborel-uid} -** UID of wellbore\
+**{wellbore-name} -** Name of wellbore\
+**{object-uid} -** UID of object\
+**{object-name} -** Name of object\
+**{object-type} -** Type of object\
 **{index-type} -** Type of index
 {% endhint %}
 
@@ -49,7 +49,7 @@ In this example we will add the following tags: **{well-uid}**, **{object-type}*
 After saving the new source settings in the **LiveRig Collector** application, we can see the changes in **Live** application.\
 \
 When selecting the modified source in the **collectors** window, the following result will be displayed.\
-&#x20;&#x20;
+
 
 ![You can see the tags in the event type fields](<../../.gitbook/assets/Captura de tela de 2020-06-25 18-02-56.png>)
 
@@ -78,13 +78,13 @@ In the **LIVERIG\_METADATA** field, when we add tags to the event type of a coll
 
 Using an event type with tags, we can create filters for an **asset**, generalizing or specifying a pipe filter, example:\
 \
-****In the image below, was created a **RIG**, the **RT13**, with a specific filter: **raw\_ns01well\_uid\_1loglog\_uid\_1**
+\*\*\*\*In the image below, was created a **RIG**, the **RT13**, with a specific filter: **raw\_ns01well\_uid\_1loglog\_uid\_1**
 
 ![](<../../.gitbook/assets/Captura de tela de 2020-06-26 17-38-22.png>)
 
 We can see the data coming through the **channels not configured** with the information from the **tags**:
 
-![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-15 (1).png>)
+![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-15.png>)
 
 ![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-28.png>)
 
@@ -93,9 +93,9 @@ We can see the data coming through the **channels not configured** with the info
 This guide demonstrates the new functionality of adding tags to the **Rig Collector event type** field. We see that this way we can create filters more dynamically, below some examples of use.
 
 > **NS01{well-uid}{object-type}{object-uid} -> Distinct information**\
-> ****\
+> \*\*\*\*\
 > **NS01{well-uid}{well-uid}{object-uid} -> Repeated information**\
-> ****\
+> \*\*\*\*\
 > **NS01{well-uid}trajectory{object-uid} -> Fixed information**\
-> ****\
+> \*\*\*\*\
 > **NS01\_{well-uid}\_{object-type}\_{object-uid} -> Distinct information separating by underline**

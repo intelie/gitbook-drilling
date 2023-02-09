@@ -5,28 +5,28 @@ description: Here you find the latest oil-and-gas-related plugins and artifacts
 # Latest releases
 
 {% hint style="success" %}
-The complete list of plugins for the **Live Drilling** solution is now categorized and published into the **Intelie Live Marketplace**, see: [https://marketplace.intelie.com/search/category/O\&G%20Drillin](https://marketplace.intelie.com/search/category/O\&G%20Drilling/)****
+The complete list of plugins for the **Live Drilling** solution is now categorized and published into the **Intelie Live Marketplace**, see: [https://marketplace.intelie.com/search/category/O\&G%20Drillin](https://marketplace.intelie.com/search/category/O\&G%20Drilling/)\*\*\*\*
 {% endhint %}
 
-****
+***
 
 ## **Dez. 30th 2022**
 
 * **plugin-liverig 5.0.0, 4.10.1, 4.9.2, 4.8.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
-* **plugin-assets 5.0.0, 4.10.1, 4.9.2, 4.8.3  (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
-* **liverig-collector 5.0.0, 4.10.1, 4.9.2, 4.8.3  (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+* **plugin-assets 5.0.0, 4.10.1, 4.9.2, 4.8.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 5.0.0, 4.10.1, 4.9.2, 4.8.3 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
 
 ## **Dez. 12th 2022**
 
 * **plugin-liverig 4.10.0, 4.9.1, 4.8.2, 4.7.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
-* **plugin-assets 4.10.0, 4.9.1, 4.8.2, 4.7.3  (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
-* **liverig-collector 4.10.0, 4.9.1, 4.8.2, 4.7.3  (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+* **plugin-assets 4.10.0, 4.9.1, 4.8.2, 4.7.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 4.10.0, 4.9.1, 4.8.2, 4.7.3 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
 
 ## **Nov. 11th 2022**
 
 * **plugin-liverig 4.9.0, 4.8.1, 4.7.2, 4.6.4 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
-* **plugin-assets 4.9.0, 4.8.1, 4.7.2, 4.6.4  (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
-* **liverig-collector 4.9.0, 4.8.1, 4.7.2, 4.6.4  (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+* **plugin-assets 4.9.0, 4.8.1, 4.7.2, 4.6.4 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 4.9.0, 4.8.1, 4.7.2, 4.6.4 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
 
 ## **Oct. 24th 2022**
 
@@ -87,8 +87,9 @@ The complete list of plugins for the **Live Drilling** solution is now categoriz
 
 * **plugin-liverig 4.1.2, 4.2.3, 4.3.1 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
 * **plugin-assets 4.1.2, 4.2.3, 4.3.1 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
-* **plugin-liverig-vis 4.1.2, 4.2.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig-vis/)**)**\
-  ****
+*   **plugin-liverig-vis 4.1.2, 4.2.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig-vis/)**)**\\
+
+    ***
 
 ## **Feb. 7th 2022**
 
@@ -156,24 +157,24 @@ The complete list of plugins for the **Live Drilling** solution is now categoriz
 
 ## **Nov. 5th 2021**
 
-* **plugin-wells 4.2.0  (**[**more**](https://marketplace.intelie.com/artifact/plugin-wells)**)**
+* **plugin-wells 4.2.0 (**[**more**](https://marketplace.intelie.com/artifact/plugin-wells)**)**
   * Unit sets for wells and rigs
 
-![](<../../.gitbook/assets/image (343) (1) (1).png>)
+![](<../../.gitbook/assets/image (334).png>)
 
 ![](<../../.gitbook/assets/image (426).png>)
 
-![](<../../.gitbook/assets/image (331).png>)
+![](<../../.gitbook/assets/image (313).png>)
 
-![](<../../.gitbook/assets/image (378).png>)
+![](<../../.gitbook/assets/image (2) (1).png>)
 
 ## **Oct. 29th 2021**
 
 * **plugin-liverig 3.10.0** ([more](https://marketplace.intelie.com/artifact/plugin-liverig))
-  * Unit sets **** api
+  * Unit sets \*\*\*\* api
   * Add loading to Source CSV screen
   * Remote control | witsml tree load data in stages
-* ## **Oct. 22th 2021**
+* ### **Oct. 22th 2021**
 * **plugin-assets 3.9.0** ([more](https://marketplace.intelie.com/artifact/plugin-assets/))
   * Ability to change the position of channel in pipeless chart (dependent upon Live 3.10.0)
 * **liverig-collector 3.9.0** ([more](https://marketplace.intelie.com/artifact/liverig))
@@ -250,7 +251,6 @@ As part of this release, we also released new patches for stable series of all t
   * Remote control collector sources screen configuration ([more](../../deprecated/liverig-v3/3.3.0.md#add-csv-source-configuration-screen))
   * Hide Units API service ([more](../../deprecated/liverig-v3/3.3.0.md#api-hide-units))
 * **plugin-casing-shoe 1.2.0**
-  * Well casing shoe schematic chart ([more](../casing-shoe-schematic.md))&#x20;
+  * Well casing shoe schematic chart ([more](../casing-shoe-schematic.md))
 * **plugin-wells 4.0.0**
   * Wells correlation ([more](../wells-correlation.md))
-

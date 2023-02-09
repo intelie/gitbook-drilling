@@ -16,7 +16,7 @@ The BOP schematic widget is where the configured schema, with real time status o
 
 Now, see how to configure a BOP Schematic and how to properly use all the features of this tool.
 
-### **How to configure from Schematic BOP**&#x20;
+### **How to configure from Schematic BOP**
 
 At the rig parameters tab it is possible to configure BOP for each rig:
 
@@ -30,7 +30,7 @@ Clicking on the edit button of the BOP configuration card will open a new window
 
 When starting from a basic template, it starts with two fixed components, Kill/Choke and Mud Boost, present in all other schemes:
 
-![Basic template loaded](<../../.gitbook/assets/image (107).png>)
+![Basic template loaded](<../../.gitbook/assets/image (94).png>)
 
 Clicking in “ + Add Component ” a new component will be appended in the schematic and the configuration screen will open with the options to configure:
 
@@ -52,7 +52,7 @@ The BOP Schematic will be displayed in the rig parameters. At this point, in the
 
 ![Bop Schematic in the rig parameter after save.](<../../.gitbook/assets/image (161).png>)
 
-### **Exporting Schematic BOP**&#x20;
+### **Exporting Schematic BOP**
 
 To export the Schematic open the edit screen and click on Export:
 
@@ -64,7 +64,7 @@ Choose the type you want to export and Save. The file will be automatically down
 
 For now, only the JSON format is enabled to export.
 
-### **Importing Schematic BOP from another rig**&#x20;
+### **Importing Schematic BOP from another rig**
 
 To import BOP Schematic from another Rig, go to the Rig you want to configure, click to edit BOP Schematic and click on the Import button.
 
@@ -78,7 +78,7 @@ At the import modal, select “Copy configuration from another rig”, then sele
 
 The schematic imported will be displayed in the edit mode. To save the changes click on the Save button.
 
-### **Importing Schematic BOP from JSON**&#x20;
+### **Importing Schematic BOP from JSON**
 
 To import BOP Schematic from JSON, go to the Rig you want to configure, click to edit BOP Schematic and click on the Import button.
 
@@ -86,7 +86,7 @@ To import BOP Schematic from JSON, go to the Rig you want to configure, click to
 
 At the import modal, select “JSON”. It is possible to drop a file or paste the JSON from the clipboard. If JSON is valid, click "Import", check the configuration you just imported and then click "Save".
 
-### **BOP Schematic Widget (real time component status)**&#x20;
+### **BOP Schematic Widget (real time component status)**
 
 To include the chart go to edit mode at the dashboard and the option for BOP schematic widget will be available
 
@@ -104,11 +104,11 @@ If there's no annotation status for the selected rig, the schematic represents t
 
 ![BOP Schematic with no status annotation (no status)](<../../.gitbook/assets/image (95).png>)
 
-### **How to update status using annotations**&#x20;
+### **How to update status using annotations**
 
 At the dashboard, click on the timeline, select "+ Create" and then select "Register BOP status":
 
-!['Register BOP Status' option in the annotations. ](<../../.gitbook/assets/image (105).png>)
+!['Register BOP Status' option in the annotations.](<../../.gitbook/assets/image (105).png>)
 
 In the next screen it is possible to select the desired rig and well. If the selected rig has no components registered, as per previous steps, no component will be displayed and the note cannot be saved.
 

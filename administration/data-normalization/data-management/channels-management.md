@@ -18,13 +18,11 @@ Indicates if the Auto-Switch feature is enabled, considering if this feature is 
 
 ![](<../../../.gitbook/assets/image (323).png>)
 
-If the Auto-Switch is disabled for the Asset (in the [Event Settings](event-settings.md) card) or if it's disabled for the entire Live (via the menu Configurations > Additional Features > Auto-Switch), the indicator will be OFF:\
-
+If the Auto-Switch is disabled for the Asset (in the [Event Settings](event-settings.md) card) or if it's disabled for the entire Live (via the menu Configurations > Additional Features > Auto-Switch), the indicator will be OFF:\\
 
 ![Auto-switch OFF](<../../../.gitbook/assets/image (339).png>)
 
-If the Auto-switch is ON, but the normalization is OFF to the Asset, a warning will be displayed:\
-
+If the Auto-switch is ON, but the normalization is OFF to the Asset, a warning will be displayed:\\
 
 ![Auto-switch is ON, but not working since there normalization is OFF](<../../../.gitbook/assets/image (488).png>)
 
@@ -36,7 +34,7 @@ Intelie Live supports data normalization templates to speed up the configuration
 
 ![Buttons to create a template from an asset and import a template into an asset.](<../../../.gitbook/assets/image (322).png>)
 
-Create template option will create a template with all channels configured in this asset. That is useful to save the same configuration and apply it for other assets.&#x20;
+Create template option will create a template with all channels configured in this asset. That is useful to save the same configuration and apply it for other assets.
 
 ![Create template by asset example (checked rows will be included on saved template)](<../../../.gitbook/assets/image (393).png>)
 
@@ -53,7 +51,7 @@ The templates can be managed on the system configuration.
 ![Example of templates configuration](<../../../.gitbook/assets/image (295).png>)
 
 {% hint style="info" %}
-Be aware that the only fields saved are:&#x20;
+Be aware that the only fields saved are:
 
 * Target channel
 * Input channel
@@ -72,8 +70,7 @@ This list represents the raw events filtered by the Event Settings > Pipes filte
 
 ![](<../../../.gitbook/assets/image (396).png>)
 
-Shows the "Data Management" card in full-screen mode.\
-
+Shows the "Data Management" card in full-screen mode.\\
 
 ![](<../../../.gitbook/assets/image (480).png>)
 
@@ -87,23 +84,23 @@ Toggles the Channels Management edit mode. During the edit mode, input and targe
 
 ### Data Quality
 
-![Not normalizing, not configured or unknown data quality](<../../../.gitbook/assets/image (456).png>)
+![Not normalizing, not configured or unknown data quality](<../../../.gitbook/assets/image (517) (1) (1) (1).png>)
 
 ![Invalid generated event type](<../../../.gitbook/assets/image (464).png>)
 
 ![OK](<../../../.gitbook/assets/image (473).png>)
 
-![No data received in time window. The time window can be configured at Configurations > Additional Features > Auto-Switch > Substitute channels that have not transmitted for more than. ](<../../../.gitbook/assets/image (460).png>)
+![No data received in time window. The time window can be configured at Configurations > Additional Features > Auto-Switch > Substitute channels that have not transmitted for more than.](<../../../.gitbook/assets/image (460).png>)
 
 ![Override Input Unit error](<../../../.gitbook/assets/image (400).png>)
 
 ### Target Channel
 
-A standard Channel&#x20;
+A standard Channel
 
 ### Current Value
 
-The current value of the normalized channel. This is the input channel value converted to the target channel's unit.&#x20;
+The current value of the normalized channel. This is the input channel value converted to the target channel's unit.
 
 ### Priority
 
@@ -111,7 +108,7 @@ Selected input channel priority
 
 ### Source
 
-Selected input channel source&#x20;
+Selected input channel source
 
 ### Input Channel
 
@@ -125,15 +122,13 @@ Selected input channel filter
 
 ### Status
 
-![No data received in time window. The time window can be configured at Configurations > Additional Features > Auto-Switch > Substitute channels that have not transmitted for more than.  ](<../../../.gitbook/assets/image (430).png>)
+![No data received in time window. The time window can be configured at Configurations > Additional Features > Auto-Switch > Substitute channels that have not transmitted for more than.](<../../../.gitbook/assets/image (430).png>)
 
 ![OK](<../../../.gitbook/assets/image (66).png>)
 
 !["Override Input Unit" conversion error](<../../../.gitbook/assets/image (60).png>)
 
 ![Conversion error](<../../../.gitbook/assets/image (59).png>)
-
-
 
 ### Priority
 
@@ -149,11 +144,11 @@ The channel to be normalized. This field has an autocomplete feature, that shows
 
 ### Current Value
 
-Input Channel's current value together with its unit.&#x20;
+Input Channel's current value together with its unit.
 
 ### Override Input Unit
 
-This functionality allows the user to overwrite the unit received in the input channel. It can be really useful when the input channel is misconfigured, or when the unit is represented differently from what is defined in Live.&#x20;
+This functionality allows the user to overwrite the unit received in the input channel. It can be really useful when the input channel is misconfigured, or when the unit is represented differently from what is defined in Live.
 
 Take as an example an input channel that receives value in `meters`:
 
