@@ -9,7 +9,7 @@ description: >-
 
 **5.0.0**
 
-* Add support for retrieving complex OPC-UA objects' fields as values. This allows declaring in the OPC-UA tag configuration which field is expected to be retrieved when its source is queried on the server. Detailed information can be found at [store json documentation](../../collector/configuration/store.json#liverig-collector-500-or-above).
+* Add support for retrieving complex OPC-UA objects' fields as values. This allows declaring in the OPC-UA tag configuration which field is expected to be retrieved when its source is queried on the server. Detailed information can be found at [store json documentation](../../collector/configuration/store.json.md#liverig-collector-500-or-above).
 * Add support for ModBus multi-register values. The Modbus protocol can represent values by merging the results of multiple contiguous registers. An example of this capability is the data type _Int32_, which makes use of 2 registers to represent values. From this version, it is possible to configure these bigger data types on the [modbus configuration](../../collector/configuration//modbus.json.md).
 * Change the semantics of the field `count` on the [modbus configuration](../../collector/configuration//modbus.json.md) to represent the number of contiguous data (possibly multi-register data) instead of the number of registers. This improvement allows retrieving a collection of multi-register values.
 * Add a patch approach for updating the collector's configuration files. This feature aims to reduce the data traffic between the Liverig Collector and the Plugin Liverig by sending just the incremental difference when an update operation is requested by the user.
