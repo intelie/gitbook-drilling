@@ -95,6 +95,6 @@ Sometimes a re-normalization is needed, for example, to fix data generated with 
 
 For this goal, there is a re-normalization option on the Configurations menu, which allows this process to be executed for a batch of assets simultaneously, and provides a full status of all the executions.
 
-![Renormalization web interface enables the reprocessing of raw data in batches for multiple assets and organized by selected channels](<../../.gitbook/assets/image (241).png>)
+![Renormalization web interface enables the reprocessing of raw data in batches for multiple assets and organized by selected channels](<../../.gitbook/assets/image (516).png>)
 
 Starting at LiveRig 4.0 and Wells 5.0, renormalizations can be performed by depth criteria instead of date-time ordering.

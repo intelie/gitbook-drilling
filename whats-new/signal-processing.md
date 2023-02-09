@@ -107,19 +107,19 @@ The pipes find peaks function is used to find peaks or valleys within a given sa
 Detecting Peaks and Troughs on a Channel
 
 ```
-event_type mnemonic:MNEMONIC => value, timestamp
+mnemonic:MNEMONIC => value, timestamp
 
 => signal.findPeaks(timestamp#, value#) as res at the end
-=> res->indexes as xArr, res->heights as yArr
+=> res->timestamps as xArr, res->heights as yArr
 => @for range(xArr:len) as x, xArr, yArr
 => yArr[x] as peak, xArr[x] as timestamp
 ```
 
 ```
-event_type mnemonic:MNEMONIC => value, timestamp
+mnemonic:MNEMONIC => value, timestamp
 
 => signal.findTroughs(timestamp#, value#) as res at the end
-=> res->indexes as xArr, res->heights as yArr
+=> res->timestamps as xArr, res->heights as yArr
 => @for range(xArr:len) as x, xArr, yArr
 => yArr[x]#:abs() as trough, xArr[x] as timestamp
 

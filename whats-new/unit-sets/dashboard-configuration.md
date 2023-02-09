@@ -11,14 +11,14 @@ After defining a unit set it is possible to use it in a dashboard:
 The unit set has 3 categories:
 
 * **Global units set:** Unit set built-in in Live, available for usage by all users
-* **Customized Unit set:** Unit set for personal usage&#x20;
+* **Customized Unit set:** Unit set for personal usage
 * **Follow Asset Filter:** The dashboard will follow the units set of the first asset filter item of lookup table selected
 
 ### Global Unit Set
 
 When opening the unit set modal in dashboard, it is possible to select the unit set saved in configuration previously. Selecting a global unit set for example Imperial would affect the channels on the dashboard configured for that unit set:
 
-![](<../../.gitbook/assets/image (358) (1).png>)
+![](<../../.gitbook/assets/image (289) (1).png>)
 
 ![](<../../.gitbook/assets/image (220).png>)
 

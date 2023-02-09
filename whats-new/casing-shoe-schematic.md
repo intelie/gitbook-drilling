@@ -4,9 +4,7 @@
 plugin-casing-shoe 1.2.0 and plugin-wells 4.0.0 minimum versions required
 {% endhint %}
 
-The casing shoe schematic chart provides a visualization of the transversal section of a well, illustrating the well construction and previewing the bit depth position in real time. The schematic shows casing structures such as liners, slotted liners, lithology,  target formations by depth of the casing string.
-
-
+The casing shoe schematic chart provides a visualization of the transversal section of a well, illustrating the well construction and previewing the bit depth position in real time. The schematic shows casing structures such as liners, slotted liners, lithology, target formations by depth of the casing string.
 
 ![Preview of casing shoe schematic chart with phases and lithology by depth](<../.gitbook/assets/image (124).png>)
 
@@ -16,13 +14,14 @@ The casing-shoe chart consumes static data from well design overview information
 
 Static data used to render the casing shoe schematic at well parameters tab:
 
-![Well design overview static information used to plot the chart](<../.gitbook/assets/image (257).png>)
+![Well design overview static information used to plot the chart](<../.gitbook/assets/image (257) (1).png>)
 
-Advantages **:**\
-****
+Advantages **:**\\
+
+***
 
 * Preview well design phase information such as casing diameters, bit depth, lithology, and target formations, and casing structure including liners, screen, slotted liners or open hole by depth
-* Go along with the real time bit depth position using the standard configured channel&#x20;
+* Go along with the real time bit depth position using the standard configured channel
 * Use well casing shoe chart for different wells with dashboards filters or a predefined well
 * Plan ahead knowing where it is advantageous to set the casing, defining where important formations are located
 
@@ -32,7 +31,7 @@ To include the chart go to edit mode at the dashboard and the option for casing 
 
 It is possible configure the chart to select the well by available wells list or with dashboard filter:
 
-![Casing shoe well configuration ](<../.gitbook/assets/image (340).png>)
+![Casing shoe well configuration](<../.gitbook/assets/image (340).png>)
 
 Also it is possible to configure which visualization will be displayed at the dashboard and the section details at long or short format:
 
@@ -75,4 +74,3 @@ It is possible to configure a well design to compare execution and planned well 
 Comparison between execution and phase planning data for a well on a dashboard.
 
 ![](https://lh6.googleusercontent.com/GqW0AKuVAdfBNdTdvXD6KTM4rJW8pgO-XM0TH9IGEdeiARuylncmNOVzuG026fOdt5\_Y3MTk6YIFQ9atvlEeWwdrSMfV53l3nzgrPtSUoa3Qb\_4Idt9z4S43fEGOaSIV1K71WbN8hWD6YubHKQ)
-
