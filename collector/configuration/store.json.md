@@ -9,6 +9,7 @@ The LiveRig Collector depends on the Node Ids (Tags) values, among other informa
   },
   "endpoint": "http://127.0.0.1:1234/witsml/store",
   "limit": 1234,
+  "purge": "300000",
   "rigs": {
     "NS04": {
       "name": "NS04",
@@ -32,7 +33,7 @@ The LiveRig Collector depends on the Node Ids (Tags) values, among other informa
 
 Each object under rigs is related to an **OPC-DA** or **OPC-UA** source, linking the `store.json` and `sources.xml` files through their **Rig Name**. 
 
-Some extra fields are responsible for an additional collector feature known as [OPC to WITSML protocol conversion](./../protocol-conversion.md). These optional fields are: `database`, `endpoint`, and `limit`. Once the `endpoint` and `database` are configured, a basic WITSML server will start backed by a PostgreSQL database to keep the data and enable the WITSML queries on top of it.
+Some extra fields are responsible for an additional collector feature known as [OPC to WITSML protocol conversion](./../protocol-conversion.md). These optional fields are: `database`, `endpoint`, `limit` and `purge`. Once the `endpoint` and `database` are configured, a basic WITSML server will start backed by a PostgreSQL database to keep the data and enable the WITSML queries on top of it.
 
 The `alias` is used as a key reference for tags, units and types values.&#x20;
 
