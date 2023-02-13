@@ -169,7 +169,7 @@
   * [store.json](collector/configuration/store.json.md)
   * [modbus.json](collector/configuration/modbus.json.md)
   * [Tags in LiveRig Collector](collector/configuration/tags-in-liverig-collector.md)
-  * [Configuring an OPC-UA source](collector/configuration/configuring-an-opcua-source.md)
+  * [Configuring an OPC-UA source](collector/configuration/configuring-an-opc-ua-source.md)
   * [Certificate-based authentication for WITSML HTTPS sources](collector/configuration/certificate-based-authentication-for-witsml-https-sources.md)
 * [LiveRig Collector Appliance](collector/liverig-collector-appliance.md)
 * [Command line Interface (CLI)](collector/cli.md)
