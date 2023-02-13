@@ -174,5 +174,11 @@ the source and store files ([Configuring `sources.xml` and `store.json`](#config
 ### Configuring `sources.xml` and `store.json`
 
 After the previous steps, you should have a functional OPC-UA endpoint and at least one node variable.
-You then configure an OPC-UA Source with the found endpoint at the [sources.xml](sources.xml.md) file.
-You should also configure the wanted node variables (tags) at the [store.json](store.json.md) file.
+
+Then, finally, you can use the [remote control UI to configure the OPC requests](../remote-control/sources/opc-requests.md). 
+That will allow you to specify the tags to be retrieved on the subscription through an user-friendly UI.
+
+Alternatively, for LiveRig Collectors before 4.6.0, you may configure the OPC-UA source editing the [sources.xml](sources.xml.md) file.
+In this case, you should also configure the desired node variables (tags) at the [store.json](store.json.md) file, manually.
+
+
