@@ -35,7 +35,7 @@ output at `/opt/intelie/liverig/logs/liverig-cli.log`
 
 Most servers have a standard discovery endpoint at `/UADiscovery` which list the available endpoints. Example:
 
-`tools/liverig-cli opcua findservers opc.tcp://192.168.2.8:4840/UADiscovery`
+liverig-cli opcua findservers opc.tcp://192.168.2.8:4840/UADiscovery`
 
 The output at `liverig-cli.log` should list the available endpoints, example:
 
