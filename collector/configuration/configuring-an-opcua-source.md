@@ -2,7 +2,7 @@
 
 ## Solution Components
 When using an OPC-UA server, we need to configure some files that are typically located at `/opt/intelie/liverig/conf/`. These files are:
-- [sources.xml](sources.xml.md)` - the sources of opc-ua data.
+- [sources.xml](sources.xml.md) - the sources of opc-ua data.
 - [store.json](store.json.md) - the variables that are being requested and their mappings.
 - [liverig.properties](liverig.properties.md) - various configurations for the server, including the authentication mode with the opc-ua server.
 
@@ -20,13 +20,13 @@ Here is an Example:
 
 You should have LiveRig installed on your system, when you build from source you will get a `rpm` at the dist folder that
 can be used for installation. It will install all LiveRig components at `/opt/intelie/liverig` and will add the LiveRig
-service to the system. You may use `systemctl` commands to control the service. It will also install the liverig-cli
+service to the system. You may use `systemctl` commands to control the service. It will also install the [liverig-cli](../cli.md)
 application, which is a CLI based program that allows you to connect to the server and get some information necessary
 for configuration.
 
 ### Check LiveRig CLI
 
-`tools/liverig-cli opcua help`
+`liverig-cli opcua help`
 
 This command should list the available OPC-UA CLI commands. Most of them will leave their
 output at `/opt/intelie/liverig/logs/liverig-cli.log`
@@ -105,15 +105,15 @@ If you need to remove any previous certificate, you can use the following comman
 After configuring the `liverig.properties` with the Application URI found on the [UA Discovery](#ua-discovery) step, you can browse
 the available nodes for LiveRig Collector to query from. To do this, you can use the following LiveRig CLI command:
 
-`tools/liverig-cli opcua browse {endpoint} {username} {password} {concurrent-calls} {requests-per-call}`
+`liverig-cli opcua browse {endpoint} {username} {password} {concurrent-calls} {requests-per-call}`
 
 **Example**:
 
-`tools/liverig-cli opcua browse opc.tcp://192.168.2.8:5011/IcoFwxServer username password 10 10`
+`liverig-cli opcua browse opc.tcp://192.168.2.8:5011/IcoFwxServer username password 10 10`
 
 **Example if there is no password**:
 
-`tools/liverig-cli opcua browse opc.tcp://opcplc:50000 "" "" 1 1`
+`liverig-cli opcua browse opc.tcp://opcplc:50000 "" "" 1 1`
 
 The two numbers at the end (not available in the older “browse” subcommand) are the number of concurrent calls to the browse
 service, and the number of requests on each call to the browse service.
@@ -148,13 +148,13 @@ The identifier for `SystemCpuLoad` is `ns=1;s=VendorServerInfo/SystemCpuLoad` an
 
 The following command will attempt to read the variables for a while, using the same mechanism as the collector would normally use:
 
-`tools/liverig-cli opcua subscribe {endpoint} {username} {password} {max-time} {interval}`
+`liverig-cli opcua subscribe {endpoint} {username} {password} {max-time} {interval}`
 
 Use this to confirm that the node will work.
 
 **Example**:
 
-`sudo tools/liverig-cli opcua subscribe opc.tcp://linux-tzyu:12686/milo admin password2 5000 1000 'ns=1;s=VendorServerInfo/SystemCpuLoad'`
+`liverig-cli opcua subscribe opc.tcp://linux-tzyu:12686/milo admin password2 5000 1000 'ns=1;s=VendorServerInfo/SystemCpuLoad'`
 
 This example will request the server to send the changes to the `ns=1;s=VendorServerInfo/SystemCpuLoad` node variable,
 at most one per second, for five seconds.
