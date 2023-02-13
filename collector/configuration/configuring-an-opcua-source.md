@@ -1,28 +1,27 @@
 # Configuring an OPC-UA Source
 
-## Solution Components
-When using an OPC-UA server, we need to configure some files that are typically located at `/opt/intelie/liverig/conf/`. These files are:
+When using an OPC-UA server, we need to configure some files that are typically located at LiveRig `/opt/intelie/liverig/conf/` folder. These files are:
 - [sources.xml](sources.xml.md) - the sources of opc-ua data.
 - [store.json](store.json.md) - the variables that are being requested and their mappings.
 - [liverig.properties](liverig.properties.md) - various configurations for the server, including the authentication mode with the opc-ua server.
 
-## First Steps
-### OPC-UA Server
+## OPC-UA Server
 You should know the endpoint of the server, which, in general, has the following form:
 
 `opc.tcp://ip-address:port/some-service-name`
 
-Here is an Example:
+Here is an example using a local [Eclipse Milo server](https://github.com/eclipse/milo):
 
 `opc.tcp://linux-tzyu:12686/milo`
 
-### LiveRig
+## LiveRig
 
-You should have LiveRig installed on your system, when you build from source you will get a `rpm` at the dist folder that
-can be used for installation. It will install all LiveRig components at `/opt/intelie/liverig` and will add the LiveRig
-service to the system. You may use `systemctl` commands to control the service. It will also install the [liverig-cli](../cli.md)
-application, which is a CLI based program that allows you to connect to the server and get some information necessary
-for configuration.
+You must have LiveRig installed on your system. Developers granted access to source code can build a `rpm` or `deb` package and install it, alternatively. 
+
+LiveRig software will be installed into `/opt/intelie/liverig` and a system service will be available on systemd. 
+You may use `systemctl` commands to enable and start the service. 
+
+Additionally, the [liverig-cli](../cli.md) command will be available, which is a CLI based program that allows you to connect to the server and get some information necessary for configuration.
 
 ### Check LiveRig CLI
 
@@ -35,7 +34,7 @@ output at `/opt/intelie/liverig/logs/liverig-cli.log`
 
 Most servers have a standard discovery endpoint at `/UADiscovery` which list the available endpoints. Example:
 
-liverig-cli opcua findservers opc.tcp://192.168.2.8:4840/UADiscovery`
+`liverig-cli opcua findservers opc.tcp://192.168.2.8:4840/UADiscovery`
 
 The output at `liverig-cli.log` should list the available endpoints, example:
 
@@ -54,10 +53,9 @@ Some important notes:
   see if it returns the information.
 - The returned `ApplicationUri` information should be used on the `liverig.properties`. This will be shown on [Step 2](#configuring-liverigproperties)
 
-
 ### Configuring `liverig.properties`
 
-Each LiveRig Collector instance should have its own unique “application URI”, which is used as an identifier by the OPC-UA
+Each LiveRig Collector instance should have its own unique application URI, which is used as an identifier by the OPC-UA
 server. This value has no default and has to be configured on the `liverig.properties` file. Example:
 
 ```properties
@@ -129,7 +127,7 @@ The result of the browse is recorded on `liverig-cli.log` in a tree-like format.
 (it should have a `V` instead of an `O`, only variables will have a value to be collected) is the node id, which is something
 like `ns=0;i=85` or `ns=1;s=asdf`.
 
-**Browse Example**:
+**Browse example**:
 
 ```
 INFO 2021-01-26 18:04:44,033 [main][] net.intelie.liverig.protocols.opcua.cli.OpcuaBrowser -    (HasComponent) V ns=1;s=VendorServerInfo/OsVersion OsVersion 1:OsVersion
