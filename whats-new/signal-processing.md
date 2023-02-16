@@ -271,9 +271,9 @@ signal.regression(x, y, function_type, polynomn_degree)
 For all examples (except real-time) the same base layer is used:
 
 ```
-def @@channels: ("CEMENT_PRES");
+def @@channels: ("pressure");
 
-rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
   => @compress.swingingDoor value# by mnemonic
   => value# as original
 ```
@@ -281,10 +281,10 @@ rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 #### Polynomial
 
 ```
-def @@channels: ("CEMENT_PRES");
+def @@channels: ("pressure");
 def @@DEGREE: 2;
 
-rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
   => @compress.swingingDoor value# by mnemonic
   => value# as y, timestamp# as x
   => signal.regression(x, y, "poly", @@DEGREE) as res, list(x) as xArr at the end
@@ -297,9 +297,9 @@ rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 #### Logarithmic 
 
 ```
-def @@channels: ("CEMENT_PRES");
+def @@channels: ("pressure");
 
-rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
   => @compress.swingingDoor value# by mnemonic
   => value# as y, timestamp# as x
   => signal.regression(x, y, "log") as res, list(x) as xArr at the end
@@ -312,9 +312,9 @@ rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 #### Exponential 
 
 ```
-def @@channels: ("CEMENT_PRES");
+def @@channels: ("pressure");
 
-rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
   => @compress.swingingDoor value# by mnemonic
   => value# as y, timestamp# as x
   => signal.regression(x, y, "exp") as res, list(x) as xArr at the end
@@ -327,9 +327,9 @@ rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 #### Exponential Decay
 
 ```
-def @@channels: ("CEMENT_PRES");
+def @@channels: ("pressure");
 
-rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
   => @compress.swingingDoor value# by mnemonic
   => value# as y, timestamp# as x
   => signal.regression(x, y, "expd") as res, list(x) as xArr at the end
@@ -342,9 +342,9 @@ rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 #### Power 
 
 ```
-def @@channels: ("CEMENT_PRES");
+def @@channels: ("pressure");
 
-rig_lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
   => @compress.swingingDoor value# by mnemonic
   => value# as y, timestamp# as x
   => signal.regression(x, y, "pow") as res, list(x) as xArr at the end
@@ -361,7 +361,7 @@ Layer 1:
 ```
 def @@channels: ("pressure");
 
-lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
   => @compress.swingingDoor value# by mnemonic
   => value# as original
 ```
@@ -372,7 +372,7 @@ Layer 2:
 def @@channels: ("pressure");
 def @@DEGREE: 2;
 
-lotfit .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
   => @compress.swingingDoor value# by mnemonic
   => value# as y, timestamp# as x
  
