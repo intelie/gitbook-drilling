@@ -260,9 +260,9 @@ It is posible to turn on the moving average or filter option on a chart to calcu
 
 ### Multi Linear Regression 
 
-The Multi Linear Regression functions are a set of pipes functions used to predict data using the *polynomial*, *logarithmic*, *exponential*, *power* and *exponential decay* functions. 
+Multi linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. There are several types of regression functions, including linear, polynomial, logarithmic, exponential, exponential decay, and power functions. The output of a regression analysis typically includes predicted values, coefficients, and statistical measures of goodness-of-fit.
 
-They aggregate data over a certain period of time receiving the x and y values, the type of the function and, in the case of the polynomial, the degree. The return type is a `row` containing the predicted values, which is a sequence of numbers, the function coefficients, and, if present an error indicating what went wrong in the format of a `string`. These errors can be caused in case of using a invalid type or not enough data to make the regression. Therefore, their signature goes like the snippet below:
+The Multi Linear Regression pipes functions aggregate data over a certain period of time receiving the x and y values, the type of the function and, in the case of the polynomial, the degree. The return type is a `row` containing the predicted values, which is a sequence of numbers, the function coefficients, and, if present an error indicating what went wrong in the format of a `string`. These errors can be caused in case of using a invalid type or not enough data to make the regression. Therefore, their signature goes like the snippet below:
 
 ```
 signal.regression(x, y, function_type, polynomn_degree)
@@ -292,7 +292,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
 
 #### Logarithmic 
 
@@ -307,7 +307,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image2.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
 
 #### Exponential 
 
@@ -322,7 +322,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/multi-regression-images/image2.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
 
 #### Exponential Decay
 
@@ -352,7 +352,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
 
 #### Real Time Usage 
 
@@ -381,5 +381,5 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
 
