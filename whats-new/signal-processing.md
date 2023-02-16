@@ -257,3 +257,129 @@ It is posible to turn on the moving average or filter option on a chart to calcu
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+### Multi Linear Regression 
+
+Multi linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. There are several types of regression functions, including linear, polynomial, logarithmic, exponential, exponential decay, and power functions. The output of a regression analysis typically includes predicted values, coefficients, and statistical measures of goodness-of-fit.
+
+The Multi Linear Regression pipes functions aggregate data over a certain period of time receiving the x and y values, the type of the function and, in the case of the polynomial, the degree. The return type is a `row` containing the predicted values, which is a sequence of numbers, the function coefficients, and, if present an error indicating what went wrong in the format of a `string`. These errors can be caused in case of using a invalid type or not enough data to make the regression. Therefore, their signature goes like the snippet below:
+
+```
+signal.regression(x, y, function_type, polynomn_degree)
+```
+
+For all examples (except real-time) the same base layer is used:
+
+```
+def @@channels: ("pressure");
+
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => value# as original
+```
+
+#### Polynomial
+
+```
+def @@channels: ("pressure");
+def @@DEGREE: 2;
+
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => value# as y, timestamp# as x
+  => signal.regression(x, y, "poly", @@DEGREE) as res, list(x) as xArr at the end
+  => @for range(xArr:len) |> (xArr:get(_) as x, res->pred:get(_) as y) as r
+  => r->x as timestamp, r->y as yPredOrder2
+```
+
+<figure><img src="../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
+
+#### Logarithmic 
+
+```
+def @@channels: ("pressure");
+
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => value# as y, timestamp# as x
+  => signal.regression(x, y, "log") as res, list(x) as xArr at the end
+  => @for range(xArr:len) |> (xArr:get(_) as x, res->pred:get(_) as y) as r
+  => r->x as timestamp, r->y as yPredOrder2
+```
+
+<figure><img src="../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
+
+#### Exponential 
+
+```
+def @@channels: ("pressure");
+
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => value# as y, timestamp# as x
+  => signal.regression(x, y, "exp") as res, list(x) as xArr at the end
+  => @for range(xArr:len) |> (xArr:get(_) as x, res->pred:get(_) as y) as r
+  => r->x as timestamp, r->y as yPredOrder2
+```
+
+<figure><img src="../.gitbook/assets/multi-regression-images/image2.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
+
+#### Exponential Decay
+
+```
+def @@channels: ("pressure");
+
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => value# as y, timestamp# as x
+  => signal.regression(x, y, "expd") as res, list(x) as xArr at the end
+  => @for range(xArr:len) |> (xArr:get(_) as x, res->pred:get(_) as y) as r
+  => r->x as timestamp, r->y as yPredOrder2
+```
+
+<figure><img src="../.gitbook/assets/multi-regression-images/image4.png" alt=""><figcaption><p>Example of exponential decay regression</p></figcaption></figure>
+
+#### Power 
+
+```
+def @@channels: ("pressure");
+
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => value# as y, timestamp# as x
+  => signal.regression(x, y, "pow") as res, list(x) as xArr at the end
+  => @for range(xArr:len) |> (xArr:get(_) as x, res->pred:get(_) as y) as r
+  => r->x as timestamp, r->y as yPredOrder2
+```
+
+<figure><img src="../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
+
+#### Real Time Usage 
+
+Layer 1:
+
+```
+def @@channels: ("pressure");
+
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => value# as original
+```
+
+Layer 2:
+
+```
+def @@channels: ("pressure");
+def @@DEGREE: 2;
+
+event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => value# as y, timestamp# as x
+ 
+  => signal.regression(x, y, "lin", @@DEGREE) as res, list(x) as xArr over last 10 sec every sec
+  => res->pred:get(res->pred:len-1) as yPred, xArr:get(xArr:len - 1) as timestamp
+
+```
+
+<figure><img src="../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
+
