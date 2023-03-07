@@ -18,4 +18,4 @@ These configurations can be overridden for each asset. So even if Auto-Switch is
 
 However, if the Auto-Switch is disabled on the system configuration, it will be disabled for all assets.
 
-![Asset configuration if the Auto-Switch is disabled](<../../.gitbook/assets/image (210).png>)
+![Asset configuration if the Auto-Switch is disabled](<../../.gitbook/assets/image (474).png>)

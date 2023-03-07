@@ -18,7 +18,7 @@ As a textual representation, CSV typically carries some standard number that nee
 
 The date time pattern can be customized to detect seconds, milliseconds, or textual samples of information like months, AM/PM marks, or either some fixed strings in the rows which represent the timestamp of each data measurement. See the [full list of symbols supported](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) (as in Java).
 
-<figure><img src="../../.gitbook/assets/Screenshot_select-area_20220919140345.png" alt=""><figcaption><p>Date time custom format configuration rules</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption><p>Date time custom format configuration rules</p></figcaption></figure>
 
 Each column in the CSV file will be interpreted as a channel value and the first column will be the date time index for each row in the dataset.
 
@@ -30,7 +30,7 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 <div>
 
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
 
  
 

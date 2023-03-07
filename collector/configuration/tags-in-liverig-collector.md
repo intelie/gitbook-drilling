@@ -28,7 +28,7 @@ Available tags
 {% hint style="info" %}
 **{well-uid} -** UID of well\
 **{well-name} -** Name of well\
-**{welborel-uid} -** UID of wellbore\
+**{wellbore-uid} -** UID of wellbore\
 **{wellbore-name} -** Name of wellbore\
 **{object-uid} -** UID of object\
 **{object-name} -** Name of object\
@@ -66,7 +66,7 @@ We can see in the image above that the **\_\_types** bring in their value the tr
 1. raw\_ns01 **well\_uid\_1 log log\_uid\_1**
 2. raw\_ns01 **well\_uid\_1 log log\_uid\_2**
 
-We can add a specific filter for each event, example:
+We can add a specific filter for each event, for example:
 
 ![Using  raw\_ns01well\_uid\_1loglog\_uid\_1 to filter](<../../.gitbook/assets/Captura de tela de 2020-06-26 17-26-53.png>)
 
@@ -84,7 +84,7 @@ Using an event type with tags, we can create filters for an **asset**, generaliz
 
 We can see the data coming through the **channels not configured** with the information from the **tags**:
 
-![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-15.png>)
+![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-15 (1).png>)
 
 ![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-28.png>)
 

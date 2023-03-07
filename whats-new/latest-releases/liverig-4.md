@@ -141,6 +141,6 @@ The renormalization now supports recalculating a single channel. Previously, at 
 
 New feature flags to **use source timestamp** and **sort by source timestamp** were added.
 
-![New option to start a batch renormalization](<../../.gitbook/assets/image (241).png>)
+![New option to start a batch renormalization](<../../.gitbook/assets/image (516).png>)
 
 ![Full history of renormalizations executed in the platform](<../../.gitbook/assets/image (434).png>)
