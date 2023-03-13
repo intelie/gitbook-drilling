@@ -12,6 +12,8 @@ description: >-
 * Add new resource to convert a set of units in a single request
 * Create service to retrieve default units and store display unit associated with asset
 * Improvement to mark wrapped-series as auxiliary series
+* Add TCP client mode for CSV source ([more](../../collector/protocols/csv.md))
+* Add source filter to sources tab on new collector screen
 
 ## 5.0 series
 
