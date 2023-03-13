@@ -10,6 +10,8 @@ description: >-
 ### 5.1.0
 
 * Add new resource to convert a set of units in a single request
+* Create service to retrieve default units and store display unit associated with asset
+* Improvement to mark wrapped-series as auxiliary series
 
 ## 5.0 series
 
