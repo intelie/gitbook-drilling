@@ -7,10 +7,6 @@ description: >-
 
 ## 5.1 series
 
-### 5.1.1
-
-* [fixed] The widget has hidden his series on the first render
-
 ### 5.1.0
 
 * Add new resource to convert a set of units in a single request
