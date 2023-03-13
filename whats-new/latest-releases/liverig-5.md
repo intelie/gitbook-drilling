@@ -5,6 +5,12 @@ description: >-
 
 # LiveRig 5
 
+## 5.1 series
+
+### 5.1.0
+
+* Add new resource to convert a set of units in a single request
+
 ## 5.0 series
 
 ### 5.0.0
