@@ -10,6 +10,13 @@ description: >-
 The LiveRig 4.0 beta series are also documented on this page, and if you have any 4.0 installed, please upgrade it to the 4.1 LiveRig series or above. They are compatible between them.
 {% endhint %}
 
+## 4.11 series
+
+**4.11.0**
+
+* Add TCP client mode for CSV source
+* Add source filter to sources tab on new collector screen
+
 ## 4.10 series
 
 **4.10.0**

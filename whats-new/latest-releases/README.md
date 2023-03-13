@@ -5,12 +5,30 @@ description: Here you find the latest oil-and-gas-related plugins and artifacts
 # Latest releases
 
 {% hint style="success" %}
-The complete list of plugins for the **Live Drilling** solution is now categorized and published into the **Intelie Live Marketplace**, see: [https://marketplace.intelie.com/search/category/O\&G%20Drillin](https://marketplace.intelie.com/search/category/O\&G%20Drilling/)\*\*\*\*
+The complete list of plugins for the **Live Drilling** solution is now categorized and published into the **Intelie Live Marketplace**, see: [https://marketplace.intelie.com/search/category/O\&G%20Drilling](https://marketplace.intelie.com/search/category/O&G%20Drilling)
 {% endhint %}
 
 ***
 
-## **Dez. 30th 2022**
+## **Mar. 10th 2023**
+
+* **plugin-liverig 5.1.1 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
+* **plugin-assets 5.1.1 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 5.1.1 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+
+## **Mar. 4th 2023**
+
+* **plugin-liverig 5.1.0, 4.11.0 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
+* **plugin-assets 5.1.0, 4.11.0 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 5.1.0, 4.11.0 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+
+## **Feb. 18th 2023**
+
+* **plugin-liverig 5.0.1, 4.10.2, 4.9.3, 4.8.4 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
+* **plugin-assets 5.0.1, 4.10.2, 4.9.3, 4.8.4 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 5.0.1, 4.10.2, 4.9.3, 4.8.4 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+
+## **Jan. 3rd 2023**
 
 * **plugin-liverig 5.0.0, 4.10.1, 4.9.2, 4.8.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
 * **plugin-assets 5.0.0, 4.10.1, 4.9.2, 4.8.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
