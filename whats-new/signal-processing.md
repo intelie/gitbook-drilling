@@ -238,27 +238,7 @@ at the end
 => signal.polynomial_lagrange_interpolation(x, y, xi) as result
 ```
 
-### Aggregations
-
-{% hint style="info" %}
-plugin-processing-1.1.0 required
-{% endhint %}
-
-It is posible to turn on the moving average or filter option on a chart to calculate it through a temporal range.&#x20;
-
-#### Moving average
-
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
-
-#### Filters
-
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-### Multi Linear Regression 
+### Multi Linear Regression
 
 Multi linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. There are several types of regression functions, including linear, polynomial, logarithmic, exponential, exponential decay, and power functions. The output of a regression analysis typically includes predicted values, coefficients, and statistical measures of goodness-of-fit.
 
@@ -294,7 +274,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 <figure><img src="../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
 
-#### Logarithmic 
+#### Logarithmic
 
 ```python
 def @@channels: ("pressure");
@@ -309,7 +289,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 <figure><img src="../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
 
-#### Exponential 
+#### Exponential
 
 ```python
 def @@channels: ("pressure");
@@ -339,7 +319,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 <figure><img src="../.gitbook/assets/multi-regression-images/image4.png" alt=""><figcaption><p>Example of exponential decay regression</p></figcaption></figure>
 
-#### Power 
+#### Power
 
 ```python
 def @@channels: ("pressure");
@@ -354,7 +334,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 <figure><img src="../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
 
-#### Real Time Usage 
+#### Real Time Usage
 
 Layer 1:
 
@@ -389,11 +369,11 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 Requirement: plugin-processing-1.1.0+, liverig-5.1.1+, liverig-vis-4.6.0+
 {% endhint %}
 
-To use a pipeless aggregation create a new temporal chart with the desired channels. 
+To use a pipeless aggregation create a new temporal chart with the desired channels.
 
 <figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
 
-Next select which aggregations are going to be applied over the data. 
+Next select which aggregations are going to be applied over the data.
 
 <figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg_mov_avg.png" alt=""><figcaption><p>Applying Moving Average aggregation over the selected channel</p></figcaption></figure>
 
@@ -401,7 +381,7 @@ Next select which aggregations are going to be applied over the data.
 
 <figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg_outliers.png" alt=""><figcaption><p>Applying Outliers aggregation over the selected channel</p></figcaption></figure>
 
-Each aggregation has configuration fields that resembles the parameters passed to a correspondent pipes function. 
+Each aggregation has configuration fields that resembles the parameters passed to a correspondent pipes function.
 
 It's possible to hide the original channel using the chart legend.
 
@@ -410,3 +390,9 @@ It's possible to hide the original channel using the chart legend.
 The aggregations can also be added in the visualization mode using the new chart configuration menu.
 
 <figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg_mod.png" alt=""><figcaption><p>New chart configuration menu with aggregations</p></figcaption></figure>
+
+It is posible to turn on the filters, moving average and outliers or on a chart to calculate it through a temporal range.
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Pipeless aggregation configuration on viewmode</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Pipeless aggregations on multiple curves</p></figcaption></figure>

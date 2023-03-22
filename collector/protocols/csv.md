@@ -30,7 +30,7 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 <div>
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
 
  
 
@@ -40,9 +40,7 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 The TCP connector puts the source in **server mode** and waits for data to be pushed into it. On the other hand, the Serial port connector configures the source as **client mode** and watches the Unix device file to consume the data passing through.
 
-Starting at LiveRig 4.11.0, CSV source supports TCP and Serial connection protocols for Client mode. When using Server mode, it only supports TCP protocol.
-If server mode is enabled, the Serial Port radio button will be disabled:
-
+Starting at LiveRig 4.11.0, CSV source supports TCP and Serial connection protocols for Client mode. When using Server mode, it only supports TCP protocol. If server mode is enabled, the Serial Port radio button will be disabled:
 
 <figure><img src="../../.gitbook/assets/csv-server-mode-serial-port-disabled.png" alt=""><figcaption><p>Serial port disabled for CSV Server Mode</p></figcaption></figure>
 

@@ -30,7 +30,7 @@ Clicking on the edit button of the BOP configuration card will open a new window
 
 When starting from a basic template, it starts with two fixed components, Kill/Choke and Mud Boost, present in all other schemes:
 
-![Basic template loaded](<../../.gitbook/assets/image (107).png>)
+![Basic template loaded](<../../.gitbook/assets/image (94).png>)
 
 Clicking in “ + Add Component ” a new component will be appended in the schematic and the configuration screen will open with the options to configure:
 

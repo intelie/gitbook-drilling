@@ -14,7 +14,7 @@ The casing-shoe chart consumes static data from well design overview information
 
 Static data used to render the casing shoe schematic at well parameters tab:
 
-![Well design overview static information used to plot the chart](<../.gitbook/assets/image (257).png>)
+![Well design overview static information used to plot the chart](<../.gitbook/assets/image (257) (1).png>)
 
 Advantages **:**\\
 
