@@ -238,6 +238,43 @@ at the end
 => signal.polynomial_lagrange_interpolation(x, y, xi) as result
 ```
 
+Here's an example where the linear interpolation function can be used with real time data. On pipes based chart create two layers with the snippets bellow.
+
+```python
+def @@channels: ("PRESSURE");
+def @@ INITIAL_TIMESTAMP: 0;
+
+rigA .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => newmap("y", value#, "x", timestamp) as data
+  
+=> @yield
+=> list(_["x"]# - @@INITIAL_TIMESTAMP) as x, list(_["y"]) as y at the end
+=> @for range(x:len) |> (x:get(_) as x, y:get(_) as y) as res
+=> res->x as x, res->y as y_original
+```
+
+```python
+def @@channels: ("PRESSURE");
+def @@ INITIAL_TIMESTAMP: 0;
+
+rigA .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => newmap("y", value#, "x", timestamp) as data
+  
+=> @yield
+=> list(_["x"]# - @@INITIAL_TIMESTAMP) as x, list(_["y"]) as y at the end
+
+=> range(100) |> x:get(_) + _*8000 as xi, x, y
+=> signal.linear_interpolation(x, y, xi) as yi, xi
+=> @for range(xi:len) |> (xi:get(_) as x, yi:get(_) as y) as res
+=> res->x as x, res->y as yi_interpolated
+```
+
+The result should be something like the image bellow.
+
+<figure><img src="../.gitbook/assets/interpolation_example.png" alt=""><figcaption><p>Example of polynomial interpolation with real data</p></figcaption></figure>
+
 ### Multi Linear Regression
 
 Multi linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. There are several types of regression functions, including linear, polynomial, logarithmic, exponential, exponential decay, and power functions. The output of a regression analysis typically includes predicted values, coefficients, and statistical measures of goodness-of-fit.
