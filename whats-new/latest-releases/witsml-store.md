@@ -7,6 +7,29 @@ description: A fully-compliant WITSML Store server made upon Live Wells 5 and Li
 
 ## 1.8 series
 
+**1.8.3**
+
+* New features
+  * Query Performance Improvements
+
+* Bugfixes
+  * Fixes a parsing error in Tubular object when sequence has size of 1 element
+  * Fixes a parsing error in Target object when sequence has size of 1 element
+  * Refactor FormationMarker object to reduce complexity
+  * Fixes a parsing error in ObjectGroup object when sequence has size of 1 element
+  * Fixes a parsing error in wbGeometry object when sequence has size of 1 element
+  * Fixes a parsing error in FluidsReport object when sequence has size of 1 element
+  * Fixes a parsing error in SurveyProgram object when sequence has size of 1 element
+  * Fixes a parsing error in DrillReport object when sequence has size of 1 element
+  * Fixes a parsing error in ConvCore object when sequence has size of 1 element
+  * Fixes cascade delete function when deleting wells
+  * Fixes a parsing error in BhaRun object when sequence has size of 1 element
+  * Fixes a parsing error in OpsReport object when sequence has size of 1 element
+  * Fixes a parsing error in CementJob object when sequence has size of 1 element
+  * Fixes a parsing error in StimJob  object when sequence has size of 1 element
+  * Fixes a parsing error in Rig object when sequence has size of 1 element
+  * Fixes Log object to correct update his name when UpdateInStore function is executed
+
 **1.8.1**
 
 * Bugfixes
