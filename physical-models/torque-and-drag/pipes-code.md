@@ -61,7 +61,7 @@ og.model.softString.normal(
 )
 ```
 
-Output: Normal **** (N) vs Depth(m)
+Output: Normal (N) vs Depth(m)
 
 ### **Normal per Length**
 
@@ -111,7 +111,7 @@ og.model.softString.drag(
 )
 ```
 
-Output: Drag **** (N) vs Depth(m)
+Output: Drag (N) vs Depth(m)
 
 ### **Torque**
 
@@ -376,7 +376,7 @@ Output: Torque on Surface (N) vs Depths (m)
 
 ![Neutral Point, Top BHA and Bit Depth vs Time](https://lh4.googleusercontent.com/nqjEcOUiUUw9Oe89b4cmZyB8N5d4ifaGN4yCF139za-B391Nbn3Qb94teftvRx4JCGeUQQjnh8gUSy6jrDK3ujFMWdyAtRsLZcRLyzTwvEQW1\_356Tz6AJ48yPBtKVhSO38ecVLB)
 
-****\
+\
 **Computes all the neutral points locations**
 
 ```javascript
@@ -449,7 +449,7 @@ Output: Position (m)
 | **Parameters**            | **Description**                                                                                                                                                           | **unit**      |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 |  **wellId**               | **Well id**                                                                                                                                                               | **String**    |
-| **weightOnBit**           | <p><strong>Weight on bit (downhole)(default: zero)</strong><br><strong></strong></p>                                                                                      | **N**         |
+| **weightOnBit**           | <p><strong>Weight on bit (downhole)(default: zero)</strong><br></p>                                                                                                       | **N**         |
 | **rotarySpeed**           | **Angular Speed (RPM) (default: zero)**                                                                                                                                   | **rad/s**     |
 | **columnVelocity**        | **Drill string or Casing Velocity (default: zero)**                                                                                                                       | **m/s**       |
 | **frictionFactor**        | **Friction Factor (default: zero)**                                                                                                                                       | **\[-]**      |

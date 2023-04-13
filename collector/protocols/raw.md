@@ -16,7 +16,7 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 <div>
 
-<figure><img src="../../.gitbook/assets/image (93) (1).png" alt=""><figcaption><p>TCP port configuration for RAW source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93) (1) (1).png" alt=""><figcaption><p>TCP port configuration for RAW source endpoint</p></figcaption></figure>
 
  
 

@@ -45,13 +45,13 @@ With version less than 2.26 the rig state is at plugin-opmode with other nomecla
 ## **Rig state detection configuration by rig**
 
 At the rig menu it is possible to access the _models configuration_ to change the values used by the physical model algorithms to identify the rig state:\
-****
+
 
 ![](https://lh4.googleusercontent.com/REkpOzvf3wvD2A4Prd6GeYtBF3CXzx0LKGEklgSR6lZ4Nr98N711-jxW1GNyS\_xBvPCjqv0AHS3MRbVxs-r5\_R2lCddM\_H099ekKCLks6siQD1hAAxusrA3kuGAoWmPB6nyp578q)
 
 It is possible to overwrite only the parameters for the current rig. The parameters that are not overwritten the globally configured values will be used. There are two parameters that are presented as read-only, since they are editable at the Derrick configuration at the rig screen tab:\
-****\
-****
+\
+
 
 ![Physical models configuration for Rig state detection](https://lh5.googleusercontent.com/Bs0mC46ASkWnf-AQ3V2SZtWgJZooxx76P4L9YFD\_C2DFJqTvx2UFg0qSVQIFoOsiVEbKnyOV3BX8C9GsA\_PLe8n\_8i4A3SDwfGZwnUf8iNCRcYWL1zE4L1HZvqsPlyQuId-eIpzQ)
 
@@ -70,7 +70,7 @@ Derrick parameters  stand length and pipe length are configurable on the rig scr
 ## Pipes functions
 
 The old opmode functions are still available for compatibility reasons:\
-****
+
 
 * drilling.normalized\_opmode
 
@@ -81,7 +81,7 @@ The old opmode functions are still available for compatibility reasons:\
 ![Pipe function: normalized\_operation\_mode](https://lh6.googleusercontent.com/zUNdKxC0Z3pUYbFbK9CamQnQ13a6XL9M1wj48tuosLWScweRy-H0UCk8-otz7AmFY6WOLu-86ejiMvpYk5oJm4KR8EKMZkUFh4ECQKDAOZYxxkO2izMglau7MEy9o48wBCX-8lMG)
 
 To use the configuration of a specific rig one can use one of the functions that receive the rig name as the first parameter:\
-****
+
 
 * drilling.rig\_state
 
@@ -98,7 +98,7 @@ To use the configuration of a specific rig one can use one of the functions that
 Above an example of the query used to retrieve the rig state of a rig by name:
 
 _def @@mnemonics: (@@channels.weight\_on\_bit, @@channels.hole\_depth, @@channels.rotary\_speed, @@channels.rate\_of\_penetration, @@channels.bit\_depth, @@channels.fluid\_flow, @@channels.block\_position, @@channels.weight\_on\_hook);_\
-__\
+\
 _**event\_type** .timestamp:adjusted\_index\_timestamp mnemonic!:@@mnemonics_
 
 _=> expand drilling.normalized\_rig\_state("**rigName**", adjusted\_index\_timestamp#, mnemonic, value#, uom, @@mnemonics!) every 15 seconds_\
@@ -106,7 +106,7 @@ _=> @set operating\_mode != prev(operating\_mode) ? random(), 0 as r_\
 _=> @throttle 2 min by operating\_mode, r_\
 _=> @filter operating\_mode != 'UNDEFINED' && operating\_mode != null_\
 _=> @yield newmap(operating\_mode, 1:object(), 'timestamp', timestamp#, '\_\_color', newmap(operating\_mode, \_\_color)_\
-__
+
 
 ![Pipe function: drilling.normalized\_rig\_state](https://lh4.googleusercontent.com/3MaXl\_6pO9zmOEitCQnUgS8sk7Nr-zQN2yFiMMqInhbrBnaiFh7XWGX2g4bZ1PHrmuEG3jPCoNc1\_38RN7wW1p\_dfF7IuwlDnG68ZqqDU1SrrzKTIIS6N9BO8iBaz9ikjGsAK3Oa)
 
@@ -115,7 +115,7 @@ __
 ## Dashboards
 
 In the following image, it is possible to see the result of the stand length changed in the rig configuration, for the same time period on the dashboard the representation is updated due to the new value passed to the physical model algorithm.\
-****
+
 
 ![Rig state detection comparison using algorithms and configuration by rig](https://lh5.googleusercontent.com/BplQUBtDWJO56u95duth23egTqvDPQifw0w6RtXGY\_pjQ1URn\_WZG2ZevUCl7Qcf6F02kGQss0r3eItl\_XfmADBuCiCv\_wMNeYp8UM\_l36xVUoVPMN7PI-QYeL7-Pq7tDnpapv\_z)
 
