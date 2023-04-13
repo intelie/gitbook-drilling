@@ -7,6 +7,17 @@ description: A fully-compliant WITSML Store server made upon Live Wells 5 and Li
 
 ## 1.8 series
 
+**1.8.4**
+
+* New features
+  * Load most recently changelog objects
+
+* Bugfixes
+  * Fixes a parsing error in toolErrorTermSet object when sequence has size of 1 element
+  * Fixes a parsing error in toolErrorModel object when sequence has size of 1 element
+  * Fixes a parsing error in Trajectory object when sequence has size of 1 element
+  * Fixes a parsing error in MudLog object when sequence has size of 1 element
+
 **1.8.3**
 
 * New features
