@@ -9,7 +9,7 @@ description: A fully-compliant WITSML Store server made upon Live Wells 5 and Li
 
 **1.8.4**
 
-* New features
+* Improvements
   * Load most recently changelog objects
 
 * Bugfixes
@@ -20,7 +20,7 @@ description: A fully-compliant WITSML Store server made upon Live Wells 5 and Li
 
 **1.8.3**
 
-* New features
+* Improvements
   * Query Performance Improvements
 
 * Bugfixes
