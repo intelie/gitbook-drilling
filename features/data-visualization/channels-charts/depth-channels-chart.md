@@ -22,7 +22,11 @@ Depth based charts can be used to visualize a fixed depth range identified by th
 
 ![Exact depth](<../../../.gitbook/assets/image (212).png>)
 
-![Relative to asset](<../../../.gitbook/assets/image (319).png>)
+<div align="center">
+
+<img src="../../../.gitbook/assets/image (319).png" alt="Relative to asset">
+
+</div>
 
 ### Depth Grid
 
@@ -32,7 +36,11 @@ Documentation for version 2.30.0 or greater
 
 Depth grid allow a depth interval highlighting using a predefined example, or any custom interval between **Micro**, **Minor** and **Major** grid lines.
 
-![An example of Custom Configuration](<../../../.gitbook/assets/image (86).png>)
+<div align="center">
+
+<img src="../../../.gitbook/assets/image (86).png" alt="An example of Custom Configuration">
+
+</div>
 
 {% hint style="info" %}
 Note that this configuration is **unit free**. You're configuring depth units interval regardless of the current **unit of measurement** of the depth index.
@@ -40,7 +48,11 @@ Note that this configuration is **unit free**. You're configuring depth units in
 
 **Visualization for the above configuration (25/50/100)**
 
-![Starting with Major line at 400 depth, Micro at 425, Minor at 450](<../../../.gitbook/assets/image (432).png>)
+<div align="center">
+
+<img src="../../../.gitbook/assets/image (432).png" alt="Starting with Major line at 400 depth, Micro at 425, Minor at 450">
+
+</div>
 
 
 

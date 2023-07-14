@@ -83,6 +83,8 @@
     * [Channel Value Chart](features/data-visualization/channels-charts/value-channel-chart.md)
     * [Depth Channels Chart](features/data-visualization/channels-charts/depth-channels-chart.md)
   * [Rig Allocation Gantt Chart](features/data-visualization/gantt.md)
+  * [Data navigation](features/data-visualization/data-navigation/README.md)
+    * [Span Control ](features/data-visualization/data-navigation/span-control.md)
 * [Unit sets](features/display-units/README.md)
   * [Configuration changes on unit sets](features/display-units/configuration-changes-on-display-units.md)
   * [Depth unit changes](features/display-units/depth-unit-changes.md)

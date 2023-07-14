@@ -14,11 +14,11 @@ The casing-shoe chart consumes static data from well design overview information
 
 Static data used to render the casing shoe schematic at well parameters tab:
 
-![Well design overview static information used to plot the chart](<../.gitbook/assets/image (257) (1).png>)
+![Well design overview static information used to plot the chart](<../.gitbook/assets/image (257).png>)
 
 Advantages **:**\\
 
-***
+
 
 * Preview well design phase information such as casing diameters, bit depth, lithology, and target formations, and casing structure including liners, screen, slotted liners or open hole by depth
 * Go along with the real time bit depth position using the standard configured channel

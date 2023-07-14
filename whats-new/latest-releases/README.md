@@ -8,7 +8,7 @@ description: Here you find the latest oil-and-gas-related plugins and artifacts
 The complete list of plugins for the **Live Drilling** solution is now categorized and published into the **Intelie Live Marketplace**, see: [https://marketplace.intelie.com/search/category/O\&G%20Drilling](https://marketplace.intelie.com/search/category/O\&G%20Drilling)
 {% endhint %}
 
-***
+
 
 ## **Mar. 10th 2023**
 
@@ -107,7 +107,7 @@ The complete list of plugins for the **Live Drilling** solution is now categoriz
 * **plugin-assets 4.1.2, 4.2.3, 4.3.1 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
 *   **plugin-liverig-vis 4.1.2, 4.2.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig-vis/)**)**\\
 
-    ***
+
 
 ## **Feb. 7th 2022**
 
@@ -178,13 +178,13 @@ The complete list of plugins for the **Live Drilling** solution is now categoriz
 * **plugin-wells 4.2.0 (**[**more**](https://marketplace.intelie.com/artifact/plugin-wells)**)**
   * Unit sets for wells and rigs
 
-![](<../../.gitbook/assets/image (334) (1) (2) (1).png>)
+![](<../../.gitbook/assets/image (334) (1) (1) (2).png>)
 
 ![](<../../.gitbook/assets/image (426).png>)
 
-![](<../../.gitbook/assets/image (313).png>)
+![](<../../.gitbook/assets/image (331).png>)
 
-![](<../../.gitbook/assets/image (2) (1).png>)
+![](<../../.gitbook/assets/image (378).png>)
 
 ## **Oct. 29th 2021**
 
