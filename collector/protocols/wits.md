@@ -48,7 +48,7 @@ For WITS client mode configuration, the access endpoint configuration will suppo
 
 <div>
 
-<figure><img src="../../.gitbook/assets/image (93) (1) (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for WITS client endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93) (1) (1) (1) (2).png" alt=""><figcaption><p>TCP port configuration for WITS client endpoint</p></figcaption></figure>
 
  
 
