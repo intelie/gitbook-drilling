@@ -10,6 +10,24 @@ The complete list of plugins for the **Live Drilling** solution is now categoriz
 
 
 
+## **Jul. 6th 2023**
+
+* **plugin-liverig 5.3.0, 5.2.1, 5.1.3, 5.0.3, 4.11.2, 4.10.4 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
+* **plugin-assets 5.3.0, 5.2.1, 5.1.3, 5.0.3, 4.11.2, 4.10.4 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 5.3.0, 5.2.1, 5.1.3, 5.0.3, 4.11.2, 4.10.4 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+
+## **May. 30th 2023**
+
+* **plugin-liverig 5.2.0 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
+* **plugin-assets 5.2.0 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 5.2.0 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+
+## **May. 13th 2023**
+
+* **plugin-liverig 5.1.2, 4.10.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
+* **plugin-assets 5.1.2, 4.10.3 (**[**more**](https://marketplace.intelie.com/artifact/plugin-assets/)**)**
+* **liverig-collector 5.1.2, 4.10.3 (**[**more**](https://marketplace.intelie.com/artifact/liverig/)**)**
+
 ## **Mar. 10th 2023**
 
 * **plugin-liverig 5.1.1 (**[**more**](https://marketplace.intelie.com/artifact/plugin-liverig/)**)**
