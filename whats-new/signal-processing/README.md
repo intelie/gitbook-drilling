@@ -409,41 +409,41 @@ Requirement: plugin-processing-1.2.0+, liverig-5.2.0+, liverig-vis-4.6.0+
 {% endhint %}
 
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/11-ui-improvement-all-configs.png" alt=""><figcaption><p>UI improvement for the aggregations configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/11-ui-improvement-all-configs.png" alt=""><figcaption><p>UI improvement for the aggregations configuration</p></figcaption></figure>
 
 In this new update the aggregations are nested within the channel card to provide a better comprehension of what data is being used to create the modified series. To add a new aggregation to a channel click on the `+` button next to channel name.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/1-ui-improve-select-a-channel.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/1-ui-improve-select-a-channel.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
 
 Then select which aggregation is going to be created. At this point the `plugin-processing` provides the following aggregation types the corresponds to the pipes functions listed previously in this document: Moving Average, Signal Filtering, Peak and Through Detections and Outliers removal.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/2-ui-improve-select-agg.png" alt=""><figcaption><p>Listing all available aggregations</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/2-ui-improve-select-agg.png" alt=""><figcaption><p>Listing all available aggregations</p></figcaption></figure>
 
 After adding the aggregations, the interface assumes a tree-like format.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/3-ui-improvement-new-agg-positioning.png" alt=""><figcaption><p>All available aggregations activated</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/3-ui-improvement-new-agg-positioning.png" alt=""><figcaption><p>All available aggregations activated</p></figcaption></figure>
 
 The follow four images shows how the configurations are now set for the aggregation functions. Each of then has their own configuration panel, where the user can even customize the plotting style.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/4-ui-improvement-moving-avg-config.png" alt=""><figcaption><p>Moving average configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/4-ui-improvement-moving-avg-config.png" alt=""><figcaption><p>Moving average configuration</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/5-ui-improvement-filter-config.png" alt=""><figcaption><p>Signal filtering configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/5-ui-improvement-filter-config.png" alt=""><figcaption><p>Signal filtering configuration</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/7-ui-improvement-detect-peaks.png" alt=""><figcaption><p>Peaks detection configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/7-ui-improvement-detect-peaks.png" alt=""><figcaption><p>Peaks detection configuration</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/6-ui-improvement-remove-outliers.png" alt=""><figcaption><p>Outliers removal configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/6-ui-improvement-remove-outliers.png" alt=""><figcaption><p>Outliers removal configuration</p></figcaption></figure>
 
 The peaks detection configuration uses a different plotting style (scatter). At this point is possible to plot the aggregation to use line or scatter plot.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/9-ui-improvement-scatter-config.png" alt=""><figcaption><p>Plotting style options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/9-ui-improvement-scatter-config.png" alt=""><figcaption><p>Plotting style options</p></figcaption></figure>
 
 Enabling and disabling aggregation can be done using a `eye` button like the channels cards. 
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/8-ui-improvement-disable-channels.png" alt=""><figcaption><p>Enable and disable aggregations<p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/8-ui-improvement-disable-channels.png" alt=""><figcaption><p>Enable and disable aggregations<p></figcaption></figure>
 
 All configurations can also be done in the view mode.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/12-ui-improvement-on-view-mode.png" alt=""><figcaption><p>Configuration in view mode<p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/12-ui-improvement-on-view-mode.png" alt=""><figcaption><p>Configuration in view mode<p></figcaption></figure>
 
 #### Older versions
 
