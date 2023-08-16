@@ -10,7 +10,7 @@ Live provides pipe functions to improve signal data processing helping make busi
 
 The pipe function for filtering signals enables removing unwanted harmonic component to have a more clear curve using low/band/high pass filters.
 
-<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
 
 Sine Wave Combined with Multiple Frequencies and Gaussian White Noise
 
@@ -100,9 +100,9 @@ y over all every 10 sec
 
 The pipes find peaks function is used to find peaks or valleys within a given sample. The values found can be filtered within a certain range that can take into account its height, plateau size, distance, prominence and width.
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (3) (3).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
 
 Detecting Peaks and Troughs on a Channel
 
@@ -188,7 +188,7 @@ Square Wave with differents Duty Cycles
 
 An outlier is an observation that is unusually far from the other values in a data set. Remove outlier is a common process to have a more clear data.
 
-<figure><img src="../.gitbook/assets/image (111).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (111).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
 
 Remove the top 5% and bottom 5% values
 
@@ -206,11 +206,11 @@ data_with_outliers
 
 We can use pipes to estimate a point using interpolation functions.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
 
 In pipes we have two types of interpolation linear and polynomial ( lagrange method )
 
-<figure><img src="../.gitbook/assets/image (91).png" alt=""><figcaption><p>Example of linear interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Example of linear interpolation</p></figcaption></figure>
 
 ```haskell
 def @@x: (1.0, 2.0, 4.0, 5.0);
@@ -224,7 +224,7 @@ at the end
 => signal.linear_interpolation(x, y, xi) as result
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
 
 ```haskell
 def @@x: (1.0, 2.0, 4.0, 5.0);
@@ -273,7 +273,7 @@ rigA .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@
 
 The result should be something like the image bellow.
 
-<figure><img src="../.gitbook/assets/interpolation_example.png" alt=""><figcaption><p>Example of polynomial interpolation with real data</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/interpolation_example.png" alt=""><figcaption><p>Example of polynomial interpolation with real data</p></figcaption></figure>
 
 ### Multi Linear Regression
 
@@ -309,7 +309,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
 
 #### Logarithmic
 
@@ -324,7 +324,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
 
 #### Exponential
 
@@ -339,7 +339,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image2.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image2.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
 
 #### Exponential Decay
 
@@ -354,7 +354,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image4.png" alt=""><figcaption><p>Example of exponential decay regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image4.png" alt=""><figcaption><p>Example of exponential decay regression</p></figcaption></figure>
 
 #### Power
 
@@ -369,7 +369,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
 
 #### Real Time Usage
 
@@ -398,7 +398,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
 
 ### Pipeless Aggregations
 
@@ -453,28 +453,28 @@ Requirement: plugin-processing-1.1.0+, liverig-5.1.1+, liverig-vis-4.6.0+
 
 To use a pipeless aggregation create a new temporal chart with the desired channels.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
 
 Next select which aggregations are going to be applied over the data.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg_mov_avg.png" alt=""><figcaption><p>Applying Moving Average aggregation over the selected channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_mov_avg.png" alt=""><figcaption><p>Applying Moving Average aggregation over the selected channel</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg_filter.png" alt=""><figcaption><p>Applying Filter aggregation, with low pass and butterworth configuration, over the selected channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_filter.png" alt=""><figcaption><p>Applying Filter aggregation, with low pass and butterworth configuration, over the selected channel</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg_outliers.png" alt=""><figcaption><p>Applying Outliers aggregation over the selected channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_outliers.png" alt=""><figcaption><p>Applying Outliers aggregation over the selected channel</p></figcaption></figure>
 
 Each aggregation has configuration fields that resembles the parameters passed to a correspondent pipes function.
 
 It's possible to hide the original channel using the chart legend.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg_disable.png" alt=""><figcaption><p>Hiding the original channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_disable.png" alt=""><figcaption><p>Hiding the original channel</p></figcaption></figure>
 
 The aggregations can also be added in the visualization mode using the new chart configuration menu.
 
-<figure><img src="../.gitbook/assets/pipeless-aggregations/pipeless_agg_mod.png" alt=""><figcaption><p>New chart configuration menu with aggregations</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_mod.png" alt=""><figcaption><p>New chart configuration menu with aggregations</p></figcaption></figure>
 
 It is possible to turn on the filters, moving average and outliers or on a chart to calculate it through a temporal range.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Pipeless aggregation configuration on view mode</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Pipeless aggregation configuration on viewmode</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Pipeless aggregations on multiple curves</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Pipeless aggregations on multiple curves</p></figcaption></figure>

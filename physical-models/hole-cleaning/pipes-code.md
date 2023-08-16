@@ -2,7 +2,7 @@
 
 ## **Steady State Hole Cleaning**
 
-****
+
 
 ![Hole Cleaning Index, Solid concentration and Bed Relative Height vs Depth - Steady State](https://lh6.googleusercontent.com/QECQnyTe4fxy1xF7gQiLHBKs3U8Sf544rrrWeYwgCrtEORDQq5OzLhle0WKJ3O1pljcL0ucaohSUJmukcPvbcVuY8OGTDWC2aLRdBYKOg\_qe3xlUk9AphZuR0\_2bCJxDbabwz4Zt)
 

@@ -4,7 +4,7 @@
 
 A feature to manage units of measure and unusual conversions. It has three main functionalities, [**Unit extension**](../../deprecated/liverig-v3/2.29.0.md#unit-extension), [**Unchained unit conversion**](../../deprecated/liverig-v3/2.29.0.md#unchained-unit-conversion), and [**Unit alias**](../../deprecated/liverig-v3/2.29.0.md#unit-alias). These features provide a way to create and edit new units, aliases, and unusual conversions via LIVE web interface. It can be found under menu Configurations > Unit Management Tools.\\
 
-***
+
 
 ![](https://lh5.googleusercontent.com/\_\_5M4YoF11yYYH23ryLr7BlDURvrs9so8N\_jcr8Of-kmVHJfReVgYbTSYi0BR2tUhSntHhd27Jbf-EwZoSq4kaaCdefx7EwPIyHJefa74aNSDtk-rW9tT\_zoj\_tN-S2jMGTG\_qDt)
 
@@ -12,11 +12,11 @@ A feature to manage units of measure and unusual conversions. It has three main 
 
 It allows the creation of a new unit that does not exist in the system yet. A valid base unit must be chosen for the new unit and also a valid conversion factor must be defined to that.\\
 
-***
+
 
 ![After defining the name and values, the new conversion can be tested on the bottom](https://lh6.googleusercontent.com/2cEoc7LV0pUZ0MA0nPNLDQRqXiDU-3Hs1Mfn3knGrOewJKi9vP9fRi4oafUsYL\_j-qqk-iuH4bwaAcBmyhWnBbTPrO8FXa2lfsn2rpnVZ7p3obrW6UMkff2s-dzJ\_1X6MU0jLaj5)
 
-***
+
 
 The new unit will be displayed in the list after creation.
 
@@ -46,7 +46,7 @@ To delete an alias, just click on the garbage icon of the desired item and endor
 
 This feature provides a way to create unusual conversions in the system. For example, in the native system, it is not possible to convert from kg to N. Using this functionality we can add the conversion for that. Unchained conversions can be created using only base units.\\
 
-***
+
 
 ![After defining the parameters for the new conversion it can be tested on the bottom](https://lh6.googleusercontent.com/VD\_soD83iuUIJYbxHdzL1vf4\_UZKRSjUXovU\_DychmrTVr0q03-B5j-I\_HypvFNdvVoPZBo49Z8RSf-kZ-dqVFQLBcj7KIO3m0Jwy6257HCGICjl2UWNU\_OMBiLtuWEqqhKxQBXt)
 
@@ -97,7 +97,7 @@ At last, it's important to mention the known side effects of deleting or renamin
 
 The unit is no longer recognized by Live, and, then, will be displayed with a warning layout.
 
-![Unknown unit warnning](<../../.gitbook/assets/image (44).png>)
+![Unknown unit warnning](<../../.gitbook/assets/image (252).png>)
 
 #### **At "Data Management"**
 
@@ -111,4 +111,4 @@ If a unit alias or a unit extension that is being used at Display Units, and is 
 
 And the Display Units will prevent the user from saving until the unit is changed to a known one:
 
-![](<../../.gitbook/assets/image (269).png>)
+![](<../../.gitbook/assets/image (196).png>)

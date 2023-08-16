@@ -5,6 +5,24 @@ description: >-
 
 # LiveRig 5
 
+## 5.3 series
+
+### 5.3.0
+
+* Support changes to realtime span on zoom action
+* Zoom in and out in multi-channel temporal widgets
+* Feature flag to save TimescaleDB for OPC-UA protocol
+
+## 5.2 series
+
+### 5.2.0
+
+* Change header orientation of temporal channels chart
+* Add validation to the filter pipes field on data normalization
+* Use Live Tooltip instead of OverlayTrigger and Tooltip from react-bootstrap
+* Add possibility to ignore or define date position in CSV protcol
+* Tooltip improvements
+
 ## 5.1 series
 
 ### 5.1.0

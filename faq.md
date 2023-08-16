@@ -46,4 +46,3 @@ For the OPC-UA protocol:
 * The authentication method (and credentials depending on the method)
 * The list of tags to be retrieved and their descriptions
 
-****

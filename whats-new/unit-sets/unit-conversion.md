@@ -10,6 +10,6 @@ If a previous value was defined in a field of asset, Live will convert the value
 
 ![](<../../.gitbook/assets/image (233).png>)
 
-![](<../../.gitbook/assets/image (321).png>)
+![](<../../.gitbook/assets/image (420).png>)
 
 ![](<../../.gitbook/assets/image (413).png>)

@@ -30,7 +30,7 @@ In the edit mode is possible to select a well and its Finished or Active interve
 
 Note that all the operations of the selected interventions will be listed on the right as planned and executed operations. Each card shows a summary of one operation:
 
-![](<../.gitbook/assets/image (499).png>)
+![](<../.gitbook/assets/image (347).png>)
 
 When the mouse is over the operation card, its point is highlighted in the chart:
 

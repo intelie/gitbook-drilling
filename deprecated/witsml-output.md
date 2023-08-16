@@ -12,7 +12,7 @@ WITSML Output is still delivered built-in in the Wells plugin but it is deprecat
 Another codebase containing improvements was launched as another plugin called Generic WITSML Output at [https://marketplace.intelie.com/artifact/plugin-generic-witsml-output](https://marketplace.intelie.com/artifact/plugin-generic-witsml-output/) but is not being actively developed.
 {% endhint %}
 
-<div>
+<div align="left">
 
 <figure><img src="../.gitbook/assets/image (130).png" alt=""><figcaption><p>Integration built-in in standard Wells plugin up to v5 series</p></figcaption></figure>
 

@@ -84,7 +84,7 @@ Using an event type with tags, we can create filters for an **asset**, generaliz
 
 We can see the data coming through the **channels not configured** with the information from the **tags**:
 
-![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-15.png>)
+![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-15 (1).png>)
 
 ![](<../../.gitbook/assets/Captura de tela de 2020-06-26 18-08-28.png>)
 
