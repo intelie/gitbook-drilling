@@ -1,8 +1,8 @@
 # Local data storage
 
-All the data received by the collector, independently of the format, is either stored locally and sent to Intelie Live as-is. That is, no modification is performed on the collected data inside the collector.
+All the data received by the collector, independently of the format, is either stored locally and sent to INTELIE Live as-is. That is, no modification is performed on the collected data inside the collector.
 
-All the data is stored in the file `/opt/intelie/liverig/data/data.log.` Simultaneously, a thread pool is reading this file and sending all of the data to Intelie Live. The process takes just a few milliseconds.
+All the data is stored in the file `/opt/intelie/liverig/data/data.log.` Simultaneously, a thread pool is reading this file and sending all of the data to INTELIE Live. The process takes just a few milliseconds.
 
 In this file, it is possible to see the **original data** (3), and also some **control information** (1) and **some metadata** (2) that are created and transmitted together, as shown in the image below.
 

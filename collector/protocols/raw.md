@@ -2,7 +2,7 @@
 
 The raw protocol is capable of receiving data in JSON format via TCP or Serial port.
 
-If the data format respects the same raw schema that the collector generates for other protocols, the data can be normalized in Intelie Live.
+If the data format respects the same raw schema that the collector generates for other protocols, the data can be normalized in INTELIE Live.
 
 ### Configuration by remote control
 
@@ -58,7 +58,7 @@ This other example reads the first COM port in a Unix system available at /dev/t
 </source>
 ```
 
-A sample of the JSON payload supported as Intelie Live events. This sample is compliant with the data schema required by the [normalization](../../data-flow/data-normalization/) engine.
+A sample of the JSON payload supported as INTELIE Live events. This sample is compliant with the data schema required by the [normalization](../../data-flow/data-normalization/) engine.
 
 ```javascript
 {

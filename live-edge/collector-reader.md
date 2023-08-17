@@ -18,7 +18,7 @@ This plugin **must not** be installed in a Live which already receives data from
 
 ### Installation&#x20;
 
-Download the plugin collector reader available at Intelie marketplace:
+Download the plugin collector reader available at INTELIE marketplace:
 
 {% embed url="https://marketplace.intelie.com/artifact/plugin-collector-reader" %}
 

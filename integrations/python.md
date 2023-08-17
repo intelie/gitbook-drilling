@@ -14,7 +14,7 @@ plugin-py-1.1.0+
 live-3.24.0+
 {% endhint %}
 
-The python server can run via Docker container image available on Intelie Marketplace with some code validation and common machine learning libraries pre installed:
+The python server can run via Docker container image available on INTELIE Marketplace with some code validation and common machine learning libraries pre installed:
 
 * Tensorflow/Keras
 * Numpy

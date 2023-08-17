@@ -2,17 +2,17 @@
 
 Data in WITS format can be transferred to the collector over Serial ports or TCP connections.
 
-The WITS metadata is applied by Intelie Live during the normalization process when generating the raw JSON events.
+The WITS metadata is applied by INTELIE Live during the normalization process when generating the raw JSON events.
 
 {% hint style="info" %}
-Data is always transmitted from the collector to Intelie Live exactly as it was received from the sources, for any protocol.
+Data is always transmitted from the collector to INTELIE Live exactly as it was received from the sources, for any protocol.
 {% endhint %}
 
-Intelie Live follows the [WITS specification](http://www.petrospec-technologies.com/resource/wits\_doc.htm) to add the names, the set of units (imperial/UK, imperial/US or metric) and to relate a depth value to each sample. Spare channels can be associated with names and units in the web interface.
+INTELIE Live follows the [WITS specification](http://www.petrospec-technologies.com/resource/wits\_doc.htm) to add the names, the set of units (imperial/UK, imperial/US or metric) and to relate a depth value to each sample. Spare channels can be associated with names and units in the web interface.
 
 As it occurs with data transmitted in any other protocol, those names and units are present on the raw events but are converted to the environment standards in the normalized events.
 
-Intelie Live supports WITS Level 0.
+INTELIE Live supports WITS Level 0.
 
 **Disclaimer:** WITS is a petroleum industry standard dated 90's (see [WITS ≠ WITSML](https://www.energistics.org/portfolio/witsml-data-standards/) on Energistics), so could be difficult to find out the spec, we also recommend a [page hosted by http://home.sprynet.com/\~carob (archived by web.archive.org)](https://web.archive.org/web/20170110225236/http://home.sprynet.com/\~carob) and the [paper published in SPE Drilling Engineering Volume 4, Issue 04, December 1989](https://doi.org/10.2118/16141-PA).
 

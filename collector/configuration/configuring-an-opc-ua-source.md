@@ -81,7 +81,7 @@ For more information, check the [liverig.properties](liverig.properties.md) page
 Each LiveRig Collector instance should have its own unique application certificate, identified by its Application URI.
 To create it, you can use the following command line, replacing `<APPLICATION_URI>` with the found Application URI on [Step 1](#ua-discovery):
 
-`keytool -selfcert -genkey -validity 360 -ext BC=ca:false -ext KeyUsage=digitalSignature,nonRepudiation,keyEncipherment,dataEncipherment,keyCertSign -ext ExtendedKeyUsage=clientAuth,serverAuth -ext SubjectAlternativeName=URI:<APPLICATION_URI> -keystore /opt/intelie/liverig/conf/opcua.jks -storetype PKCS12 -storepass liverig -keyalg RSA -keysize 2048 -alias opcua -keypass liverig -dname "cn=liverig, ou=Intelie, o=Intelie, l=Rio de Janeiro, st=Rio de Janeiro, c=BR"`
+`keytool -selfcert -genkey -validity 360 -ext BC=ca:false -ext KeyUsage=digitalSignature,nonRepudiation,keyEncipherment,dataEncipherment,keyCertSign -ext ExtendedKeyUsage=clientAuth,serverAuth -ext SubjectAlternativeName=URI:<APPLICATION_URI> -keystore /opt/intelie/liverig/conf/opcua.jks -storetype PKCS12 -storepass liverig -keyalg RSA -keysize 2048 -alias opcua -keypass liverig -dname "cn=liverig, ou=INTELIE, o=INTELIE, l=Rio de Janeiro, st=Rio de Janeiro, c=BR"`
 
 That is, for an application URI of `urn:server_12:liverig` the command should have `-ext SubjectAlternativeName=URI:urn:server_12:liverig`
 

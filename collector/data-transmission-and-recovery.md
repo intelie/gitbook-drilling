@@ -1,20 +1,20 @@
 # Data transmission and recovery
 
-After the data is gathered by the collector and saved locally, it is transmitted to Intelie Live.
+After the data is gathered by the collector and saved locally, it is transmitted to INTELIE Live.
 
 The collector works with a _real-time high priority_ policy. That is, when the network recovers from any outage, the real time data is transmitted immediately and the backlog data is transmitted with low priority in a separate channel with limited bandwidth.
 
 This separation between real-time and non-real-time data also occurs when the collector was just initialized.
 
 {% hint style="info" %}
-There are four channels transmitting the data from the collector to Intelie Live in parallel: control, realtime, retransmission, and remotecontrol.
+There are four channels transmitting the data from the collector to INTELIE Live in parallel: control, realtime, retransmission, and remotecontrol.
 {% endhint %}
 
-### Outage recovery between the collector and Intelie Live
+### Outage recovery between the collector and INTELIE Live
 
-When the network recovers from an outage between the collector and Intelie Live, all the data that was not transmitted in real time is then transmitted with lower priority, respecting the maximum bandwith defined by the `resend_rate` parameter, in bytes per second.
+When the network recovers from an outage between the collector and INTELIE Live, all the data that was not transmitted in real time is then transmitted with lower priority, respecting the maximum bandwith defined by the `resend_rate` parameter, in bytes per second.
 
-As generally the collector and Intelie Live are on separate networks, this is a common situation.
+As generally the collector and INTELIE Live are on separate networks, this is a common situation.
 
 ### Outage recovery between the collector and the data sources
 

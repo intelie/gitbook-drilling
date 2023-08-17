@@ -6,7 +6,7 @@ To collect WITSML data, the collector can connect to several different data sour
 Currently supported WITSML versions are 1.3.1, 1.4.1 and 2.0.
 {% endhint %}
 
-In both modes (server or client), the WITSML capabilities on the LiveRig Collector are limited to the objects listed below. The data ingested by those objects typically will be transmitted to Intelie Live and converted as events for both real-time and historical analytics.
+In both modes (server or client), the WITSML capabilities on the LiveRig Collector are limited to the objects listed below. The data ingested by those objects typically will be transmitted to INTELIE Live and converted as events for both real-time and historical analytics.
 
 * Version 1.3 and 1.4
   * log (depth and time-based)
@@ -20,7 +20,7 @@ In both modes (server or client), the WITSML capabilities on the LiveRig Collect
 
 This support enables the data import into the edge environments (typically in physical rigs with small hardware requirements).&#x20;
 
-A more complete feature for WITSML capabilities is also provided through the [WITSML Store plugin](../../integrations/witsml-store.md) in a full Intelie Live installation (central or at the edge environments).
+A more complete feature for WITSML capabilities is also provided through the [WITSML Store plugin](../../integrations/witsml-store.md) in a full INTELIE Live installation (central or at the edge environments).
 
 ### Configuration
 

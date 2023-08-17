@@ -1,6 +1,6 @@
 ---
 description: >-
-  Intelie Live provides a Gantt chart for manage projects and plan rig
+  INTELIE Live provides a Gantt chart for manage projects and plan rig
   allocation. This chart is a tool to control scheduled and execution
   interventions in project management context.
 ---

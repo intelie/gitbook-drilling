@@ -10,7 +10,7 @@ The status of the cryptography is shown on the collectors web interface.
 
 ### Deployment upon OpenVPN
 
-Alternatively, we can use OpenVPN between the Live and the collector instances. An OpenVPN server would run close to the Intelie Live instance, and every collector would run an instance of an OpenVPN client on it.
+Alternatively, we can use OpenVPN between the Live and the collector instances. An OpenVPN server would run close to the INTELIE Live instance, and every collector would run an instance of an OpenVPN client on it.
 
 ![Connection using OpenVPN](<../.gitbook/assets/LiveRig Architecture (2).png>)
 

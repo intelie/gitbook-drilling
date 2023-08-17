@@ -24,7 +24,7 @@ Another codebase containing improvements was launched as another plugin called G
 
 ### Characteristics
 
-* Provides a secure WITSML store server using SOAP protocol in Intelie Live
+* Provides a secure WITSML store server using SOAP protocol in INTELIE Live
 * WITSML 1.3.1.1 and 1.4.1.1. available&#x20;
 * GetFromStore function to list:
   * well, wellbore, log, message, tubular, wbGeometry, mudLog, and trajectory objects
@@ -45,7 +45,7 @@ Another codebase containing improvements was launched as another plugin called G
     * based:
       * date time or measured depth indexes
       * selected mnemonics(defined in Channels Management functionality)
-* Independent authentication from Intelie Live with multiple users
+* Independent authentication from INTELIE Live with multiple users
 
 This configuration follows the following model below:
 
@@ -89,7 +89,7 @@ This configuration follows the following model below:
 
 | Parameters      | Description                                            | Required | Type            | Default Value | Possible Values                  |
 | --------------- | ------------------------------------------------------ | -------- | --------------- | ------------- | -------------------------------- |
-| endpoint        | the endpoint URL that will be provided in Intelie Live | yes      | string          |               | `http://127.0.0.1:<port>/<path>` |
+| endpoint        | the endpoint URL that will be provided in INTELIE Live | yes      | string          |               | `http://127.0.0.1:<port>/<path>` |
 | event\_limit    | number of max events used  for this pipes query        | no       | positive number | 100.000       |                                  |
 | timestamp\_mode | timestamp source for curves                            | yes      | string          |               | source, adjusted, capture, live  |
 

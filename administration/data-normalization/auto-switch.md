@@ -6,7 +6,7 @@ The Auto-Switch can be managed on the system configuration.
 
 Auto-Switch configurations allow to enable/disable the feature and to customize both `gap` and `restored` parameters. See more details [here](../../data-flow/data-normalization/auto-switch.md).
 
-If this feature is enabled, the Intelie Live platform will select the best input channel for each normalized channel.
+If this feature is enabled, the INTELIE Live platform will select the best input channel for each normalized channel.
 
 {% hint style="info" %}
 Auto-Switch engine only selects input channels with a priority defined.

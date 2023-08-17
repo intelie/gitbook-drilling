@@ -1,6 +1,6 @@
 # Sources
 
-Inside the `Sources` tab in the Intelie Live `Collectors` tab is possible to add sources for an online Collector with SSL enabled,  a button will be available at the bottom of sources list as shown below:
+Inside the `Sources` tab in the INTELIE Live `Collectors` tab is possible to add sources for an online Collector with SSL enabled,  a button will be available at the bottom of sources list as shown below:
 
 ![List of sources configured for a Collector](<../../../.gitbook/assets/collector-remote-control-sources.png>)
 

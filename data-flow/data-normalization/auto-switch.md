@@ -1,6 +1,6 @@
 # Auto-Switch
 
-Auto-Switch selects the best input channel for each normalized channel. Intelie LIVE platform analyzes every one of those channels configured and create an individual status, that represents the data quality of that channel.
+Auto-Switch selects the best input channel for each normalized channel. INTELIE LIVE platform analyzes every one of those channels configured and create an individual status, that represents the data quality of that channel.
 
 Every 20 seconds, the highest priority input channel with good status will be selected for each normalized channel.&#x20;
 

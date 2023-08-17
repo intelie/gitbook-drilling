@@ -14,7 +14,7 @@ In case of an error, a new attempt can be made.
 
 ![Error message](<../../../.gitbook/assets/image (411).png>)
 
-When requesting the WITSML tree, Intelie Live will try to get the latest information available in an internal cache. The tree request date is displayed and it can be updated by clicking on the repeat icon.
+When requesting the WITSML tree, INTELIE Live will try to get the latest information available in an internal cache. The tree request date is displayed and it can be updated by clicking on the repeat icon.
 
 ![](<../../../.gitbook/assets/image (520).png>)
 

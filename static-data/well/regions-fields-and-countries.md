@@ -1,6 +1,6 @@
 # Regions, fields and countries
 
-Intelie Live enables the management of fields, regions, and countries. It is possible to use a default set, provided out-of-the-box.
+INTELIE Live enables the management of fields, regions, and countries. It is possible to use a default set, provided out-of-the-box.
 
 It is possible to configure location for each well:
 

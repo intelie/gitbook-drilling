@@ -2,7 +2,7 @@
 This feature is only available for collector versions equal or above 3.0.0
 {% endhint %}
 
-Inside the `Properties` tab in the Intelie Live `Collectors` tab is possible to change the properties of an online Collector with SSL enabled. This page is only available for admin users:
+Inside the `Properties` tab in the INTELIE Live `Collectors` tab is possible to change the properties of an online Collector with SSL enabled. This page is only available for admin users:
 
 ![Properties page](<../../.gitbook/assets/collector-remote-control-properties.png>)
 

@@ -45,7 +45,7 @@ The LiveRig 4.0 beta series are also documented on this page, and if you have an
 * Improve the UX when configuring channels visualizations in pipeless widgets
 * New endpoint in liverig remote control API to save collector properties
 * Create a JSON Schema to validate and describe AppProperties JSON documents
-* Compatibility with Intelie Design System: migrate buttons, search bars, inputs and modals component in Normalization Template page
+* Compatibility with INTELIE Design System: migrate buttons, search bars, inputs and modals component in Normalization Template page
 
 ## 4.7 series
 

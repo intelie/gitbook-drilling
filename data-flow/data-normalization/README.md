@@ -13,7 +13,7 @@ The normalization occurs in 5 steps:
 After that, the normalized data is generated and can be used on visualization, algorithms and alerts.
 
 {% hint style="info" %}
-The data parse is performed by the Intelie Live platform. The collector only parses the data for some specific reasons such as iterating on the date or depth when using WISTML, for example.
+The data parse is performed by the INTELIE Live platform. The collector only parses the data for some specific reasons such as iterating on the date or depth when using WISTML, for example.
 {% endhint %}
 
 Data from different sources, either onshore or offshore, can be merged into the same asset during the normalization process.
@@ -22,4 +22,4 @@ Data from different sources, either onshore or offshore, can be merged into the 
 All the original data is processed and saved as is, and is also used in many analyses.
 {% endhint %}
 
-A [guide](../../administration/data-normalization/) on how to configure the data normalization in Intelie Live is provided on the System Administration section.
+A [guide](../../administration/data-normalization/) on how to configure the data normalization in INTELIE Live is provided on the System Administration section.

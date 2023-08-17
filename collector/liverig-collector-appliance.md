@@ -1,6 +1,6 @@
 # LiveRig Collector Appliance
 
-Intelie can deploy the LiveRig on a hardware, with small factory rack with a LCD with service status.
+INTELIE can deploy the LiveRig on a hardware, with small factory rack with a LCD with service status.
 
 ![](../.gitbook/assets/Selection\_001.png)
 

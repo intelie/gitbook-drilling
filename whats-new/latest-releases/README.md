@@ -5,7 +5,7 @@ description: Here you find the latest oil-and-gas-related plugins and artifacts
 # Latest releases
 
 {% hint style="success" %}
-The complete list of plugins for the **Live Drilling** solution is now categorized and published into the **Intelie Live Marketplace**, see: [https://marketplace.intelie.com/search/category/O\&G%20Drilling](https://marketplace.intelie.com/search/category/O\&G%20Drilling)
+The complete list of plugins for the **Live Drilling** solution is now categorized and published into the **INTELIE Live Marketplace**, see: [https://marketplace.intelie.com/search/category/O\&G%20Drilling](https://marketplace.intelie.com/search/category/O\&G%20Drilling)
 {% endhint %}
 
 

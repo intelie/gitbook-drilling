@@ -8,7 +8,7 @@ When the source is configured to WITSML in the client mode (pulling), the Backlo
 
 ![List of previous backlog sync requests](<../../../.gitbook/assets/image (170).png>)
 
-Intelie Live will show all the previous backlog sync requests and details of each one.
+INTELIE Live will show all the previous backlog sync requests and details of each one.
 
 To create a new request the user has to select the logs from the WITSML tree.
 

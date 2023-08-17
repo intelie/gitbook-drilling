@@ -1,10 +1,10 @@
 # Manual Pressure Test
 
 {% hint style="info" %}
-Intelie suggest to use the new version of pressure tests pipeless available at pressure-tests-automated section
+INTELIE suggest to use the new version of pressure tests pipeless available at pressure-tests-automated section
 {% endhint %}
 
-Intelie Live can automate a set of conditions that can be performed against any variable to define if a pressure test is successful or not.
+INTELIE Live can automate a set of conditions that can be performed against any variable to define if a pressure test is successful or not.
 
 Any available test will be shown as options on the chart for any user. If the user have the proper permissions, he or she can save the results of their tests and share with other users.
 

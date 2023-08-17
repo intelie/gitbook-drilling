@@ -1,6 +1,6 @@
 # Data normalization templates
 
-Intelie Live supports data normalization templates to speed up the configuration of the normalization. If assets have part of their sources configuration in common, e.g. the same service company, then a template can be used to define that configuration.
+INTELIE Live supports data normalization templates to speed up the configuration of the normalization. If assets have part of their sources configuration in common, e.g. the same service company, then a template can be used to define that configuration.
 
 ![Buttons to create a template from an asset and import a template into an asset.](<../../.gitbook/assets/image (322).png>)
 

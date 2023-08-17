@@ -26,7 +26,7 @@ If the data is normalized by rig, the operations will only be shown on the well 
 
 ## Configuration
 
-Intelie Live provides two different algorithms for detecting the current drilling activity. It is also possible to add and edit those activities manually. Their configuration is accessed on the Configurations menu, as the image shows.
+INTELIE Live provides two different algorithms for detecting the current drilling activity. It is also possible to add and edit those activities manually. Their configuration is accessed on the Configurations menu, as the image shows.
 
 ![Rig state configuration menu](https://lh3.googleusercontent.com/Ol9YkUfQfVIwAJrwIzw9\_B4P06J-o2-VYkBwVqPWdDjNBc7yJNSS8G0cW3dAhfnYjx9s0a\_IqlKw-0BnlcEVtD6krm9nWhosiRw81xy\_9ec1nXvAtOMhEb7dDz4QlDTm2kNf9GrP)
 

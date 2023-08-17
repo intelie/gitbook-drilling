@@ -1,13 +1,13 @@
-# Connecting to Intelie Live
+# Connecting to INTELIE Live
 
-To accept connections from any collector, an instance of the `liverig-server` integration must be created on the Intelie Live web administration.
+To accept connections from any collector, an instance of the `liverig-server` integration must be created on the INTELIE Live web administration.
 
 ![Creating a liverig-server instance](<../.gitbook/assets/image (84).png>)
 
 On the configuration of this integration, the user must define:
 
-* the state path, which is the path where the re-transmission control data will be stored on the Intelie Live server;
-* the local port, which is the port on which Intelie Live will listen for connections;
+* the state path, which is the path where the re-transmission control data will be stored on the INTELIE Live server;
+* the local port, which is the port on which INTELIE Live will listen for connections;
 * cryptography keystore path and password;
 * and the list of collector instances and their respective allowed rig names
 

@@ -140,7 +140,7 @@
 
 * [Introduction](collector/introduction.md)
 * [Getting Started](collector/getting-started.md)
-* [Connecting to Intelie Live](collector/connecting-to-intelie-live.md)
+* [Connecting to INTELIE Live](collector/connecting-to-intelie-live.md)
 * [Security](collector/security.md)
 * [Local data storage](collector/local-data-storage.md)
 * [Data transmission and recovery](collector/data-transmission-and-recovery.md)

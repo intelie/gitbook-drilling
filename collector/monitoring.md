@@ -1,6 +1,6 @@
 # Monitoring
 
-On Intelie Live `Collectors` tab, it is possible to get an overview of all the active collectors and drill down to troubleshoot any issue regarding data collection and transmission.
+On INTELIE Live `Collectors` tab, it is possible to get an overview of all the active collectors and drill down to troubleshoot any issue regarding data collection and transmission.
 
 The interface provides information regarding data availabilty and quality, transmission and compression rates, SSL/TLS status, and many other information about the health of the collectors.
 
@@ -10,9 +10,9 @@ The interface provides information regarding data availabilty and quality, trans
 
 **Sources Status**
 
-The sources are clickable and Intelie Live provides more details of the source in a modal.
+The sources are clickable and INTELIE Live provides more details of the source in a modal.
 
-For every protocol available, Intelie Live will display basic source information and configuation. For WITSML (only client mode) and OPC sources, a request tab is also available, showing requests configured and information available in the server can be requested.
+For every protocol available, INTELIE Live will display basic source information and configuation. For WITSML (only client mode) and OPC sources, a request tab is also available, showing requests configured and information available in the server can be requested.
 
 ![Configuration Tab available for WITSML, WITS, CSV, OPC-DA, OPC-UA, Modbus and Raw sources](<../.gitbook/assets/collector-witsml-source.png>)
 
@@ -22,7 +22,7 @@ For every protocol available, Intelie Live will display basic source information
 
 ### The `internal` event
 
-Once per minute, every collector generates an event with many statistics associated to its health and the health of the sources of data. The events provided by different collectors are used by Intelie Live as a heartbeat, and provide a full view of the collectors infrastructure.
+Once per minute, every collector generates an event with many statistics associated to its health and the health of the sources of data. The events provided by different collectors are used by INTELIE Live as a heartbeat, and provide a full view of the collectors infrastructure.
 
 ![\`internal\` event shown at the console](<../.gitbook/assets/image (462).png>)
 

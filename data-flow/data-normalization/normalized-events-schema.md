@@ -32,7 +32,7 @@ If the option `Include raw fields` is marked on the asset normalization configur
 | `converted_value`                                                                                                                | double |
 | The value after conversion. This can be different from the `value` if the option `Ignore unit conversion errors` is not enabled. |        |
 | `capture_timestamp`                                                                                                              | long   |
-| The date that the event was received by the collector (while `timestamp` is the date that it was received by Intelie Live).      |        |
+| The date that the event was received by the collector (while `timestamp` is the date that it was received by INTELIE Live).      |        |
 
 ## Errors
 

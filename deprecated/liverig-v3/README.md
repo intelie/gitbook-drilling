@@ -254,8 +254,8 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 * Fixed pressure tests performance queries
 * WITS Custom Mapping ([more](../../administration/high-frequency-data/wits-custom-mapping.md))
 * Improve "Depths auto update" in the "Additional Features" menu to allow the selection of values ​​to update hole depth and measured depth separately
-* Allow searching for sources on Intelie Live Collectors screen
-* New API for source endpoint validation in remote control of Intelie Live Collectors ([more](../../collector/remote-control/apis/test-source-endpoint-api.md))
+* Allow searching for sources on INTELIE Live Collectors screen
+* New API for source endpoint validation in remote control of INTELIE Live Collectors ([more](../../collector/remote-control/apis/test-source-endpoint-api.md))
 * Fixed bugs at units conversion engine
   * Alias which points to a Unit Extensions are not being loaded after system initialization;
   * It is not possible to create a Unit Alias pointing to a Unit FixUp (gal\[US]/min, for example);
@@ -651,7 +651,7 @@ This version depends on Live 2.25.8
 * Allow that channels are normalized without being configured if they match the standard names
 * Display collector sources configuration details on Live web interface
 * Display number of received channels and compression rate for each collector on Live web interface
-* Integration with Intelie's _Poço Web_ to retrieve well project data
+* Integration with INTELIE's _Poço Web_ to retrieve well project data
 * Support for filters in WITSML wildcard configuration
 * Support for WITSML version 1.4.1.1 in server mode on the collector ([more](../../collector/protocols/witsml.md))
 * Support for ignoring invalid SSL certificates in WITSML ([more](../../collector/configuration/liverig.properties.md))

@@ -20,7 +20,7 @@ It represents how much pressure the standpipe supports.
 
 For the WITSML protocol:
 
-* Whether Intelie's collector will act as the client or the server
+* Whether INTELIE's collector will act as the client or the server
   * If the collector is on client mode:
     * The url, username, password to access the WITSML Store
     * The list of wells and wellbores

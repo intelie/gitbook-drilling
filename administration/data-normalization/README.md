@@ -1,12 +1,12 @@
 # Data Normalization
 
-The [data normalization](../../data-flow/data-normalization/) process is applied to any event received by Intelie Live that follows the raw format and has a related asset configured.
+The [data normalization](../../data-flow/data-normalization/) process is applied to any event received by INTELIE Live that follows the raw format and has a related asset configured.
 
 ## First step: Standard Channels configuration
 
 To perform this process, one must define a set of Standard Channels, or Standard Curves, in which will be defined the mnemonic and the unit of measurement for each channel, independently of its source (well, rig or service company).
 
-![Standard channels configuration in Intelie Live](<../../.gitbook/assets/image (372).png>)
+![Standard channels configuration in INTELIE Live](<../../.gitbook/assets/image (372).png>)
 
 ## Second step: Asset configuration
 

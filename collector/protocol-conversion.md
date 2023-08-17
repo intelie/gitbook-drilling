@@ -99,6 +99,6 @@ After configuring the OPC to WITSML conversion an WITSML server endpoint will be
 configure a new [WITSML](./protocols/witsml.md) Source at a LiveRig Collector or use a WITSML Store for fetching data.
 
 {% hint style="info" %}
-When used in pure protocol conversion mode, the collector does not need the presence of a centralized Intelie Live
+When used in pure protocol conversion mode, the collector does not need the presence of a centralized INTELIE Live
 environment.
 {% endhint %}

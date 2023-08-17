@@ -32,7 +32,7 @@ The perspectives are associated to teams on the Team page, in the Live administr
 
 ## User Permissions
 
-Besides the [permissions defined by the Intelie Live platform](https://platform.intelie.com/features/access-permision#user-basic-permissions), other specific permissions are added by the Drilling Solution.
+Besides the [permissions defined by the INTELIE Live platform](https://platform.intelie.com/features/access-permision#user-basic-permissions), other specific permissions are added by the Drilling Solution.
 
 
 

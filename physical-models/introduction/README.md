@@ -1,6 +1,6 @@
 # Introduction
 
-The physical models are available today on the Intelie Live Platform.
+The physical models are available today on the INTELIE Live Platform.
 
 * Trajectory - Minimum Curvature Method
 * Torque and Drag  - Soft String
@@ -10,7 +10,7 @@ The physical models are available today on the Intelie Live Platform.
 * Thermal Simulator
 * Volume Tracker
 
-**On Intelie Live is possible to use the Engineering tools in two forms:**&#x20;
+**On INTELIE Live is possible to use the Engineering tools in two forms:**&#x20;
 
 *   **Standalone (Steady-state)**
 

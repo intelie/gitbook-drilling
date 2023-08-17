@@ -1,6 +1,6 @@
 # Standard Identifiers
 
-To support some out-of-the-box analyses provided by Intelie, a set of common identifiers must be configured.
+To support some out-of-the-box analyses provided by INTELIE, a set of common identifiers must be configured.
 
 When those fields are configured, some macros are enabled to support the access to that specific mnemonics. For example, when configured, `@@channels.bit_depth` will refer to the bit depth mnemonic, whatever it is, in any environment.
 
