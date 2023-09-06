@@ -14,7 +14,7 @@ The pipe function for filtering signals enables removing unwanted harmonic compo
 
 Sine Wave Combined with Multiple Frequencies and Gaussian White Noise
 
-```python
+```haskell
 def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 => over all every sec
@@ -30,7 +30,7 @@ def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 Generate FFT of Original Signal
 
-```python
+```haskell
 def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 => over last min every sec
@@ -50,7 +50,7 @@ def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 Applying Low Pass IIR Butterworth Filter
 
-```python
+```haskell
 def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 => over all every sec
@@ -71,7 +71,7 @@ y over all every min
 
 FFT of the Filtered Signal
 
-```python
+```haskell
 def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 => over last min every sec
@@ -106,7 +106,7 @@ The pipes find peaks function is used to find peaks or valleys within a given sa
 
 Detecting Peaks and Troughs on a Channel
 
-```python
+```haskell
 mnemonic:MNEMONIC => value, timestamp
 
 => signal.findPeaks(timestamp#, value#) as res at the end
@@ -115,7 +115,7 @@ mnemonic:MNEMONIC => value, timestamp
 => yArr[x] as peak, xArr[x] as timestamp
 ```
 
-```python
+```haskell
 mnemonic:MNEMONIC => value, timestamp
 
 => signal.findTroughs(timestamp#, value#) as res at the end
@@ -131,7 +131,7 @@ mnemonic:MNEMONIC => value, timestamp
 
 Sine Waves
 
-```python
+```haskell
 => over last 10 min every sec
 => count() as x over all every item
 => signal.generate_wave("sin", x, 0.01, 0, 0) as y_0_deg,
@@ -143,18 +143,19 @@ Sine Waves
 
 Sine Wave with Noise
 
-<pre><code><strong>=> over last 10 min every sec
-</strong>=> count() as x over all every item
+```haskell
+=> over last 10 min every sec
+=> count() as x over all every item
 => signal.generate_wave("sin", x, 0.01, 0, 0.02) as y_0_deg,
    signal.generate_wave("sin", x, 0.01, 45/pi(), 0.03) as y_45_deg,
    signal.generate_wave("sin", x, 0.01, 60/pi(), 0.04) as y_60_deg
-</code></pre>
+```
 
 <figure><img src="https://lh6.googleusercontent.com/dLqGKauaO7wVE_iFa7TuEuN8gC_40idZWPV2YN-QYLZvvFevgDmP8EjqLM9_VzPSSn3Ju248CBaoXRnnN1vtV6xatRTdHDAnRcCCurT1GQFsnMIsQxFFPk5jpMDOrZXJ5-m2DbZL1z3Sh9EqUd0QOnLLJfzHdRk0Bob3ZRzrpHIIhRNFgP-d2EszjYProQ" alt=""><figcaption><p>Sine noised wave generated</p></figcaption></figure>
 
 Square Wave
 
-```python
+```haskell
 => over last 10 min every sec
 => count() as x over all every item
 => signal.generate_wave("square", x, 0.01, 0, 0) as y_0_deg
@@ -164,7 +165,7 @@ Square Wave
 
 Square Wave with Noise
 
-```python
+```haskell
 => over last 10 min every sec
 => count() as x over all every item
 => signal.generate_wave("square", x, 0.01, 0, 0.05) as y_0_deg
@@ -174,7 +175,7 @@ Square Wave with Noise
 
 Square Wave with differents Duty Cycles
 
-```python
+```haskell
 => over last 10 min every sec
 => count() as x over all every item
 => signal.generate_wave("square", x, 0.01, 0, 0, 0.10) as y_10,
@@ -191,10 +192,9 @@ An outlier is an observation that is unusually far from the other values in a da
 
 Remove the top 5% and bottom 5% values
 
-```python
+```haskell
 data_with_outliers
-=> signal.removeOutliers(timestamp#, value#, 'top_bottom') as filteredData 
-over all every 10 minutes
+=> signal.removeOutliers(timestamp#, value#, 'top_bottom') as filteredData over all every 10 minutes
 => filteredData->timestamps as xArr, filteredData->values as yArr
 => @for range(xArr:len) as x, xArr, yArr
 => yArr[x] as filtered, xArr[x] as timestamp
@@ -212,7 +212,7 @@ In pipes we have two types of interpolation linear and polynomial ( lagrange met
 
 <figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Example of linear interpolation</p></figcaption></figure>
 
-```python
+```haskell
 def @@x: (1.0, 2.0, 4.0, 5.0);
 def @@y: (4.0, 6.0, 11.0, 17.0);
 def @@xi: (3.0, 4.0);
@@ -226,7 +226,7 @@ at the end
 
 <figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
 
-```python
+```haskell
 def @@x: (1.0, 2.0, 4.0, 5.0);
 def @@y: (4.0, 6.0, 11.0, 17.0);
 def @@xi: (3.0, 4.0);
@@ -240,7 +240,7 @@ at the end
 
 Here's an example where the linear interpolation function can be used with real time data. On pipes based chart create two layers with the snippets bellow.
 
-```python
+```haskell
 def @@channels: ("PRESSURE");
 def @@ INITIAL_TIMESTAMP: 0;
 
@@ -254,7 +254,7 @@ rigA .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@
 => res->x as x, res->y as y_original
 ```
 
-```python
+```haskell
 def @@channels: ("PRESSURE");
 def @@ INITIAL_TIMESTAMP: 0;
 
@@ -281,13 +281,13 @@ Multi linear regression is a statistical method used to model the relationship b
 
 The Multi Linear Regression pipes functions aggregate data over a certain period of time receiving the x and y values, the type of the function and, in the case of the polynomial, the degree. The return type is a `row` containing the predicted values, which is a sequence of numbers, the function coefficients, and, if present an error indicating what went wrong in the format of a `string`. These errors can be caused in case of using a invalid type or not enough data to make the regression. Therefore, their signature goes like the snippet below:
 
-```python
+```haskell
 signal.regression(x, y, function_type, polynomn_degree)
 ```
 
 For all examples (except real-time) the same base layer is used:
 
-```python
+```haskell
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -297,7 +297,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 #### Polynomial
 
-```python
+```haskell
 def @@channels: ("pressure");
 def @@DEGREE: 2;
 
@@ -313,7 +313,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 #### Logarithmic
 
-```python
+```haskell
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -328,7 +328,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 #### Exponential
 
-```python
+```haskell
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -343,7 +343,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 #### Exponential Decay
 
-```python
+```haskell
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -358,7 +358,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 #### Power
 
-```python
+```haskell
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -375,7 +375,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 Layer 1:
 
-```python
+```haskell
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -385,7 +385,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 Layer 2:
 
-```python
+```haskell
 def @@channels: ("pressure");
 def @@DEGREE: 2;
 
@@ -401,6 +401,51 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 <figure><img src="../../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
 
 ### Pipeless Aggregations
+
+#### Latest versions
+
+{% hint style="info" %}
+Requirement: plugin-processing-1.2.0+, liverig-5.2.0+, liverig-vis-4.6.0+
+{% endhint %}
+
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/11-ui-improvement-all-configs.png" alt=""><figcaption><p>UI improvement for the aggregations configuration</p></figcaption></figure>
+
+In this new update the aggregations are nested within the channel card to provide a better comprehension of what data is being used to create the modified series. To add a new aggregation to a channel click on the `+` button next to channel name.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/1-ui-improve-select-a-channel.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
+
+Then select which aggregation is going to be created. At this point the `plugin-processing` provides the following aggregation types the corresponds to the pipes functions listed previously in this document: Moving Average, Signal Filtering, Peak and Through Detections and Outliers removal.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/2-ui-improve-select-agg.png" alt=""><figcaption><p>Listing all available aggregations</p></figcaption></figure>
+
+After adding the aggregations, the interface assumes a tree-like format.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/3-ui-improvement-new-agg-positioning.png" alt=""><figcaption><p>All available aggregations activated</p></figcaption></figure>
+
+The follow four images shows how the configurations are now set for the aggregation functions. Each of then has their own configuration panel, where the user can even customize the plotting style.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/4-ui-improvement-moving-avg-config.png" alt=""><figcaption><p>Moving average configuration</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/5-ui-improvement-filter-config.png" alt=""><figcaption><p>Signal filtering configuration</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/7-ui-improvement-detect-peaks.png" alt=""><figcaption><p>Peaks detection configuration</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/6-ui-improvement-remove-outliers.png" alt=""><figcaption><p>Outliers removal configuration</p></figcaption></figure>
+
+The peaks detection configuration uses a different plotting style (scatter). At this point is possible to plot the aggregation to use line or scatter plot.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/9-ui-improvement-scatter-config.png" alt=""><figcaption><p>Plotting style options</p></figcaption></figure>
+
+Enabling and disabling aggregation can be done using a `eye` button like the channels cards. 
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/8-ui-improvement-disable-channels.png" alt=""><figcaption><p>Enable and disable aggregations<p></figcaption></figure>
+
+All configurations can also be done in the view mode.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/12-ui-improvement-on-view-mode.png" alt=""><figcaption><p>Configuration in view mode<p></figcaption></figure>
+
+#### Older versions
 
 {% hint style="info" %}
 Requirement: plugin-processing-1.1.0+, liverig-5.1.1+, liverig-vis-4.6.0+
@@ -428,7 +473,7 @@ The aggregations can also be added in the visualization mode using the new chart
 
 <figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_mod.png" alt=""><figcaption><p>New chart configuration menu with aggregations</p></figcaption></figure>
 
-It is posible to turn on the filters, moving average and outliers or on a chart to calculate it through a temporal range.
+It is possible to turn on the filters, moving average and outliers or on a chart to calculate it through a temporal range.
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Pipeless aggregation configuration on viewmode</p></figcaption></figure>
 

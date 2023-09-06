@@ -5,7 +5,12 @@ The LiveRig Collector depends on the Node Ids (Tags) values, among other informa
 ```json
 {
   "database": {
-    "url": "jdbc:postgresql://localhost:5432/?user=root&password=rootpassword"
+    "url": "jdbc:postgresql://localhost:5432/?user=root&password=rootpassword",
+    "parameters": {
+      "timescale": false,
+      "timescale.chunk_interval": 604800000,
+      "timescale.compress_after": 3600000
+    }
   },
   "endpoint": "http://127.0.0.1:1234/witsml/store",
   "limit": 1234,

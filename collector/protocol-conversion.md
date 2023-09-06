@@ -5,7 +5,7 @@ and deliver it on WITSML format. That action could be performed in any deployed 
 
 ![OPC to WITSML Architecture](../.gitbook/assets/OPCToWitsmlConverter.png)
 
-The OPC to WITSML conversion works by running a basic WITSML server backed by a PostgreSQL database, where the Live Rig
+The OPC to WITSML conversion works by running a basic WITSML server backed by a PostgreSQL or TimescaleDB database, where the Live Rig
 Collector will query the OPC server and expose its data as an WITSML server.
 
 To configure this feature, you need to configure an OPC-DA or OPC-UA Source on the LiveRig Collector. For more
@@ -20,13 +20,56 @@ These are: `database`, `endpoint`, `limit` and `purge`.
 
 ### Database
 
-The `database` field is required for connecting to the local PostgreSQL database used in the conversion. *Example:*
+The `database` field is required for connecting to the local database instance used in the conversion.
+To specify which database will be used (PostgreSQL, TimescaleDB), just configure a flag inside the parameter field of the database section.
+
+*Example:*
 
 ```json
 "database": {
-"url": "jdbc:postgresql://localhost:5432/?user=root&password=rootpassword"
+    "url": "jdbc:postgresql://localhost:5432/?user=root&password=rootpassword",
+    "parameters": {
+        "timescale": false
+    }
 }
 ```
+
+The default database is PostgreSQL, which means that if configuration parameters are not provided, or if it's
+provided with the timescale flag set to false, PostgreSQL will be used.
+
+By enabling TimescaleDB, we can take advantage of its compression features, capable of decreasing the total
+amount of used disk space.
+To install a TimescaleDB instance, you need to configure the extension accordingly.
+
+For more details, see [Installing TimescaleDB](https://docs.timescale.com/self-hosted/latest/install/)
+on the official docs.
+
+#### TimescaleDB Configuration
+
+A valid TimescaleDB configuration looks like the following:
+
+```json
+"database": {
+    "url": "jdbc:postgresql://localhost:5432/?user=root&password=rootpassword",
+    "parameters": {
+        "timescale": true,
+        "timescale.chunk_interval": 604800000,
+        "timescale.compress_after": 3600000
+    }
+}
+```
+
+- ***Chunk Interval***: Hypertables in TimescaleDB are automatically partitioned into smaller pieces, called chunks.
+Each chunk contains a specific amount of data, defined by chunk interval configuration.
+Behind the scenes, each chunk is the smallest portion of data that can be compressed and decompressed.
+`timescale.chunk_interval` setting is expressed in milliseconds, and defaults to 7 days (604800000 ms).
+
+
+- ***Compress After***: Represents the amount of time after which the hypertable chunks will be automatically
+compressed in the background. A recurrent policy is set to compress every chunk containing data older
+than this configuration. `timescale.compress_after` setting is also expressed in milliseconds,
+and defaults to 1 hour (3600000 ms).
+
 
 ### Endpoint
 
