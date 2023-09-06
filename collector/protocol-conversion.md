@@ -72,6 +72,6 @@ When used in pure protocol conversion mode, the collector does not need the pres
 ### Limitations
 
 1. Unit conversion is not supported.
-2. The generated WITSML logs contain only date and time information.
+2. The actual data will be available as WITSML date-time logs only (no depth support).
 3. A straightforward WITSML well and wellbore structure will be used to represent the actual data as WITSML logs.
 
