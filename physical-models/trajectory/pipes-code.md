@@ -152,7 +152,7 @@ og.model.minimumCurvature.tvdMap(
 ```
 
 **Output: True Vertical Depth (m) vs MD(m)**\
-****
+
 
 ### **TVD Delta**
 

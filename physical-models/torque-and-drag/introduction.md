@@ -20,4 +20,3 @@ Drag is an axial force, generated between the contact force between the drill st
   * Assess buckling along the string
   * Benchmark friction factors
 
-****

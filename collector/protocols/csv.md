@@ -18,7 +18,7 @@ As a textual representation, CSV typically carries some standard number that nee
 
 The date time pattern can be customized to detect seconds, milliseconds, or textual samples of information like months, AM/PM marks, or either some fixed strings in the rows which represent the timestamp of each data measurement. See the [full list of symbols supported](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) (as in Java).
 
-<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption><p>Date time custom format configuration rules</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot_select-area_20220919140345.png" alt=""><figcaption><p>Date time custom format configuration rules</p></figcaption></figure>
 
 Each column in the CSV file will be interpreted as a channel value and the first column will be the date time index for each row in the dataset.
 
@@ -30,7 +30,7 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 <div>
 
-<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp (1) (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93) (1) (1) (1).png" alt=""><figcaption><p>TCP port configuration for CSV source endpoint</p></figcaption></figure>
 
  
 
@@ -40,9 +40,7 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 The TCP connector puts the source in **server mode** and waits for data to be pushed into it. On the other hand, the Serial port connector configures the source as **client mode** and watches the Unix device file to consume the data passing through.
 
-Starting at Liverig 4.11.0, CSV client mode support both TCP and Serial connection protocols, and Server mode supports only TCP connection protocol.
-If server mode is enabled, the Serial Port radio button will be disabled:
-
+Starting at LiveRig 4.11.0, CSV source supports TCP and Serial connection protocols for Client mode. When using Server mode, it only supports TCP protocol. If server mode is enabled, the Serial Port radio button will be disabled:
 
 <figure><img src="../../.gitbook/assets/csv-server-mode-serial-port-disabled.png" alt=""><figcaption><p>Serial port disabled for CSV Server Mode</p></figcaption></figure>
 

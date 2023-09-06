@@ -45,7 +45,7 @@ When choosing rigs selected through dashboard option it is possible to use the d
 
 ![Rig filter dashboard configuration](https://lh5.googleusercontent.com/bijeziuqFaPUBY1RdpfMgwt5LoRGWDGZSYGpdyQxD5riADHeAy5Z4VebgblrAGYjYTwOrabJr7GpBDMrUTc7q681W7EIyDqEXruylymm-i1qubSjqk4WUeLnJjN0khVJmBbjx0Ay)
 
-&#x20;**** Make sure the filter is active. This filter can have multiple values
+&#x20;Make sure the filter is active. This filter can have multiple values
 
 ![Active filters dashboard configuration](https://lh3.googleusercontent.com/7afbYdPBm32AeKWirLjaYYZk0uHixR1Z6MGfwY13mndst6FR9xgZZSP-1Eq-qOBgYZ\_xEehQeNsEFQ5\_j95Hjg1rfuXFJLNX0WmBN3zcJtELxaLe84OCbWR7OaumkeTjj0JHQhWN)
 
@@ -73,4 +73,3 @@ Then the rigs can be selected in view mode through the dashboard filter.
 
 ![Pipes function og.rigAllocation lists interventions filtered by rig event types](https://lh6.googleusercontent.com/wL9remk2OlTexHUVWV60sl2WdHCe79KH4e\_vX38o\_V5FRAjgLupbhwAvSjWe1KipY1w0Ycbas26OQYmmPBr5EwURTNHBS5HtoY0UEITQGR66l9IdjlfKzV2MZeQOxWg4zdhDv7tF)
 
-****

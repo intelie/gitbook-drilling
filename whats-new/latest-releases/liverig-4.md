@@ -14,7 +14,7 @@ The LiveRig 4.0 beta series are also documented on this page, and if you have an
 
 **4.11.0**
 
-* Add TCP client mode for CSV source
+* Add TCP client mode for CSV source ([more](../../collector/protocols/csv.md))
 * Add source filter to sources tab on new collector screen
 
 ## 4.10 series

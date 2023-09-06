@@ -27,7 +27,8 @@
 * [Rig State detection](whats-new/rig-state-detection.md)
 * [BOP Schematic](whats-new/bop-schematic/README.md)
   * [BOP status register](whats-new/bop-schematic/bop-status-register.md)
-* [Signal Processing](whats-new/signal-processing.md)
+* [Signal Processing](whats-new/signal-processing/README.md)
+  * [Moving Average](whats-new/signal-processing/moving-average.md)
 
 ## Data Flow
 
@@ -81,6 +82,8 @@
     * [Temporal Channels Chart](features/data-visualization/channels-charts/temporal-channels-chart.md)
     * [Channel Value Chart](features/data-visualization/channels-charts/value-channel-chart.md)
     * [Depth Channels Chart](features/data-visualization/channels-charts/depth-channels-chart.md)
+    * [Data navigation](features/data-visualization/channels-charts/data-navigation/README.md)
+      * [Span Control ](features/data-visualization/channels-charts/data-navigation/span-control.md)
   * [Rig Allocation Gantt Chart](features/data-visualization/gantt.md)
 * [Unit sets](features/display-units/README.md)
   * [Configuration changes on unit sets](features/display-units/configuration-changes-on-display-units.md)

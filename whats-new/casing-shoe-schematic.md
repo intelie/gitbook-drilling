@@ -18,7 +18,7 @@ Static data used to render the casing shoe schematic at well parameters tab:
 
 Advantages **:**\\
 
-***
+
 
 * Preview well design phase information such as casing diameters, bit depth, lithology, and target formations, and casing structure including liners, screen, slotted liners or open hole by depth
 * Go along with the real time bit depth position using the standard configured channel

@@ -10,11 +10,11 @@ Live provides pipe functions to improve signal data processing helping make busi
 
 The pipe function for filtering signals enables removing unwanted harmonic component to have a more clear curve using low/band/high pass filters.
 
-<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
 
 Sine Wave Combined with Multiple Frequencies and Gaussian White Noise
 
-```
+```python
 def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 => over all every sec
@@ -30,7 +30,7 @@ def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 Generate FFT of Original Signal
 
-```
+```python
 def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 => over last min every sec
@@ -50,7 +50,7 @@ def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 Applying Low Pass IIR Butterworth Filter
 
-```
+```python
 def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 => over all every sec
@@ -71,7 +71,7 @@ y over all every min
 
 FFT of the Filtered Signal
 
-```
+```python
 def sine_wave(x, f=60, amp=1, theta=0): amp * sin(2*pi()*f*x + theta);
 
 => over last min every sec
@@ -100,13 +100,13 @@ y over all every 10 sec
 
 The pipes find peaks function is used to find peaks or valleys within a given sample. The values found can be filtered within a certain range that can take into account its height, plateau size, distance, prominence and width.
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (3) (3).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
 
 Detecting Peaks and Troughs on a Channel
 
-```
+```python
 mnemonic:MNEMONIC => value, timestamp
 
 => signal.findPeaks(timestamp#, value#) as res at the end
@@ -115,7 +115,7 @@ mnemonic:MNEMONIC => value, timestamp
 => yArr[x] as peak, xArr[x] as timestamp
 ```
 
-```
+```python
 mnemonic:MNEMONIC => value, timestamp
 
 => signal.findTroughs(timestamp#, value#) as res at the end
@@ -131,7 +131,7 @@ mnemonic:MNEMONIC => value, timestamp
 
 Sine Waves
 
-```
+```python
 => over last 10 min every sec
 => count() as x over all every item
 => signal.generate_wave("sin", x, 0.01, 0, 0) as y_0_deg,
@@ -154,7 +154,7 @@ Sine Wave with Noise
 
 Square Wave
 
-```
+```python
 => over last 10 min every sec
 => count() as x over all every item
 => signal.generate_wave("square", x, 0.01, 0, 0) as y_0_deg
@@ -164,7 +164,7 @@ Square Wave
 
 Square Wave with Noise
 
-```
+```python
 => over last 10 min every sec
 => count() as x over all every item
 => signal.generate_wave("square", x, 0.01, 0, 0.05) as y_0_deg
@@ -174,7 +174,7 @@ Square Wave with Noise
 
 Square Wave with differents Duty Cycles
 
-```
+```python
 => over last 10 min every sec
 => count() as x over all every item
 => signal.generate_wave("square", x, 0.01, 0, 0, 0.10) as y_10,
@@ -187,11 +187,11 @@ Square Wave with differents Duty Cycles
 
 An outlier is an observation that is unusually far from the other values in a data set. Remove outlier is a common process to have a more clear data.
 
-<figure><img src="../.gitbook/assets/image (111).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (111).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
 
 Remove the top 5% and bottom 5% values
 
-```
+```python
 data_with_outliers
 => signal.removeOutliers(timestamp#, value#, 'top_bottom') as filteredData 
 over all every 10 minutes
@@ -206,13 +206,13 @@ over all every 10 minutes
 
 We can use pipes to estimate a point using interpolation functions.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
 
 In pipes we have two types of interpolation linear and polynomial ( lagrange method )
 
-<figure><img src="../.gitbook/assets/image (91).png" alt=""><figcaption><p>Example of linear interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Example of linear interpolation</p></figcaption></figure>
 
-```
+```python
 def @@x: (1.0, 2.0, 4.0, 5.0);
 def @@y: (4.0, 6.0, 11.0, 17.0);
 def @@xi: (3.0, 4.0);
@@ -224,9 +224,9 @@ at the end
 => signal.linear_interpolation(x, y, xi) as result
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
 
-```
+```python
 def @@x: (1.0, 2.0, 4.0, 5.0);
 def @@y: (4.0, 6.0, 11.0, 17.0);
 def @@xi: (3.0, 4.0);
@@ -238,39 +238,56 @@ at the end
 => signal.polynomial_lagrange_interpolation(x, y, xi) as result
 ```
 
-### Aggregations
+Here's an example where the linear interpolation function can be used with real time data. On pipes based chart create two layers with the snippets bellow.
 
-{% hint style="info" %}
-plugin-processing-1.1.0 required
-{% endhint %}
+```python
+def @@channels: ("PRESSURE");
+def @@ INITIAL_TIMESTAMP: 0;
 
-It is posible to turn on the moving average or filter option on a chart to calculate it through a temporal range.&#x20;
+rigA .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => newmap("y", value#, "x", timestamp) as data
+  
+=> @yield
+=> list(_["x"]# - @@INITIAL_TIMESTAMP) as x, list(_["y"]) as y at the end
+=> @for range(x:len) |> (x:get(_) as x, y:get(_) as y) as res
+=> res->x as x, res->y as y_original
+```
 
-#### Moving average
+```python
+def @@channels: ("PRESSURE");
+def @@ INITIAL_TIMESTAMP: 0;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+rigA .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
+  => @compress.swingingDoor value# by mnemonic
+  => newmap("y", value#, "x", timestamp) as data
+  
+=> @yield
+=> list(_["x"]# - @@INITIAL_TIMESTAMP) as x, list(_["y"]) as y at the end
 
-#### Filters
+=> range(100) |> x:get(_) + _*8000 as xi, x, y
+=> signal.linear_interpolation(x, y, xi) as yi, xi
+=> @for range(xi:len) |> (xi:get(_) as x, yi:get(_) as y) as res
+=> res->x as x, res->y as yi_interpolated
+```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+The result should be something like the image bellow.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/interpolation_example.png" alt=""><figcaption><p>Example of polynomial interpolation with real data</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-### Multi Linear Regression 
+### Multi Linear Regression
 
 Multi linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. There are several types of regression functions, including linear, polynomial, logarithmic, exponential, exponential decay, and power functions. The output of a regression analysis typically includes predicted values, coefficients, and statistical measures of goodness-of-fit.
 
 The Multi Linear Regression pipes functions aggregate data over a certain period of time receiving the x and y values, the type of the function and, in the case of the polynomial, the degree. The return type is a `row` containing the predicted values, which is a sequence of numbers, the function coefficients, and, if present an error indicating what went wrong in the format of a `string`. These errors can be caused in case of using a invalid type or not enough data to make the regression. Therefore, their signature goes like the snippet below:
 
-```
+```python
 signal.regression(x, y, function_type, polynomn_degree)
 ```
 
 For all examples (except real-time) the same base layer is used:
 
-```
+```python
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -280,7 +297,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 #### Polynomial
 
-```
+```python
 def @@channels: ("pressure");
 def @@DEGREE: 2;
 
@@ -292,11 +309,11 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
 
-#### Logarithmic 
+#### Logarithmic
 
-```
+```python
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -307,11 +324,11 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
 
-#### Exponential 
+#### Exponential
 
-```
+```python
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -322,11 +339,11 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image2.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image2.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
 
 #### Exponential Decay
 
-```
+```python
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -337,11 +354,11 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image4.png" alt=""><figcaption><p>Example of exponential decay regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image4.png" alt=""><figcaption><p>Example of exponential decay regression</p></figcaption></figure>
 
-#### Power 
+#### Power
 
-```
+```python
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -352,13 +369,13 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
 
-#### Real Time Usage 
+#### Real Time Usage
 
 Layer 1:
 
-```
+```python
 def @@channels: ("pressure");
 
 event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemonic!:@@channels
@@ -368,7 +385,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 Layer 2:
 
-```
+```python
 def @@channels: ("pressure");
 def @@DEGREE: 2;
 
@@ -381,5 +398,38 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 ```
 
-<figure><img src="../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
 
+### Pipeless Aggregations
+
+{% hint style="info" %}
+Requirement: plugin-processing-1.1.0+, liverig-5.1.1+, liverig-vis-4.6.0+
+{% endhint %}
+
+To use a pipeless aggregation create a new temporal chart with the desired channels.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
+
+Next select which aggregations are going to be applied over the data.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_mov_avg.png" alt=""><figcaption><p>Applying Moving Average aggregation over the selected channel</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_filter.png" alt=""><figcaption><p>Applying Filter aggregation, with low pass and butterworth configuration, over the selected channel</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_outliers.png" alt=""><figcaption><p>Applying Outliers aggregation over the selected channel</p></figcaption></figure>
+
+Each aggregation has configuration fields that resembles the parameters passed to a correspondent pipes function.
+
+It's possible to hide the original channel using the chart legend.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_disable.png" alt=""><figcaption><p>Hiding the original channel</p></figcaption></figure>
+
+The aggregations can also be added in the visualization mode using the new chart configuration menu.
+
+<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_mod.png" alt=""><figcaption><p>New chart configuration menu with aggregations</p></figcaption></figure>
+
+It is posible to turn on the filters, moving average and outliers or on a chart to calculate it through a temporal range.
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Pipeless aggregation configuration on viewmode</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Pipeless aggregations on multiple curves</p></figcaption></figure>

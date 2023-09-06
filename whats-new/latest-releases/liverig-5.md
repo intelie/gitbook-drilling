@@ -5,6 +5,24 @@ description: >-
 
 # LiveRig 5
 
+## 5.3 series
+
+### 5.3.0
+
+* Support changes to realtime span on zoom action
+* Zoom in and out in multi-channel temporal widgets
+* Feature flag to save TimescaleDB for OPC-UA protocol
+
+## 5.2 series
+
+### 5.2.0
+
+* Change header orientation of temporal channels chart
+* Add validation to the filter pipes field on data normalization
+* Use Live Tooltip instead of OverlayTrigger and Tooltip from react-bootstrap
+* Add possibility to ignore or define date position in CSV protcol
+* Tooltip improvements
+
 ## 5.1 series
 
 ### 5.1.0
@@ -12,6 +30,8 @@ description: >-
 * Add new resource to convert a set of units in a single request
 * Create service to retrieve default units and store display unit associated with asset
 * Improvement to mark wrapped-series as auxiliary series
+* Add TCP client mode for CSV source ([more](../../collector/protocols/csv.md))
+* Add source filter to sources tab on new collector screen
 
 ## 5.0 series
 
