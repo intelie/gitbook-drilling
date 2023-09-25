@@ -130,6 +130,7 @@
     * [Event Settings](administration/data-normalization/data-management/event-settings.md)
     * [Channels Management](administration/data-normalization/data-management/channels-management.md)
   * [Data normalization templates](administration/data-normalization/data-normalization-templates.md)
+  * [Data normalization templates prioritization](administration/data-normalization/data-normalization-templates-prioritization.md)
   * [Auto-Switch](administration/data-normalization/auto-switch.md)
 * [Standard Identifiers](administration/standard-identifiers.md)
 * [Static Data](administration/static-data/README.md)
