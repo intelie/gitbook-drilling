@@ -17,6 +17,11 @@ http://environment.com/services/plugin-liverig/collectors/getFromStore?qualifier
 | key | value                                           |
 | --- |-------------------------------------------------|
 | query* | XML query to be execute on WITMSL |
+
+![](https://github.com/efsh/gitbook-drilling/assets/1487210/c57f7648-451d-48d3-8eb6-7a9194ab26d0)
+
+![](https://github.com/efsh/gitbook-drilling/assets/1487210/ba1eb88d-b33a-44af-bccd-3aac8b193046)
+
 ## Response
 ### Status message 
 - [X] 200: OK
