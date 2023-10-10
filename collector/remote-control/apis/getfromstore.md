@@ -1,4 +1,49 @@
 # getFromStore
+
+This feature allows you to execute a WITSML query via API.
+
+{% swagger method="post" path="" baseUrl="http://environment.com/services/plugin-liverig/collectors/getFromStore?" summary="qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="qualifier" required="true" %}
+Liverig Collector integration qualifier
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="instance" required="true" %}
+Collector name
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="soureName" required="true" %}
+Collector source name
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="rigName" required="true" %}
+Collector rig name
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="type" required="true" %}
+WITSML object type
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="query" required="true" %}
+XML query to execute over the source WITMSL server endpoint
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Returns an Object with an “result” short attribute, being “1” a query success and “0” for a query failure, and a “xml” string attribute with the query results." %}
+```javascript
+{
+    "success": {
+        "result": 1,
+        "xml": "<?xml version='1.0' encoding='utf-8'?><wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">...</xml>"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+
 This feature allows a plugin to execute a WITSML query via API.
 ```
 POST
@@ -26,7 +71,12 @@ http://environment.com/services/plugin-liverig/collectors/getFromStore?qualifier
 ### Status message 
 - [X] 200: OK
 ### Body message
-Returns a Json object with an `result` short attribute (being 1 a success and 0 for a failure) and a `xml` string attribute with the query results.
+Returns a JSON object containing one of the following:
+- `failure` field with associated error message (as string)
+- `cancel` or `interrupt` field in case the operation was cancelled, typically during a liverig termination
+- `success` field and its value represents the effective response from WITSML third-party server wrapped as another JSON object: an `result` short attribute (being 1 a success and 0 for a failure) and a `xml` string attribute with the query results.
+
+In case of `success` the payload will be as follows:
 ```json
 {
     "success": {
@@ -35,6 +85,7 @@ Returns a Json object with an `result` short attribute (being 1 a success and 0 
     }
 }
 ```
+
 ## Example
 ### Request
 ```java
