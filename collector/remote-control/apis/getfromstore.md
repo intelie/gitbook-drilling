@@ -12,15 +12,15 @@ Collector qualifier
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="instance" required="true" %}
-Collector instance
+Collector name
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="soureName" required="true" %}
+{% swagger-parameter in="path" name="sourceName" required="true" %}
 Collector source name
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="rigName" required="true" %}
-Collector rig name
+Collector rig name (used as configured event type)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="type" required="true" %}
