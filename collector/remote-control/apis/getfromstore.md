@@ -8,11 +8,11 @@ This feature allows you to execute a WITSML query via API.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="qualifier" required="true" %}
-Liverig Collector integration qualifier
+Collector qualifier
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="instance" required="true" %}
-Collector name
+Collector instance
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="soureName" required="true" %}
@@ -31,63 +31,42 @@ WITSML object type
 XML query to execute over the source WITMSL server endpoint
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Returns an Object with an “result” short attribute, being “1” a query success and “0” for a query failure, and a “xml” string attribute with the query results." %}
+{% swagger-response status="200: OK" description="A JSON object with `success` field and its value represents the effective response from WITSML third-party server wrapped as another JSON object: an `result` short attribute (being 1 a success and 0 for a failure) and a `xml` string attribute with the query results." %}
 ```javascript
 {
     "success": {
         "result": 1,
-        "xml": "<?xml version='1.0' encoding='utf-8'?><wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">...</xml>"
+        "xml": "<?xml version='1.0' encoding='utf-8'?>..."
     }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="200: OK" description="In case of internal Liverig failures, one of the following responses will raise." %}
+```javascript
+{
+    "failure": "IllegalArgumentException: anything can come here, just an example.."
+}
+{
+    "cancel": ""
+}
+{
+    "interrupt": ""
 }
 ```
 {% endswagger-response %}
 {% endswagger %}
 
-
-This feature allows a plugin to execute a WITSML query via API.
-```
-POST
-http://environment.com/services/plugin-liverig/collectors/getFromStore?qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type
-```
-## Request 
-### Parameters
-| key         | value                                                       |
-|-------------|-------------------------------------------------------------|
-| qualifier*  | Liverig Collector plugin qualifier | 
-| instance*   | Collector name                                              |
-| sourceName* | Collector source name                                       | 
-| rigName*    | Collector rig name                                          |
-| type*       | Witsml Object Type                                          |
-### Body
-| key | value                                           |
-| --- |-------------------------------------------------|
-| query* | XML query to be execute on WITMSL |
-
-![](https://github.com/efsh/gitbook-drilling/assets/1487210/c57f7648-451d-48d3-8eb6-7a9194ab26d0)
-
-![](https://github.com/efsh/gitbook-drilling/assets/1487210/ba1eb88d-b33a-44af-bccd-3aac8b193046)
-
-## Response
-### Status message 
-- [X] 200: OK
-### Body message
-Returns a JSON object containing one of the following:
-- `failure` field with associated error message (as string)
-- `cancel` or `interrupt` field in case the operation was cancelled, typically during a liverig termination
-- `success` field and its value represents the effective response from WITSML third-party server wrapped as another JSON object: an `result` short attribute (being 1 a success and 0 for a failure) and a `xml` string attribute with the query results.
-
-In case of `success` the payload will be as follows:
-```json
-{
-    "success": {
-        "result": 1,
-        "xml": "..."
-    }
-}
-```
-
 ## Example
+
+![Identifying the Liverig integration qualifier](https://github.com/efsh/gitbook-drilling/assets/1487210/ba1eb88d-b33a-44af-bccd-3aac8b193046)
+
+![Identifying the other query parameters about the Collector source details](https://github.com/efsh/gitbook-drilling/assets/1487210/c57f7648-451d-48d3-8eb6-7a9194ab26d0)
+
+A example is demonstrated below using effective requests and responses. That is for demonstration purposes only. Do not copy/paste into a production environment.
+
 ### Request
+
 ```java
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
@@ -102,7 +81,9 @@ Request request = new Request.Builder()
   .build();
 Response response = client.newCall(request).execute();
 ```
+
 ### Response
+
 ```json
 {
     "success": {
@@ -111,4 +92,3 @@ Response response = client.newCall(request).execute();
     }
 }
 ```
-The example above is for demonstration purposes only. Do not copy/paste into a production environment.
