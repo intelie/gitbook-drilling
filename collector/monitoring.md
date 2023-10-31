@@ -2,17 +2,39 @@
 
 On Intelie Live `Collectors` tab, it is possible to get an overview of all the active collectors and drill down to troubleshoot any issue regarding data collection and transmission.
 
-The interface provides information regarding data availabilty and quality, transmission and compression rates, SSL/TLS status, and many other information about the health of the collectors.
+The interface provides information regarding data availability and quality, transmission and compression rates, SSL/TLS status, and other information about the health of the collectors.
 
 ![](<../.gitbook/assets/collector-monitoring.png>)
 
 ![](<../.gitbook/assets/collector-monitoring-2.png>)
 
+**Collector Status**
+
+The Collector Status will be shown in the upper right corner of the Collector List screen.
+
+![](<../.gitbook/assets/collector-monitoring-status.png>)
+
+You can click on the **information icon** to find each label description.
+
+![](../.gitbook/assets/collector-monitoring-status-info.png)
+![](../.gitbook/assets/collector-monitoring-status-label.png)
+
+{% hint style="info" %}
+If you need more info about the status of the collector, you can query the `liverig_server_event` event type. 
+
+![](../.gitbook/assets/collector-monitoring-liverig_server_event-query.png)
+{% endhint %}
+
+{% hint style="info" %}
+When a LiveRig Collector fails to authenticate to the Plugin LiveRig, it will generate an **Unknown** collector.
+To find more information about this Unknown collector, you can query the `liverig_server_event` to detect the error message.
+{% endhint %}
+
 **Sources Status**
 
 The sources are clickable and Intelie Live provides more details of the source in a modal.
 
-For every protocol available, Intelie Live will display basic source information and configuation. For WITSML (only client mode) and OPC sources, a request tab is also available, showing requests configured and information available in the server can be requested.
+For every protocol available, Intelie Live will display basic source information and configuration. For WITSML (only client mode) and OPC sources, a request tab is also available, showing requests configured and information available in the server can be requested.
 
 ![Configuration Tab available for WITSML, WITS, CSV, OPC-DA, OPC-UA, Modbus and Raw sources](<../.gitbook/assets/collector-witsml-source.png>)
 
@@ -22,7 +44,7 @@ For every protocol available, Intelie Live will display basic source information
 
 ### The `internal` event
 
-Once per minute, every collector generates an event with many statistics associated to its health and the health of the sources of data. The events provided by different collectors are used by Intelie Live as a heartbeat, and provide a full view of the collectors infrastructure.
+Once per minute, every collector generates an event with many statistics associated to its health and the health of the sources of data. The events provided by different collectors are used by Intelie Live as a heartbeat, and provide a full view of the collectors' infrastructure.
 
 ![\`internal\` event shown at the console](<../.gitbook/assets/image (462).png>)
 
