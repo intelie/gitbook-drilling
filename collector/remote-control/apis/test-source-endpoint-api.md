@@ -23,7 +23,7 @@ application/json
 
 {% swagger-parameter in="body" name="source" type="string" %}
 Source object, containing the 
-
+\
 ```
 {
     "name": "same used in collector source name",
@@ -38,7 +38,7 @@ Source object, containing the
     "tlsAuth": false // or true
 }
 ```
-
+\
 
 It's used when sent to obtain the source information to validate the endpoint.
 
