@@ -9,11 +9,11 @@ Please note that it is necessary to replace the term "environment" with the corr
 Test a source endpoint. Currently supports all server mode protocols, and WITSML, Modus and WITS in client mode.
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="qualifier" type="string" %}
+{% swagger-parameter in="query" name="qualifier" required="true" type="string" %}
 Collector qualifier
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="instance" type="string" %}
+{% swagger-parameter in="query" name="instance" type="string" required="true" %}
 Collector instance
 {% endswagger-parameter %}
 
@@ -77,9 +77,19 @@ It's used when sent to obtain the source information to validate the endpoint.
 
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="Returns an object with the property successif the collector was reached. Otherwise, the return object has the failiture property, containing a string with more information about the error.
+{% swagger-response status="200" description="Returns an object with the property `success` as the WITSML response status. See details below." %}
 
-The success object represents the validation performed at the collector." %}
+```
+{
+    "success": {
+        "result": "true"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+
 {% tabs %}
 {% tab title="Ok" %}
 ```
@@ -111,6 +121,4 @@ The success object represents the validation performed at the collector." %}
 ```
 {% endtab %}
 {% endtabs %}
-{% endswagger-response %}
-{% endswagger %}
 

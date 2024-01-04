@@ -7,23 +7,23 @@ This feature allows you to execute a WITSML query via API.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="qualifier" required="true" %}
+{% swagger-parameter in="query" name="qualifier" required="true" %}
 Collector qualifier
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="instance" required="true" %}
+{% swagger-parameter in="query" name="instance" required="true" %}
 Collector name
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="sourceName" required="true" %}
+{% swagger-parameter in="query" name="sourceName" required="true" %}
 Collector source name
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="rigName" required="true" %}
+{% swagger-parameter in="query" name="rigName" required="true" %}
 Collector rig name (used as configured event type)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="type" required="true" %}
+{% swagger-parameter in="query" name="type" required="true" %}
 WITSML object type
 {% endswagger-parameter %}
 
