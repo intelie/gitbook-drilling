@@ -83,10 +83,14 @@ A example is demonstrated below using effective requests and responses. That is 
 - Rig name: "RIG02"
 - Query: list all headers of well UID `Energistics-well-0001`
 
-Body:
+HTTP request body containing the WITSML query for this well object:
 
 ```xml
-<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">\n  <well uid=\"Energistics-well-0001\">\n    <name />\n  </well>\n</wells>
+<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">
+  <well uid=\"Energistics-well-0001\">
+    <name />
+  </well>
+</wells>
 ```
 
 CLI for Unix or Powershell:
