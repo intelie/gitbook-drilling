@@ -2,6 +2,16 @@
 
 This feature allows you to create Backlog Sync requests via API.
 
+{% hint style="warning" %}
+This feature only supports WITSML protocol.
+{% endhint %}
+
+## Required information
+
+![Identifying the Liverig integration qualifier](../../../.gitbook/assets/collector-source-details/basic-qualifier-and-instance-information.png)
+
+![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
+
 {% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/backlog-sync/request?qualifier=qualifier&instance=instance" method="post" summary="/backlog-sync/request" %}
 {% swagger-description %}
 Create a new request to retrieve historical high-frequency data from WITSML Logs and supports both date time and depth information

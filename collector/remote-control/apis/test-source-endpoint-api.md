@@ -1,5 +1,13 @@
 # /testSourceEndpoint
 
+This feature allows you to validate the endpoint connection against the effective server (for some protocols like WITSML, OPC, ModBus) behind the LiveRig Collector using the remote control API.
+
+## Required information
+
+![Identifying the Liverig integration qualifier](../../../.gitbook/assets/collector-source-details/basic-qualifier-and-instance-information.png)
+
+![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
+
 {% hint style="info" %}
 Please note that it is necessary to replace the term "environment" with the correct address before using the API.
 {% endhint %}
