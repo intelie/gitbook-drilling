@@ -3,7 +3,7 @@
 This feature allows you to list, add or edit a `store.json` file using LiveRig Collector using the remote control API.
 
 {% hint style="warning" %}
-This feature only supports OPC protocol.
+This endpoint only supports OPC protocol
 {% endhint %}
 
 ## Required information

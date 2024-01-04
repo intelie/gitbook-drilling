@@ -3,7 +3,7 @@
 This feature allows you to create Backlog Sync requests via API.
 
 {% hint style="warning" %}
-This feature only supports WITSML protocol.
+This endpoint only supports WITSML protocol
 {% endhint %}
 
 ## Required information

@@ -3,7 +3,7 @@
 This feature allows you to execute a WITSML query against the WITSML Store behind the LiveRig Collector using the remote control API.
 
 {% hint style="warning" %}
-This feature only supports WITSML protocol.
+This endpoint only supports WITSML protocol
 {% endhint %}
 
 ## Required information
