@@ -63,9 +63,9 @@ XML query to execute over the source WITMSL server endpoint
 
 ## Example
 
-![Identifying the Liverig integration qualifier](../../.gitbook/assets/collector-source-details/basic-qualifier-and-instance-information.png)
+![Identifying the Liverig integration qualifier](../../../.gitbook/assets/collector-source-details/basic-qualifier-and-instance-information.png)
 
-![Identifying the additional collector source details for WITSML protocol](../../.gitbook/assets/collector-source-details/witsml-source-details.png)
+![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
 
 A example is demonstrated below using effective requests and responses. That is for demonstration purposes only. Do not copy/paste into a production environment.
 
