@@ -21,28 +21,8 @@ Collector instance
 application/json
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="source" type="string" %}
-Source object, containing the 
-\
-
-{
-    `"name": "same used in collector source name"`,
-    `"rigName": "same used in collector source rig name"`,
-    `"serviceCompany": "same used in collector source service company"`,
-    `"username": "myuser"`,
-    `"password": "un%prot3ct3d"`,
-    `"endpoint": "http://mywitsml.server.com"`,
-    `"mode": "client", // or "server",`
-    `"protocolName": "witsml",`
-    `"protocolVersion": "1.4.1.1",`
-    `"tlsAuth": false // or true`
-}
-
-\
-
-It's used when sent to obtain the source information to validate the endpoint.
-
-
+{% swagger-parameter in="body" name="source" type="json" required="true" %}
+Basic information about how to connect to the source endpoint. See examples below. 
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Returns an object with the property \"success\" as the WITSML response status. See details below." %}
@@ -57,6 +37,27 @@ It's used when sent to obtain the source information to validate the endpoint.
 {% endswagger-response %}
 {% endswagger %}
 
+
+### Body examples
+
+```
+{
+
+    "name": "same used in collector source name",
+    "rigName": "same used in collector source rig name",
+    "serviceCompany": "same used in collector source service company",
+    "username": "myuser",
+    "password": "un%prot3ct3d",
+    "endpoint": "http://mywitsml.server.com",
+    "mode": "client", // or "server",
+    "protocolName": "witsml",
+    "protocolVersion": "1.4.1.1",
+    "tlsAuth": false // or true
+}
+```
+
+
+### Response examples
 
 {% tabs %}
 {% tab title="Ok" %}
