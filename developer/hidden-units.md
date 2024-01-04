@@ -25,7 +25,7 @@ This service provides five more methods on `3.7.0`release:
 
 The following Groovy plugin example hides "**UGT**" and "**rad**" units on all frontend (**HIDE\_ALL**) and "**miUS2**" unit while maintaining the autocomplete feature on the channels management screen (**NOT\_INPUT\_CHANNEL**):
 
-```
+```groovy
 //@liveplugin pluginHideThreeUnits@1.0.0
 //@requirePlugins plugin-liverig
 

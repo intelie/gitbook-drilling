@@ -19,7 +19,7 @@ Each request must send a set of JSON-formatted data. This data must be modelled 
 
 ## Example
 
-```
+```shell
 curl -v --user myuser:mypass -H "Content-Type: application/json" -X POST \
   -d "{__type:aaa, a:1}" https://localhost/services/plugin-restinput/myrest/
 ```

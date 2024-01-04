@@ -28,7 +28,7 @@ Each entry obeys the following convention:
 
 Knowing that we can use a WITS Custom Mapping to associate each entry of the above list to a mnemonic and parse those data in the following format:
 
-```javascript
+```json
 {
  "liverig__metadata": {
    "source_protocol_name": "wits;0;fpsuk;custom=witsCustomMap01"

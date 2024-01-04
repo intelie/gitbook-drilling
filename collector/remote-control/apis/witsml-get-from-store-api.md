@@ -1,30 +1,44 @@
-# getFromStore
+# /getFromStore
 
-This feature allows you to execute a WITSML query via API.
+This feature allows you to execute a WITSML query against the WITSML Store behind the LiveRig Collector using the remote control API.
 
-{% swagger method="post" path="" baseUrl="http://environment.com/services/plugin-liverig/collectors/getFromStore?" summary="qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type" %}
+{% hint style="warning" %}
+This endpoint only supports WITSML protocol
+{% endhint %}
+
+## Required information
+
+![Identifying the Liverig integration qualifier](../../../.gitbook/assets/collector-source-details/basic-qualifier-and-instance-information.png)
+
+![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
+
+{% swagger method="post" path="" baseUrl="http://environment.com/services/plugin-liverig/collectors/getFromStore" summary="/getFromStore?qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="qualifier" required="true" %}
+{% swagger-parameter in="query" name="qualifier" required="true" %}
 Collector qualifier
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="instance" required="true" %}
+{% swagger-parameter in="query" name="instance" required="true" %}
 Collector name
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="sourceName" required="true" %}
+{% swagger-parameter in="query" name="sourceName" required="true" %}
 Collector source name
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="rigName" required="true" %}
+{% swagger-parameter in="query" name="rigName" required="true" %}
 Collector rig name (used as configured event type)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="type" required="true" %}
+{% swagger-parameter in="query" name="type" required="true" %}
 WITSML object type
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-type" type="string" required="true" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="query" required="true" %}
@@ -59,27 +73,45 @@ XML query to execute over the source WITMSL server endpoint
 
 ## Example
 
-![Identifying the Liverig integration qualifier](https://github.com/efsh/gitbook-drilling/assets/1487210/ba1eb88d-b33a-44af-bccd-3aac8b193046)
-
-![Identifying the other query parameters about the Collector source details](https://github.com/efsh/gitbook-drilling/assets/1487210/c57f7648-451d-48d3-8eb6-7a9194ab26d0)
-
 A example is demonstrated below using effective requests and responses. That is for demonstration purposes only. Do not copy/paste into a production environment.
 
 ### Request
 
-```java
-OkHttpClient client = new OkHttpClient().newBuilder()
-  .build();
-MediaType mediaType = MediaType.parse("application/json");
-RequestBody body = RequestBody.create(mediaType, "<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">\n  <well uid=\"Energistics-well-0001\">\n    <name />\n  </well>\n</wells>");
-Request request = new Request.Builder()
-  .url("https://rtolive.intelie.com/services/plugin-liverig/collectors/getFromStore?qualifier=real&instance=real-collector&sourceName=Witsml certification&rigName=cert&type=well")
-  .method("POST", body)
-  .addHeader("x-csrf-token", "e39e59aa-cd1d-4b61-802a-a75c35803fa9")
-  .addHeader("Content-Type", "application/json")
-  .addHeader("Cookie", "JSESSIONID=node02gbcgw4hpnq51u6fx83c9vjp12438.node0")
-  .build();
-Response response = client.newCall(request).execute();
+- Qualifier: myliverig
+- Instance: real-collector
+- Source name: "Example WITSML server"
+- Rig name: "RIG02"
+- Query: list all headers of well UID `Energistics-well-0001`
+
+HTTP request body containing the WITSML query for this well object:
+
+```xml
+<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">
+  <well uid=\"Energistics-well-0001\">
+    <name />
+  </well>
+</wells>
+```
+
+CLI for Unix or Powershell:
+
+```shell
+curl -v "https://environment.com/services/plugin-liverig/collectors/getFromStore?qualifier=myliverig&instance=real-collector&sourceName=\"Example WITSML server\"&rigName=\"RIG02\"&type=well" \
+--user myuser:mypass \
+-H "Content-Type: application/json" \
+-X POST \
+-d "<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">\n  <well uid=\"Energistics-well-0001\">\n    <name />\n  </well>\n</wells>"
+```
+
+Using session cookies instead of direct user credentials authentication (for SAML-enabled environments):
+
+```shell
+curl -v "https://environment.com/services/plugin-liverig/collectors/getFromStore?qualifier=myliverig&instance=real-collector&sourceName=\"Example WITSML server\"&rigName=\"RIG02\"&type=well" \
+-H "Content-Type: application/json" \
+-H "x-csrf-token: e45e59aa-cd1d-4b61-802a-a12c35803fa9" \
+-H "Cookie: JSESSIONID=node02gbcgw4hpnq44o8fx83c9vjp12438.node0" \
+-X POST \
+-d "<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">\n  <well uid=\"Energistics-well-0001\">\n    <name />\n  </well>\n</wells>"
 ```
 
 ### Response
