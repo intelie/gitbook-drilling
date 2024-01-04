@@ -24,20 +24,20 @@ application/json
 {% swagger-parameter in="body" name="source" type="string" %}
 Source object, containing the 
 \
-```
+
 {
-    "name": "same used in collector source name",
-    "rigName": "same used in collector source rig name",
-    "serviceCompany": "same used in collector source service company",
-    "username": "myuser",
-    "password": "un%prot3ct3d",
-    "endpoint": "http://mywitsml.server.com",
-    "mode": "client", // or "server",
-    "protocolName": "witsml",
-    "protocolVersion": "1.4.1.1",
-    "tlsAuth": false // or true
+    `"name": "same used in collector source name"`,
+    `"rigName": "same used in collector source rig name"`,
+    `"serviceCompany": "same used in collector source service company"`,
+    `"username": "myuser"`,
+    `"password": "un%prot3ct3d"`,
+    `"endpoint": "http://mywitsml.server.com"`,
+    `"mode": "client", // or "server",`
+    `"protocolName": "witsml",`
+    `"protocolVersion": "1.4.1.1",`
+    `"tlsAuth": false // or true`
 }
-```
+
 \
 
 It's used when sent to obtain the source information to validate the endpoint.
@@ -45,7 +45,7 @@ It's used when sent to obtain the source information to validate the endpoint.
 
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="Returns an object with the property **success** as the WITSML response status. See details below." %}
+{% swagger-response status="200" description="Returns an object with the property \"success\" as the WITSML response status. See details below." %}
 
 ```
 {
