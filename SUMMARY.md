@@ -151,6 +151,7 @@
     * [/testSourceEndpoint](collector/remote-control/apis/test-source-endpoint-api.md)
     * [/storeConfiguration](collector/remote-control/apis/store-configuration-api.md)
     * [/getFromStore](collector/remote-control/apis/witsml-get-from-store-api.md)
+    * [/backlog-sync](collector/remote-control/apis/backlog-sync-api.md)
   * [Sources](collector/remote-control/sources/README.md)
     * [OPC Requests](collector/remote-control/sources/opc-requests.md)
     * [WITSML Backlog Sync](collector/remote-control/sources/witsml-backlog-sync.md)
