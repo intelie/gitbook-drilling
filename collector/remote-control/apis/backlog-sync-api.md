@@ -42,11 +42,15 @@ An object representing the logs that will be retrieved from WITSML Store. See ex
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="start" type="string" %}
-For date time information, the Unix epoch timestamp for the initial startDateTimeindex to be retrieved. 
+ATTENTION: ONLY FOR DATE TIME requests, the Unix epoch timestamp for the initial startDateTimeindex to be retrieved. 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="end" type="string" %}
-For date time information, the Unix epoch timestamp for the last endDateTimeindex to be retrieved. 
+ATTENTION: ONLY FOR DATE TIME requests, the Unix epoch timestamp for the last endDateTimeindex to be retrieved. 
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="depth" type="json" %}
+ATTENTION: ONLY FOR DEPTH requests, an inner object containing `start`, `end` and `uom`. 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="qualifier" type="string" %}
@@ -100,4 +104,37 @@ Collector instance (yes, unfortunately also in body, known bug)
 }
 ```
 
-##
+#### Body for depth WITSML Logs
+
+- Source name: "Example WITSML server"
+- Rig name: "RIG02"
+- Depth range: from 100 meters to 200 meters
+- WITSML Depth Log UID: "Energistics-w1-wb1-log-0002"
+- WITSML Well UID: "Energistics-well-0001"
+- WITSML Wellbore UID: "Energistics-w1-wellbore-0001"
+
+```
+{
+    "source": "Example WITSML server",
+    "rigName": "RIG02",
+    "wells": {
+        "Certification-Test-81-well--------FillerFillerFillerFillerFiller": {
+            "Certification-Test-81-wellbore----FillerFillerFillerFillerFiller": {
+                "logs": [
+                    {
+                        "uid": "Energistics-w1-wb1-log-0002",
+                        "indexType": "measured depth"
+                    }
+                ]
+            }
+        }
+    },
+    "depth": {
+        "start": "100",
+        "end": "200",
+        "uom": "m"
+    },
+    "qualifier": "qualifier",
+    "instance": "instance"
+}
+```
