@@ -30,7 +30,7 @@ In case of `true`, it will ignore the caching and it will re-read the store conf
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="The representational object of current store for the requested source" %}
-```
+```json
 {
     "success": {
         "store": {
@@ -107,7 +107,7 @@ The inner fields `database`, `endpoint`, `limit` and `purge` are *optional* and 
 
 {% endhint %}
 
-```
+```json
 {
     "store": {
         "database": {

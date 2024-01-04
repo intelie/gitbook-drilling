@@ -62,7 +62,7 @@ Collector instance (yes, unfortunately also in body, known bug)
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="An UUID that can be used later to monitor the progress of historical task" %}
-```
+```json
 {"success":"02a7533a-fa69-46fc-9441-7592b9b9cb2a"}
 ```
 {% endswagger-response %}
@@ -81,7 +81,7 @@ Collector instance (yes, unfortunately also in body, known bug)
 - WITSML Wellbore UID: "Energistics-w1-wellbore-0001"
 
 
-```
+```json
 {
     "source": "Example WITSML server",
     "rigName": "RIG02",
@@ -113,7 +113,7 @@ Collector instance (yes, unfortunately also in body, known bug)
 - WITSML Well UID: "Energistics-well-0001"
 - WITSML Wellbore UID: "Energistics-w1-wellbore-0001"
 
-```
+```json
 {
     "source": "Example WITSML server",
     "rigName": "RIG02",

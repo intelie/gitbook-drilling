@@ -35,7 +35,7 @@ Basic information about how to connect to the source endpoint. See examples belo
 
 {% swagger-response status="200" description="Returns an object with the property \"success\" as the WITSML response status. See details below." %}
 
-```
+```json
 {
     "success": {
         "result": "true"
@@ -48,7 +48,7 @@ Basic information about how to connect to the source endpoint. See examples belo
 
 ### Body examples
 
-```
+```json
 {
 
     "name": "same used in collector source name",
@@ -69,7 +69,7 @@ Basic information about how to connect to the source endpoint. See examples belo
 
 {% tabs %}
 {% tab title="Ok" %}
-```
+```json
 {
     "success": {
         "result": "true"
@@ -79,7 +79,7 @@ Basic information about how to connect to the source endpoint. See examples belo
 {% endtab %}
 
 {% tab title="Warning" %}
-```
+```json
 {
     "success": {
         "result": "false",
@@ -91,9 +91,9 @@ Basic information about how to connect to the source endpoint. See examples belo
 {% endtab %}
 
 {% tab title="Error" %}
-```
+```json
 {
-    failure: "error message string"
+    "failure": "error message string"
 }
 ```
 {% endtab %}
