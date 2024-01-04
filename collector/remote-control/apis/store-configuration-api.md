@@ -12,7 +12,7 @@ This feature only supports OPC protocol.
 
 ![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
 
-{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/storeConfiguration" method="get" summary="?qualifier=qualifier&instance=instance&force=true" %}
+{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/storeConfiguration" method="get" summary="/storeConfiguration?qualifier=qualifier&instance=instance&force=true" %}
 {% swagger-description %}
 View the store.json file
 {% endswagger-description %}

@@ -12,7 +12,7 @@ This feature only supports WITSML protocol.
 
 ![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
 
-{% swagger method="post" path="" baseUrl="http://environment.com/services/plugin-liverig/collectors/getFromStore" summary="?qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type" %}
+{% swagger method="post" path="" baseUrl="http://environment.com/services/plugin-liverig/collectors/getFromStore" summary="/getFromStore?qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type" %}
 {% swagger-description %}
 
 {% endswagger-description %}

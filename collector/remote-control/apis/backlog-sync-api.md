@@ -12,7 +12,7 @@ This feature only supports WITSML protocol.
 
 ![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
 
-{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/backlog-sync/request?qualifier=qualifier&instance=instance" method="post" summary="/backlog-sync/request" %}
+{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/backlog-sync/request" method="post" summary="/backlog-sync/request?qualifier=qualifier&instance=instance" %}
 {% swagger-description %}
 Create a new request to retrieve historical high-frequency data from WITSML Logs and supports both date time and depth information
 {% endswagger-description %}

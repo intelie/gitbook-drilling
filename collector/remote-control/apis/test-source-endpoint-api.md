@@ -12,7 +12,7 @@ This feature allows you to validate the endpoint connection against the effectiv
 Please note that it is necessary to replace the term "environment" with the correct address before using the API.
 {% endhint %}
 
-{% swagger baseUrl="https://environment.com" path="/services/plugin-liverig/collectors/testSourceEndpoint" method="post" summary="?qualifier=qualifier&instance=instance" %}
+{% swagger baseUrl="https://environment.com" path="/services/plugin-liverig/collectors/testSourceEndpoint" method="post" summary="/testSourceEndpoint?qualifier=qualifier&instance=instance" %}
 {% swagger-description %}
 Test a source endpoint. Currently supports all server mode protocols, and WITSML, Modus and WITS in client mode.
 {% endswagger-description %}
