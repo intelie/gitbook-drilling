@@ -77,19 +77,37 @@ A example is demonstrated below using effective requests and responses. That is 
 
 ### Request
 
-```java
-OkHttpClient client = new OkHttpClient().newBuilder()
-  .build();
-MediaType mediaType = MediaType.parse("application/json");
-RequestBody body = RequestBody.create(mediaType, "<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">\n  <well uid=\"Energistics-well-0001\">\n    <name />\n  </well>\n</wells>");
-Request request = new Request.Builder()
-  .url("https://rtolive.intelie.com/services/plugin-liverig/collectors/getFromStore?qualifier=real&instance=real-collector&sourceName=Witsml certification&rigName=cert&type=well")
-  .method("POST", body)
-  .addHeader("x-csrf-token", "e39e59aa-cd1d-4b61-802a-a75c35803fa9")
-  .addHeader("Content-Type", "application/json")
-  .addHeader("Cookie", "JSESSIONID=node02gbcgw4hpnq51u6fx83c9vjp12438.node0")
-  .build();
-Response response = client.newCall(request).execute();
+- Qualifier: myliverig
+- Instance: real-collector
+- Source name: "Example WITSML server"
+- Rig name: "RIG02"
+- Query: list all headers of well UID `Energistics-well-0001`
+
+Body:
+
+```xml
+<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">\n  <well uid=\"Energistics-well-0001\">\n    <name />\n  </well>\n</wells>
+```
+
+CLI for Unix or Powershell:
+
+```shell
+curl -v "https://environment.com/services/plugin-liverig/collectors/getFromStore?qualifier=myliverig&instance=real-collector&sourceName=\"Example WITSML server\"&rigName=\"RIG02\"&type=well" \
+--user myuser:mypass \
+-H "Content-Type: application/json" \
+-X POST \
+-d "<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">\n  <well uid=\"Energistics-well-0001\">\n    <name />\n  </well>\n</wells>"
+```
+
+Using session cookies instead of direct user credentials authentication (for SAML-enabled environments):
+
+```shell
+curl -v "https://environment.com/services/plugin-liverig/collectors/getFromStore?qualifier=myliverig&instance=real-collector&sourceName=\"Example WITSML server\"&rigName=\"RIG02\"&type=well" \
+-H "Content-Type: application/json" \
+-H "x-csrf-token: e45e59aa-cd1d-4b61-802a-a12c35803fa9" \
+-H "Cookie: JSESSIONID=node02gbcgw4hpnq44o8fx83c9vjp12438.node0" \
+-X POST \
+-d "<wells xmlns=\"http://www.witsml.org/schemas/1series\" version=\"1.4.1.1\">\n  <well uid=\"Energistics-well-0001\">\n    <name />\n  </well>\n</wells>"
 ```
 
 ### Response
