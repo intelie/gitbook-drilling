@@ -118,8 +118,8 @@ Collector instance (yes, unfortunately also in body, known bug)
     "source": "Example WITSML server",
     "rigName": "RIG02",
     "wells": {
-        "Certification-Test-81-well--------FillerFillerFillerFillerFiller": {
-            "Certification-Test-81-wellbore----FillerFillerFillerFillerFiller": {
+        "Energistics-well-0001": {
+            "Energistics-w1-wellbore-0001": {
                 "logs": [
                     {
                         "uid": "Energistics-w1-wb1-log-0002",
