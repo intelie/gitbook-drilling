@@ -1,4 +1,4 @@
-# testSourceEndpoint
+# /testSourceEndpoint
 
 {% hint style="info" %}
 Please note that it is necessary to replace the term "environment" with the correct address before using the API.

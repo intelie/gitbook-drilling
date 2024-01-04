@@ -1,4 +1,4 @@
-# storeConfiguration
+# /storeConfiguration
 
 This feature allows you to add or edit a store.json file via API. We can view the calls created and how you use them.\
 

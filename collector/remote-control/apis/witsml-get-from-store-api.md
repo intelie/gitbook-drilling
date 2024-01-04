@@ -1,4 +1,4 @@
-# getFromStore
+# /getFromStore
 
 This feature allows you to execute a WITSML query via API.
 
