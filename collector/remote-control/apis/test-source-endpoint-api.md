@@ -4,7 +4,7 @@
 Please note that it is necessary to replace the term "environment" with the correct address before using the API.
 {% endhint %}
 
-{% swagger baseUrl="https://environment.com" path="/services/plugin-liverig/collectors/testSourceEndpoint?qualifier=&instance=live" method="post" summary="testSourceEndpoint" %}
+{% swagger baseUrl="https://environment.com" path="/services/plugin-liverig/collectors/testSourceEndpoint" method="post" summary="?qualifier=qualifier&instance=instance" %}
 {% swagger-description %}
 Test a source endpoint. Currently supports all server mode protocols, and WITSML, Modus and WITS in client mode.
 {% endswagger-description %}
@@ -15,6 +15,10 @@ Collector qualifier
 
 {% swagger-parameter in="query" name="instance" type="string" required="true" %}
 Collector instance
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-type" type="string" required="true" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="source" type="string" %}

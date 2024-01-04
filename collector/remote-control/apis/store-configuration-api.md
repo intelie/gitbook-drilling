@@ -3,17 +3,21 @@
 This feature allows you to add or edit a store.json file via API. We can view the calls created and how you use them.\
 
 
-{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/storeConfiguration?qualifier=qualifier&instance=instance&force=true" method="get" summary="storeConfiguration" %}
+{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/storeConfiguration" method="get" summary="?qualifier=qualifier&instance=instance&force=true" %}
 {% swagger-description %}
 View the store.json file
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="instance" type="string" %}
+{% swagger-parameter in="query" name="instance" type="string" required="true" %}
 Collector instance
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="qualifier" type="string" %}
+{% swagger-parameter in="query" name="qualifier" type="string" required="true" %}
 Collector qualifier
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="force" type="boolean" %}
+In case of `true`, it will ignore the caching and it will re-read the store configuration from the collector at remote site.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -22,17 +26,21 @@ Collector qualifier
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/storeConfiguration?qualifier=qualifiers&instance=instance&force=true" method="post" summary="storeConfiguration" %}
+{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/storeConfiguration" method="post" summary="?qualifier=qualifiers&instance=instance&force=true" %}
 {% swagger-description %}
 Add or edit the store.json file
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="qualifier" type="string" %}
+{% swagger-parameter in="query" name="qualifier" type="string" required="true" %}
 Collector qualifier
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="instance" type="string" %}
+{% swagger-parameter in="query" name="instance" type="string" required="true" %}
 Collector instance
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="force" type="boolean" %}
+In case of `true`, it will ignore the caching and it will re-read the store configuration from the collector at remote site.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="purge" type="string" %}

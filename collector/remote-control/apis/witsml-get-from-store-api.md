@@ -2,7 +2,7 @@
 
 This feature allows you to execute a WITSML query via API.
 
-{% swagger method="post" path="" baseUrl="http://environment.com/services/plugin-liverig/collectors/getFromStore?" summary="qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type" %}
+{% swagger method="post" path="" baseUrl="http://environment.com/services/plugin-liverig/collectors/getFromStore" summary="?qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -25,6 +25,10 @@ Collector rig name (used as configured event type)
 
 {% swagger-parameter in="query" name="type" required="true" %}
 WITSML object type
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-type" type="string" required="true" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="query" required="true" %}
