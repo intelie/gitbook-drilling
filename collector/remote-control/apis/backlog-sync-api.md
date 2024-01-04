@@ -7,7 +7,7 @@ This feature allows you to create Backlog Sync requests via API.
 Create a new request to retrieve historical high-frequency data from WITSML Logs and supports both date time and depth information
 {% endswagger-description %}
 
-{% swagger-parameter in="qury" name="instance" type="string" %}
+{% swagger-parameter in="query" name="instance" type="string" %}
 Collector instance
 {% endswagger-parameter %}
 
