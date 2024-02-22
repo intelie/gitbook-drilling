@@ -7,20 +7,12 @@ description: >-
 # LOT/FIT
 
 {% hint style="info" %}
-Requirement: plugin-pressuretests 2.27.0+
+Requirement: plugin-pressuretests 2.28.0+
 {% endhint %}
-
-{% embed url="https://www.youtube.com/watch?v=ye3JTSovn8k&feature=youtu.be" %}
-Live Releases | LOT/FIT pressure tests - What's new on Drilling real-time analysis!
-{% endembed %}
 
 ### Introduction
 
-While drilling a well, the rock wall are under effect of compression and tensile stress by the drilling fluid pressure:
-
-![Stresses in an infinitesimal rock element](https://lh4.googleusercontent.com/JHdRdX897B6UIc-XYD28xuFz7EX-HCwSLbCaB2p7uRNYDblHMb7rtmNllYOaC7YpUMWEDs9JjjfX-qTrmb0y\_IqHPYNGTjkauhdL4O-41uz1SaKAyxNbHI9du-ZvsIgmq1qVwc5DUB4)
-
-LOT/FIT are pressure tests to ensure the well safety and integrity to avoid problems such as:
+While drilling a well, the rock wall are under effect of compression and tensile stress by the drilling fluid pressure. LOT/FIT are pressure tests to ensure the well safety and integrity to avoid problems such as:
 
 * rock collapse
 * lost circulation
@@ -87,11 +79,7 @@ Simply click and drag to determine the interval:
 
 ![Interval selecting ](https://lh3.googleusercontent.com/ta\_9IoX44Pp\_0gXqocEr-mUFBThIePrmT09FBhybhhVkBPHAB-0L5VBmb9HO0Y6lZB\_2RjscrYgmC-Yv9S2tjeW6M9mvWaR-LBsvBpQuptj8f-fwfnFxf0ciu\_LS-n2b5lU41fxF)
 
-Next it will be presented with the calculation parameters.&#x20;
-
-![Informing constants](https://lh5.googleusercontent.com/3PldcQeyOFNaJ9t7xAHDubViepJRn-RBfx-ZmaXMdqG1CQcD-iQEFZxhuXVlCbbhrd7TZ5tLZo24pE5qD5IZi1a40Rly3WSZQO4xY9wwN1S41CcxjgCldh2p3S5VGlArnZ5Nttba)
-
-In the newest version (2.28.0+) it is possible to inform tvd casing shoe, md casing shoe, mud weight and which asset and channels the test should based on. Also it is possible to disable pressure loss calculation and configure units:\
+Next it will be presented with the calculation parameters. It is possible to inform tvd casing shoe, md casing shoe, mud weight and which asset and channels the test should based on. Also it is possible to disable pressure loss calculation and configure units:\
 
 
 ![MD, TVD, Mud weigth, pressure loss enabled and units configuration](<../../.gitbook/assets/image (360).png>)
