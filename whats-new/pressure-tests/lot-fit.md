@@ -7,7 +7,7 @@ description: >-
 # LOT/FIT
 
 {% hint style="info" %}
-Requirement: plugin-pressuretests 2.28.0+
+Requirement: plugin-pressuretests-2.28.0+, plugin-annotations-3.8.2+
 {% endhint %}
 
 ### Introduction
