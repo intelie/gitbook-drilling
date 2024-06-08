@@ -54,9 +54,12 @@ Note that this configuration is **unit free**. You're configuring depth units in
 
 </div>
 
+## Customizing data gaps report threshold for depth channels charts
 
+As explained at "[Customizing data gaps report threshold for temporal channels charts](features/data-visualization/channels-charts/temporal-channels-chart.md#customizing-data-gaps-report-threshold-for-temporal-channels-charts)", all temporal and depth channels charts will display data gaps if "Report data gaps" feature is on. 
 
+The size of these gaps is defined globally in the Live administration, or by the `@@dataGapsReportThreshold` macro for temporal channels charts.
 
+For depth channels charts, however, data size customization should be done using the `@@depthDataGapsReportThreshold`. This macro can be defined in a pipes module, and just like any other pipes macro, the developer can use conditionals, access live variable (for example, `live.matchspan`) and other macros (such as `@@context` and `@@lookup`). 
 
-
-
+When creating the pipes module, just make sure to turn the options "Disable prefixing module functions with the qualifier" on.

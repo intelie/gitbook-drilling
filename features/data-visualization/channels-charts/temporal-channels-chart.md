@@ -51,3 +51,25 @@ Important note:
 
 As this chart type focus on the relative comparison between the channels, the channel ordering functionality is not available on stacked charts.
 {% endhint %}
+
+## Customizing data gaps report threshold for temporal channels charts
+
+If "Report data gaps" feature is enabled in a Live environment, all temporal and depth channels charts in this environment will display data gaps according to the "data gaps time threshold" configuration.
+
+![](<../../../.gitbook/assets/dataGaps-time.png>)
+
+The above picture shows the same chart in a Live environment with data gaps feature enabled (left), and disabled (right). Note that in the picture at the left, 2 points that have a time interval bigger than the "data gaps threshold" are no longer connected. 
+
+The "data gaps time threshold" can be  configured at Live administration, and only allows a value, in ms. Sometimes, for a temporal channels chart, the developer may need more expressiveness, for example, defining the threshold based on the dashboard timestamp, or defining the threshold matching the `@@assetWidgetOverrideFilter` conditionals. 
+
+In these cases, the developer can define the macro `@@dataGapsReportThreshold`. One way of doing so is creating a pipes module. For example:
+
+![](<../../../.gitbook/assets/dataGapsReportThreshold-1.png>)
+
+Make sure to turn the options "Disable prefixing module functions with the qualifier" on.
+
+This other example defines the data gaps report threshold depending on the event type of the filtered asset:
+```
+def @@dataGapsReportThreshold:
+  @@lookup.asset_name_event_type[0] == "rig_Test" ? 60000, 2000:const();
+```
