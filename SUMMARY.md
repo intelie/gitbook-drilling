@@ -118,7 +118,11 @@
   * [Physical models configuration](static-data/rig/phyisical-models-configuration.md)
 * [Pipes functions](static-data/pipes-functions.md)
 * [REST API Examples](static-data/examples.md)
-
+* [Protocols](features/protocols/README.md)
+  * [WITSML](features/protocols/witsml/README.md)
+    * [Object Explorer](features/protocols/witsml/object-explorer/README.md)
+      * [Standardization](features/protocols/witsml/object-explorer/standardization.md)
+    * [Backlog Syncronization](features/protocols/witsml/backlog-sync/README.md)
 ## Administration
 
 * [High Frequency Data](administration/high-frequency-data/README.md)
