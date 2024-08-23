@@ -6,6 +6,11 @@ description: >-
 
 # WITSML Store
 
+TODO.
+
+  Is WITSML store still in use
+  If YES, show WITSML store certification
+
 {% hint style="info" %}
 WITSML Store plugin is available at [https://marketplace.intelie.com/artifact/plugin-witsml-store](https://marketplace.intelie.com/artifact/plugin-witsml-store/).
 {% endhint %}

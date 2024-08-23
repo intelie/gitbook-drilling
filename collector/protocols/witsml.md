@@ -2,6 +2,8 @@
 
 To collect WITSML data, the collector can connect to several different data sources simultaneously and act either as a **client**, requesting periodically new data, or as a **server**, receiving data from any third-party client.
 
+TODO add new features here
+
 {% hint style="info" %}
 Currently supported WITSML versions are 1.3.1, 1.4.1 and 2.0.
 {% endhint %}
