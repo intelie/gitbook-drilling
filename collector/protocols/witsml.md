@@ -1,8 +1,8 @@
 # WITSML
 
-To collect WITSML data, the collector can connect to several different data sources simultaneously and act either as a **client**, requesting periodically new data, or as a **server**, receiving data from any third-party client.
+[WITSML](https://energistics.org/witsml-data-standards) (Wellsite Information Transfer Standard Markup Language) is a standard protocol for transmitting technical data in petroleum insdustry organizations
 
-TODO add new features here
+To collect WITSML data, the collector can connect to several different data sources simultaneously and act either as a **client**, requesting periodically new data, or as a **server**, receiving data from any third-party client.
 
 {% hint style="info" %}
 Currently supported WITSML versions are 1.3.1, 1.4.1 and 2.0.
@@ -41,3 +41,11 @@ Once the [Remote Control](../remote-control/) feature is enabled, the user can c
 The endpoint configuration for server mode will depend on a HTTP port available on the collector machine to listen for connections from third-party clients. Any external client may push data into this endpoint through WITSML using the credentials filled at this form.
 
 <figure><img src="../../.gitbook/assets/collector-witsml-access-endpoint.png" alt=""><figcaption><p>Endpoint to listen for WITSML connections, then third parties may push data into.</p></figcaption></figure>
+
+## Collect and manipulating WITSML data in Live 
+
+* [Backlog Syncronization](witsml/backlog-sync/README.md)
+    * [Mnemonic Standardization](witsml/object-explorer/standardization.md)
+* [Object Explorer](witsml/object-explorer/README.md)
+* [Requests](witsml/requests/README.md)
+* [WITSML Browser](witsml/witsml-browser/README.md)
