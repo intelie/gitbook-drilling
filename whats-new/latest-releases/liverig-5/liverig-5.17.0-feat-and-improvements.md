@@ -6,7 +6,7 @@
 
 Standard WITSML uses GET and POST methods and sometimes we need to know if one given growing object has changed or not.
 
-Thus to avoid unecessary WITSML request to server a new feature has added to Liverig to increase performance requests
+Thus to avoid unecessary WITSML request to server a new feature has been added to Liverig to increase performance requests
 
 ### Disabling original real-time pooling mechanism in the collector
 

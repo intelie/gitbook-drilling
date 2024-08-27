@@ -15,7 +15,7 @@ Detailed features and improvements can be found [here](liverig-5/liverig-5.18.0-
 
 * Allow to configure data-only log request option on the Collector's Requests tab
 * Add Mnemonic filter option by logCurveInfo or mnemonicList
-* [Allow Liverig to Collect specific channels which arrive with low-frequency Samples](liverig-5/liverig-5.18.0-feat-and-improvements.md)
+* Allow Liverig to Collect specific channels which arrive with low-frequency Samples ([here](liverig-5/liverig-5.18.0-feat-and-improvements.md))
 * Allow backlog history requests for specific mnemonics
 
 ## 5.17 series
