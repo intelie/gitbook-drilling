@@ -5,6 +5,16 @@ description: >-
 
 # LiveRig 5
 
+## 5.17 series
+
+### 5.17.0
+
+**Features and improvements**:
+
+Detailed features and improvements can be found [here](liverig-5/liverig-5.17.0-feat-and-improvements.md)
+
+* Witsml realtime log request improvements
+
 ## 5.3 series
 
 ### 5.3.0
