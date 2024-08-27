@@ -143,11 +143,11 @@ wildcard_period_in_seconds=600
 
 # WITSML Change mechanism features
 #
-# witsml_change_mechanism_feature=true
-# witsml_change_mechanism_feature.witsml_change_mechanism_delay_period_in_seconds=2
-# witsml_change_mechanism_feature.witsml_change_mechanism_detection_period_in_seconds=10
-# witsml_change_mechanism_feature.witsml_change_mechanism_initial_last_change_feature=false
-# witsml_change_mechanism_feature.witsml_change_mechanism_late_channels_feature=true
-# witsml_change_mechanism_feature.witsml_change_mechanism_object_growing_feature=true
-# witsml_change_mechanism_feature.witsml_change_mechanism_initial_last_change_in_minutes=10
+# witsml_change_mechanism_feature=false
+# witsml_change_mechanism_delay_period_in_seconds=0
+#witsml_change_mechanism_detection_period_in_seconds=10
+# witsml_change_mechanism_initial_last_change_feature=true
+# witsml_change_mechanism_late_channels_feature=false
+# witsml_change_mechanism_object_growing_feature=true
+# witsml_change_mechanism_initial_last_change_in_minutes=10
 ```
