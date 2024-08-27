@@ -39,7 +39,9 @@ The transfer of backlog data to real-time data is faster than in polling mode be
 ### Pooling Mechanism x WITSML Change Mechanism
 
 Pooling Mode
-TODO ADD IMAGE
+
+![](../../../.gitbook/assets/liverig-5.17.0/features/witsml-change-mechanism-pooling.png)
 
 WITSML Change mode
-TODO ADD IMAGE
+
+![](../../../.gitbook/assets/liverig-5.17.0/features/witsml-change-mechanism-change-mode.png)
