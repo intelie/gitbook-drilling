@@ -6,7 +6,7 @@ All the data is stored in the file `/opt/intelie/liverig/data/data.log.` Simulta
 
 In this file, it is possible to see the **original data** (3), and also some **control information** (1) and **some metadata** (2) that are created and transmitted together, as shown in the image below.
 
-TODO: Link below is broker or unacessible. Edit or remove this link
+TODO: Link below is broker or unavailable. Edit or remove this link
 
 ![](https://lh4.googleusercontent.com/jYg63Ph2nie-5qnB80QiGqrEVrjOeAaNuQfFpw06TbKrPbnneiut2\_dtXCTjfWfuUpEYT7AXKlkKqBw2BCFO36L6JsgVMAk7p4dGSEy9oJlchA4BqI2kOKVnX4SYNzlY7EJTyb69)
 
