@@ -12,29 +12,33 @@ This feature allows you to validate the endpoint connection against the effectiv
 Please note that it is necessary to replace the term "environment" with the correct address before using the API.
 {% endhint %}
 
-{% swagger baseUrl="https://environment.com" path="/services/plugin-liverig/collectors/testSourceEndpoint" method="post" summary="/testSourceEndpoint?qualifier=qualifier&instance=instance" %}
-{% swagger-description %}
+## /testSourceEndpoint?qualifier=qualifier\&instance=instance
+
+<mark style="color:green;">`POST`</mark> `https://environment.com/services/plugin-liverig/collectors/testSourceEndpoint`
+
 Test a source endpoint. Currently supports all server mode protocols, and WITSML, Modus and WITS in client mode.
-{% endswagger-description %}
 
-{% swagger-parameter in="query" name="qualifier" required="true" type="string" %}
-Collector qualifier
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="query" name="instance" type="string" required="true" %}
-Collector instance
-{% endswagger-parameter %}
+| Name                                        | Type   | Description         |
+| ------------------------------------------- | ------ | ------------------- |
+| qualifier<mark style="color:red;">\*</mark> | string | Collector qualifier |
+| instance<mark style="color:red;">\*</mark>  | string | Collector instance  |
 
-{% swagger-parameter in="header" name="Content-type" type="string" required="true" %}
-application/json
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-parameter in="body" name="source" type="json" required="true" %}
-Basic information about how to connect to the source endpoint. See examples below. 
-{% endswagger-parameter %}
+| Name                                           | Type   | Description      |
+| ---------------------------------------------- | ------ | ---------------- |
+| Content-type<mark style="color:red;">\*</mark> | string | application/json |
 
-{% swagger-response status="200" description="Returns an object with the property \"success\" as the WITSML response status. See details below." %}
+#### Request Body
 
+| Name                                     | Type | Description                                                                        |
+| ---------------------------------------- | ---- | ---------------------------------------------------------------------------------- |
+| source<mark style="color:red;">\*</mark> | json | Basic information about how to connect to the source endpoint. See examples below. |
+
+{% tabs %}
+{% tab title="200 Returns an object with the property "success" as the WITSML response status. See details below." %}
 ```json
 {
     "success": {
@@ -42,9 +46,8 @@ Basic information about how to connect to the source endpoint. See examples belo
     }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
-
+{% endtab %}
+{% endtabs %}
 
 ### Body examples
 
@@ -63,7 +66,6 @@ Basic information about how to connect to the source endpoint. See examples belo
     "tlsAuth": false // or true
 }
 ```
-
 
 ### Response examples
 
@@ -98,4 +100,3 @@ Basic information about how to connect to the source endpoint. See examples belo
 ```
 {% endtab %}
 {% endtabs %}
-

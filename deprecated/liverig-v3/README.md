@@ -1,7 +1,7 @@
 # LiveRig 3.x / 2.x
 
 {% hint style="warning" %}
-This page for release notes is archived. Continues here just for historical purposes.&#x20;
+This page for release notes is archived. Continues here just for historical purposes.
 
 Please see the [latest releases](../../whats-new/latest-releases/) for the most recent releases of LiveRig and Live Wells.
 {% endhint %}
@@ -116,7 +116,7 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 
 * Fix "Renormalization Throttle" save [(more)](3.2.0.md#fix-renormalization-throttle-save)
 * Always show Channels Management 'unconfigured channels' [(more)](3.2.0.md#always-show-channels-management-unconfigured-channels)
-* Fixes "import JSON" caret color when using Live 3.1.0 or higher  [(more)](3.2.0.md#fixes-import-json-caret-color-when-using-live-3-1-0-or-higher)
+* Fixes "import JSON" caret color when using Live 3.1.0 or higher [(more)](3.2.0.md#fixes-import-json-caret-color-when-using-live-3-1-0-or-higher)
 * Fixes "Data Quality" icon to not indicates an Override Input Unit (OIU) conversion error when it's OK [(more)](3.2.0.md#fixes-data-quality-icon-to-not-indicate-an-override-input-unit-oiu-conversion-error-when-its-ok)
 
 ## [3.1.0 (July 5, 2021)](3.1.0.md)
@@ -236,7 +236,7 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 
 * Display default units at physical models configuration
 * Fixes the edition of Additional Fields at Data Management tab of some assets (e.g Rigs, Crews)
-* Fixes a HTTP 400 error when requesting WITSML tree using # in `sourceName`&#x20;
+* Fixes a HTTP 400 error when requesting WITSML tree using # in `sourceName`
 * Prevents dashboards crash in mobile mode when display units are active
 
 ## 3.0.1 (April 24, 2021)
@@ -248,7 +248,7 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 * Improvements on Depth Grid wording and concept adherence ([more](../../features/data-visualization/channels-charts/depth-channels-chart.md#depth-grid))
 * Improved integrations security with encoding strategy
 * Added objectives table for formations by depth at well parameters ([more](../../static-data/well/well-design-overview.md))
-* Improved well geometry data with casing information at well parameters  ([more](../../static-data/well/well-design-overview.md))
+* Improved well geometry data with casing information at well parameters ([more](../../static-data/well/well-design-overview.md))
 * Plugin spectrum to calculate FFT of a time domain signal ([more](../../whats-new/fft-spectrum-plugin.md))
 * Added BOP configuration components and notes for status register ([more](../../whats-new/bop-schematic/bop-status-register.md))
 * Fixed pressure tests performance queries
@@ -265,7 +265,7 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
   * A problem was occurring when the asset was associated with more than one collector and one of the collectors had more than one source. In this case, when only one source of a collector was transmitting data, the status of the asset was being shown as offline and should be online.
 * Cumulative fixes from 2.28 and 2.29 stable versions
   * Fixes the edition of Additional Fields at Data Management tab of some assets (e.g Rigs, Crews)
-  * Fixes a HTTP 400 error when requesting WITSML tree using # in `sourceName`&#x20;
+  * Fixes a HTTP 400 error when requesting WITSML tree using # in `sourceName`
   * Prevents dashboards crash in mobile mode when display units are active
   * Bop configuration at rig parameters
   * Unit management improvements
@@ -293,7 +293,7 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 
 ### Fixes and improvements
 
-* Performance improvements&#x20;
+* Performance improvements
 * \[fixed] Unable to save Additional fields at the Assets screen Data Management tab [(more)](2.29.0.md#improve-data-management-ui)
 * Rest Output security improvement [(more)](2.29.0.md#rest-output-security-improvement)
 * \[API] Async observers
@@ -305,7 +305,7 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 ### Fixes and improvements
 
 * \[fixed] Source configurations can be wrongly disabled for empty collectors
-* Improve Rest Output configuration UI&#x20;
+* Improve Rest Output configuration UI
 * Improve WITSML Output configuration UI
 
 ## 2.28.1 (Feb 12, 2021)
@@ -317,13 +317,13 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 ## 2.28.0 (Feb 10, 2021)
 
 * Sections runs representation for drilling and casing
-* BHA&#x20;
+* BHA
   * Component representation at intervention sections
   * Witsml tubular importing
 * Units for section attributes, bha, rigs and rigstate configuration
 * Source configurations using the collector remote control
 * Added support for Modbus protocol ([more](../../collector/protocols/modbus.md))
-* Added support for tubular, wbGeomety, and mudlogs  objects in the WITSML output ([more](../witsml-output.md))
+* Added support for tubular, wbGeomety, and mudlogs objects in the WITSML output ([more](../witsml-output.md))
 * Channels charts:
   * Added option to define baseline value for area series
   * Improved zones / area configuration
@@ -334,11 +334,11 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 * Allow use lot/fit tests with dashboard filters
 * Fix well parameters table behavior
 * Well json importing for lithology
-* Operations initial date&#x20;
+* Operations initial date
 * Well parameters units fixes
 * Improvements to the Depth Auto Update service
 * Performance improvements on the WITSML Output
-* \[Collector] WITS - allow override timestamp&#x20;
+* \[Collector] WITS - allow override timestamp
 
 ## 2.27.0 (Nov 5, 2020)
 
@@ -365,7 +365,7 @@ Please see the [latest releases](../../whats-new/latest-releases/) for the most 
 * Fix Gantt dashboard for custom intervention
 * Fix Intervention permissions for completion column and sections
 * Rig state calculation improvements
-* FIT calculation&#x20;
+* FIT calculation
 
 {% hint style="info" %}
 This version depends on [Live 2.28.0](https://platform.intelie.com/release-notes#2-28-0-aug-21-2020)
@@ -396,7 +396,7 @@ There are new plugins on this version: plugin-ui-components and plugin-rig-state
 
 * \[fixed] OpenWells import issues
 * \[fixed] Well pipe function for location
-* \[fixed] Valves rules improvements in csb schematic&#x20;
+* \[fixed] Valves rules improvements in csb schematic
 * \[fixed] Unit selector history fixes
 * \[fixed] Backlog querier should run only for time-based logs
 * \[fixed] WITSML querier should be stateless
@@ -531,7 +531,7 @@ This version depends on [Live 2.25.17](https://platform.intelie.com/release-note
 * Poçoweb integration:
   * Completion and abandonment (\~100 fields)
   * Lithology (+16 fields indexed by elevation)
-  * Rig (+10 fields)&#x20;
+  * Rig (+10 fields)
   * BOP (+7 fields)
   * Completion columns (+9 fields)
 * Operations tab at drilling intervention sections (+7 fields)
@@ -585,7 +585,7 @@ This version depends on Live 2.25.13
 * Operation mode algorithms configuration interface ([more](../../whats-new/rig-state-detection.md#configuration))
 * Ability to change units of measurement for a specific dashboard
 * Ability to filter and search on the normalization channels mapping configuration
-* A new plugin, plugin-assets, was created to centralize generic assets features and source code ([more](broken-reference))
+* A new plugin, plugin-assets, was created to centralize generic assets features and source code ([more](broken-reference/))
 
 ### Fixes and improvements
 
@@ -647,7 +647,7 @@ This version depends on Live 2.25.8
 
 * Support for well-based data normalization ([more](../../data-flow/data-normalization/))
 * Allow to enable and disable the normalization for each asset ([more](../../administration/data-normalization/))
-* Support for fluids and geometry in drilling intervention static data ([more](../../static-data/intervention/drilling-section-schema.md))
+* Support for fluids and geometry in drilling intervention static data ([more](../../static-data/intervention/schema/drilling-section-schema.md))
 * Allow that channels are normalized without being configured if they match the standard names
 * Display collector sources configuration details on Live web interface
 * Display number of received channels and compression rate for each collector on Live web interface
@@ -741,4 +741,4 @@ This version depends on Live 2.24.5
 * Users without admin permission receiving error messages when saving standard or SVG widgets
 * Channels temporal axis messing up asset names
 * Axes disappearing on Temporal Channels Chart
-* User without the proper level of permission being able to see dashboards list&#x20;
+* User without the proper level of permission being able to see dashboards list

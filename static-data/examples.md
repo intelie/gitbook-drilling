@@ -257,6 +257,60 @@
 }
 ```
 
+## Production Unit
+
+#### Read Production Unit
+
+`GET /services/plugin-liverig/assets/production-unit/{productionUnitId}`
+
+#### Read Production Unit Linked Wells
+
+`GET /services/plugin-liverig/assets/production-unit/view/linked-wells/{productionUnitId}`
+
+#### Create Production Unit
+
+`POST /services/plugin-liverig/assets/production-unit`
+
+```javascript
+{ 
+	"name":"Production Unit Name", 
+	"type":"offshore_floating" 
+} 
+```
+
+#### Update Production Unit
+
+`POST /services/plugin-liverig/assets/production-unit/{productionUnitId}`
+
+```javascript
+{ 
+	"id":" productionUnitId", 
+	"name":"Production Unit Name", 
+	"type":"offshore_floating" 
+} 
+```
+
+#### Update Production Unit Parameters
+
+`POST /services/plugin-liverig/assets/production-unit/{productionUnitId}/part/attributes`
+
+```javascript
+{ 
+    "location": { 
+        "country": "AL", 
+        "latitude": "0", 
+        "longitude": "0", 
+        "units": { 
+            "latitude": "dega", 
+            "longitude": "dega" 
+        } 
+    }, 
+    "description": { 
+        "company": "1" 
+    } 
+} 
+```
+
 ## Intervention
 
 #### Read Intervention
@@ -284,6 +338,28 @@
    }
 }
 ```
+
+## Production Intervention
+
+#### Read Production Intervention Info
+
+`GET /services/plugin-liverig/assets/intervention/{interventionId}/part/productionInfo`
+
+#### Create or Update Production Intervention Info
+
+`POST /services/plugin-liverig/assets/intervention/{interventionId}/part/productionInfo`
+
+```javascript
+{ 
+    "wellType": "production", 
+    "completionType": "completionwith2zones", 
+    "wellElevationMethod": "bcs", 
+    "productionFluid": "oil", 
+    "injectionFluid": "water" 
+} 
+```
+
+Only one between productionFluid or injectionFluid should be sent, the valor to be sent will be defined by the wellType.
 
 ## Sections
 
