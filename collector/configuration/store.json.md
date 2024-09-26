@@ -1,5 +1,10 @@
-The `store.json` file is used by LiveRig Collector to organize the OPC tags to be read from the sources configured at `sources.xml`.
+The `store.json` file is used by LiveRig Collector to organize the CSV data stream and OPC tags to be read from the sources configured at `sources.xml`.
 
+## CSV data stream
+
+TODO add CSV data stream convertion in store.json configuration
+
+## OPC protocol
 The LiveRig Collector depends on the Node Ids (Tags) values, among other information, to query OPC server properly. These values are mapped in the following JSON format, as below:
 
 ```json
