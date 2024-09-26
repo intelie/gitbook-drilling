@@ -76,3 +76,7 @@ A sample of the JSON payload supported as Intelie Live events. This sample is co
    }
 }
 ```
+
+{% hint style="info" %}
+Each line of the input data stream should end with the '\n' (the end of line character). The maximum allowed line length in characters is 4,194,304. This limit was imposed to avoid huge lines that could extrapolate the Live event maximum size or extrapolate the internal implementation buffer capacity.
+{% endhint %}
