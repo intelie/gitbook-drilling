@@ -322,6 +322,15 @@ Once created you can use _WITSML browser_ to access WITSML log (see example belo
 ![csv-to-witsml-browser](../../.gitbook/assets/csv-to-witsml/csv-witsml-log-browser.gif)
 
 
+### Limitations
+
+This CSV to WITSML Log converted has limitation:
+
+- Can only be accessed locally
+- No user/password
+- Ignores _queryOptions_ queries, i.e. _queryOptions: returnElements=all_
+
+
 ## OPC protocol
 The LiveRig Collector depends on the Node Ids (Tags) values, among other information, to query OPC server properly. These values are mapped in the following JSON format, as below:
 
