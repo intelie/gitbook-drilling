@@ -37,7 +37,7 @@ Configure the server host name and port:
 
 The option to open python console will be available at the header:
 
-![](<../.gitbook/assets/image (273).png>)
+![](<../.gitbook/assets/image (225).png>)
 
 It is possible to execute code or drag and drop a python file into the console area:
 
@@ -111,4 +111,4 @@ Live provides the multiple files support for executing and saving python stateme
 plugin-py-1.3.0+  required
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (136).png" alt=""><figcaption><p>Python tree of files and actions</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (322).png" alt=""><figcaption><p>Python tree of files and actions</p></figcaption></figure>

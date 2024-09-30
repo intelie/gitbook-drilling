@@ -8,28 +8,26 @@ This endpoint only supports OPC protocol
 
 ## Required information
 
-![Identifying the Liverig integration qualifier](../../../.gitbook/assets/collector-source-details/basic-qualifier-and-instance-information.png)
+![Identifying the Liverig integration qualifier](../../../.gitbook/assets/basic-qualifier-and-instance-information.png)
 
-![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
+![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/witsml-source-details.png)
 
-{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/storeConfiguration" method="get" summary="/storeConfiguration?qualifier=qualifier&instance=instance&force=true" %}
-{% swagger-description %}
+## /storeConfiguration?qualifier=qualifier\&instance=instance\&force=true
+
+<mark style="color:blue;">`GET`</mark> `http://environment.com/services/plugin-liverig/collectors/storeConfiguration`
+
 View the store.json file
-{% endswagger-description %}
 
-{% swagger-parameter in="query" name="instance" type="string" required="true" %}
-Collector instance
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="query" name="qualifier" type="string" required="true" %}
-Collector qualifier
-{% endswagger-parameter %}
+| Name                                        | Type    | Description                                                                                                                  |
+| ------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| instance<mark style="color:red;">\*</mark>  | string  | Collector instance                                                                                                           |
+| qualifier<mark style="color:red;">\*</mark> | string  | Collector qualifier                                                                                                          |
+| force                                       | boolean | In case of `true`, it will ignore the caching and it will re-read the store configuration from the collector at remote site. |
 
-{% swagger-parameter in="query" name="force" type="boolean" %}
-In case of `true`, it will ignore the caching and it will re-read the store configuration from the collector at remote site.
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="The representational object of current store for the requested source" %}
+{% tabs %}
+{% tab title="200 The representational object of current store for the requested source" %}
 ```json
 {
     "success": {
@@ -55,56 +53,43 @@ In case of `true`, it will ignore the caching and it will re-read the store conf
     }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger baseUrl="http://environment.com" path="/services/plugin-liverig/collectors/storeConfiguration" method="post" summary="?qualifier=qualifiers&instance=instance&force=true" %}
-{% swagger-description %}
+## ?qualifier=qualifiers\&instance=instance\&force=true
+
+<mark style="color:green;">`POST`</mark> `http://environment.com/services/plugin-liverig/collectors/storeConfiguration`
+
 Add or edit the store.json file
-{% endswagger-description %}
 
-{% swagger-parameter in="query" name="qualifier" type="string" required="true" %}
-Collector qualifier
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="query" name="instance" type="string" required="true" %}
-Collector instance
-{% endswagger-parameter %}
+| Name                                        | Type    | Description                                                                                                                  |
+| ------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| qualifier<mark style="color:red;">\*</mark> | string  | Collector qualifier                                                                                                          |
+| instance<mark style="color:red;">\*</mark>  | string  | Collector instance                                                                                                           |
+| force                                       | boolean | In case of `true`, it will ignore the caching and it will re-read the store configuration from the collector at remote site. |
 
-{% swagger-parameter in="query" name="force" type="boolean" %}
-In case of `true`, it will ignore the caching and it will re-read the store configuration from the collector at remote site.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="purge" type="string" %}
-Set a period to purge tables
-{% endswagger-parameter %}
+| Name     | Type    | Description                                                                                        |
+| -------- | ------- | -------------------------------------------------------------------------------------------------- |
+| purge    | string  | Set a period to purge tables                                                                       |
+| limit    | integer | Set the size of the WITSML response                                                                |
+| rigs     | string  | Set a list of rig objects, containing the `name`, `units`, `tags`, `types` and `timestamp` fields. |
+| endpoint | string  | URL service used                                                                                   |
+| database | string  | URL database used                                                                                  |
 
-{% swagger-parameter in="body" name="limit" type="integer" %}
-Set the size of the WITSML response
-{% endswagger-parameter %}
+{% tabs %}
+{% tab title="200 " %}
 
-{% swagger-parameter in="body" name="rigs" type="string" %}
-Set a list of rig objects, containing the `name`, `units`, `tags`, `types` and `timestamp` fields.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="endpoint" type="string" %}
-URL service used
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="database" type="string" %}
-URL database used
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Body examples for POST
 
 {% hint style="warning" %}
-
-The inner fields `database`, `endpoint`, `limit` and `purge` are *optional* and **may be set only if you need the [Protocol Conversion](../../protocol-conversion.md) feature**.
-
+The inner fields `database`, `endpoint`, `limit` and `purge` are _optional_ and **may be set only if you need the** [**Protocol Conversion**](../../protocol-conversion.md) **feature**.
 {% endhint %}
 
 ```json

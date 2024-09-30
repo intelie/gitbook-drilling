@@ -12,7 +12,7 @@ WITSML Store plugin is available at [https://marketplace.intelie.com/artifact/pl
 
 Intelie WITSML Store implements the [WITSML standard](https://www.energistics.org/witsml-data-standards/) as defined by [Energistics](https://www.energistics.org/) and it's compliant with the [WITSML 1.4.1.1 API](http://w3.energistics.org/schema/WITSML\_v1.4.1.1\_Data\_Schema/witsml\_v1.4.1.1\_data/index\_witsml\_schema.html).
 
-![WITSML Store as key component at Central and Edge installations](<../.gitbook/assets/image (48).png>)
+![WITSML Store as key component at Central and Edge installations](<../.gitbook/assets/image (246).png>)
 
 ### Key features
 

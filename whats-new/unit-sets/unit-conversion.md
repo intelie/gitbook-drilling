@@ -6,10 +6,10 @@ The unit sets allow an easy configuration per asset and that relies on the capab
 
 If a previous value was defined in a field of asset, Live will convert the value to the target unit of associated unit set. Example of well converting units from meters to ft:
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (262).png>)
 
-![](<../../.gitbook/assets/image (233).png>)
+![](<../../.gitbook/assets/image (405).png>)
 
-![](<../../.gitbook/assets/image (420).png>)
+![](<../../.gitbook/assets/image (102).png>)
 
-![](<../../.gitbook/assets/image (413).png>)
+![](<../../.gitbook/assets/image (201).png>)

@@ -6,7 +6,7 @@ The [data normalization](../../data-flow/data-normalization/) process is applied
 
 To perform this process, one must define a set of Standard Channels, or Standard Curves, in which will be defined the mnemonic and the unit of measurement for each channel, independently of its source (well, rig or service company).
 
-![Standard channels configuration in Intelie Live](<../../.gitbook/assets/image (372).png>)
+![Standard channels configuration in Intelie Live](<../../.gitbook/assets/image (129).png>)
 
 ## Second step: Asset configuration
 
@@ -16,7 +16,7 @@ The next step is to define, for each rig or each well, one or more possible sour
 
 Each source is defined by two levels of filters. The first filter mandatory, It is at the asset level and limits all the data that will be matched with this asset, as the image below shows.
 
-![Filter the data that will be matched to an asset](<../../.gitbook/assets/image (265).png>)
+![Filter the data that will be matched to an asset](<../../.gitbook/assets/image (38).png>)
 
 Although generally a simple filter is used to match the data to the asset, complex filters can also be used, such as
 
@@ -32,7 +32,7 @@ raw_all_wells liverig__object->log_name:Time*
 
 The second one is optional, and is defined for each of the source's mnemonics. It is important for disambiguation, specially in the case that different sources generate similar mnemonics.
 
-![Example of usage of the same mnemonic on different sources](<../../.gitbook/assets/image (30).png>)
+![Example of usage of the same mnemonic on different sources](<../../.gitbook/assets/image (274).png>)
 
 An examples of that filter is:
 
@@ -44,13 +44,13 @@ liverig__object->name:Time*
 
 Each source must obligatorily define a mnemonic. When the normalized event is generated, its mnemonic will be defined by the standard channel configuration.
 
-![Example of mnemonics on the sources](<../../.gitbook/assets/image (387).png>)
+![Example of mnemonics on the sources](<../../.gitbook/assets/image (217).png>)
 
 ### Unit conversion
 
 The unit conversion is automatic. When the event is received, if it defines a unit in the `uom` field, the value will be automatically converted to match the standard channel unit.
 
-![The target unit is defined on the standard channels](<../../.gitbook/assets/image (510).png>)
+![The target unit is defined on the standard channels](<../../.gitbook/assets/image (501).png>)
 
 Take a look [here](../../data-flow/data-normalization/unit-conversion.md) to find out the supported units.
 
@@ -85,16 +85,16 @@ If it is not possible to convert a value, the errors field will describe any pos
 
 Since version 2.19.0, the normalization can be enabled or disabled for each asset, using the toggle shown on the image below.
 
-![Toggle to disable or enable data normalization for one asset](<../../.gitbook/assets/image (509).png>)
+![Toggle to disable or enable data normalization for one asset](<../../.gitbook/assets/image (505).png>)
 
 ### Renormalization
 
 Sometimes a re-normalization is needed, for example, to fix data generated with a wrong normalization configuration.
 
-![Renormalization entry at High Frequency Data section at Configurations menu](<../../.gitbook/assets/image (349).png>)
+![Renormalization entry at High Frequency Data section at Configurations menu](<../../.gitbook/assets/image (59).png>)
 
 For this goal, there is a re-normalization option on the Configurations menu, which allows this process to be executed for a batch of assets simultaneously, and provides a full status of all the executions.
 
-![Renormalization web interface enables the reprocessing of raw data in batches for multiple assets and organized by selected channels](<../../.gitbook/assets/image (241).png>)
+![Renormalization web interface enables the reprocessing of raw data in batches for multiple assets and organized by selected channels](<../../.gitbook/assets/image (320).png>)
 
 Starting at LiveRig 4.0 and Wells 5.0, renormalizations can be performed by depth criteria instead of date-time ordering.

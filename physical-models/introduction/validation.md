@@ -6,11 +6,11 @@ This validation is a service where through the below link, is possible to check 
 
 Example 1: Case with an error
 
-![](<../../.gitbook/assets/image (240).png>)
+![](<../../.gitbook/assets/image (467).png>)
 
 Example 2: All inputs are correct
 
-![](<../../.gitbook/assets/image (63).png>)
+![](<../../.gitbook/assets/image (292).png>)
 
 **Link:**
 

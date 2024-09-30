@@ -12,7 +12,7 @@ The rig state plugin can be found in the [marketplace](https://marketplace.intel
 
 The activities will be displayed both on the rig and on the well interfaces. They are available under the "Operation Status" tab.
 
-![Example of the operations feed](<../.gitbook/assets/image (45).png>)
+![Example of the operations feed](<../.gitbook/assets/image (99).png>)
 
 {% hint style="warning" %}
 This feature requires that the input standard channels are [identified](../administration/standard-identifiers.md).
@@ -57,7 +57,7 @@ It is possible to overwrite only the parameters for the current rig. The paramet
 
 It is also possible to enable and disable the algorithm calculation per rig:
 
-![Models configuration at rig parameters tab](<../.gitbook/assets/image (500).png>)
+![Models configuration at rig parameters tab](<../.gitbook/assets/image (536).png>)
 
 If the rig is not enabled, a message will be shown at the operation status screen:
 
@@ -123,7 +123,7 @@ In the following image, it is possible to see the result of the stand length cha
 
 It is possible to configure the rig state detection units constants per rig&#x20;
 
-![Units configuration for rig state detection](<../.gitbook/assets/image (352).png>)
+![Units configuration for rig state detection](<../.gitbook/assets/image (126).png>)
 
 ## Default Value - RigState Parameters
 

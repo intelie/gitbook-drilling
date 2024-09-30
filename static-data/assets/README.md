@@ -4,5 +4,5 @@ The static data is organized in assets. The base asset types for drilling are th
 
 All the data related to an asset is versioned. It is possible to restore any previously saved version, as the image below shows. The versions can work both as project information and execution data.
 
-![How to access the version history for an asset](<../../.gitbook/assets/image (511).png>)
+![How to access the version history for an asset](<../../.gitbook/assets/image (530).png>)
 

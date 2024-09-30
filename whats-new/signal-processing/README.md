@@ -10,7 +10,7 @@ Live provides pipe functions to improve signal data processing helping make busi
 
 The pipe function for filtering signals enables removing unwanted harmonic component to have a more clear curve using low/band/high pass filters.
 
-<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (331).png" alt=""><figcaption><p>Signal filter pipe function</p></figcaption></figure>
 
 Sine Wave Combined with Multiple Frequencies and Gaussian White Noise
 
@@ -100,9 +100,9 @@ y over all every 10 sec
 
 The pipes find peaks function is used to find peaks or valleys within a given sample. The values found can be filtered within a certain range that can take into account its height, plateau size, distance, prominence and width.
 
-<figure><img src="../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (332).png" alt=""><figcaption><p>Signal find peaks pipe function</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (348).png" alt=""><figcaption><p>Signal find troughs pipe function</p></figcaption></figure>
 
 Detecting Peaks and Troughs on a Channel
 
@@ -188,7 +188,7 @@ Square Wave with differents Duty Cycles
 
 An outlier is an observation that is unusually far from the other values in a data set. Remove outlier is a common process to have a more clear data.
 
-<figure><img src="../../.gitbook/assets/image (111).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Remove outliers pipe funn</p></figcaption></figure>
 
 Remove the top 5% and bottom 5% values
 
@@ -206,11 +206,11 @@ data_with_outliers
 
 We can use pipes to estimate a point using interpolation functions.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (204).png" alt=""><figcaption><p>Types of interpolation</p></figcaption></figure>
 
 In pipes we have two types of interpolation linear and polynomial ( lagrange method )
 
-<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Example of linear interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (203).png" alt=""><figcaption><p>Example of linear interpolation</p></figcaption></figure>
 
 ```haskell
 def @@x: (1.0, 2.0, 4.0, 5.0);
@@ -224,7 +224,7 @@ at the end
 => signal.linear_interpolation(x, y, xi) as result
 ```
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (206).png" alt=""><figcaption><p>Example of polynomial interpolation</p></figcaption></figure>
 
 ```haskell
 def @@x: (1.0, 2.0, 4.0, 5.0);
@@ -309,7 +309,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../../.gitbook/assets/multi-regression-images/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image6.png" alt=""><figcaption><p>Example of polynomial regression</p></figcaption></figure>
 
 #### Logarithmic
 
@@ -324,7 +324,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../../.gitbook/assets/multi-regression-images/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image5.png" alt=""><figcaption><p>Example of logarithmic regression</p></figcaption></figure>
 
 #### Exponential
 
@@ -339,7 +339,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../../.gitbook/assets/multi-regression-images/image2.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image2.png" alt=""><figcaption><p>Example of exponential regression</p></figcaption></figure>
 
 #### Exponential Decay
 
@@ -354,7 +354,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../../.gitbook/assets/multi-regression-images/image4.png" alt=""><figcaption><p>Example of exponential decay regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image4.png" alt=""><figcaption><p>Example of exponential decay regression</p></figcaption></figure>
 
 #### Power
 
@@ -369,7 +369,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
   => r->x as timestamp, r->y as yPredOrder2
 ```
 
-<figure><img src="../../.gitbook/assets/multi-regression-images/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image3.png" alt=""><figcaption><p>Example of power regression</p></figcaption></figure>
 
 #### Real Time Usage
 
@@ -398,7 +398,7 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 
 ```
 
-<figure><img src="../../.gitbook/assets/multi-regression-images/image1.png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image1 (1).png" alt=""><figcaption><p>Example of real time data polynomial regression</p></figcaption></figure>
 
 ### Pipeless Aggregations
 
@@ -408,42 +408,41 @@ event_type .timestamp:adjusted_index_timestamp adjusted_index_timestamp:* mnemon
 Requirement: plugin-processing-1.2.0+, liverig-5.2.0+, liverig-vis-4.6.0+
 {% endhint %}
 
-
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/11-ui-improvement-all-configs.png" alt=""><figcaption><p>UI improvement for the aggregations configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11-ui-improvement-all-configs.png" alt=""><figcaption><p>UI improvement for the aggregations configuration</p></figcaption></figure>
 
 In this new update the aggregations are nested within the channel card to provide a better comprehension of what data is being used to create the modified series. To add a new aggregation to a channel click on the `+` button next to channel name.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/1-ui-improve-select-a-channel.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1-ui-improve-select-a-channel.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
 
 Then select which aggregation is going to be created. At this point the `plugin-processing` provides the following aggregation types the corresponds to the pipes functions listed previously in this document: Moving Average, Signal Filtering, Peak and Through Detections and Outliers removal.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/2-ui-improve-select-agg.png" alt=""><figcaption><p>Listing all available aggregations</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2-ui-improve-select-agg.png" alt=""><figcaption><p>Listing all available aggregations</p></figcaption></figure>
 
 After adding the aggregations, the interface assumes a tree-like format.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/3-ui-improvement-new-agg-positioning.png" alt=""><figcaption><p>All available aggregations activated</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3-ui-improvement-new-agg-positioning.png" alt=""><figcaption><p>All available aggregations activated</p></figcaption></figure>
 
 The follow four images shows how the configurations are now set for the aggregation functions. Each of then has their own configuration panel, where the user can even customize the plotting style.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/4-ui-improvement-moving-avg-config.png" alt=""><figcaption><p>Moving average configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4-ui-improvement-moving-avg-config.png" alt=""><figcaption><p>Moving average configuration</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/5-ui-improvement-filter-config.png" alt=""><figcaption><p>Signal filtering configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5-ui-improvement-filter-config.png" alt=""><figcaption><p>Signal filtering configuration</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/7-ui-improvement-detect-peaks.png" alt=""><figcaption><p>Peaks detection configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7-ui-improvement-detect-peaks.png" alt=""><figcaption><p>Peaks detection configuration</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/6-ui-improvement-remove-outliers.png" alt=""><figcaption><p>Outliers removal configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6-ui-improvement-remove-outliers.png" alt=""><figcaption><p>Outliers removal configuration</p></figcaption></figure>
 
 The peaks detection configuration uses a different plotting style (scatter). At this point is possible to plot the aggregation to use line or scatter plot.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/9-ui-improvement-scatter-config.png" alt=""><figcaption><p>Plotting style options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9-ui-improvement-scatter-config.png" alt=""><figcaption><p>Plotting style options</p></figcaption></figure>
 
-Enabling and disabling aggregation can be done using a `eye` button like the channels cards. 
+Enabling and disabling aggregation can be done using a `eye` button like the channels cards.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/8-ui-improvement-disable-channels.png" alt=""><figcaption><p>Enable and disable aggregations<p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/8-ui-improvement-disable-channels.png" alt=""><figcaption><p>Enable and disable aggregations</p></figcaption></figure>
 
 All configurations can also be done in the view mode.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/12-ui-improvement-on-view-mode.png" alt=""><figcaption><p>Configuration in view mode<p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12-ui-improvement-on-view-mode.png" alt=""><figcaption><p>Configuration in view mode</p></figcaption></figure>
 
 #### Older versions
 
@@ -453,28 +452,28 @@ Requirement: plugin-processing-1.1.0+, liverig-5.1.1+, liverig-vis-4.6.0+
 
 To use a pipeless aggregation create a new temporal chart with the desired channels.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless_agg.png" alt=""><figcaption><p>Editor menu with pipeless aggregations options</p></figcaption></figure>
 
 Next select which aggregations are going to be applied over the data.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_mov_avg.png" alt=""><figcaption><p>Applying Moving Average aggregation over the selected channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless_agg_mov_avg.png" alt=""><figcaption><p>Applying Moving Average aggregation over the selected channel</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_filter.png" alt=""><figcaption><p>Applying Filter aggregation, with low pass and butterworth configuration, over the selected channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless_agg_filter.png" alt=""><figcaption><p>Applying Filter aggregation, with low pass and butterworth configuration, over the selected channel</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_outliers.png" alt=""><figcaption><p>Applying Outliers aggregation over the selected channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless_agg_outliers.png" alt=""><figcaption><p>Applying Outliers aggregation over the selected channel</p></figcaption></figure>
 
 Each aggregation has configuration fields that resembles the parameters passed to a correspondent pipes function.
 
 It's possible to hide the original channel using the chart legend.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_disable.png" alt=""><figcaption><p>Hiding the original channel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless_agg_disable.png" alt=""><figcaption><p>Hiding the original channel</p></figcaption></figure>
 
 The aggregations can also be added in the visualization mode using the new chart configuration menu.
 
-<figure><img src="../../.gitbook/assets/pipeless-aggregations/pipeless_agg_mod.png" alt=""><figcaption><p>New chart configuration menu with aggregations</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pipeless_agg_mod.png" alt=""><figcaption><p>New chart configuration menu with aggregations</p></figcaption></figure>
 
 It is possible to turn on the filters, moving average and outliers or on a chart to calculate it through a temporal range.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Pipeless aggregation configuration on viewmode</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (187).png" alt=""><figcaption><p>Pipeless aggregation configuration on viewmode</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Pipeless aggregations on multiple curves</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (214).png" alt=""><figcaption><p>Pipeless aggregations on multiple curves</p></figcaption></figure>

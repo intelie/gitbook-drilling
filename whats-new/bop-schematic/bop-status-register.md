@@ -30,7 +30,7 @@ After saving the entered data, the component names will also be displayed on the
 
 First it is required to configure the permission of BOP annotation at the admin tab:&#x20;
 
-![BOP permission configuration](<../../.gitbook/assets/image (31).png>)
+![BOP permission configuration](<../../.gitbook/assets/image (253).png>)
 
 To create an annotation of the type of BOP status it is necessary to go to the dashboard, click on the timeline and select the option  _Register bop status_\
 

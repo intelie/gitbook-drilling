@@ -15,11 +15,11 @@ The `plugin-spectrum` it is a Live plugin that provides pipes functions to analy
 
 Some of the benefits of frequency analysis are improved well safety monitoring and issue prevention:
 
-![Benefits of analyse signal in frequency domain](<../.gitbook/assets/image (39).png>)
+![Benefits of analyse signal in frequency domain](<../.gitbook/assets/image (300).png>)
 
 Drilling systems are subject to torsional, axial, and lateral vibrations that are excited by bit-rock or by drillstring-formation interaction forces. These oscillations can be distinguished by mode shape and frequency. High-frequency torsional oscillations have natural modes reaching 400 Hz. Stick/slip oscillations are characterized by low frequencies usually below 1 Hz and affect the entire drill-string.&#x20;
 
-![Drilling modes of vibration: lateral, longitudinal and torsional](<../.gitbook/assets/image (250).png>)
+![Drilling modes of vibration: lateral, longitudinal and torsional](<../.gitbook/assets/image (96).png>)
 
 The next table shows the frequency ranges of common vibration interaction forces and modes:
 
@@ -34,17 +34,17 @@ The next table shows the frequency ranges of common vibration interaction forces
 
 The stick-slip phenomenon is most typically related to higher compressive strength formations related to torsional vibration (0-5Hz). When drilling with too low RPM or too high WOB (weight on bit), the drill string may enter the stick-slip window:
 
-![Drilling efficiency diagram and stick slip window](<../.gitbook/assets/image (17).png>)
+![Drilling efficiency diagram and stick slip window](<../.gitbook/assets/image (296).png>)
 
 ## Live FFT
 
 The `signal.FFT()` pipes function receives a `double array of timestamp series`, a `double array of signal`, the `sampling rate` of signal and a `boolean convertToDecibel` that flags whether or not to convert the output magnitude to decibel:
 
-![Pipe function to calculate FFT](<../.gitbook/assets/image (274).png>)
+![Pipe function to calculate FFT](<../.gitbook/assets/image (13).png>)
 
 The example below shows generated sine wave signals in the left charts and their FFTs to the right. The first with one harmonic, the second with three harmonics increasing amplitudes, and the third with noised sine signal.
 
-![Generated sine harmonic signals with calculated FFT](<../.gitbook/assets/image (137).png>)
+![Generated sine harmonic signals with calculated FFT](<../.gitbook/assets/image (394).png>)
 
 With a Cartesian chart, it is possible to plot the FFT signal based on the example query below. It is also possible to replace the generated signal with a real signal:&#x20;
 
@@ -74,7 +74,7 @@ In a temporal chart with the query bellow it is possible to generate a sine sign
 => sin(2/10*pi()*times) as sin every item
 ```
 
-![Example of generated sine](<../.gitbook/assets/image (245).png>)
+![Example of generated sine](<../.gitbook/assets/image (434).png>)
 
 In a Cartesian chart with the query bellow it is possible to generate the fft of the sine signal:
 
@@ -95,7 +95,7 @@ over last 10 min every 1 min
 => @set true as __clear
 ```
 
-![FFT calculated based on generated sine signal](<../.gitbook/assets/image (293).png>)
+![FFT calculated based on generated sine signal](<../.gitbook/assets/image (227).png>)
 
 In a temporal chart with the query bellow it is possible to generate sine with harmonics:
 
@@ -106,7 +106,7 @@ In a temporal chart with the query bellow it is possible to generate sine with h
 + 3*sin(4/10*pi()*times) as sin every item
 ```
 
-![Sine signal generated with harmonics](<../.gitbook/assets/image (384).png>)
+![Sine signal generated with harmonics](<../.gitbook/assets/image (110).png>)
 
 In a Cartesian chart with the query bellow it is possible to generate the FFT of the harmonics sine signal:
 
@@ -127,7 +127,7 @@ In a Cartesian chart with the query bellow it is possible to generate the FFT of
 => @set true as __clear
 ```
 
-![FFT calculated with harmonics](<../.gitbook/assets/image (479).png>)
+![FFT calculated with harmonics](<../.gitbook/assets/image (500).png>)
 
 In a temporal chart with the query bellow it is possible to generate sine with noise:
 
@@ -137,7 +137,7 @@ In a temporal chart with the query bellow it is possible to generate sine with n
 => 20*sin(2/10*pi()*times) +20*random() as sin every item
 ```
 
-![Sine signal generated with noise](<../.gitbook/assets/image (218).png>)
+![Sine signal generated with noise](<../.gitbook/assets/image (423).png>)
 
 In a Cartesian chart with the query bellow it is possible to generate the FFT of the noised sine signal:
 
@@ -158,4 +158,4 @@ In a Cartesian chart with the query bellow it is possible to generate the FFT of
 => @set true as __clear
 ```
 
-![FFT calculated based on noised sine ](<../.gitbook/assets/image (89).png>)
+![FFT calculated based on noised sine ](<../.gitbook/assets/image (245).png>)

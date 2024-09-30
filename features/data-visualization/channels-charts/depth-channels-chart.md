@@ -6,7 +6,7 @@ description: View channels in a depth interval
 
 ### **Configurations**
 
-The same configurations found on [Temporal Channels Chart](temporal-channels-chart.md) is also found here.&#x20;
+The same configurations found on [Temporal Channels Chart](temporal-channels-chart.md) is also found here.
 
 Channels depth comes with a **Depth selector** instead of Time selector and have a **Depth Grid** configuration:
 
@@ -20,11 +20,11 @@ The units of measurement used for the depth on the normalized events can be conf
 
 Depth based charts can be used to visualize a fixed depth range identified by the **Exact Depth** option, or update dynamically, identified by **Relative to asset option.**
 
-![Exact depth](<../../../.gitbook/assets/image (212).png>)
+![Exact depth](<../../../.gitbook/assets/image (422).png>)
 
 <div align="center">
 
-<img src="../../../.gitbook/assets/image (319).png" alt="Relative to asset">
+<img src="../../../.gitbook/assets/image (49).png" alt="Relative to asset">
 
 </div>
 
@@ -38,7 +38,7 @@ Depth grid allow a depth interval highlighting using a predefined example, or an
 
 <div align="center">
 
-<img src="../../../.gitbook/assets/image (86).png" alt="An example of Custom Configuration">
+<img src="../../../.gitbook/assets/image (250).png" alt="An example of Custom Configuration">
 
 </div>
 
@@ -50,16 +50,16 @@ Note that this configuration is **unit free**. You're configuring depth units in
 
 <div align="center">
 
-<img src="../../../.gitbook/assets/image (432).png" alt="Starting with Major line at 400 depth, Micro at 425, Minor at 450">
+<img src="../../../.gitbook/assets/image (115).png" alt="Starting with Major line at 400 depth, Micro at 425, Minor at 450">
 
 </div>
 
 ## Customizing data gaps report threshold for depth channels charts
 
-As explained at "[Customizing data gaps report threshold for temporal channels charts](features/data-visualization/channels-charts/temporal-channels-chart.md#customizing-data-gaps-report-threshold-for-temporal-channels-charts)", all temporal and depth channels charts will display data gaps if "Report data gaps" feature is on. 
+As explained at "[Customizing data gaps report threshold for temporal channels charts](https://github.com/intelie/drilling/blob/main/features/data-visualization/channels-charts/features/data-visualization/channels-charts/temporal-channels-chart.md#customizing-data-gaps-report-threshold-for-temporal-channels-charts)", all temporal and depth channels charts will display data gaps if "Report data gaps" feature is on.
 
 The size of these gaps is defined globally in the Live administration, or by the `@@dataGapsReportThreshold` macro for temporal channels charts.
 
-For depth channels charts, however, data size customization should be done using the `@@depthDataGapsReportThreshold`. This macro can be defined in a pipes module, and just like any other pipes macro, the developer can use conditionals, access live variable (for example, `live.matchspan`) and other macros (such as `@@context` and `@@lookup`). 
+For depth channels charts, however, data size customization should be done using the `@@depthDataGapsReportThreshold`. This macro can be defined in a pipes module, and just like any other pipes macro, the developer can use conditionals, access live variable (for example, `live.matchspan`) and other macros (such as `@@context` and `@@lookup`).
 
 When creating the pipes module, just make sure to turn the options "Disable prefixing module functions with the qualifier" on.

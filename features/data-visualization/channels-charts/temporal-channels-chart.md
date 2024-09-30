@@ -4,11 +4,11 @@ description: View channels in a time interval
 
 # Temporal Channels Chart
 
-![Example of a temporal chart](<../../../.gitbook/assets/image (62).png>)
+![Example of a temporal chart](<../../../.gitbook/assets/image (307).png>)
 
 Many visual options are available on the `Chart` tab, as shown on the image below.
 
-![Example of chart configuration](<../../../.gitbook/assets/image (363).png>)
+![Example of chart configuration](<../../../.gitbook/assets/image (144).png>)
 
 ## Plot fills between multiple channels
 
@@ -18,7 +18,7 @@ In case of multiple channels (even from multiple assets) in the same widget, it'
 
 The configuration for the other channel to be compared and how to fill the positive and negative differences is available in **Widget Chart Options** menu at right top of each widget.
 
-![](<../../../.gitbook/assets/image (407).png>)
+![](<../../../.gitbook/assets/image (149).png>)
 
 ## Stacked area charts
 
@@ -26,13 +26,13 @@ A stacked area chart displays the evolution of a numeric variable for several gr
 
 Comparing the heights of each segment of the curve allows us to get a general idea of how each subgroup compares to the other in their contributions to the total.
 
-![Example of a stacked area chart](<../../../.gitbook/assets/image (261).png>)
+![Example of a stacked area chart](<../../../.gitbook/assets/image (402).png>)
 
 On the **Widget Chart Options** menu, after clicking on the stacked chart icon, the following option is available:
 
 * Stroke style and width: Sets different stroke styles and widths for the current channel.
 
-![Chart type option menu](<../../../.gitbook/assets/image (70).png>)
+![Chart type option menu](<../../../.gitbook/assets/image (239).png>)
 
 {% hint style="warning" %}
 Important note:
@@ -40,11 +40,11 @@ Important note:
 Channels with different units can be added on the same stacked chart, but the user will receive a warning message.
 {% endhint %}
 
-![Warning message](<../../../.gitbook/assets/image (345).png>)
+![Warning message](<../../../.gitbook/assets/image (226).png>)
 
 Different types of charts can be added on the same visualization, as shown on the image below:
 
-![Stacked charts + line chart](<../../../.gitbook/assets/image (286).png>)
+![Stacked charts + line chart](<../../../.gitbook/assets/image (4).png>)
 
 {% hint style="warning" %}
 Important note:
@@ -56,19 +56,20 @@ As this chart type focus on the relative comparison between the channels, the ch
 
 If "Report data gaps" feature is enabled in a Live environment, all temporal and depth channels charts in this environment will display data gaps according to the "data gaps time threshold" configuration.
 
-![](<../../../.gitbook/assets/dataGaps-time.png>)
+![](../../../.gitbook/assets/dataGaps-time.png)
 
-The above picture shows the same chart in a Live environment with data gaps feature enabled (left), and disabled (right). Note that in the picture at the left, 2 points that have a time interval bigger than the "data gaps threshold" are no longer connected. 
+The above picture shows the same chart in a Live environment with data gaps feature enabled (left), and disabled (right). Note that in the picture at the left, 2 points that have a time interval bigger than the "data gaps threshold" are no longer connected.
 
-The "data gaps time threshold" can be  configured at Live administration, and only allows a value, in ms. Sometimes, for a temporal channels chart, the developer may need more expressiveness, for example, defining the threshold based on the dashboard timestamp, or defining the threshold matching the `@@assetWidgetOverrideFilter` conditionals. 
+The "data gaps time threshold" can be configured at Live administration, and only allows a value, in ms. Sometimes, for a temporal channels chart, the developer may need more expressiveness, for example, defining the threshold based on the dashboard timestamp, or defining the threshold matching the `@@assetWidgetOverrideFilter` conditionals.
 
 In these cases, the developer can define the macro `@@dataGapsReportThreshold`. One way of doing so is creating a pipes module. For example:
 
-![](<../../../.gitbook/assets/dataGapsReportThreshold-1.png>)
+![](../../../.gitbook/assets/dataGapsReportThreshold-1.png)
 
 Make sure to turn the options "Disable prefixing module functions with the qualifier" on.
 
 This other example defines the data gaps report threshold depending on the event type of the filtered asset:
+
 ```
 def @@dataGapsReportThreshold:
   @@lookup.asset_name_event_type[0] == "rig_Test" ? 60000, 2000:const();

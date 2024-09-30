@@ -265,4 +265,4 @@ og.model.general.rheologicalModelCalibration(
 
 **Example**
 
-![Plot all rheological model vs rheometer readings](<../../.gitbook/assets/image (266).png>)
+![Plot all rheological model vs rheometer readings](<../../.gitbook/assets/image (481).png>)

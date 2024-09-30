@@ -9,28 +9,28 @@ description: >-
 
 At the Live integrations page it is possible to add an instance to configure the integration with OpenWells:
 
-![OpenWells integration configuration](<../.gitbook/assets/image (429).png>)
+![OpenWells integration configuration](<../.gitbook/assets/image (100).png>)
 
 After configure the OpenWells integration with credentials at the admin page the option will be available at well parameters tab and at interventions tab.
 
-![Import option at Well parameters tab](<../.gitbook/assets/image (525).png>)
+![Import option at Well parameters tab](<../.gitbook/assets/image (387).png>)
 
-![OpenWells importing option](<../.gitbook/assets/image (27).png>)
+![OpenWells importing option](<../.gitbook/assets/image (298).png>)
 
-![Search well by name](<../.gitbook/assets/image (26).png>)
+![Search well by name](<../.gitbook/assets/image (254).png>)
 
-![](<../.gitbook/assets/image (1) (1) (1).png>)
+![](<../.gitbook/assets/image (191).png>)
 
-![Phase details from OpenWells](<../.gitbook/assets/image (262).png>)
+![Phase details from OpenWells](<../.gitbook/assets/image (235).png>)
 
-![Section data imported from OpenWells](<../.gitbook/assets/image (389).png>)
+![Section data imported from OpenWells](<../.gitbook/assets/image (182).png>)
 
-![Trajectory imported from OpenWells](<../.gitbook/assets/image (157).png>)
+![Trajectory imported from OpenWells](<../.gitbook/assets/image (326).png>)
 
-![Options to import from OpenWells at intervention](<../.gitbook/assets/image (405).png>)
+![Options to import from OpenWells at intervention](<../.gitbook/assets/image (215).png>)
 
-![Wellbore casing data imported from OpenWells](<../.gitbook/assets/image (276).png>)
+![Wellbore casing data imported from OpenWells](<../.gitbook/assets/image (51).png>)
 
-![Completion columns imported from OpenWells](<../.gitbook/assets/image (294).png>)
+![Completion columns imported from OpenWells](../.gitbook/assets/image.png)
 
-![Section data imported from OpenWells](<../.gitbook/assets/image (139).png>)
+![Section data imported from OpenWells](<../.gitbook/assets/image (478).png>)

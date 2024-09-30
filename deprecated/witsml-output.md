@@ -14,11 +14,11 @@ Another codebase containing improvements was launched as another plugin called G
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image (130).png" alt=""><figcaption><p>Integration built-in in standard Wells plugin up to v5 series</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (157).png" alt=""><figcaption><p>Integration built-in in standard Wells plugin up to v5 series</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/image (117).png" alt=""><figcaption><p>Identifying the plugin which delivers the integration type</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (357).png" alt=""><figcaption><p>Identifying the plugin which delivers the integration type</p></figcaption></figure>
 
 </div>
 

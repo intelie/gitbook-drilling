@@ -16,15 +16,15 @@ If you don't know what is the Auto-Switch feature, consider these readings:\
 
 Indicates if the Auto-Switch feature is enabled, considering if this feature is on and enabled for the current Asset.
 
-![](<../../../.gitbook/assets/image (323).png>)
+![](<../../../.gitbook/assets/image (487).png>)
 
 If the Auto-Switch is disabled for the Asset (in the [Event Settings](event-settings.md) card) or if it's disabled for the entire Live (via the menu Configurations > Additional Features > Auto-Switch), the indicator will be OFF:\\
 
-![Auto-switch OFF](<../../../.gitbook/assets/image (339).png>)
+![Auto-switch OFF](<../../../.gitbook/assets/image (484).png>)
 
 If the Auto-switch is ON, but the normalization is OFF to the Asset, a warning will be displayed:\\
 
-![Auto-switch is ON, but not working since there normalization is OFF](<../../../.gitbook/assets/image (488).png>)
+![Auto-switch is ON, but not working since there normalization is OFF](<../../../.gitbook/assets/image (532).png>)
 
 ## Buttons
 
@@ -32,11 +32,11 @@ If the Auto-switch is ON, but the normalization is OFF to the Asset, a warning w
 
 Intelie Live supports data normalization templates to speed up the configuration of the normalization. If assets have part of their sources configuration in common, e.g. the same service company, then a template can be used to define that configuration.
 
-![Buttons to create a template from an asset and import a template into an asset.](<../../../.gitbook/assets/image (322).png>)
+![Buttons to create a template from an asset and import a template into an asset.](<../../../.gitbook/assets/image (48).png>)
 
 Create template option will create a template with all channels configured in this asset. That is useful to save the same configuration and apply it for other assets.
 
-![Create template by asset example (checked rows will be included on saved template)](<../../../.gitbook/assets/image (393).png>)
+![Create template by asset example (checked rows will be included on saved template)](<../../../.gitbook/assets/image (140).png>)
 
 ### Import Template
 
@@ -44,11 +44,11 @@ Import template option allows the selection of an already saved template to impo
 
 By selecting “Prioritize the channels selected on this template for the selected assets”, the template channels will be imported and selected. If this option is off, the selected channels will be the ones that already exist.
 
-![](<../../../.gitbook/assets/image (433).png>)
+![](<../../../.gitbook/assets/image (128).png>)
 
 The templates can be managed on the system configuration.
 
-![Example of templates configuration](<../../../.gitbook/assets/image (295).png>)
+![Example of templates configuration](<../../../.gitbook/assets/image (72).png>)
 
 {% hint style="info" %}
 Be aware that the only fields saved are:
@@ -68,11 +68,11 @@ This list represents the raw events filtered by the Event Settings > Pipes filte
 
 ### Expand
 
-![](<../../../.gitbook/assets/image (396).png>)
+![](<../../../.gitbook/assets/image (25).png>)
 
 Shows the "Data Management" card in full-screen mode.\\
 
-![](<../../../.gitbook/assets/image (480).png>)
+![](<../../../.gitbook/assets/image (380).png>)
 
 ###
 
@@ -84,15 +84,15 @@ Toggles the Channels Management edit mode. During the edit mode, input and targe
 
 ### Data Quality
 
-![Not normalizing, not configured or unknown data quality](<../../../.gitbook/assets/image (456) (1) (1).png>)
+![Not normalizing, not configured or unknown data quality](<../../../.gitbook/assets/image (521).png>)
 
-![Invalid generated event type](<../../../.gitbook/assets/image (464).png>)
+![Invalid generated event type](<../../../.gitbook/assets/image (523).png>)
 
-![OK](<../../../.gitbook/assets/image (473).png>)
+![OK](<../../../.gitbook/assets/image (368).png>)
 
-![No data received in time window. The time window can be configured at Configurations > Additional Features > Auto-Switch > Substitute channels that have not transmitted for more than.](<../../../.gitbook/assets/image (460).png>)
+![No data received in time window. The time window can be configured at Configurations > Additional Features > Auto-Switch > Substitute channels that have not transmitted for more than.](<../../../.gitbook/assets/image (490).png>)
 
-![Override Input Unit error](<../../../.gitbook/assets/image (400).png>)
+![Override Input Unit error](<../../../.gitbook/assets/image (135).png>)
 
 ### Target Channel
 
@@ -122,13 +122,13 @@ Selected input channel filter
 
 ### Status
 
-![No data received in time window. The time window can be configured at Configurations > Additional Features > Auto-Switch > Substitute channels that have not transmitted for more than.](<../../../.gitbook/assets/image (430).png>)
+![No data received in time window. The time window can be configured at Configurations > Additional Features > Auto-Switch > Substitute channels that have not transmitted for more than.](<../../../.gitbook/assets/image (211).png>)
 
-![OK](<../../../.gitbook/assets/image (66).png>)
+![OK](<../../../.gitbook/assets/image (295).png>)
 
-!["Override Input Unit" conversion error](<../../../.gitbook/assets/image (60).png>)
+!["Override Input Unit" conversion error](<../../../.gitbook/assets/image (184).png>)
 
-![Conversion error](<../../../.gitbook/assets/image (59).png>)
+![Conversion error](<../../../.gitbook/assets/image (272).png>)
 
 ### Priority
 
@@ -152,7 +152,7 @@ This functionality allows the user to overwrite the unit received in the input c
 
 Take as an example an input channel that receives value in `meters`:
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (275).png>)
 
 As Live does not understand `meters` , only `m`, there will be a unit conversion error in normalization. To solve that, the user can define the Override Input Unit as `m`. This way, Live will treat the received data as `m`, and not `meters`.\
 \

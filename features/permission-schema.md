@@ -8,11 +8,11 @@ By default, a well or a rig can be viewed and managed by all the users that have
 
 The access to the assets can be managed on the asset web interface, on the `Access Options` menu.
 
-![Access options are available on wells and on rigs](<../.gitbook/assets/image (40).png>)
+![Access options are available on wells and on rigs](<../.gitbook/assets/image (181).png>)
 
 If the access must be restricted for a well or a rig, a perspective should be associated to it.
 
-![The perspective selection for an asset](<../.gitbook/assets/image (217).png>)
+![The perspective selection for an asset](<../.gitbook/assets/image (418).png>)
 
 ## Access to data
 
@@ -20,7 +20,7 @@ The access to the data is restricted at the dashboards level.
 
 Each dashboard is associated to a perspective, which is associated to one or more teams.
 
-![The perspective selection for a dashboard](<../.gitbook/assets/image (188).png>)
+![The perspective selection for a dashboard](<../.gitbook/assets/image (321).png>)
 
 ## Perspectives
 
@@ -28,7 +28,7 @@ Perspectives are tags related to entities that restrict the access to them.
 
 The perspectives are associated to teams on the Team page, in the Live administration web interface.
 
-![Perspectives can be associated to teams](<../.gitbook/assets/image (22).png>)
+![Perspectives can be associated to teams](<../.gitbook/assets/image (277).png>)
 
 ## User Permissions
 
