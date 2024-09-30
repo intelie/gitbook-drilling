@@ -30,7 +30,7 @@ As a textual representation, WITS typically carries some standard number that ne
 
 Enables the user to choose between three standard record mappings.
 
-<figure><img src="../../.gitbook/assets/image (158).png" alt=""><figcaption><p>Standard WITS record mappings supported</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (340).png" alt=""><figcaption><p>Standard WITS record mappings supported</p></figcaption></figure>
 
 #### WITS custom mapping
 
@@ -48,7 +48,7 @@ For WITS client mode configuration, the access endpoint configuration will suppo
 
 <div>
 
-<figure><img src="../../.gitbook/assets/image (93) (1) (1) (1) (2).png" alt=""><figcaption><p>TCP port configuration for WITS client endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp.png" alt=""><figcaption><p>TCP port configuration for WITS client endpoint</p></figcaption></figure>
 
  
 
@@ -58,7 +58,7 @@ For WITS client mode configuration, the access endpoint configuration will suppo
 
 In case, any older LiveRig Collector is used in the edge installation, the selection for Serial ports will be unavailable since only TCP endpoints are allowed up to 4.6 series.
 
-<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p>Warning the lack of support for serial port connections at local sites</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption><p>Warning the lack of support for serial port connections at local sites</p></figcaption></figure>
 
 ### Configuration by source file
 

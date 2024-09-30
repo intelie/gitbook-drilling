@@ -16,19 +16,19 @@ To configure or edit a unit set go to **Configurations > Units > Unit Sets** :
 
 Click on new unit set:
 
-![](<../../.gitbook/assets/image (177).png>)
+![](<../../.gitbook/assets/image (443).png>)
 
 ### Asset-based Configuration
 
 Choose a name for the custom units set and navigate through the asset types tabs (channels, rig, well or intervention) to configure them:
 
-![](<../../.gitbook/assets/image (280).png>)
+![](<../../.gitbook/assets/image (32).png>)
 
 ### Create custom units&#x20;
 
 In case of invalid units are inserted, the cell will be invalid and the user will not be able to save:
 
-![](<../../.gitbook/assets/image (514).png>)
+![](<../../.gitbook/assets/image (511).png>)
 
 ### Features
 

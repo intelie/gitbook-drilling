@@ -12,4 +12,4 @@ Minimum dependency required:  \
 plugin-assets-2.27.0 | plugin-liverig-vis-2.27.0 | plugin-wells-2.27.0
 {% endhint %}
 
-![](<../.gitbook/assets/image (23).png>)
+![](<../.gitbook/assets/image (237).png>)

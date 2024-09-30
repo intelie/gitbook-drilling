@@ -8,44 +8,38 @@ This endpoint only supports WITSML protocol
 
 ## Required information
 
-![Identifying the Liverig integration qualifier](../../../.gitbook/assets/collector-source-details/basic-qualifier-and-instance-information.png)
+![Identifying the Liverig integration qualifier](../../../.gitbook/assets/basic-qualifier-and-instance-information.png)
 
-![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/collector-source-details/witsml-source-details.png)
+![Identifying the additional collector source details for WITSML protocol](../../../.gitbook/assets/witsml-source-details.png)
 
-{% swagger method="post" path="" baseUrl="http://environment.com/services/plugin-liverig/collectors/getFromStore" summary="/getFromStore?qualifier=qualifier&instance=instance&sourceName=sourceName&rigName=rigName&type=type" %}
-{% swagger-description %}
+## /getFromStore?qualifier=qualifier\&instance=instance\&sourceName=sourceName\&rigName=rigName\&type=type
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `http://environment.com/services/plugin-liverig/collectors/getFromStore`
 
-{% swagger-parameter in="query" name="qualifier" required="true" %}
-Collector qualifier
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="query" name="instance" required="true" %}
-Collector name
-{% endswagger-parameter %}
+| Name                                         | Type   | Description                                        |
+| -------------------------------------------- | ------ | -------------------------------------------------- |
+| qualifier<mark style="color:red;">\*</mark>  | String | Collector qualifier                                |
+| instance<mark style="color:red;">\*</mark>   | String | Collector name                                     |
+| sourceName<mark style="color:red;">\*</mark> | String | Collector source name                              |
+| rigName<mark style="color:red;">\*</mark>    | String | Collector rig name (used as configured event type) |
+| type<mark style="color:red;">\*</mark>       | String | WITSML object type                                 |
 
-{% swagger-parameter in="query" name="sourceName" required="true" %}
-Collector source name
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-parameter in="query" name="rigName" required="true" %}
-Collector rig name (used as configured event type)
-{% endswagger-parameter %}
+| Name                                           | Type   | Description      |
+| ---------------------------------------------- | ------ | ---------------- |
+| Content-type<mark style="color:red;">\*</mark> | string | application/json |
 
-{% swagger-parameter in="query" name="type" required="true" %}
-WITSML object type
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="header" name="Content-type" type="string" required="true" %}
-application/json
-{% endswagger-parameter %}
+| Name                                    | Type   | Description                                                 |
+| --------------------------------------- | ------ | ----------------------------------------------------------- |
+| query<mark style="color:red;">\*</mark> | String | XML query to execute over the source WITMSL server endpoint |
 
-{% swagger-parameter in="body" name="query" required="true" %}
-XML query to execute over the source WITMSL server endpoint
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="A JSON object with `success` field and its value represents the effective response from WITSML third-party server wrapped as another JSON object: an `result` short attribute (being 1 a success and 0 for a failure) and a `xml` string attribute with the query results." %}
+{% tabs %}
+{% tab title="200: OK A JSON object with `success` field and its value represents the effective response from WITSML third-party server wrapped as another JSON object: an `result` short attribute (being 1 a success and 0 for a failure) and a `xml` string attribute with the query results." %}
 ```javascript
 {
     "success": {
@@ -54,9 +48,9 @@ XML query to execute over the source WITMSL server endpoint
     }
 }
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="200: OK" description="In case of internal Liverig failures, one of the following responses will raise." %}
+{% tab title="200: OK In case of internal Liverig failures, one of the following responses will raise." %}
 ```javascript
 {
     "failure": "IllegalArgumentException: anything can come here, just an example.."
@@ -68,8 +62,8 @@ XML query to execute over the source WITMSL server endpoint
     "interrupt": ""
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Example
 
@@ -77,11 +71,11 @@ A example is demonstrated below using effective requests and responses. That is 
 
 ### Request
 
-- Qualifier: myliverig
-- Instance: real-collector
-- Source name: "Example WITSML server"
-- Rig name: "RIG02"
-- Query: list all headers of well UID `Energistics-well-0001`
+* Qualifier: myliverig
+* Instance: real-collector
+* Source name: "Example WITSML server"
+* Rig name: "RIG02"
+* Query: list all headers of well UID `Energistics-well-0001`
 
 HTTP request body containing the WITSML query for this well object:
 

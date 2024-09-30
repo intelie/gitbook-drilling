@@ -6,7 +6,7 @@ The solution can collect data from sensors, system integrations, and user intera
 
 Usually, there are basically two kinds of applications running: the Intelie Live, which is the main component of the solution, and several liverig-collector instances.&#x20;
 
-![Solution Architecture](<.gitbook/assets/image (32).png>)
+![Solution Architecture](<.gitbook/assets/image (299).png>)
 
 {% hint style="info" %}
 Intelie Live's functionalities may vary depending on which plugins are currently installed.

@@ -16,7 +16,7 @@ Starting at LiveRig 4.7.0, the access configuration supports both TCP and Serial
 
 <div>
 
-<figure><img src="../../.gitbook/assets/image (93) (1) (1) (1) (2).png" alt=""><figcaption><p>TCP port configuration for RAW source endpoint</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/liverig-source-configuration-connectors-tcp.png" alt=""><figcaption><p>TCP port configuration for RAW source endpoint</p></figcaption></figure>
 
  
 
@@ -28,7 +28,7 @@ The TCP connector puts the source in **server mode** and waits for data to be pu
 
 In case, any older LiveRig Collector is used in the edge installation, the selection for Serial ports will be unavailable since only TCP endpoints are allowed up to 4.6 series.
 
-<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p>Warning the lack of support for serial port connections at local sites</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption><p>Warning the lack of support for serial port connections at local sites</p></figcaption></figure>
 
 ### Configuration by source file
 

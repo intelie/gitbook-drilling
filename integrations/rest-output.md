@@ -2,7 +2,7 @@
 
 ### Characteristics
 
-![Rest output integration configuration](<../.gitbook/assets/image (494).png>)
+![Rest output integration configuration](<../.gitbook/assets/image (488).png>)
 
 * Rest Output provides data using the JSON format as the response of a HTTP request using the method GET. Each request returns an array of JSON objects;\
 
@@ -15,11 +15,11 @@
 
 * In some cases, related data generated from distinct sources (eg: surface and hole bottom) which were generated on the same moment can be received at different times. In order to mitigate these problems it is possible to set a delay for the data being provided for the application. This way, when the application makes a request at 10:00:00 with a 1 minute delay, Intelie Live will return the data received until 09:59:00. This allows for data received on distinct moments on time to be delivered on the same batch.
 
-![Event timestamp configuration](<../.gitbook/assets/image (417).png>)
+![Event timestamp configuration](<../.gitbook/assets/image (136).png>)
 
 * Timestamp configuration will be used to create an index for rest output generated query. When using collector time, the asset, data management option, "Include raw fields" needs to be enabled
 
-![Asset, data management, option](<../.gitbook/assets/image (311).png>)
+![Asset, data management, option](<../.gitbook/assets/image (73).png>)
 
 
 

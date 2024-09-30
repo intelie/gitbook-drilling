@@ -25,15 +25,15 @@ To maintain a small safety factor to permit safe well control operations, the ma
 
 The region of the graph bounded by the fracture pressure curve on the upper side and by the pore pressure curve) on the lower side is often referred to and defined as the _Drilling Operating Window_ :
 
-![Drilling operating window for well stability with pressure by depth graphic](<../../.gitbook/assets/image (490).png>)
+![Drilling operating window for well stability with pressure by depth graphic](<../../.gitbook/assets/image (365).png>)
 
-![Wellbore Instability collapse and lost of circulation in a pressure by depth graphic](<../../.gitbook/assets/image (385).png>)
+![Wellbore Instability collapse and lost of circulation in a pressure by depth graphic](<../../.gitbook/assets/image (127).png>)
 
 LOT/FIT tests help to keep the well in safety region of pressure by depth and to find critical points.
 
 Above is shown a typical pressure-volume curve with LOP (Leak-Off-Pressure) point and FIT (Formation Integrity) point. Next is shown the fracture propagation and the when the pump stops.
 
-![Typical pressure-volume curve in a fracturing test.](<../../.gitbook/assets/image (404).png>)
+![Typical pressure-volume curve in a fracturing test.](<../../.gitbook/assets/image (220).png>)
 
 Understanding the implications of mud weight, pore pressure, and fracture pressure is important in pressure management and well control assurance.&#x20;
 
@@ -82,7 +82,7 @@ Simply click and drag to determine the interval:
 Next it will be presented with the calculation parameters. It is possible to inform tvd casing shoe, md casing shoe, mud weight and which asset and channels the test should based on. Also it is possible to disable pressure loss calculation and configure units:\
 
 
-![MD, TVD, Mud weigth, pressure loss enabled and units configuration](<../../.gitbook/assets/image (360).png>)
+![MD, TVD, Mud weigth, pressure loss enabled and units configuration](<../../.gitbook/assets/image (213).png>)
 
 Next it is possible to select the linear portion of the interval:
 

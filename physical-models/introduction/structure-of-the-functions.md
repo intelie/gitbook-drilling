@@ -4,7 +4,7 @@
 
 All models are done as built-in functions, helping to do any analysis.
 
-![](<../../.gitbook/assets/image (185).png>)
+![](<../../.gitbook/assets/image (411).png>)
 
 ## Structure for all output of og.model functions
 
@@ -13,13 +13,13 @@ All **og.model** functions return a structure with log and result.&#x20;
 * **Log**: debugging tool, we can see debug, info, warnings, and error messages. Very important to check errors at the specific function calling data.
 * **Result**: Desire output, can be a single value or a map.
 
-![](<../../.gitbook/assets/image (29).png>)
+![](<../../.gitbook/assets/image (257).png>)
 
 ## **Run the models using Historical, Active, or set IDs  Interventions/Section/Runs**
 
 **Interventions -> Section -> Run -> Operations**
 
-![](<../../.gitbook/assets/image (199).png>)
+![](<../../.gitbook/assets/image (420).png>)
 
 **How it works**
 
