@@ -280,11 +280,11 @@ Given a CSV with 10 columns configured schema should be something like this
 ...
 ```
 
-### IMPORTANT
+#### IMPORTANT
 
 All channel types **MUST** be string. CSV parser only recognizes **string** object.
 
-## Configuring CSV client
+### Configuring CSV client
 
 More details to configure CSV client to send data to Liverig collector, click [here](../protocols/csv.md)
 
@@ -310,6 +310,17 @@ For _store.json_ file example above _sources.xml_ file should be something like 
 </sources>
 
 ```
+
+### Accessing converted CSV to WITSML 1.4.1.1 Log
+
+Go to collectors->collector1->sources and click "Create new source" (See below)
+
+![csv-to-witsml](../../.gitbook/assets/csv-to-witsml/csv-witsml-log-converter-example.gif)
+
+Once created you can use _WITSML browser_ to access WITSML log (see example below)
+
+![csv-to-witsml-browser](../../.gitbook/assets/csv-to-witsml/csv-witsml-log-browser.gif)
+
 
 ## OPC protocol
 The LiveRig Collector depends on the Node Ids (Tags) values, among other information, to query OPC server properly. These values are mapped in the following JSON format, as below:
