@@ -861,6 +861,42 @@
             <td></td>
             <td></td>
         </tr>
+        <tr>
+            <td><code>witsml_tree_request_feature</code><br>Enables the WITSML tree request feature to load WITSML objects to be used in Collector's Backlog Sync and Collector's Object Explorer screens</td>
+            <td align="center"><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td align="center">5.9.0</td>
+            <td align="center"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>witsml_tree_request_object_limit</code><br>Maximum number of objects loaded in witsml tree.</td>
+            <td align="center"><code>int</code></td>
+            <td><code>1000</code></td>
+            <td align="center">5.9.0</td>
+            <td align="center"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>witsml_tree_request_delay_time</code><br>Initial delay for search/pooling new objects.</td>
+            <td align="center"><code>int</code></td>
+            <td><code>0</code></td>
+            <td align="center">5.9.0</td>
+            <td align="center">ms</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>witsml_tree_request_update_time</code><br>Time schedule for search/pooling new objects.</td>
+            <td align="center"><code>int</code></td>
+            <td><code>60</code></td>
+            <td align="center">5.9.0</td>
+            <td align="center">s</td>
+            <td></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
