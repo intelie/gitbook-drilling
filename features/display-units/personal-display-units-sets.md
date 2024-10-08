@@ -13,7 +13,7 @@ Personal sets are intended to be used in cases where all units in the set are co
 
 While in the dashboard page, click on the options menu and select the “Unit set” option.
 
-![](<../../.gitbook/assets/image (451).png>)
+![](<../../.gitbook/assets/image (372).png>)
 
 After that a modal will appear showing all the available units sets, those sets will be divided into personal sets and global sets as shown in the image below:
 
@@ -37,4 +37,4 @@ To disable the creation of personal sets, first go to the administration panel:
 
 While in the administration panel go to “System and display settings” there is possible to turn on or off the creation of personal sets as shown below:
 
-![](<../../.gitbook/assets/image (523).png>)
+![](<../../.gitbook/assets/image (513).png>)

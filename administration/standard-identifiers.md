@@ -4,7 +4,7 @@ To support some out-of-the-box analyses provided by Intelie, a set of common ide
 
 When those fields are configured, some macros are enabled to support the access to that specific mnemonics. For example, when configured, `@@channels.bit_depth` will refer to the bit depth mnemonic, whatever it is, in any environment.
 
-![Example of identified channels](<../.gitbook/assets/image (237).png>)
+![Example of identified channels](<../.gitbook/assets/image (458).png>)
 
 | **Channel**                | **Pipes macro**                         |
 | -------------------------- | --------------------------------------- |

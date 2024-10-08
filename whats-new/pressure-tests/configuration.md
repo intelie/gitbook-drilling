@@ -12,11 +12,11 @@ Set fields Qualifier, Name and Description like the image below and let the othe
 
 It is possible to define, on the web administration, different pressure tests specifications, that can be run on any chart of the `Pressure Test` type.
 
-![Types of tests can be created on the web administration](<../../.gitbook/assets/image (110).png>)
+![Types of tests can be created on the web administration](<../../.gitbook/assets/image (338).png>)
 
 
 
 It is possible to define many parameters that control the criteria for each test to be accepted as successful, as the image below shows.
 
-![Some of the parameters that can be changed](<../../.gitbook/assets/image (382).png>)
+![Some of the parameters that can be changed](<../../.gitbook/assets/image (194).png>)
 

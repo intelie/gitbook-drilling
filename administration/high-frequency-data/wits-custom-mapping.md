@@ -97,21 +97,21 @@ Knowing that we can use a WITS Custom Mapping to associate each entry of the abo
 
 UOM, unit of measurement, can be independently defined for each mnemonic when creating a custom mapping via Live interface.
 
-If there is no mapping for a specific entry it will be parsed as a mnemonic identified by the concatenation of “WITS” + wits\_record + wits\_item as it was done for entries 019999, 313233, and 9999END in the previous example.&#x20;
+If there is no mapping for a specific entry it will be parsed as a mnemonic identified by the concatenation of “WITS” + wits\_record + wits\_item as it was done for entries 019999, 313233, and 9999END in the previous example.
 
 ## Creating a WITS Custom Mapping
 
 A customizes mapping, which will be used to parse WITS data coming from a source, can be created going to `Live interface > Configurations > WITS Custom Mapping`
 
-![](<../../.gitbook/assets/image (450).png>)
+![](<../../.gitbook/assets/image (518).png>)
 
 Click `New map` and enter an Identifier which will be used to identify your list later. The Identifier cannot be changed after defined, it will be the unique identifier of your custom mapping. The field `Description` is not mandatory, and it can be used to briefly describe the purpose of the custom mapping. After setting both fields, click `Save`.
 
-![](<../../.gitbook/assets/image (320).png>)
+![](<../../.gitbook/assets/image (1).png>)
 
 Fill the lines according to the rules informed above. Remember that `RECORD` and `ITEM` will identify the entries received from the source and map that to the given `MNEMONIC` and `UOM`.
 
-![](<../../.gitbook/assets/image (359).png>)
+![](<../../.gitbook/assets/image (134).png>)
 
 | Column      | Description                                                        |
 | ----------- | ------------------------------------------------------------------ |
@@ -124,8 +124,8 @@ Fill the lines according to the rules informed above. Remember that `RECORD` and
 
 ## Editing a WITS Custom Mapping
 
-To edit a WITS Custom Mapping previously created, go to `Live interface > Configurations > WITS Custom Mapping`  to list all mappings available.
+To edit a WITS Custom Mapping previously created, go to `Live interface > Configurations > WITS Custom Mapping` to list all mappings available.
 
-![](<../../.gitbook/assets/image (213).png>)
+![](<../../.gitbook/assets/image (317).png>)
 
 After that, just click the list to be edited and it will show the same screen used for creation.

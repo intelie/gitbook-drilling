@@ -36,8 +36,8 @@ Save test on the preview modal:
 
 After saving the test can be found on messenger:
 
-![Test on messenger](<../../.gitbook/assets/image (392).png>)
+![Test on messenger](<../../.gitbook/assets/image (208).png>)
 
 Expading the test is possible to see details:
 
-![Test result on messenger](<../../.gitbook/assets/image (414).png>)
+![Test result on messenger](<../../.gitbook/assets/image (199).png>)

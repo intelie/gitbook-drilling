@@ -81,7 +81,7 @@ description: >-
 
 Previously in LiveRig v3 series, the only way was to reprocess the entire data set to recalculate the depth channels. Now is easy to configure the criteria to inquiry depth data and renormalize only them.
 
-![](<../../.gitbook/assets/image (416).png>)
+![](<../../.gitbook/assets/image (114).png>)
 
 {% hint style="warning" %}
 The Wells 5.0 beta series are also documented on this page, and if you have any 4.0 installed, please upgrade it to the 5.1 Wells series. They are compatible between then.

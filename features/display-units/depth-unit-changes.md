@@ -9,13 +9,13 @@ description: >-
 After identifying the hole depth channel using the [Standard Identifiers](../../administration/standard-identifiers.md), display units configured to it will also convert the index of the current chart, example:\
 
 
-![Hole depth identification](<../../.gitbook/assets/image (81).png>)
+![Hole depth identification](<../../.gitbook/assets/image (293).png>)
 
 Notice that the screenshot below does not have unit set applied
 
-![No unit set](<../../.gitbook/assets/image (501).png>)
+![No unit set](<../../.gitbook/assets/image (514).png>)
 
 Same data, with display unit applied, note that hole depth was converted from **meter** to **foot**.\
 
 
-![Hole depth with applied "ft" display unit](<../../.gitbook/assets/image (195).png>)
+![Hole depth with applied "ft" display unit](<../../.gitbook/assets/image (399).png>)

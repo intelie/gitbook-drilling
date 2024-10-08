@@ -2,7 +2,7 @@
 
 In this configuration panel, the user can customize many aspects of the Data Normalization engine.
 
-![Event settings group the main features which customize the normalization algorithm](<../../../.gitbook/assets/image (325).png>)
+![Event settings group the main features which customize the normalization algorithm](<../../../.gitbook/assets/image (52).png>)
 
 ### Pipes filter
 

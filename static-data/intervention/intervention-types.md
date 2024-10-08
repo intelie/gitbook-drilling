@@ -11,6 +11,6 @@ Default  intervention types:&#x20;
 * Evaluation&#x20;
 * Not Specified
 
-![](<../../.gitbook/assets/image (243).png>)
+![](<../../.gitbook/assets/image (416).png>)
 
 Custom intervention configuration types can be found [here](../../administration/static-data/intervention-types.md).

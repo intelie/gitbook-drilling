@@ -24,7 +24,7 @@ All charts can display a fixed well or rig, or follow the selection on the dashb
 
 An option is available on the edit mode of the chart to allow this selection.
 
-![Enable the chart to follow the dashboard filter](<../../../.gitbook/assets/image (82).png>)
+![Enable the chart to follow the dashboard filter](<../../../.gitbook/assets/image (271).png>)
 
 {% hint style="info" %}
 **Developer:** It is possible to override pipes filter for Channel queries by defining a `assetWidgetOverrideFilter`pipes macro on the environment.

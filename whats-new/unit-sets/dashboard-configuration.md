@@ -4,7 +4,7 @@
 
 After defining a unit set it is possible to use it in a dashboard:
 
-![](<../../.gitbook/assets/image (127).png>)
+![](<../../.gitbook/assets/image (173).png>)
 
 ## Unit Set Types
 
@@ -18,25 +18,25 @@ The unit set has 3 categories:
 
 When opening the unit set modal in dashboard, it is possible to select the unit set saved in configuration previously. Selecting a global unit set for example Imperial would affect the channels on the dashboard configured for that unit set:
 
-![](<../../.gitbook/assets/image (289) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (358) (1).png>)
 
-![](<../../.gitbook/assets/image (220).png>)
+![](<../../.gitbook/assets/image (456).png>)
 
 It is possible to duplicate a unit set:
 
-![](<../../.gitbook/assets/image (469).png>)
+![](<../../.gitbook/assets/image (370).png>)
 
 ### Personal Unit Set
 
 It is possible to use a personal unit set by user on the dashboard:
 
-![](<../../.gitbook/assets/image (246).png>)
+![](<../../.gitbook/assets/image (447).png>)
 
 ### Follow Filter
 
 If there are no assets in the filter, or the filter uses a lookup other than **lookup.asset\_name\_event\_type**, the filter option will be disabled.
 
-![](<../../.gitbook/assets/image (182).png>)
+![](<../../.gitbook/assets/image (455).png>)
 
 The dashboard allow define multiple filters but the follow asset filter will use the first one:
 
@@ -50,4 +50,4 @@ Then, at the dashboard, a specific badge will be displayed informing that dashbo
 
 If the asset **does not** have a defined set of units, the Global Units Set will be used as a fallback:
 
-![](<../../.gitbook/assets/image (104).png>)
+![](<../../.gitbook/assets/image (170).png>)

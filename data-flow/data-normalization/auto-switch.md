@@ -20,7 +20,7 @@ Both parameters, `gap` and `restored`, can be changed in the [system configurati
 
 The asset configuration bellow will be used in all subsequent examples. `gap` and `restored` are equals to 1
 
-![Input channels prioritized](<../../.gitbook/assets/image (78).png>)
+![Input channels prioritized](<../../.gitbook/assets/image (305).png>)
 
 ### Example 1
 

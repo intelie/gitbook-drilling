@@ -8,4 +8,4 @@ When users set **Axis min** or **Axis max** using a chart provided by [Data visu
 
 A warning icon will appear, the example is the conversion of 100bbl (input) to Litre
 
-![User converted input](<../../.gitbook/assets/image (253).png>)
+![User converted input](<../../.gitbook/assets/image (404).png>)
