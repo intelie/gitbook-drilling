@@ -1,6 +1,11 @@
 The `store.json` file is used by LiveRig Collector to enrich some kinds of  basic source data streams configured at `sources.xml`.
 
-In LiveRig Collector, two basic source data streams accept unit enrichment and exposure as WITSML, they are: CSV and OPC. 
+In LiveRig Collector, two basic source data streams accept unit enrichment and exposure as WITSML, they are: WITS0, CSV and OPC. 
+
+## WITS0 data
+
+TODO: Implement WITS0 documentation
+
 
 ## CSV data stream
 
