@@ -180,9 +180,7 @@ Once created you can use _WITSML browser_ to access WITSML log (see example belo
 This WITS0 to WITSML Log converted has limitation:
 
 - Can only be accessed locally
-- No user/password
 - Ignores _queryOptions_ queries, i.e. _queryOptions: returnElements=all_
-
 
 
 ## CSV data stream
