@@ -87,3 +87,7 @@ This other example reads the first COM port in a Unix system available at /dev/t
         <endpoint>serial:///dev/ttyS0?baudRate=9600</endpoint>
 </source>
 ```
+
+{% hint style="info" %}
+Each line of the input data stream should end with the '\n' (the end of line character). The maximum allowed line length in characters is 4,194,304. This limit was imposed to avoid huge lines that could extrapolate the Live event maximum size or extrapolate the internal implementation buffer capacity.
+{% endhint %}
