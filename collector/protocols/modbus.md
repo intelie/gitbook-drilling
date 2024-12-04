@@ -8,6 +8,12 @@ description: Based on MODBUS Application Protocol Specification V1.1b3
 This capability is provided by **LiveRig Collector 2.28.0** or higher
 {% endhint %}
 
+```sh
+TODO add missing information for TCP slave addres (_unit_id_)
+
+For PLC4x >= 0.13.0 add extra feature _default-payload-byte-order_
+```
+
 The MODBUS protocol is capable of receiving data from a PLC (programmable logic controllers) device via TCP connections if LiveRig is older than 5.0.0, otherwise the data can be received  via
 TCP, UDP and Serial connections.
 
