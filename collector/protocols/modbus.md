@@ -14,8 +14,7 @@ TODO add missing information for TCP slave addres (_unit_id_)
 For PLC4x >= 0.13.0 add extra feature _default-payload-byte-order_
 ```
 
-The MODBUS protocol is capable of receiving data from a PLC (programmable logic controllers) device via TCP connections if LiveRig is older than 5.0.0, otherwise the data can be received  via
-TCP, UDP and Serial connections.
+The MODBUS protocol is capable of receiving data from a PLC (programmable logic controllers) device via TCP, UDP and Serial connections.
 
 There are a number of memory areas defined in the MODBUS specification. Here, are the types of data supported, by the LiveRig Collector:
 
@@ -27,7 +26,14 @@ There are a number of memory areas defined in the MODBUS specification. Here, ar
   * Holding Register - Short value, usually representing an analog output from the PLC
 
 ## Configuring the `endpoint` field for Modbus sources
-### LiveRig Collector 5.0.0 or above
+
+### Serial (Liverig > 5.0.0)
+
+### TCP (Liverig >= 5.0.0)
+
+### UDP (Liverig > 5.0.0)
+
+
 If you are using a LiveRig version 5.0.0 or above, you can change the connection protocol by declaring the endpoint using the
 format: `{code}:{transport}://{ip-address}:{port}?{options}`. Here is a list of options:
 
@@ -92,6 +98,6 @@ In this example we have two PLC devices, identified by `<request>` node and the 
 | revisionWaitingTime | Timeout, in milliseconds, after which a request is terminated.                           |      No      | Infinity      |
 | object              | Name that will be fetched in `modbus.json` to get more information about the memory area |     Yes      |               |
 | query\_period       | Interval, in seconds, for the execution of each request                                  |     Yes      |               |
-| uid\_log            | A number, between 1 and 255, that identifies the target PLC                              |      No      | 1             |
+| uid\_log            | A number, between 1 and 247, that identifies the target PLC                              |      No      | 1             |
 
 A [modbus.json](./../configuration/modbus.json.md) is also needed to be configured in the collector, so the data can be properly retrieved.
