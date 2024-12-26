@@ -31,31 +31,33 @@ It is an open communication prototocol to interconnect electronic devices such a
 6 - Supervising systems
 
 
-ModBus protocol is able of receiving data from a PLC (programmable logic controllers) device via TCP, UDP and Serial connections.
+ModBus protocol is able of receiving data from any industrial equipment devices that uses TCP and Serial connections.
 
-## Modbus data in Liverig
+## Modbus data
 
-There are a number of memory areas defined in the ModBus specification as described below. Liverig supports only Read Only mode:
+There are a number of memory areas defined in the ModBus specification as described below:
 
 - Discrete Input _(Read Only)_ - Boolean input value, usually representing a binary input to the PLC
-- Coils _(Read Only)_ - Boolean value, usually representing a binary output from the PLC
-- Registers _(Read Only)_
-  * Input Register - Short input value, usually representing an input to the PLC
-  * Holding Register - Short value, usually representing an input or output
+- Coils _(Read / Write)_ - Boolean value, usually representing a binary output from the PLC
+- Registers
+  * Input Register (Read Only) - Short input value, usually representing an input to the PLC
+  * Holding Register (Read / Write) - Short value, usually representing an input or output
 
-For defining types to be converted  (double, long, integer ...), normalized and collected check [modbus.json](./../configuration/modbus.json.md)
+**NOTE**: All memory areas described below is only _Read Only_ mode for Liverig collector
 
-## Configuring `endpoint` field for Modbus sources
+For defined types in memory areas (double, long, integer, booleab ...) check [modbus.json](./../configuration/modbus.json.md) for configuration
 
-Endpoint is configured in Liverig:
+## Configuring connection for Modbus sources
+
+Endpoint connection is configured in Liverig as:
 
 ```
-{protocol type}:{transport}://{endpoint|device}?{options}
+{protocol type}:{transport}://{endpoint:{port}|device}?{options}
 ```
 
 E.g.
 ```
-modbus-tcp:tcp://192.168.1.112?unit_id=2&tcp.keep-alive=false
+modbus-tcp:tcp://192.168.1.112:2000?unit_id=2&tcp.keep-alive=false
 ```
 
 ### ModBus protocol types
@@ -99,7 +101,7 @@ in sources.xml
 2- RTU using TCP
 
 ```
-modbus-rtu:tcp://192.168.1.100?unit-id=5&request-timeout=6000
+modbus-rtu:tcp://192.168.1.100:502?unit-id=5&request-timeout=6000
 ```
 
 in sources.xml
@@ -113,7 +115,7 @@ in sources.xml
         <service_company>Your Company</service_company>
         <protocol_name>modbus</protocol_name>
         <protocol_version>1.1b3</protocol_version>
-        <endpoint>modbus-rtu:tcp://192.168.1.100?unit-id=5&amp;request-timeout=6000</endpoint>
+        <endpoint>modbus-rtu:tcp://192.168.1.100:502?unit-id=5&amp;request-timeout=6000</endpoint>
         ...
     </source>
     ...
@@ -131,13 +133,13 @@ Liverig supports different kind of **transport** connection according to its ver
 TCP only format
 
 ```
-modbus://your-ip-address?{options}
+modbus://your-ip-address:{port}?{options}
 ```
 
 E.g.:
 
 ```
-modbus://192.168.1.115?unit-id=10
+modbus://192.168.1.115:502?unit-id=10
 ```
 
 **For Liverig > 5.0.0**
@@ -150,7 +152,7 @@ E.g. TCP modes:
 
 
 ```
-modbus-tcp:tcp://192.168.1.115?unit-id=10
+modbus-tcp:tcp://192.168.1.115:3000?unit-id=10
 ```
 
 ```
@@ -168,8 +170,22 @@ modbus-ascii:serial://dev/ttyUSB1?unit-id=10
 ```
 
 ```
-modbus-rtu:serial://dev/ttyASM0?unit-id=10
+modbus-rtu:serial://dev/ttyACM0?unit-id=10
 ```
+
+
+**Serial modes in different OS examples:**
+- For Linux Systems:
+  `modbus-adu:serial:/dev/ttyUSB0`
+- For Windows Systems:
+  `modbus-adu:serial:COM1`
+
+Some UNIX system is needed extra permission to access serial connection devices. This can be done by adding the user to the `dialout` group using a `sudo usermod -a -G dialout $USER` command.*
+
+### ModBus options types
+
+| Name | Description | Is required? | Default value |
+|-|-|-|-|
 
 
 TODO: Remove texts below
