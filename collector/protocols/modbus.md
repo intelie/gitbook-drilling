@@ -14,25 +14,165 @@ TODO add missing information for TCP slave addres (_unit_id_)
 For PLC4x >= 0.13.0 add extra feature _default-payload-byte-order_
 ```
 
-The MODBUS protocol is capable of receiving data from a PLC (programmable logic controllers) device via TCP, UDP and Serial connections.
+Modbus is a serial communication protocol developed by the Modicon corporation (now Schneider Electric) in 1979
 
-There are a number of memory areas defined in the MODBUS specification. Here, are the types of data supported, by the LiveRig Collector:
+It is an open communication prototocol to interconnect electronic devices such as:
 
-* Coils
-  * Discrete Input - Boolean input value, usually representing a binary input to the PLC
-  * Coil - Boolean value, usually representing a binary output from the PLC
-* Registers
-  * Input Register - Short input value, usually representing an analog input to the PLC
-  * Holding Register - Short value, usually representing an analog output from the PLC
+1 - PLC's (programmable logic controllers)
 
-## Configuring the `endpoint` field for Modbus sources
+2 - Sensors
 
-### Serial (Liverig > 5.0.0)
+3 - Monitoring equipment
 
-### TCP (Liverig >= 5.0.0)
+4 - Actuators
 
-### UDP (Liverig > 5.0.0)
+5 - IoT devices
 
+6 - Supervising systems
+
+
+ModBus protocol is able of receiving data from a PLC (programmable logic controllers) device via TCP, UDP and Serial connections.
+
+## Modbus data in Liverig
+
+There are a number of memory areas defined in the ModBus specification as described below. Liverig supports only Read Only mode:
+
+- Discrete Input _(Read Only)_ - Boolean input value, usually representing a binary input to the PLC
+- Coils _(Read Only)_ - Boolean value, usually representing a binary output from the PLC
+- Registers _(Read Only)_
+  * Input Register - Short input value, usually representing an input to the PLC
+  * Holding Register - Short value, usually representing an input or output
+
+For defining types to be converted  (double, long, integer ...), normalized and collected check [modbus.json](./../configuration/modbus.json.md)
+
+## Configuring `endpoint` field for Modbus sources
+
+Endpoint is configured in Liverig:
+
+```
+{protocol type}:{transport}://{endpoint|device}?{options}
+```
+
+E.g.
+```
+modbus-tcp:tcp://192.168.1.112?unit_id=2&tcp.keep-alive=false
+```
+
+### ModBus protocol types
+
+Supported ModBus protocol types in Liverig are:
+
+_1 - RTU (Remote Terminal Unit):_ is the most common used
+
+_2 - ModBus ASCII:_ Same as RTU but using ASCII characters to transport data using more space size to transport data
+
+_3 - ModBus over TCP/IP:_ Uses TCP/IP to communicate via Ethernet
+
+**Some examples:**
+
+For Liverig > 5.0.0
+
+1- RTU using Serial
+
+```
+modbus-rtu:serial://dev/ttyUSB0?unit_id=2&serial.baud-rate=9600&serial.parity=EVEN_PARITY
+```
+
+in sources.xml
+```xml
+<sources>
+    <source>
+        <name>Modbus Serial Example 1</name>
+        <enabled>true</enabled>
+        <mode>client</mode>
+        <rig_name>modbus</rig_name>
+        <service_company>Your Company</service_company>
+        <protocol_name>modbus</protocol_name>
+        <protocol_version>1.1b3</protocol_version>
+        <endpoint>modbus-rtu:serial://dev/ttyUSB0?unit_id=2&amp;serial.baud-rate=9600&amp;serial.parity=EVEN_PARITY</endpoint>
+        ...
+    </source>
+    ...
+</sources>
+```
+
+2- RTU using TCP
+
+```
+modbus-rtu:tcp://192.168.1.100?unit-id=5&request-timeout=6000
+```
+
+in sources.xml
+```xml
+<sources>
+    <source>
+        <name>Modbus Serial Example 1</name>
+        <enabled>true</enabled>
+        <mode>client</mode>
+        <rig_name>modbus</rig_name>
+        <service_company>Your Company</service_company>
+        <protocol_name>modbus</protocol_name>
+        <protocol_version>1.1b3</protocol_version>
+        <endpoint>modbus-rtu:tcp://192.168.1.100?unit-id=5&amp;request-timeout=6000</endpoint>
+        ...
+    </source>
+    ...
+</sources>
+```
+
+Liverig works as Master mode to collect Slave data. Slave must be identified by _unit_id_ in range from 1 to 247
+
+### ModBus transport types
+
+Liverig supports different kind of **transport** connection according to its version
+
+**For Liverig = 5.0.0**
+
+TCP only format
+
+```
+modbus://your-ip-address?{options}
+```
+
+E.g.:
+
+```
+modbus://192.168.1.115?unit-id=10
+```
+
+**For Liverig > 5.0.0**
+
+Transport mode available: _tcp_ or _serial_
+
+
+
+E.g. TCP modes:
+
+
+```
+modbus-tcp:tcp://192.168.1.115?unit-id=10
+```
+
+```
+modbus-ascii:tcp://192.168.1.115?unit-id=10
+```
+
+```
+modbus-rtu:tcp://192.168.1.115?unit-id=10
+```
+
+E.g. SERIAL modes:
+
+```
+modbus-ascii:serial://dev/ttyUSB1?unit-id=10
+```
+
+```
+modbus-rtu:serial://dev/ttyASM0?unit-id=10
+```
+
+
+TODO: Remove texts below
 
 If you are using a LiveRig version 5.0.0 or above, you can change the connection protocol by declaring the endpoint using the
 format: `{code}:{transport}://{ip-address}:{port}?{options}`. Here is a list of options:
