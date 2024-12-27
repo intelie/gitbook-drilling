@@ -10,7 +10,7 @@ This capability is provided by **LiveRig Collector 2.28.0** or higher
 
 **Modbus** is a serial communication protocol developed by the Modicon corporation (now Schneider Electric) in 1979
 
-It is an open communication prototocol to interconnect electronic devices such as:
+It is an open communication protocol to interconnect electronic devices such as:
 
 1 - PLC's (programmable logic controllers)
 
@@ -25,7 +25,7 @@ It is an open communication prototocol to interconnect electronic devices such a
 6 - Supervising systems
 
 
-ModBus protocol is able of receiving data from any industrial equipment devices that uses TCP and Serial connections.
+**ModBus** protocol is able of receiving data from any industrial equipment devices that uses TCP and Serial (RS-232 or RS-485) connections.
 
 ## Modbus data
 
@@ -185,13 +185,14 @@ Liverig connection string optios is used to setup some extra configuration in Mo
 | Name | Type | Description | Required | Default value |
 |-|-|-|-|-|
 | unit-identifier | Integer | Slave device identifier | No | 1 | 
-| request-timeout | Integer | Default timeout for all requests  | No | 5000 ms
+| request-timeout | Integer | Default timeout for all requests in milliseconds | No | 5000 ms
 | ping-address | String | Simple address, that Liverig will use to check connection to device is active | No | 4x00001:BOOL |
 
 #### TCP options table
 
 | Name | Type | Description | Required | Default value |
 |-|-|-|-|-|
+| port | Integer | ModBus TCP port | No | 502 |
 | tcp.keep-alive | Boolean | Packets to be sent keeping alive? | No | false |
 | tcp.no-delay | Boolean | Packets should be sent instantly or should give the OS time to aggregate data? | No | true |
 
@@ -205,39 +206,26 @@ Liverig connection string optios is used to setup some extra configuration in Mo
 | serial.num-stop-bits | Integer | Number of stop bit to terminate data transport. Typical value are 1 or 2. _NOTE_ 1.5 stop bit is not supported | No | 1 |
 | serial.parity | String | Data parity check. Available values are: _NO_PARITY, ODD_PARITY, EVEN_PARITY, MARK_PARITY and SPACE_PARITY_ | No | NO_PARITY |
 
+## Collecting data in ModBus
 
-TODO: Remove texts below
+Liverig works as _master_ in ModBus to collect data thus _sources.xml_ and _[modbus.json](./../configuration/modbus.json.md)_ must be configured to collect typed values. 
 
-If you are using a LiveRig version 5.0.0 or above, you can change the connection protocol by declaring the endpoint using the
-format: `{code}:{transport}://{ip-address}:{port}?{options}`. Here is a list of options:
 
-- **code**: `modbus-tcp`*(default)*, `modbus-adu`, `modbus-ascii`;
-- **transport**: `tcp`*(default)*, `udp`, `serial`;
-- **options**: `request-timeout`, `unit-identifier` (This will use the following structure: `?{option-1-name}={option-1-value}&{option-2-name}={option-2-value}`)
+Parameters in _sources.xml_
+| Name                | Description                                                                              | Is required? | Default value |
+|---------------------|------------------------------------------------------------------------------------------|:------------:|---------------|
+| revisionWaitingTime | Timeout, in milliseconds, after which a request is terminated.                           |      No      | Infinity      |
+| object              | Name that will be fetched in _[modbus.json](./../configuration/modbus.json.md)_ |     Yes      |               |
+| query\_period       | Interval, in seconds, for the execution of each request                                  |     Yes      |               |
+| uid\_log            | A number, between 1 and 247, that identifies the target PLC                              |      No      | 1             |
 
-The `transport`, `port` and `options` fields are optional. The default port value is `502` and if the `code` value is
-just `modbus`, it will default to the `modbus-tcp` value.
 
-**Example TCP Modbus endpoint:**
+### Example
 
-`modbus-tcp:tcp//127.0.0.1:1552`
+The configuration below opens a new connection on port 1552
 
-**Example Serial Modbus endpoint:**
-- For Linux Systems:
-  `modbus-adu:serial:/dev/ttyUSB0`
-- For Windows Systems:
-  `modbus-adu:serial:COM1`
 
-**Note:** *You need to add a special permission to access serial Sources on Linux. This can be done by adding the user to
-the `dialout` group using a `sudo usermod -a -G dialout $USER` command.*
-
-### LiveRig Collector previous than 5.0.0
-If you are using a LiveRig 4.x or bellow, you cannot change the connection protocol, so the endpoint format must be `modbus://{ip-address}:{port}`
-
-## Example
-
-The configuration below opens a new connection on port 1552 (default is `502`)
-
+_sources.xml_
 ```xml
     <source>
         <name>Modbus TCP</name>
@@ -265,13 +253,44 @@ The configuration below opens a new connection on port 1552 (default is `502`)
     </source>
 ```
 
-In this example we have two PLC devices, identified by `<request>` node and the following information must be provided:
-
-| Name                | Description                                                                              | Is required? | Default value |
-|---------------------|------------------------------------------------------------------------------------------|:------------:|---------------|
-| revisionWaitingTime | Timeout, in milliseconds, after which a request is terminated.                           |      No      | Infinity      |
-| object              | Name that will be fetched in `modbus.json` to get more information about the memory area |     Yes      |               |
-| query\_period       | Interval, in seconds, for the execution of each request                                  |     Yes      |               |
-| uid\_log            | A number, between 1 and 247, that identifies the target PLC                              |      No      | 1             |
-
-A [modbus.json](./../configuration/modbus.json.md) is also needed to be configured in the collector, so the data can be properly retrieved.
+_modbus.json_
+```json
+{
+  "version": "2.0",
+  "controllers": {
+    "pump-pressure-1": [
+      {
+        "type": "input-register",
+        "start_address": 2,
+        "dataType": "float",
+        "count": 3,
+        "unit": "psi",
+        "alias": ["rotary_pump_pressure", "rotation_max_pressure", "hold_back_pressure"]
+      },
+      {
+        "type": "discrete-input",
+        "start_address": 4,
+        "dataType": "float",
+        "count": 2,
+        "alias": ["water_pressure"]
+      },
+      {
+        "type": "coil",
+        "start_address": 10
+      }
+    ],
+    "water-flow-1": [
+      {
+        "type": "holding-register",
+        "start_address": 2,
+        "dataType": "float",
+        "unit": "m3"
+      },
+      {
+        "type": "coil",
+        "start_address": 3
+      }
+    ]
+  }
+}
+```
