@@ -75,7 +75,7 @@ modbus-rtu:serial://dev/ttyUSB0?unit_id=2&serial.baud-rate=9600&serial.parity=EV
         <service_company>Your Company</service_company>
         <protocol_name>modbus</protocol_name>
         <protocol_version>1.1b3</protocol_version>
-        <endpoint>modbus-rtu:serial://dev/ttyUSB0?unit_id=2&serial.baud-rate=9600&serial.parity=EVEN_PARITY</endpoint>
+        <endpoint>modbus-rtu:serial://dev/ttyUSB0?unit_id=2&amp;serial.baud-rate=9600&amp;serial.parity=EVEN_PARITY</endpoint>
         ...
     </source>
     ...
@@ -99,7 +99,7 @@ modbus-rtu:tcp://192.168.1.100:502?unit-identifier=5&request-timeout=6000
         <service_company>Your Company</service_company>
         <protocol_name>modbus</protocol_name>
         <protocol_version>1.1b3</protocol_version>
-        <endpoint>modbus-rtu:tcp://192.168.1.100:502?unit-identifier=5&request-timeout=6000</endpoint>
+        <endpoint>modbus-rtu:tcp://192.168.1.100:502?unit-identifier=5&amp;request-timeout=6000</endpoint>
         ...
     </source>
     ...
