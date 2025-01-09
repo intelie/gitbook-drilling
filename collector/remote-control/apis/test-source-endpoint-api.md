@@ -1,6 +1,6 @@
 # /testSourceEndpoint
 
-This feature allows you to validate the endpoint connection against the effective server (for some protocols like WITSML, OPC, ModBus) behind the LiveRig Collector using the remote control API.
+This feature allows you to validate the endpoint connection against the effective server (for some protocols like WITSML, OPC, Modbus) behind the LiveRig Collector using the remote control API.
 
 ## Required information
 

@@ -1,4 +1,4 @@
-For a ModBus source be normalized by Intelie Live, two files must be configured: [sources.xml](./sources.xml.md) and [modbus.json](./modbus.json.md). The specific documentation how to configure a ModBus source is provided at the [modbus protocol page](./../protocols/modbus.md). 
+For a Modbus source be normalized by Intelie Live, two files must be configured: [sources.xml](./sources.xml.md) and [modbus.json](./modbus.json.md). The specific documentation how to configure a Modbus source is provided at the [modbus protocol page](./../protocols/modbus.md). 
 
 Following the example at the modbus protocol page, two `<request>` objects need to be mapped on the following JSON format (`modbus.json`).
 

@@ -19,11 +19,11 @@ It is an open communication protocol to interconnect electronic devices such as:
 1. IoT devices
 1. Supervising systems
 
-**ModBus** protocol is able of receiving data from any industrial equipment devices that uses TCP and Serial (RS-232 or RS-485) connections.
+**Modbus** protocol is able of receiving data from any industrial equipment devices that uses TCP and Serial (RS-232 or RS-485) connections.
 
 ## Modbus data
 
-There are a number of memory areas defined in the ModBus specification as described below:
+There are a number of memory areas defined in the Modbus specification as described below:
 
 - Discrete Input _(Read Only)_ - Boolean input value, usually representing a binary input to the PLC
 - Coils _(Read / Write)_ - Boolean value, usually representing a binary output from the PLC
@@ -37,7 +37,7 @@ For defined types in memory areas (e.g. double, long, integer, boolean) check [m
 
 ## Configuring connection for Modbus sources
 
-**ModBus** in LiveRig Collector can be accessed by two kinds of transport (TCP or Serial) and its parameter can be configured as follow:
+**Modbus** in LiveRig Collector can be accessed by two kinds of transport (TCP or Serial) and its parameter can be configured as follow:
 
 ```
 {protocol type}:{transport}://{endpoint:{port}|device}?{options}
@@ -48,15 +48,15 @@ E.g.
 modbus-tcp:tcp://192.168.1.112:2000?unit_id=2&tcp.keep-alive=false
 ```
 
-### ModBus protocol types
+### Modbus protocol types
 
-Supported ModBus protocol types in LiveRig Collector are:
+Supported Modbus protocol types in LiveRig Collector are:
 
 1 - **RTU (Remote Terminal Unit)**: is the most common used
 
-2 - **ModBus ASCII**: Same as RTU but using ASCII characters to transport data using more space size
+2 - **Modbus ASCII**: Same as RTU but using ASCII characters to transport data using more space size
 
-3 - **ModBus over TCP/IP**: Uses TCP/IP to communicate through Ethernet
+3 - **Modbus over TCP/IP**: Uses TCP/IP to communicate through Ethernet
 
 Some examples are demonstrated below:
 
@@ -110,7 +110,7 @@ modbus-rtu:tcp://192.168.1.100:502?unit-identifier=5&request-timeout=6000
 
 LiveRig Collector works as Master mode to collect Slave data. Slave must be identified by _unit-identifier_ in range from 1 to 247.
 
-### ModBus transport types
+### Modbus transport types
 
 LiveRig Collector supports different kind of transport connection. Since 5.0.0, both **tcp** and **serial** transport modes are supported. 
 
@@ -147,9 +147,9 @@ modbus-rtu:serial://dev/ttyACM0?unit-identifier=10
 
 Some UNIX system is required permission to access serial connection with devices. This can be done by adding the user to the `dialout` group using a `sudo usermod -a -G dialout $USER` command.
 
-### ModBus options types
+### Modbus options types
 
-The connection string options are used to setup some extra configuration in ModBus protocol. See tables below:
+The connection string options are used to setup some extra configuration in Modbus protocol. See tables below:
 
 #### General option table (used both Serial and TCP transports)
 
@@ -163,7 +163,7 @@ The connection string options are used to setup some extra configuration in ModB
 
 | Name | Type | Description | Required | Default value |
 |-|-|-|-|-|
-| port | Integer | ModBus TCP port | No | 502 |
+| port | Integer | Modbus TCP port | No | 502 |
 | tcp.keep-alive | Boolean | Packets to be sent keeping alive? | No | false |
 | tcp.no-delay | Boolean | Packets should be sent instantly or should give the OS time to aggregate data? | No | true |
 
@@ -177,9 +177,9 @@ The connection string options are used to setup some extra configuration in ModB
 | serial.num-stop-bits | Integer | Number of stop bit to terminate data transport. Typical value are 1 or 2. **NOTE**: 1.5 stop bit is not supported | No | 1 |
 | serial.parity | String | Data parity check. Available values are: _NO_PARITY, ODD_PARITY, EVEN_PARITY, MARK_PARITY and SPACE_PARITY_ | No | NO_PARITY |
 
-## Collecting data in ModBus
+## Collecting data in Modbus
 
-LiveRig Collector works as Master in ModBus to collect data thus `sources.xml` and [modbus.json](./../configuration/modbus.json.md) must be configured to collect typed values. 
+LiveRig Collector works as Master in Modbus to collect data thus `sources.xml` and [modbus.json](./../configuration/modbus.json.md) must be configured to collect typed values. 
 
 
 Parameters in `sources.xml`
@@ -270,7 +270,7 @@ The configuration below opens a new connection on port 1552
 
 ## Compatibility for LiveRig Collector prior to 5.x
 
-ModBus support for LiveRig Collector prior to 5.0.0 **is limited to TCP transport only**.
+Modbus support for LiveRig Collector prior to 5.0.0 **is limited to TCP transport only**.
 
 The connection string was slightly different as demonstrated below:
 
