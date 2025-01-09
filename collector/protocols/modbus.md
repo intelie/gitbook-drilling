@@ -52,11 +52,9 @@ modbus-tcp:tcp://192.168.1.112:2000?unit_id=2&tcp.keep-alive=false
 
 Supported Modbus protocol types in LiveRig Collector are:
 
-1 - **RTU (Remote Terminal Unit)**: is the most common used
-
-2 - **Modbus ASCII**: Same as RTU but using ASCII characters to transport data using more space size
-
-3 - **Modbus over TCP/IP**: Uses TCP/IP to communicate through Ethernet
+1. **RTU (Remote Terminal Unit)**: is the most common used
+1. **Modbus ASCII**: Same as RTU but using ASCII characters to transport data using more space size
+1. **Modbus over TCP/IP**: Uses TCP/IP to communicate through Ethernet
 
 Some examples are demonstrated below:
 
