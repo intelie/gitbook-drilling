@@ -20,14 +20,14 @@
 [modbus.md](modbus.md)
 {% endcontent-ref %}
 
+{% content-ref url="mqtt.md" %}
+[mqtt.md](mqtt.md)
+{% endcontent-ref %}
+
 {% content-ref url="csv.md" %}
 [csv.md](csv.md)
 {% endcontent-ref %}
 
 {% content-ref url="raw.md" %}
 [raw.md](raw.md)
-{% endcontent-ref %}
-
-{% content-ref url="mqtt.md" %}
-[mqtt.md](mqtt.md)
 {% endcontent-ref %}
