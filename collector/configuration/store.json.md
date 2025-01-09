@@ -50,11 +50,11 @@ The `alias` is used as a key reference for tags, units and types values.&#x20;
 | units     | Uses the UOM as a value            | no                                   |               |
 | types     | Uses the type as a value           | no (if OPC to WITSML converter, yes) | double        |
 
-**Note**: For **OPC-UA** sources, the tag field should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
+**NOTE**: For **OPC-UA** sources, the tag field should be written as the following pattern: `ns=<namespaceindex>;<type>=<value>`
 
-## LiveRig Collector 5.0.0 or above
+## Complex type and date time tags
 
-Since LiveRig Collector version 5.0.0, the collector can be configured to extract field from object values in **OPC-UA** sources. 
+Since LiveRig Collector version 5.0.0, it can be configured to extract field from object values in **OPC-UA** sources. 
 
 **Example 1:**
 
@@ -111,7 +111,7 @@ Resulting in the following value:
 
 ![Extracting the encoded object](../../.gitbook/assets/OpcuaObjectEvent4.png)
 
-**Note**: Since the `tags` field from the `store.json` file is a `Map`, you need to add a new alias for each field you want to fetch. Example:
+**NOTE**: Since the `tags` field from the `store.json` file is a `Map`, you need to add a new alias for each field you want to fetch. Example:
 `"RangeObject/Identifier": "ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange?field=/encodingId/identifier/value"` and
 `"RangeObject/namespaceIndex": "ns=2;s=HelloWorld/DataAccess/AnalogValue/0:EURange?field=/encodingId/namespaceIndex/value"`
 
