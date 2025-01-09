@@ -435,7 +435,7 @@ There are new plugins on this version: plugin-ui-components and plugin-rig-state
 * Added pipes functions to retrieve information about interventions;
 * Make the liverig collector handle WITSML Store data edition;
 * Allow backlog history to support wildcards on the collector;
-* Support dynamic event type for raw data based on information like the well name, log, etc.; ([more](../../collector/configuration/tags-in-liverig-collector.md))
+* Support dynamic event type for raw data based on information like the well name, log, etc.; ([more](../../collector/configuration/multiple-event-types-for-witsml-sources.md))
 * Support reversed scale on charts.
 
 ### Fixes and improvements
