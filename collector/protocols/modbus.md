@@ -12,18 +12,12 @@ This capability is provided by **LiveRig Collector 2.28.0** or higher
 
 It is an open communication protocol to interconnect electronic devices such as:
 
-1 - PLC's (programmable logic controllers)
-
-2 - Sensors
-
-3 - Monitoring equipment
-
-4 - Actuators
-
-5 - IoT devices
-
-6 - Supervising systems
-
+1. PLC's (programmable logic controllers)
+1. Sensors
+1. Monitoring equipment
+1. Actuators
+1. IoT devices
+1. Supervising systems
 
 **ModBus** protocol is able of receiving data from any industrial equipment devices that uses TCP and Serial (RS-232 or RS-485) connections.
 
@@ -37,13 +31,13 @@ There are a number of memory areas defined in the ModBus specification as descri
   * Input Register (Read Only) - Short input value, usually representing an input to the PLC
   * Holding Register (Read / Write) - Short value, usually representing an stored input or output
 
-**NOTE**: All memory areas described below is _Read Only_ for Liverig collector
+**NOTE**: All memory areas described below is _Read Only_ for LiveRig Collector
 
-For defined types in memory areas (double, long, integer, boolean ...) check [modbus.json](./../configuration/modbus.json.md) for configuration
+For defined types in memory areas (e.g. double, long, integer, boolean) check [modbus.json](./../configuration/modbus.json.md) for configuration.
 
 ## Configuring connection for Modbus sources
 
-**ModBus** in _Liverig_ can be accessed by two kinds of transport (TCP or Serial) and its parameter can be configured as follow:
+**ModBus** in LiveRig Collector can be accessed by two kinds of transport (TCP or Serial) and its parameter can be configured as follow:
 
 ```
 {protocol type}:{transport}://{endpoint:{port}|device}?{options}
@@ -56,25 +50,23 @@ modbus-tcp:tcp://192.168.1.112:2000?unit_id=2&tcp.keep-alive=false
 
 ### ModBus protocol types
 
-Supported ModBus protocol types in Liverig are:
+Supported ModBus protocol types in LiveRig Collector are:
 
-_1 - RTU (Remote Terminal Unit):_ is the most common used
+1 - **RTU (Remote Terminal Unit)**: is the most common used
 
-_2 - ModBus ASCII:_ Same as RTU but using ASCII characters to transport data using more space size
+2 - **ModBus ASCII**: Same as RTU but using ASCII characters to transport data using more space size
 
-_3 - ModBus over TCP/IP:_ Uses TCP/IP to communicate via Ethernet
+3 - **ModBus over TCP/IP**: Uses TCP/IP to communicate through Ethernet
 
-**Some examples:**
+Some examples are demonstrated below:
 
-For Liverig > 5.0.0
-
-1- RTU using Serial
+**RTU using Serial**
 
 ```
 modbus-rtu:serial://dev/ttyUSB0?unit_id=2&serial.baud-rate=9600&serial.parity=EVEN_PARITY
 ```
 
-_sources.xml_
+**sources.xml**
 ```xml
 <sources>
     <source>
@@ -85,20 +77,20 @@ _sources.xml_
         <service_company>Your Company</service_company>
         <protocol_name>modbus</protocol_name>
         <protocol_version>1.1b3</protocol_version>
-        <endpoint>modbus-rtu:serial://dev/ttyUSB0?unit_id=2&amp;serial.baud-rate=9600&amp;serial.parity=EVEN_PARITY</endpoint>
+        <endpoint>modbus-rtu:serial://dev/ttyUSB0?unit_id=2&serial.baud-rate=9600&serial.parity=EVEN_PARITY</endpoint>
         ...
     </source>
     ...
 </sources>
 ```
 
-2- RTU using TCP
+**RTU using TCP**
 
 ```
 modbus-rtu:tcp://192.168.1.100:502?unit-identifier=5&request-timeout=6000
 ```
 
-_sources.xml_
+**sources.xml**
 ```xml
 <sources>
     <source>
@@ -109,41 +101,20 @@ _sources.xml_
         <service_company>Your Company</service_company>
         <protocol_name>modbus</protocol_name>
         <protocol_version>1.1b3</protocol_version>
-        <endpoint>modbus-rtu:tcp://192.168.1.100:502?unit-identifier=5&amp;request-timeout=6000</endpoint>
+        <endpoint>modbus-rtu:tcp://192.168.1.100:502?unit-identifier=5&request-timeout=6000</endpoint>
         ...
     </source>
     ...
 </sources>
 ```
 
-Liverig works as Master mode to collect Slave data. Slave must be identified by _unit-identifier_ in range from 1 to 247.
+LiveRig Collector works as Master mode to collect Slave data. Slave must be identified by _unit-identifier_ in range from 1 to 247.
 
 ### ModBus transport types
 
-Liverig supports different kind of **transport** connection according to its version
+LiveRig Collector supports different kind of transport connection. Since 5.0.0, both **tcp** and **serial** transport modes are supported. 
 
-**For Liverig 5.0.0**
-
-TCP only format
-
-```
-modbus://your-ip-address:{port}?{options}
-```
-
-E.g.:
-
-```
-modbus://192.168.1.115:502?unit-identifier=10
-```
-
-**For Liverig > 5.0.0**
-
-Transport mode available: _tcp_ or _serial_
-
-
-
-E.g. TCP modes:
-
+Examples of TCP transport modes:
 
 ```
 modbus-tcp:tcp://192.168.1.115:3000?unit-identifier=10
@@ -157,7 +128,7 @@ modbus-ascii:tcp://192.168.1.115?unit-identifier=10
 modbus-rtu:tcp://192.168.1.115?unit-identifier=10
 ```
 
-E.g. SERIAL modes:
+Examples of SERIAL transport modes:
 
 ```
 modbus-ascii:serial://dev/ttyUSB1?unit-identifier=10
@@ -168,7 +139,7 @@ modbus-rtu:serial://dev/ttyACM0?unit-identifier=10
 ```
 
 
-**Serial modes in different OS examples (Liverig > 5.0.0):**
+**Serial modes in different OS examples:**
 - For Linux Systems:
   `modbus-rtu:serial:/dev/ttyUSB0`
 - For Windows Systems:
@@ -178,7 +149,7 @@ Some UNIX system is required permission to access serial connection with devices
 
 ### ModBus options types
 
-Liverig connection string optios is used to setup some extra configuration in ModBus protocol. See tables below:
+The connection string options are used to setup some extra configuration in ModBus protocol. See tables below:
 
 #### General option table (used both Serial and TCP transports)
 
@@ -203,19 +174,19 @@ Liverig connection string optios is used to setup some extra configuration in Mo
 |-|-|-|-|-|
 | serial.baud-rate | Integer | Baud rate in _bps_ of the serial port. Available values are: _9600, 14400, 19200, 38400, 57600, 115200, 128000_ | No | 57600 |
 | serial.num-data-bits | Integer | Number of bits to send data. Common values: 7 or 8| No | 8 |
-| serial.num-stop-bits | Integer | Number of stop bit to terminate data transport. Typical value are 1 or 2. _NOTE_ 1.5 stop bit is not supported | No | 1 |
+| serial.num-stop-bits | Integer | Number of stop bit to terminate data transport. Typical value are 1 or 2. **NOTE**: 1.5 stop bit is not supported | No | 1 |
 | serial.parity | String | Data parity check. Available values are: _NO_PARITY, ODD_PARITY, EVEN_PARITY, MARK_PARITY and SPACE_PARITY_ | No | NO_PARITY |
 
 ## Collecting data in ModBus
 
-Liverig works as _master_ in ModBus to collect data thus _sources.xml_ and _[modbus.json](./../configuration/modbus.json.md)_ must be configured to collect typed values. 
+LiveRig Collector works as Master in ModBus to collect data thus `sources.xml` and [modbus.json](./../configuration/modbus.json.md) must be configured to collect typed values. 
 
 
-Parameters in _sources.xml_
+Parameters in `sources.xml`
 | Name                | Description                                                                              | Is required? | Default value |
 |---------------------|------------------------------------------------------------------------------------------|:------------:|---------------|
 | revisionWaitingTime | Timeout, in milliseconds, after which a request is terminated.                           |      No      | Infinity      |
-| object              | Name that will be fetched in _[modbus.json](./../configuration/modbus.json.md)_ |     Yes      |               |
+| object              | Name that will be fetched in [modbus.json](./../configuration/modbus.json.md) |     Yes      |               |
 | query\_period       | Interval, in seconds, for the execution of each request                                  |     Yes      |               |
 | uid\_log            | A number, between 1 and 247, that identifies the target PLC                              |      No      | 1             |
 
@@ -225,35 +196,37 @@ Parameters in _sources.xml_
 The configuration below opens a new connection on port 1552
 
 
-_sources.xml_
+**sources.xml**
+
 ```xml
-    <source>
-        <name>Modbus TCP</name>
-        <enabled>true</enabled>
-        <mode>client</mode>
-        <rig_name>NS03</rig_name>
-        <service_company>intelie</service_company>
-        <protocol_name>modbus</protocol_name>
-        <protocol_version>1.1b3</protocol_version>
-        <endpoint>modbus://127.0.0.1:1552</endpoint>
-        <requests>
-            <request>
-                <revisionWaitingTime>3000</revisionWaitingTime>
-                <object>pump-pressure-1</object>
-                <query_period>25</query_period>
-                <uid_log>1</uid_log>
-            </request>
-            <request>
-                <revisionWaitingTime>3000</revisionWaitingTime>
-                <object>water-flow-1</object>
-                <query_period>10</query_period>
-                <uid_log>2</uid_log>
-            </request>
-        </requests>
-    </source>
+<source>
+    <name>Modbus TCP</name>
+    <enabled>true</enabled>
+    <mode>client</mode>
+    <rig_name>NS03</rig_name>
+    <service_company>intelie</service_company>
+    <protocol_name>modbus</protocol_name>
+    <protocol_version>1.1b3</protocol_version>
+    <endpoint>modbus://127.0.0.1:1552</endpoint>
+    <requests>
+        <request>
+            <revisionWaitingTime>3000</revisionWaitingTime>
+            <object>pump-pressure-1</object>
+            <query_period>25</query_period>
+            <uid_log>1</uid_log>
+        </request>
+        <request>
+            <revisionWaitingTime>3000</revisionWaitingTime>
+            <object>water-flow-1</object>
+            <query_period>10</query_period>
+            <uid_log>2</uid_log>
+        </request>
+    </requests>
+</source>
 ```
 
-_modbus.json_
+**modbus.json**
+
 ```json
 {
   "version": "2.0",
@@ -293,4 +266,20 @@ _modbus.json_
     ]
   }
 }
+```
+
+## Compatibility for LiveRig Collector prior to 5.x
+
+ModBus support for LiveRig Collector prior to 5.0.0 **is limited to TCP transport only**.
+
+The connection string was slightly different as demonstrated below:
+
+```
+modbus://your-ip-address:{port}?{options}
+```
+
+E.g.:
+
+```
+modbus://192.168.1.115:502?unit-identifier=10
 ```
