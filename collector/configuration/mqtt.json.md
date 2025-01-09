@@ -81,5 +81,5 @@ As shown in the `json` example above, one viable configuration for a channel is 
 This will output all channels generated from the MQTT message received.
 
 {% hint style="info" %}
-Instead of manually configuring this file, is also possible to use the remote control page [MQTT Requests](./../remote-control/sources/mqtt-requests.md) to change the settings easily.
+Instead of manually configuring this file, is also possible to use the remote control page [MQTT Topics](./../remote-control/sources/mqtt-topics.md) to change the settings easily.
 {% endhint %}
