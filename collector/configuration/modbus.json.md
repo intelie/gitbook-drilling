@@ -1,6 +1,6 @@
-For a Modbus source be normalized by Intelie Live, two files must be configured: [sources.xml](./sources.xml.md) and [modbus.json](./modbus.json.md). The specific documentation how to configure a Modbus source is provided at the [modbus protocol page](./../protocols/modbus.md). 
+For a Modbus data be ingested by LiveRig Collector and forward to INTELIE Live, two files must be configured: [sources.xml](./sources.xml.md) and `modbus.json`. This page will explain the INTELIE JSON schema for the `modbus.json` LiveRig Collector configuration.
 
-Following the example at the modbus protocol page, two `<request>` objects need to be mapped on the following JSON format (`modbus.json`).
+The specific documentation about the Modbus source is provided at the [modbus protocol page](./../protocols/modbus.md). Following the example at that Modbus protocol page, two `<request>` objects depends on additional controller mapping as the following JSON format (`modbus.json`) describes below.
 
 ```json
 {
