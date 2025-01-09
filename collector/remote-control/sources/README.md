@@ -4,7 +4,7 @@ Inside the `Sources` tab in the Intelie Live `Collectors` tab is possible to add
 
 ![List of sources configured for a Collector](../../../.gitbook/assets/collector-remote-control-sources.png)
 
-When clicking the `Create new source` button, there's a form that should be filled with sources information, like name, service company, protocol, mode, rig name and some store access information. The [protocols](../../protocols/) available are: WITSML (versions 1.3.1.1, 1.4.1.1 and 2.0), WITS, OPC-DA, OPC-UA, Modbus, CSV and RAW (JSON).
+When clicking the `Create new source` button, there's a form that should be filled with sources information, like name, service company, protocol, mode, rig name and some store access information. The [protocols](../../protocols/) available are: WITSML (versions 1.3.1.1, 1.4.1.1 and 2.0), WITS, OPC-DA, OPC-UA, Modbus, MQTT, CSV and RAW (JSON).
 
 ![List of protocols available to configure a new source](<../../../.gitbook/assets/image (342).png>)
 
