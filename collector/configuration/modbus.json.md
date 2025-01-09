@@ -1,6 +1,6 @@
-For a modbus source to be normalized by Intelie Live, two files are needed to be configured, the [sources.xml](./sources.xml.md) and the `modbus.json`. The specific setting about a modbus source can be found at the [modbus protocol page](./../protocols/modbus.md). Following the example at the modbus protocol page, two `<request>` objects need to be mapped on the following JSON format (`modbus.json`).&#x20;
+For a ModBus source be normalized by Intelie Live, two files must be configured: [sources.xml](./sources.xml.md) and [modbus.json](./modbus.json.md). The specific documentation how to configure a ModBus source is provided at the [modbus protocol page](./../protocols/modbus.md). 
 
-## LiveRig Collector 5.0.0 or above
+Following the example at the modbus protocol page, two `<request>` objects need to be mapped on the following JSON format (`modbus.json`).
 
 ```json
 {
@@ -88,7 +88,7 @@ Example:
 If the dataType is `int32` and the `start_address` is `123`, the LiveRig Collector will fetch the values from
 addresses `123` and `124` to form the `int32` (long) value.
 
-### Aliases
+## Aliases
 
 The `alias` field from the `modbus.json` file is an array of strings. That means that you can allocate more than 1 alias
 to a memory area.
@@ -112,12 +112,16 @@ addresses `123`, `124` and `125`. If the `alias` field has the value `["exampleA
 , "exampleAlias4"]`, then the LiveRig Collector will map `exampeAlias_123` to address `123`, `exampeAlias_124` to
 address `124` and `exampeAlias_125` to address `125`. The `exampleAlias4` will not be used as a channel rename.*
 
-**Note:**
+**NOTE:**
 If there is fewer aliases than the address count (the alias list has a size of `2` and the count of addresses is `4`),
 the
 LiveRig Collector will raise an exception, since it won't know how to map the aliases to each address.
 
-## LiveRig Collector 4.x or bellow
+## Compatibility for LiveRig Collector prior to 5.x
+
+Prior to 5.0.0, the INTELIE `modbus.json` format was not able to support the configuration of multiple coin, input-register or discrete-input for a same controller.
+
+The ancient JSON schema for those deprecated versions is demonstrated bellow just for historical reference. Please consider to upgrade any LiveRig Collector to the most recent version.
 
 ```json
 {
@@ -150,7 +154,7 @@ LiveRig Collector will raise an exception, since it won't know how to map the al
 }
 ```
 
-Each `controller` represents a device defined on [sources.xml](./sources.xml.md) at `<request>/<object>` and describe all memory areas that will be fetched. For each memory area (such as `input-register,` `discrete-input`, `coil` or `holding-register`), the following information must be provided:&#x20;
+Each `controller` represents a device defined on [sources.xml](./sources.xml.md) at `<request>/<object>` and describe all memory areas that will be fetched. For each memory area (such as `input-register,` `discrete-input`, `coil` or `holding-register`), the following information must be provided:
 
 | Name           | Description                                                                                        | Is required? | Default value |
 |----------------|----------------------------------------------------------------------------------------------------|--------------|---------------|
