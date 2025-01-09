@@ -1,4 +1,4 @@
-# MQTT Requests
+# MQTT Topics
 
 When selecting an MQTT source, it is possible to configure the MQTT topics to subscribe and its configuration using the `Topics` tab.
 This page allows the user to remotely configure the [mqtt.json file](./../../configuration/mqtt.json.md). 
