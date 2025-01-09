@@ -39,6 +39,16 @@ This file stores the configuration regarding the connection to all the remote da
 | This flag indicates if a witsml source using https protocol should use a certificate to authenticate.                                                                                 |                               |                        |
 | `requests`                                                                                                                                                                            | list\<Sources.Source.Request> | witsml                 |
 
+{% hint style="info" %}
+As part of XML, any string connection for `endpoint` that needs URL parameters needs to escape `&` as `&amp;`.
+
+For example:
+
+`<endpoint>https://server:1234?key=value&another=value</endpoint>` is not a valid XML
+
+`<endpoint>https://server:1234?key=value&amp;another=value</endpoint>` is the correct format
+{% endhint %}
+
 ### Sources.Source.Request
 
 | Field                                                                                                                                                                                                                                                                                                           | Type    | Restricted to          |
@@ -70,7 +80,7 @@ This file stores the configuration regarding the connection to all the remote da
 
 ### Example
 
-```markup
+```xml
 <sources>
     <source>
         <name>my connection</name>
@@ -79,7 +89,7 @@ This file stores the configuration regarding the connection to all the remote da
         <service_company>the company</service_company>
         <protocol_name>witsml</protocol_name>
         <protocol_version>1.3.1.1</protocol_version>
-        <endpoint>https://the_server:9999/witsml</endpoint>
+        <endpoint>https://the_server:9999/witsml?any_key=any_value&amp;another_key=another_value</endpoint>
         <tls_auth>true</tls_auth>
         <username>witsml</username>
         <password>witsml</password>
